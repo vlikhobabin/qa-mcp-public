@@ -6,12 +6,19 @@ TestClient protocol directly, runs BDD/Gherkin scenarios, reads and verifies
 managed forms, and exposes target-bound lifecycle and UI operations to AI
 agents without requiring a Vanessa Automation manager runtime.
 
-This is a prepared prerelease source snapshot of commit
-`b6ae33639d151e9b47bf0a1248f0be5309a72504`, with the existing product unchanged.
-The public repository URL (`<public-repository-url>`), destination and release
-tag are pending selection; nothing is claimed published. The broader OSS-08
-release train and OSS-09 downstream cutover are not mandatory MVP prerequisites.
-This snapshot does not claim stable or live-native qualification.
+The public repository is [vlikhobabin/qa-mcp-public](https://github.com/vlikhobabin/qa-mcp-public).
+[qa-mcp v0.1.0 (MVP prerelease)](https://github.com/vlikhobabin/qa-mcp-public/releases/tag/v0.1.0)
+is published with the existing product unchanged; it is not Stable.
+The immutable tag points to the fresh public root `ba576b752ebe2939d4c84d53a8b1732d7b641e36`,
+imported from the prepared snapshot based on original commit
+`b6ae33639d151e9b47bf0a1248f0be5309a72504`. Internal Git ancestors are excluded.
+Only README/publication-policy documentation on `main` is updated after the tag.
+The release includes full source `qa-mcp-b6ae336-source.tar.gz`, Python wheel
+and package sdist, a Docker archive, Windows executable/ZIP and `SHA256SUMS`.
+Download the assets together and run `sha256sum -c SHA256SUMS` before use.
+No PyPI/GHCR publication was made; GitHub Actions is disabled for this initial import.
+The broader OSS-08 release train and OSS-09 downstream cutover are not mandatory
+MVP prerequisites. This release does not claim stable or live-native qualification.
 
 ## What is included
 
@@ -44,6 +51,22 @@ The public core owns protocol, scenario, operation/result and standalone
 transport semantics. Private downstream products consume a released version
 and provide their own relay, tenant, portal or telemetry integrations without
 forking core behavior. See [the shared-core extension contract](docs/shared-core-extension.md).
+
+## Install the release wheel
+
+Download `qa_mcp-0.1.0-py3-none-any.whl` from the release linked above.
+With Python 3.11+:
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install ./qa_mcp-0.1.0-py3-none-any.whl
+.venv/bin/qa-native-mcp
+```
+
+The last command starts the stdio server for an MCP client.
+The Docker attachment can be loaded with `docker load --input qa-mcp-image.tar`;
+use its retained tag `qa-mcp-mvp-b6ae336-20260911t105140z:local` with the
+[Docker startup settings](docker/README.md).
 
 ## Install from a source snapshot
 
@@ -99,6 +122,12 @@ Build it from Linux without running a Windows host:
 ./bin/ai-build-windows-host-agent build --output-dir .runtime/windows-host-agent
 ./bin/ai-build-windows-host-agent verify --bundle-dir .runtime/windows-host-agent
 ```
+
+For v0.1.0, the attached Windows executable/ZIP is an unstamped Linux
+cross-build (`-buildvcs=false`) inspected for PE/amd64/GUI and capability markers.
+It has no Windows-native qualification or successful helper-bundle verification.
+The existing helper above requires Git and fails in a Git-free source extraction.
+No new live 1C qualification was performed for this release.
 
 Installation and firewall guidance is in
 [host-agent/README.md](host-agent/README.md). Live use requires a licensed 1C

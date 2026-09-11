@@ -7,9 +7,13 @@ attribution without claiming affiliation or endorsement.
 
 ## Publication boundary
 
-The public upstream is intended to start from one source snapshot after its
-applicable publication checks. This prepared prerelease snapshot uses commit
-`b6ae33639d151e9b47bf0a1248f0be5309a72504`; preparation is not a new review verdict. Earlier
+The [public upstream](https://github.com/vlikhobabin/qa-mcp-public) starts from the single
+root commit `ba576b752ebe2939d4c84d53a8b1732d7b641e36`. The immutable
+[`v0.1.0` MVP prerelease](https://github.com/vlikhobabin/qa-mcp-public/releases/tag/v0.1.0)
+is published from that exact tree, imported from the prepared snapshot based on
+original commit `b6ae33639d151e9b47bf0a1248f0be5309a72504`.
+The original commit identifies the source baseline, not a public Git ancestor;
+publication does not create a new review verdict. Earlier
 internal Git ancestors are not part of the public import because their author
 metadata and historical lab reports contain personal or private-lab identity.
 They remain owner-retained migration history, not distributable provenance.
@@ -23,13 +27,21 @@ they are not actual accounts, hosts, products, routable endpoints, or runnable
 paths. Commands in current guidance use environment variables or neutral
 examples instead of those historical labels.
 
-This policy does not rewrite history or publish a release. Repository URL,
-destination and tag remain pending selection. OSS-08 owns the broader future
-GitHub/GHCR release train; OSS-09 owns downstream cutover. Their completion is
-not a mandatory prerequisite for this MVP snapshot. Preparation does not claim
-stable-release or live-native qualification. The exported release workflow
-retains manual builds with external publication steps disabled until a
-destination is selected and publication is authorized.
+The release attaches the full `qa-mcp-b6ae336-source.tar.gz` source snapshot,
+Python wheel and package sdist, Docker archive, Windows executable/ZIP and flat
+`SHA256SUMS`. Source/tag/artifacts remain immutable; the subsequent `main` commit
+updates only README and this policy with publication URLs and status.
+GitHub Actions is disabled for this initial-import repository (a reversible
+repository setting); workflow source and disabled external publishing steps
+are retained. No PyPI or GHCR publication was made.
+
+OSS-08 owns the broader future GitHub/GHCR release train; OSS-09 owns downstream
+cutover. Their completion is not a mandatory prerequisite for this MVP.
+The published release is a prerelease, not Stable, and does not claim full BDD,
+security or live-native qualification. No new live 1C or Windows-native run was
+performed. The Windows artifacts are inspected Linux cross-builds without a VCS
+stamp or successful helper-bundle verification; the existing build helper
+requires Git and fails in a Git-free source extraction.
 
 ## Contacts
 
