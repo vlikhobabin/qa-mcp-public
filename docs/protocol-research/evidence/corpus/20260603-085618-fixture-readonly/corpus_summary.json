@@ -1,0 +1,42 @@
+{
+  "schema": "protocol-corpus-run.v1",
+  "generated_at": "2026-06-03T05:57:03Z",
+  "capture_id": "20260603-085618",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260603-085618",
+  "case_count": 6,
+  "case_ids": [
+    "fixture-button-readonly",
+    "fixture-table-readonly",
+    "fixture-commandbar-readonly",
+    "fixture-page-readonly",
+    "fixture-label-readonly",
+    "fixture-checkbox-readonly"
+  ],
+  "replay_status_counts": {
+    "pending": 6
+  },
+  "availability_counts": {
+    "pending": 6
+  },
+  "element_families": [
+    "Button",
+    "CheckBox",
+    "CommandBar",
+    "Label",
+    "Page",
+    "Table"
+  ],
+  "supported_case_ids": [],
+  "gap_case_ids": [
+    "fixture-button-readonly",
+    "fixture-table-readonly",
+    "fixture-commandbar-readonly",
+    "fixture-page-readonly",
+    "fixture-label-readonly",
+    "fixture-checkbox-readonly"
+  ],
+  "case_rows_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly/corpus_cases.jsonl",
+  "case_events_path": "runtime/protocol-research/captures/20260603-085618/case_events.jsonl",
+  "runtime_manifest_path": "runtime/protocol-research/captures/20260603-085618/case_manifest.json",
+  "raw_output_policy": "raw traffic and logs stay under ignored runtime/protocol-research paths"
+}

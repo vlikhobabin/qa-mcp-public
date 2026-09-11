@@ -1,0 +1,120 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.pending-promotion-readiness.v1",
+  "generated_at": "2026-06-06T19:35:41+03:00",
+  "source_cleanup_run": "20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "final_live_join_report": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-promotion-final-readiness/frame_join_report.json",
+  "supporting_evidence": {
+    "runtime_preflight": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-readonly-runtime-preflight/runtime_summary.json",
+    "missing_proof_runtime_gap": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-pending-missing-proof-runtime-gap/summary.json",
+    "ambiguous_range_isolation": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-ambiguous-range-isolation/isolation_summary.json",
+    "marker_contract_reconciliation": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-pending-marker-contract-reconciliation/marker_contract_summary.json"
+  },
+  "counts": {
+    "manifest_commands": 17,
+    "joined_command_windows": 17,
+    "accepted_before_card": 8,
+    "accepted_after_card": 8,
+    "promoted_by_card": 0,
+    "pending_after_card": 9
+  },
+  "accepted_case_ids": [
+    "tm-v1-active-window",
+    "tm-v1-active-form",
+    "tm-v1-diag-window-find-field-marker",
+    "tm-v1-diag-form-find-field-marker",
+    "tm-v1-field-version",
+    "tm-v1-field-string",
+    "tm-v1-commandbar-main",
+    "tm-v1-pages-main"
+  ],
+  "accepted_gate": {
+    "requires_case_id_match": true,
+    "requires_manager_frame_range_match": true,
+    "requires_normalized_hash_match": true,
+    "joined_frame_evidence_alone_is_accepted": false,
+    "verification_result": "accepted rows in the final report retain replay_evidence matching case id, manager frame range and normalized hash"
+  },
+  "pending_rows": [
+    {
+      "case_id": "tm-v1-diag-command-interface-dump",
+      "manager_frame_range": {"from": 18, "to": 20},
+      "normalized_hash": "45b82b8a5f5febcc6ca5086bd872984206d54d3ffd7e3c6fa3e7546e4ee6311b",
+      "blocker": "No clean TestClient endpoint was available after preflight; a command-interface count-marker contract could not be directly probed.",
+      "next_route": "Restore the Vanessa EPF/runtime endpoint, then run a focused command-interface direct probe or replay for frames 18..20.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-pending-missing-proof-runtime-gap/summary.json"
+    },
+    {
+      "case_id": "tm-v1-diag-window-children",
+      "manager_frame_range": {"from": 21, "to": 22},
+      "normalized_hash": "a606b8eda4f9e3a65f15110b36bb28b04a965c6b8d3bcae9a9b0319d7e6a973f",
+      "blocker": "No clean TestClient endpoint was available after preflight; a window-children count contract could not be directly probed.",
+      "next_route": "Restore the Vanessa EPF/runtime endpoint, then run a focused window-children direct probe or replay for frames 21..22.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-pending-missing-proof-runtime-gap/summary.json"
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "manager_frame_range": {"from": 23, "to": 25},
+      "normalized_hash": "5d87ccd9f0c08ea313b9378dff7fe65abcfb3f3e5355bd15d3fb8e9294ca51f2",
+      "blocker": "Joined evidence observes the title/form marker, but no current endpoint was available to prove title semantics versus version semantics.",
+      "next_route": "Restore runtime endpoint and prove whether this diagnostic endpoint intentionally returns the form title or should retarget version semantics.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-pending-marker-contract-reconciliation/marker_contract_summary.json"
+    },
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "manager_frame_range": {"from": 26, "to": 106},
+      "normalized_hash": "0244782c3c4f28c8b3ad0bbf5dfaf37916cb642f0d82debe8543fdd08c71f85a",
+      "blocker": "The current event window covers 81 manager frames and the corpus row has no whitelisted semantic payload token that isolates the form-path operation.",
+      "next_route": "Rerun a focused form-path capture after runtime restoration, or add narrower side-channel boundaries around the form-path call.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-ambiguous-range-isolation/isolation_summary.json"
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "manager_frame_range": {"from": 117, "to": 119},
+      "normalized_hash": "33f8fb78e26a3aa64d0b111942140a3b19eba163e3e2ab875cfa81a5ccc1ad3f",
+      "blocker": "Older form-summary direct-probe evidence is rejected/supporting only, and no current endpoint was available for a current-run marker proof.",
+      "next_route": "Restore runtime endpoint and rerun form-summary direct proof before changing the expected marker.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-pending-marker-contract-reconciliation/marker_contract_summary.json"
+    },
+    {
+      "case_id": "tm-v1-checkbox-true",
+      "manager_frame_range": {"from": 126, "to": 130},
+      "normalized_hash": "1ea7dc4c026fb1a000214163de81b6edf32751c0442ddf12de7d00e485e2987d",
+      "blocker": "Current-run replay observed only the target marker while the cleanup capture also contains the type marker; the older accepted checkbox probe remains supporting only.",
+      "next_route": "Run a current-run direct probe or response parser that validates both checkbox identity and the normalized hash for frames 126..130.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-pending-marker-contract-reconciliation/marker_contract_summary.json"
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "manager_frame_range": {"from": 131, "to": 390},
+      "normalized_hash": "926585521047f8e7e2abe2316dacbbf690142f04867c73cb12c172139a153e86",
+      "blocker": "The row spans 260 manager frames and target-marker repetition alone does not identify a minimal operation shape; no action semantics are claimed.",
+      "next_route": "Restore runtime endpoint and rerun a focused read-only button-state probe with narrower side-channel boundaries.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-ambiguous-range-isolation/isolation_summary.json"
+    },
+    {
+      "case_id": "tm-v1-table-items",
+      "manager_frame_range": {"from": 396, "to": 401},
+      "normalized_hash": "9c09bc0e84e5e14f6215ccb858e5d4cb07a0bd99bf0228b55256259c719e89a6",
+      "blocker": "Current-run replay reaches the table identity marker, but the semantic choice between table-summary identity and row-marker endpoint remains unproven.",
+      "next_route": "Prove the table-summary endpoint contract or add a separate row endpoint before changing the expected marker.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-pending-marker-contract-reconciliation/marker_contract_summary.json"
+    },
+    {
+      "case_id": "tm-v1-group-main",
+      "manager_frame_range": {"from": 408, "to": 413},
+      "normalized_hash": "88ffe72ff1b8392c56b8cf999151ef66b1db837e8edfee734a0d197d402e04b8",
+      "blocker": "Current-run replay reaches the group target marker, but original form marker evidence remains present and target-marker-only group semantics are not independently proven.",
+      "next_route": "Run a current-run direct probe or parser that validates group identity semantics for frames 408..413.",
+      "evidence": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-pending-marker-contract-reconciliation/marker_contract_summary.json"
+    }
+  ],
+  "v2_safe_action_readiness": {
+    "status": "blocked",
+    "reason": "Manager fixture V1 read-only coverage still has 9 pending rows and the clean runtime endpoint required for focused proof is unavailable.",
+    "can_continue_planning": true,
+    "live_acceptance_requires": [
+      "runtime endpoint restoration and focused proof for required V1 prerequisites",
+      "or an explicit residual-risk decision to proceed while listed V1 rows remain pending"
+    ]
+  }
+}

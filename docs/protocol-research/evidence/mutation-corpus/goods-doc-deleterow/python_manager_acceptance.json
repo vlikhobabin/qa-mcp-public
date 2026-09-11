@@ -1,0 +1,27 @@
+{
+  "schema": "qa-mcp.compare-probe-reference.by-ordinal.v1",
+  "generated_at": "2026-06-12T09:09:53Z",
+  "mode": "probe-ordinal",
+  "phase": "action",
+  "reference": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\delrow-ref1",
+  "probe": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\probe-delrow-20260612-120204",
+  "phase_ordinal_counts": {
+    "client_to_manager": 5,
+    "manager_to_client": 5
+  },
+  "reference_hash_by_direction": {
+    "client_to_manager": "5b55573a8093a993246a164e703fd71969386073c1f11cfa8c782a11cb279ee8",
+    "manager_to_client": "5eb7a36d9b4062ef9bfc806fde6537e72f6e56ab2db0640dbdb35549a7a60c38"
+  },
+  "probe_hash_by_direction": {
+    "client_to_manager": "5b55573a8093a993246a164e703fd71969386073c1f11cfa8c782a11cb279ee8",
+    "manager_to_client": "5eb7a36d9b4062ef9bfc806fde6537e72f6e56ab2db0640dbdb35549a7a60c38"
+  },
+  "hash_match_by_direction": {
+    "client_to_manager": true,
+    "manager_to_client": true
+  },
+  "structural_match": true,
+  "all_hashes_match": true,
+  "verdict": "accepted"
+}

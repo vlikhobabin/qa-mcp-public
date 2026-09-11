@@ -1,0 +1,24 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2-safe-action.summary.v1",
+  "generated_at": "2026-06-07T19:33:22Z",
+  "capture_id": "20260607-first-focused-v2-safe-action-live-runner-2",
+  "run_dir": "runtime/protocol-research/captures/20260607-first-focused-v2-safe-action-live-runner-2",
+  "row_count": 2,
+  "accepted_count": 0,
+  "status_counts": {
+    "success": 2
+  },
+  "validation_status_counts": {
+    "accepted_for_capture": 2
+  },
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths",
+  "phase_event_count": 12,
+  "runner_result_count": 2,
+  "frame_join_count": 2,
+  "output_files": {
+    "safe_action_report_json": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join/safe_action_report.json",
+    "safe_action_report_markdown": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join/safe_action_report.md",
+    "corpus_cases": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join/corpus_cases.jsonl",
+    "runtime_summary": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join/runtime_summary.json"
+  }
+}

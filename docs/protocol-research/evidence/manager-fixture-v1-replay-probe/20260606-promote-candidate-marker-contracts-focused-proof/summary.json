@@ -1,0 +1,226 @@
+{
+    "schema":  "qa-mcp.manager-fixture-v1.replay-probe-summary.v1",
+    "source_capture":  "runtime/protocol-research/captures/20260606-promote-candidate-marker-contracts-focused-proof",
+    "successful_replay_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof",
+    "transport_status":  "ok",
+    "send_count":  null,
+    "no_response_frames":  [
+
+                           ],
+    "observed_dynamic_fields":  {
+                                    "probe_kind":  "direct_python_manager_marker_replay"
+                                },
+    "adaptation":  {
+                       "bootstrap_frames":  "captured focused-proof bootstrap",
+                       "marker_frames":  "ACK GUID, sequence and nonce replacement"
+                   },
+    "accepted_probe_cases":  [
+                                 {
+                                     "case_id":  "tm-v1-diag-window-find-form-marker",
+                                     "manager_frame_range":  {
+                                                                 "from":  22,
+                                                                 "to":  24
+                                                             },
+                                     "response_after_send":  24,
+                                     "response_size":  1244,
+                                     "expected_marker":  "QA MCP Protocol Fixture V1",
+                                     "observed_markers":  [
+                                                              "homepage[\u003cguid\u003e]",
+                                                              "homepage",
+                                                              "e1cib/navigationpoint/startpage",
+                                                              "QA MCP Protocol Fixture V1"
+                                                          ],
+                                     "normalized_hash":  "5d87ccd9f0c08ea313b9378dff7fe65abcfb3f3e5355bd15d3fb8e9294ca51f2",
+                                     "replay_status":  "accepted_probe",
+                                     "probe_kind":  "direct_python_manager_marker_replay",
+                                     "successful_probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-diag-window-find-form-marker"
+                                 },
+                                 {
+                                     "case_id":  "tm-v1-form-summary",
+                                     "manager_frame_range":  {
+                                                                 "from":  365,
+                                                                 "to":  367
+                                                             },
+                                     "response_after_send":  367,
+                                     "response_size":  1275,
+                                     "expected_marker":  "QA MCP Protocol Fixture V1",
+                                     "observed_markers":  [
+                                                              "QA MCP Protocol Fixture V1"
+                                                          ],
+                                     "normalized_hash":  "33f8fb78e26a3aa64d0b111942140a3b19eba163e3e2ab875cfa81a5ccc1ad3f",
+                                     "replay_status":  "accepted_probe",
+                                     "probe_kind":  "direct_python_manager_marker_replay",
+                                     "successful_probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-form-summary"
+                                 },
+                                 {
+                                     "case_id":  "tm-v1-checkbox-true",
+                                     "manager_frame_range":  {
+                                                                 "from":  368,
+                                                                 "to":  372
+                                                             },
+                                     "response_after_send":  372,
+                                     "response_size":  1505,
+                                     "expected_marker":  "CheckBox",
+                                     "observed_markers":  [
+                                                              "PF_CHECKBOX_TRUE",
+                                                              "CheckBox",
+                                                              "pf_checkbox_true",
+                                                              "pf_group_main",
+                                                              "pf_group_checkboxes"
+                                                          ],
+                                     "normalized_hash":  "1ea7dc4c026fb1a000214163de81b6edf32751c0442ddf12de7d00e485e2987d",
+                                     "replay_status":  "accepted_probe",
+                                     "probe_kind":  "direct_python_manager_marker_replay",
+                                     "successful_probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-checkbox-true"
+                                 },
+                                 {
+                                     "case_id":  "tm-v1-button-inert",
+                                     "manager_frame_range":  {
+                                                                 "from":  373,
+                                                                 "to":  1020
+                                                             },
+                                     "response_after_send":  1020,
+                                     "response_size":  119870,
+                                     "expected_marker":  "PF_BUTTON_INERT",
+                                     "observed_markers":  [
+                                                              "PF_BUTTON_INERT",
+                                                              "pf_button_inert"
+                                                          ],
+                                     "normalized_hash":  "926585521047f8e7e2abe2316dacbbf690142f04867c73cb12c172139a153e86",
+                                     "replay_status":  "accepted_probe",
+                                     "probe_kind":  "direct_python_manager_marker_replay",
+                                     "successful_probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-button-inert"
+                                 },
+                                 {
+                                     "case_id":  "tm-v1-table-items",
+                                     "manager_frame_range":  {
+                                                                 "from":  1025,
+                                                                 "to":  1030
+                                                             },
+                                     "response_after_send":  1030,
+                                     "response_size":  4421,
+                                     "expected_marker":  "PF_TABLE_ITEMS",
+                                     "observed_markers":  [
+                                                              "PF_TABLE_ITEMS",
+                                                              "pf_table_items",
+                                                              "pf_group_main"
+                                                          ],
+                                     "normalized_hash":  "9c09bc0e84e5e14f6215ccb858e5d4cb07a0bd99bf0228b55256259c719e89a6",
+                                     "replay_status":  "accepted_probe",
+                                     "probe_kind":  "direct_python_manager_marker_replay",
+                                     "successful_probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-table-items"
+                                 },
+                                 {
+                                     "case_id":  "tm-v1-group-main",
+                                     "manager_frame_range":  {
+                                                                 "from":  1031,
+                                                                 "to":  1036
+                                                             },
+                                     "response_after_send":  1036,
+                                     "response_size":  3772,
+                                     "expected_marker":  "PF_GROUP_MAIN",
+                                     "observed_markers":  [
+                                                              "PF_GROUP_MAIN",
+                                                              "pf_group_main"
+                                                          ],
+                                     "normalized_hash":  "88ffe72ff1b8392c56b8cf999151ef66b1db837e8edfee734a0d197d402e04b8",
+                                     "replay_status":  "accepted_probe",
+                                     "probe_kind":  "direct_python_manager_marker_replay",
+                                     "successful_probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-group-main"
+                                 }
+                             ],
+    "blocked_probe_cases":  [
+                                {
+                                    "case_id":  "tm-v1-diag-command-interface-dump",
+                                    "manager_frame_range":  {
+                                                                "from":  17,
+                                                                "to":  19
+                                                            },
+                                    "normalized_hash":  "45b82b8a5f5febcc6ca5086bd872984206d54d3ffd7e3c6fa3e7546e4ee6311b",
+                                    "expected_marker":  "ci_children_count=",
+                                    "observed_markers":  [
+                                                             "homepage[\u003cguid\u003e]",
+                                                             "homepage",
+                                                             "e1cib/navigationpoint/startpage"
+                                                         ],
+                                    "probe_status":  "rejected",
+                                    "accepted_protocol_mapping":  false,
+                                    "blocker":  "Direct marker replay did not observe the expected marker for this contract.",
+                                    "next_route":  "Add a typed side-channel/count contract or protocol collection-count parser; direct wire marker replay does not expose ci_children_count=.",
+                                    "probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-diag-command-interface-dump"
+                                },
+                                {
+                                    "case_id":  "tm-v1-diag-window-children",
+                                    "manager_frame_range":  {
+                                                                "from":  20,
+                                                                "to":  21
+                                                            },
+                                    "normalized_hash":  "a606b8eda4f9e3a65f15110b36bb28b04a965c6b8d3bcae9a9b0319d7e6a973f",
+                                    "expected_marker":  "window_children_count=",
+                                    "observed_markers":  [
+                                                             "homepage[\u003cguid\u003e]",
+                                                             "homepage",
+                                                             "e1cib/navigationpoint/startpage"
+                                                         ],
+                                    "probe_status":  "rejected",
+                                    "accepted_protocol_mapping":  false,
+                                    "blocker":  "Direct marker replay did not observe the expected marker for this contract.",
+                                    "next_route":  "Add a typed side-channel/count contract or protocol collection-count parser; direct wire marker replay does not expose window_children_count=.",
+                                    "probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-diag-window-children"
+                                },
+                                {
+                                    "case_id":  "tm-v1-diag-window-get-form-path",
+                                    "manager_frame_range":  {
+                                                                "from":  25,
+                                                                "to":  361
+                                                            },
+                                    "normalized_hash":  "0244782c3c4f28c8b3ad0bbf5dfaf37916cb642f0d82debe8543fdd08c71f85a",
+                                    "expected_marker":  "PF_FIXTURE_VERSION",
+                                    "observed_markers":  [
+                                                             "homepage[\u003cguid\u003e]",
+                                                             "homepage",
+                                                             "e1cib/navigationpoint/startpage"
+                                                         ],
+                                    "probe_status":  "rejected",
+                                    "accepted_protocol_mapping":  false,
+                                    "blocker":  "Direct marker replay did not observe the expected marker for this contract.",
+                                    "next_route":  "Isolate or retarget diagnostic_window_get_form_path; candidate title marker was rejected and current expected PF_FIXTURE_VERSION is not observed.",
+                                    "probe_dir":  "runtime/protocol-research/manager-fixture-marker-probe/20260606-promote-candidate-marker-contracts-focused-proof/tm-v1-diag-window-get-form-path"
+                                }
+                            ],
+    "contract_changes_applied":  [
+                                     {
+                                         "case_id":  "tm-v1-diag-window-find-form-marker",
+                                         "previous_expected_marker":  "PF_FIXTURE_VERSION",
+                                         "expected_marker":  "QA MCP Protocol Fixture V1"
+                                     },
+                                     {
+                                         "case_id":  "tm-v1-form-summary",
+                                         "previous_expected_marker":  "PF_FIXTURE_VERSION",
+                                         "expected_marker":  "QA MCP Protocol Fixture V1"
+                                     },
+                                     {
+                                         "case_id":  "tm-v1-button-inert",
+                                         "previous_expected_marker":  "TestedFormButton",
+                                         "expected_marker":  "PF_BUTTON_INERT"
+                                     },
+                                     {
+                                         "case_id":  "tm-v1-table-items",
+                                         "previous_expected_marker":  "PF_ROW_001",
+                                         "expected_marker":  "PF_TABLE_ITEMS"
+                                     },
+                                     {
+                                         "case_id":  "tm-v1-group-main",
+                                         "previous_expected_marker":  "PF_FORM_MAIN",
+                                         "expected_marker":  "PF_GROUP_MAIN"
+                                     }
+                                 ],
+    "verification":  {
+                         "accepted_count":  6,
+                         "blocked_count":  3,
+                         "candidate_contracts_promoted":  5,
+                         "current_pending_rows_promoted_by_direct_probe":  6,
+                         "active_window_probe_status":  "rejected_homepage_not_in_pending_scope",
+                         "acceptance_rule":  "Accepted rows must match focused-proof case_id, manager_frame_range and normalized_hash in report_manager_fixture_v1.py."
+                     }
+}

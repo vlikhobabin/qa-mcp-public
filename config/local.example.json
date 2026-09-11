@@ -1,0 +1,9 @@
+{
+  "platformExe": "C:\\Program Files\\1cv8\\8.3.27.2130\\bin\\1cv8.exe",
+  "clientInfobase": "C:\\1C_BASES\\vanessa_client",
+  "managerInfobase": "C:\\1C_BASES\\vanessa_manager",
+  "testClientPort": 15381,
+  "proxyListenPort": 15382,
+  "proxyTargetPort": 15381,
+  "vanessaExternalProcessing": "releases\\vanessa\\single\\vanessa-automation.epf"
+}

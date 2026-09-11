@@ -1,0 +1,1572 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2-safe-action.report.v1",
+  "generated_at": "2026-06-07T17:33:09Z",
+  "capture_id": "recovery-sequence",
+  "validation": {
+    "schema": "qa-mcp.v2-safe-action-manifest-validation.v1",
+    "generated_at": "2026-06-07T17:29:19Z",
+    "source_manifest": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\tools\\protocol-research\\manager_fixture_v2_safe_action_catalog.json",
+    "scenario": "manager-fixture-v2-safe-action",
+    "row_count": 7,
+    "executable_count": 5,
+    "status_counts": {
+      "accepted_for_capture": 5,
+      "blocked": 1,
+      "rejected": 1
+    },
+    "allowed_action_families": [
+      "activate_existing_window_or_form",
+      "expand_or_collapse_menu_or_group",
+      "focus_existing_element",
+      "select_local_table_row",
+      "switch_fixture_page"
+    ],
+    "required_fields": [
+      "action_id",
+      "target_id",
+      "target_marker",
+      "pre_state",
+      "action",
+      "post_state",
+      "recovery_expectation",
+      "mutates_business_data",
+      "allowed_action_family",
+      "expected_action_result_markers"
+    ],
+    "target_count": 7,
+    "reviewed_target_map_path": "docs/protocol-research/evidence/fixture-target-maps/20260607-client-fixture-v2-safe-action-target-map/target_map_summary.md",
+    "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths",
+    "rows": [
+      {
+        "action_id": "safe-activate-existing-window",
+        "case_id": "safe-activate-existing-window",
+        "target_id": "tm-v2-window-main",
+        "target_marker": "PF_FORM_MAIN",
+        "allowed_action_family": "activate_existing_window_or_form",
+        "validation_status": "accepted_for_capture",
+        "executable": true,
+        "owner": "project:qa-mcp",
+        "status_reason": "existing window/form activation is fixture-local and non-persistent",
+        "residual_risk": "candidate only until manager live proof separates action traffic",
+        "reasons": [],
+        "row": {
+          "action_id": "safe-activate-existing-window",
+          "case_id": "safe-activate-existing-window",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-window-main",
+          "target_marker": "PF_FORM_MAIN",
+          "pre_state": {
+            "active_window_marker": "PF_FORM_MAIN",
+            "fixture_state_marker": "PF_STATE_INITIAL"
+          },
+          "action": {
+            "family": "activate_existing_window_or_form",
+            "api_intent": "activate already opened fixture window"
+          },
+          "post_state": {
+            "active_window_marker": "PF_FORM_MAIN",
+            "fixture_state_marker": "PF_STATE_INITIAL"
+          },
+          "recovery_expectation": {
+            "route": "no_cleanup_required",
+            "expected_marker": "PF_FORM_MAIN"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "activate_existing_window_or_form",
+          "expected_action_result_markers": [
+            "PF_FORM_MAIN",
+            "PF_STATE_INITIAL"
+          ],
+          "safety_class": "safe_ui_action",
+          "provider_owner": "project:qa-mcp",
+          "status_reason": "existing window/form activation is fixture-local and non-persistent",
+          "residual_risk": "candidate only until manager live proof separates action traffic"
+        }
+      },
+      {
+        "action_id": "safe-focus-existing-edit-string",
+        "case_id": "safe-focus-existing-edit-string",
+        "target_id": "tm-v2-edit-string",
+        "target_marker": "PF_EDIT_STRING",
+        "allowed_action_family": "focus_existing_element",
+        "validation_status": "accepted_for_capture",
+        "executable": true,
+        "owner": "project:qa-mcp",
+        "status_reason": "focus change targets an existing fixture field and does not edit data",
+        "residual_risk": "candidate only until live focus proof confirms the same target identity",
+        "reasons": [],
+        "row": {
+          "action_id": "safe-focus-existing-edit-string",
+          "case_id": "safe-focus-existing-edit-string",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-edit-string",
+          "target_marker": "PF_EDIT_STRING",
+          "pre_state": {
+            "focus_marker": "PF_FORM_MAIN",
+            "last_action": "PF_STATE_INITIAL"
+          },
+          "action": {
+            "family": "focus_existing_element",
+            "api_intent": "set focus to existing edit field without changing value"
+          },
+          "post_state": {
+            "focus_marker": "PF_EDIT_STRING",
+            "value_marker": "PF_EDIT_STRING_VALUE"
+          },
+          "recovery_expectation": {
+            "route": "focus_form_shell",
+            "expected_marker": "PF_FORM_MAIN"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "focus_existing_element",
+          "expected_action_result_markers": [
+            "PF_EDIT_STRING",
+            "PF_EDIT_STRING_VALUE"
+          ],
+          "safety_class": "safe_ui_action",
+          "provider_owner": "project:qa-mcp",
+          "status_reason": "focus change targets an existing fixture field and does not edit data",
+          "residual_risk": "candidate only until live focus proof confirms the same target identity"
+        }
+      },
+      {
+        "action_id": "safe-switch-fixture-page-b",
+        "case_id": "safe-switch-fixture-page-b",
+        "target_id": "tm-v2-pages-main",
+        "target_marker": "PF_PAGES_MAIN",
+        "allowed_action_family": "switch_fixture_page",
+        "validation_status": "accepted_for_capture",
+        "executable": true,
+        "owner": "project:qa-mcp",
+        "status_reason": "page switching changes only transient fixture UI state",
+        "residual_risk": "candidate only until recovery proof shows page A is restored",
+        "reasons": [],
+        "row": {
+          "action_id": "safe-switch-fixture-page-b",
+          "case_id": "safe-switch-fixture-page-b",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-pages-main",
+          "target_marker": "PF_PAGES_MAIN",
+          "pre_state": {
+            "selected_page": "PF_PAGE_A",
+            "last_action": "PF_STATE_INITIAL"
+          },
+          "action": {
+            "family": "switch_fixture_page",
+            "api_intent": "select existing fixture page B"
+          },
+          "post_state": {
+            "selected_page": "PF_PAGE_B",
+            "selected_page_marker": "PF_SELECTED_PAGE"
+          },
+          "recovery_expectation": {
+            "route": "select_page_a",
+            "expected_marker": "PF_PAGE_A"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "switch_fixture_page",
+          "expected_action_result_markers": [
+            "PF_PAGES_MAIN",
+            "PF_PAGE_B",
+            "PF_SELECTED_PAGE"
+          ],
+          "safety_class": "safe_ui_action",
+          "provider_owner": "project:qa-mcp",
+          "status_reason": "page switching changes only transient fixture UI state",
+          "residual_risk": "candidate only until recovery proof shows page A is restored"
+        }
+      },
+      {
+        "action_id": "safe-select-local-row-002",
+        "case_id": "safe-select-local-row-002",
+        "target_id": "tm-v2-table-items",
+        "target_marker": "PF_TABLE_ITEMS",
+        "allowed_action_family": "select_local_table_row",
+        "validation_status": "accepted_for_capture",
+        "executable": true,
+        "owner": "project:qa-mcp",
+        "status_reason": "row selection targets local fixture table state only",
+        "residual_risk": "candidate only until reset proof shows PF_ROW_NONE after recovery",
+        "reasons": [],
+        "row": {
+          "action_id": "safe-select-local-row-002",
+          "case_id": "safe-select-local-row-002",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-table-items",
+          "target_marker": "PF_TABLE_ITEMS",
+          "pre_state": {
+            "selected_row_marker": "PF_ROW_NONE",
+            "table_marker": "PF_TABLE_ITEMS"
+          },
+          "action": {
+            "family": "select_local_table_row",
+            "api_intent": "select existing local fixture table row PF_ROW_002"
+          },
+          "post_state": {
+            "selected_row_marker": "PF_ROW_002",
+            "state_field_marker": "PF_SELECTED_ROW_MARKER"
+          },
+          "recovery_expectation": {
+            "route": "reset_fixture_state",
+            "expected_marker": "PF_ROW_NONE"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "select_local_table_row",
+          "expected_action_result_markers": [
+            "PF_TABLE_ITEMS",
+            "PF_ROW_002",
+            "PF_SELECTED_ROW_MARKER"
+          ],
+          "safety_class": "safe_ui_action",
+          "provider_owner": "project:qa-mcp",
+          "status_reason": "row selection targets local fixture table state only",
+          "residual_risk": "candidate only until reset proof shows PF_ROW_NONE after recovery"
+        }
+      },
+      {
+        "action_id": "safe-expand-commandbar-main",
+        "case_id": "safe-expand-commandbar-main",
+        "target_id": "tm-v2-commandbar-main",
+        "target_marker": "PF_COMMAND_BAR_MAIN",
+        "allowed_action_family": "expand_or_collapse_menu_or_group",
+        "validation_status": "accepted_for_capture",
+        "executable": true,
+        "owner": "project:qa-mcp",
+        "status_reason": "menu expansion is allowed only when no command item is invoked",
+        "residual_risk": "candidate only until live proof confirms no command click occurs",
+        "reasons": [],
+        "row": {
+          "action_id": "safe-expand-commandbar-main",
+          "case_id": "safe-expand-commandbar-main",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-commandbar-main",
+          "target_marker": "PF_COMMAND_BAR_MAIN",
+          "pre_state": {
+            "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+            "popup_state": "collapsed_or_not_open"
+          },
+          "action": {
+            "family": "expand_or_collapse_menu_or_group",
+            "api_intent": "expand command bar menu without invoking a command item"
+          },
+          "post_state": {
+            "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+            "popup_marker": "PF_COMMAND_POPUP"
+          },
+          "recovery_expectation": {
+            "route": "collapse_or_focus_form_shell",
+            "expected_marker": "PF_COMMAND_BAR_MAIN"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "expand_or_collapse_menu_or_group",
+          "expected_action_result_markers": [
+            "PF_COMMAND_BAR_MAIN",
+            "PF_COMMAND_POPUP"
+          ],
+          "safety_class": "safe_ui_action",
+          "provider_owner": "project:qa-mcp",
+          "status_reason": "menu expansion is allowed only when no command item is invoked",
+          "residual_risk": "candidate only until live proof confirms no command click occurs"
+        }
+      },
+      {
+        "action_id": "blocked-expand-popup-child",
+        "case_id": "blocked-expand-popup-child",
+        "target_id": "tm-v2-popup-child",
+        "target_marker": "PF_COMMAND_POPUP_CHILD",
+        "allowed_action_family": "expand_or_collapse_menu_or_group",
+        "validation_status": "blocked",
+        "executable": false,
+        "owner": "project:qa-mcp",
+        "status_reason": "popup child target identity is not reviewed enough for V2 execution",
+        "residual_risk": "a child popup target could invoke a command if marker identity drifts",
+        "reasons": [
+          "non_executable_status:blocked"
+        ],
+        "row": {
+          "action_id": "blocked-expand-popup-child",
+          "case_id": "blocked-expand-popup-child",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-popup-child",
+          "target_marker": "PF_COMMAND_POPUP_CHILD",
+          "pre_state": {
+            "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+            "popup_state": "unknown"
+          },
+          "action": {
+            "family": "expand_or_collapse_menu_or_group",
+            "api_intent": "attempt child popup expansion"
+          },
+          "post_state": {
+            "popup_child_marker": "PF_COMMAND_POPUP_CHILD"
+          },
+          "recovery_expectation": {
+            "route": "blocked_before_execution",
+            "expected_marker": "PF_COMMAND_BAR_MAIN"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "expand_or_collapse_menu_or_group",
+          "expected_action_result_markers": [
+            "PF_COMMAND_POPUP_CHILD"
+          ],
+          "safety_class": "safe_ui_action",
+          "tooling_status": "blocked",
+          "provider_owner": "project:qa-mcp",
+          "blocked_reason": "popup child target identity is not reviewed enough for V2 execution",
+          "residual_risk": "a child popup target could invoke a command if marker identity drifts"
+        }
+      },
+      {
+        "action_id": "rejected-click-inert-button",
+        "case_id": "rejected-click-inert-button",
+        "target_id": "tm-v2-button-inert",
+        "target_marker": "PF_BUTTON_INERT",
+        "allowed_action_family": "business_command_click",
+        "validation_status": "rejected",
+        "executable": false,
+        "owner": "project:qa-mcp",
+        "status_reason": "button clicks and business command clicks are outside V2 safe-action scope",
+        "residual_risk": "button behavior must move to a later mutation/recovery card",
+        "reasons": [
+          "unsupported_action_family:business_command_click"
+        ],
+        "row": {
+          "action_id": "rejected-click-inert-button",
+          "case_id": "rejected-click-inert-button",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-button-inert",
+          "target_marker": "PF_BUTTON_INERT",
+          "pre_state": {
+            "button_marker": "PF_BUTTON_INERT",
+            "last_action": "PF_STATE_INITIAL"
+          },
+          "action": {
+            "family": "business_command_click",
+            "api_intent": "click fixture button"
+          },
+          "post_state": {
+            "blocked_before_execution": true
+          },
+          "recovery_expectation": {
+            "route": "blocked_before_execution",
+            "expected_marker": "PF_STATE_INITIAL"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "business_command_click",
+          "expected_action_result_markers": [
+            "PF_BUTTON_INERT"
+          ],
+          "safety_class": "safe_ui_action",
+          "tooling_status": "rejected",
+          "provider_owner": "project:qa-mcp",
+          "rejection_reason": "button clicks and business command clicks are outside V2 safe-action scope",
+          "residual_risk": "button behavior must move to a later mutation/recovery card"
+        }
+      }
+    ]
+  },
+  "phase_event_count": 49,
+  "rows": [
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "safe-activate-existing-window",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "active_window_marker": "PF_FORM_MAIN",
+        "fixture_state_marker": "PF_STATE_INITIAL"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "safe-activate-existing-window",
+      "target_id": "tm-v2-window-main",
+      "target_marker": "PF_FORM_MAIN",
+      "mutates_business_data": false,
+      "allowed_action_family": "activate_existing_window_or_form",
+      "expected_action_result_markers": [
+        "PF_FORM_MAIN",
+        "PF_STATE_INITIAL"
+      ],
+      "pre_state": {
+        "active_window_marker": "PF_FORM_MAIN",
+        "fixture_state_marker": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "activate_existing_window_or_form",
+        "api_intent": "activate already opened fixture window"
+      },
+      "post_state": {
+        "active_window_marker": "PF_FORM_MAIN",
+        "fixture_state_marker": "PF_STATE_INITIAL"
+      },
+      "recovery_expectation": {
+        "route": "no_cleanup_required",
+        "expected_marker": "PF_FORM_MAIN"
+      },
+      "recovery_result": {
+        "status": "known_state_planned",
+        "route": "no_cleanup_required",
+        "expected_recovery_markers": [
+          "PF_FORM_MAIN"
+        ],
+        "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+        "live_recovery_executed": false
+      },
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "recovery_frame_range": null,
+      "action_result_markers": [
+        "PF_FORM_MAIN",
+        "PF_STATE_INITIAL"
+      ],
+      "rerun_determinism": {
+        "status": "dry_run_repeatable",
+        "pre_state": {
+          "active_window_marker": "PF_FORM_MAIN",
+          "fixture_state_marker": "PF_STATE_INITIAL"
+        },
+        "action_result_markers": [
+          "PF_FORM_MAIN",
+          "PF_STATE_INITIAL"
+        ],
+        "live_rerun_executed": false
+      },
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "recovery-sequence",
+        "sequence": 1,
+        "scenario": "manager-fixture-v2-safe-action",
+        "action_id": "safe-activate-existing-window",
+        "case_id": "safe-activate-existing-window",
+        "target_id": "tm-v2-window-main",
+        "target_marker": "PF_FORM_MAIN",
+        "allowed_action_family": "activate_existing_window_or_form",
+        "validation_status": "accepted_for_capture",
+        "mutates_business_data": false,
+        "status_reason": "dry-run dispatcher accepted validated allowlisted row",
+        "owner": "project:qa-mcp",
+        "residual_risk": "candidate only until manager live proof separates action traffic",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": false,
+        "status": "success",
+        "blocked_before_action": false,
+        "action_result_markers": [
+          "PF_FORM_MAIN",
+          "PF_STATE_INITIAL"
+        ],
+        "recovery_result": {
+          "status": "known_state_planned",
+          "route": "no_cleanup_required",
+          "expected_recovery_markers": [
+            "PF_FORM_MAIN"
+          ],
+          "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+          "live_recovery_executed": false
+        },
+        "recovery_frame_range": null,
+        "rerun_determinism": {
+          "status": "dry_run_repeatable",
+          "pre_state": {
+            "active_window_marker": "PF_FORM_MAIN",
+            "fixture_state_marker": "PF_STATE_INITIAL"
+          },
+          "action_result_markers": [
+            "PF_FORM_MAIN",
+            "PF_STATE_INITIAL"
+          ],
+          "live_rerun_executed": false
+        },
+        "phase_results": [
+          {
+            "phase": "pre_read",
+            "status": "success",
+            "observed_state": {
+              "active_window_marker": "PF_FORM_MAIN",
+              "fixture_state_marker": "PF_STATE_INITIAL"
+            }
+          },
+          {
+            "phase": "action_start",
+            "status": "success",
+            "action": {
+              "family": "activate_existing_window_or_form",
+              "api_intent": "activate already opened fixture window"
+            },
+            "allowed_action_family": "activate_existing_window_or_form"
+          },
+          {
+            "phase": "action_end",
+            "status": "success",
+            "action_result_markers": [
+              "PF_FORM_MAIN",
+              "PF_STATE_INITIAL"
+            ]
+          },
+          {
+            "phase": "post_read",
+            "status": "success",
+            "observed_state": {
+              "active_window_marker": "PF_FORM_MAIN",
+              "fixture_state_marker": "PF_STATE_INITIAL"
+            },
+            "action_result_markers": [
+              "PF_FORM_MAIN",
+              "PF_STATE_INITIAL"
+            ]
+          },
+          {
+            "phase": "recovery",
+            "status": "success",
+            "recovery_expectation": {
+              "route": "no_cleanup_required",
+              "expected_marker": "PF_FORM_MAIN"
+            }
+          },
+          {
+            "phase": "recovery_read",
+            "status": "success",
+            "recovery_result": {
+              "status": "known_state_planned",
+              "route": "no_cleanup_required",
+              "expected_recovery_markers": [
+                "PF_FORM_MAIN"
+              ],
+              "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+              "live_recovery_executed": false
+            }
+          }
+        ],
+        "reasons": []
+      },
+      "availability": "supported",
+      "capture_id": "recovery-sequence",
+      "frame_range": null,
+      "request_size": 0,
+      "response_size": 0,
+      "dynamic_fields": [],
+      "pre_normalization_hash": null,
+      "normalized_hash": null,
+      "normalization_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "pending",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "accepted_for_capture",
+      "non_accepted_reasons": [
+        "missing_action_frame_range",
+        "replay_or_probe_unavailable"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "semantic_sources": [],
+      "notes": ""
+    },
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "safe-focus-existing-edit-string",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "focus_marker": "PF_FORM_MAIN",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "safe-focus-existing-edit-string",
+      "target_id": "tm-v2-edit-string",
+      "target_marker": "PF_EDIT_STRING",
+      "mutates_business_data": false,
+      "allowed_action_family": "focus_existing_element",
+      "expected_action_result_markers": [
+        "PF_EDIT_STRING",
+        "PF_EDIT_STRING_VALUE"
+      ],
+      "pre_state": {
+        "focus_marker": "PF_FORM_MAIN",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "focus_existing_element",
+        "api_intent": "set focus to existing edit field without changing value"
+      },
+      "post_state": {
+        "focus_marker": "PF_EDIT_STRING",
+        "value_marker": "PF_EDIT_STRING_VALUE"
+      },
+      "recovery_expectation": {
+        "route": "focus_form_shell",
+        "expected_marker": "PF_FORM_MAIN"
+      },
+      "recovery_result": {
+        "status": "known_state_planned",
+        "route": "focus_form_shell",
+        "expected_recovery_markers": [
+          "PF_FORM_MAIN"
+        ],
+        "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+        "live_recovery_executed": false
+      },
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "recovery_frame_range": null,
+      "action_result_markers": [
+        "PF_EDIT_STRING",
+        "PF_EDIT_STRING_VALUE"
+      ],
+      "rerun_determinism": {
+        "status": "dry_run_repeatable",
+        "pre_state": {
+          "focus_marker": "PF_FORM_MAIN",
+          "last_action": "PF_STATE_INITIAL"
+        },
+        "action_result_markers": [
+          "PF_EDIT_STRING",
+          "PF_EDIT_STRING_VALUE"
+        ],
+        "live_rerun_executed": false
+      },
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "recovery-sequence",
+        "sequence": 2,
+        "scenario": "manager-fixture-v2-safe-action",
+        "action_id": "safe-focus-existing-edit-string",
+        "case_id": "safe-focus-existing-edit-string",
+        "target_id": "tm-v2-edit-string",
+        "target_marker": "PF_EDIT_STRING",
+        "allowed_action_family": "focus_existing_element",
+        "validation_status": "accepted_for_capture",
+        "mutates_business_data": false,
+        "status_reason": "dry-run dispatcher accepted validated allowlisted row",
+        "owner": "project:qa-mcp",
+        "residual_risk": "candidate only until live focus proof confirms the same target identity",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": false,
+        "status": "success",
+        "blocked_before_action": false,
+        "action_result_markers": [
+          "PF_EDIT_STRING",
+          "PF_EDIT_STRING_VALUE"
+        ],
+        "recovery_result": {
+          "status": "known_state_planned",
+          "route": "focus_form_shell",
+          "expected_recovery_markers": [
+            "PF_FORM_MAIN"
+          ],
+          "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+          "live_recovery_executed": false
+        },
+        "recovery_frame_range": null,
+        "rerun_determinism": {
+          "status": "dry_run_repeatable",
+          "pre_state": {
+            "focus_marker": "PF_FORM_MAIN",
+            "last_action": "PF_STATE_INITIAL"
+          },
+          "action_result_markers": [
+            "PF_EDIT_STRING",
+            "PF_EDIT_STRING_VALUE"
+          ],
+          "live_rerun_executed": false
+        },
+        "phase_results": [
+          {
+            "phase": "pre_read",
+            "status": "success",
+            "observed_state": {
+              "focus_marker": "PF_FORM_MAIN",
+              "last_action": "PF_STATE_INITIAL"
+            }
+          },
+          {
+            "phase": "action_start",
+            "status": "success",
+            "action": {
+              "family": "focus_existing_element",
+              "api_intent": "set focus to existing edit field without changing value"
+            },
+            "allowed_action_family": "focus_existing_element"
+          },
+          {
+            "phase": "action_end",
+            "status": "success",
+            "action_result_markers": [
+              "PF_EDIT_STRING",
+              "PF_EDIT_STRING_VALUE"
+            ]
+          },
+          {
+            "phase": "post_read",
+            "status": "success",
+            "observed_state": {
+              "focus_marker": "PF_EDIT_STRING",
+              "value_marker": "PF_EDIT_STRING_VALUE"
+            },
+            "action_result_markers": [
+              "PF_EDIT_STRING",
+              "PF_EDIT_STRING_VALUE"
+            ]
+          },
+          {
+            "phase": "recovery",
+            "status": "success",
+            "recovery_expectation": {
+              "route": "focus_form_shell",
+              "expected_marker": "PF_FORM_MAIN"
+            }
+          },
+          {
+            "phase": "recovery_read",
+            "status": "success",
+            "recovery_result": {
+              "status": "known_state_planned",
+              "route": "focus_form_shell",
+              "expected_recovery_markers": [
+                "PF_FORM_MAIN"
+              ],
+              "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+              "live_recovery_executed": false
+            }
+          }
+        ],
+        "reasons": []
+      },
+      "availability": "supported",
+      "capture_id": "recovery-sequence",
+      "frame_range": null,
+      "request_size": 0,
+      "response_size": 0,
+      "dynamic_fields": [],
+      "pre_normalization_hash": null,
+      "normalized_hash": null,
+      "normalization_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "pending",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "accepted_for_capture",
+      "non_accepted_reasons": [
+        "missing_action_frame_range",
+        "replay_or_probe_unavailable"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "semantic_sources": [],
+      "notes": ""
+    },
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "safe-switch-fixture-page-b",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "selected_page": "PF_PAGE_A",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "safe-switch-fixture-page-b",
+      "target_id": "tm-v2-pages-main",
+      "target_marker": "PF_PAGES_MAIN",
+      "mutates_business_data": false,
+      "allowed_action_family": "switch_fixture_page",
+      "expected_action_result_markers": [
+        "PF_PAGES_MAIN",
+        "PF_PAGE_B",
+        "PF_SELECTED_PAGE"
+      ],
+      "pre_state": {
+        "selected_page": "PF_PAGE_A",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "switch_fixture_page",
+        "api_intent": "select existing fixture page B"
+      },
+      "post_state": {
+        "selected_page": "PF_PAGE_B",
+        "selected_page_marker": "PF_SELECTED_PAGE"
+      },
+      "recovery_expectation": {
+        "route": "select_page_a",
+        "expected_marker": "PF_PAGE_A"
+      },
+      "recovery_result": {
+        "status": "known_state_planned",
+        "route": "select_page_a",
+        "expected_recovery_markers": [
+          "PF_PAGE_A"
+        ],
+        "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+        "live_recovery_executed": false
+      },
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "recovery_frame_range": null,
+      "action_result_markers": [
+        "PF_PAGES_MAIN",
+        "PF_PAGE_B",
+        "PF_SELECTED_PAGE"
+      ],
+      "rerun_determinism": {
+        "status": "dry_run_repeatable",
+        "pre_state": {
+          "selected_page": "PF_PAGE_A",
+          "last_action": "PF_STATE_INITIAL"
+        },
+        "action_result_markers": [
+          "PF_PAGES_MAIN",
+          "PF_PAGE_B",
+          "PF_SELECTED_PAGE"
+        ],
+        "live_rerun_executed": false
+      },
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "recovery-sequence",
+        "sequence": 3,
+        "scenario": "manager-fixture-v2-safe-action",
+        "action_id": "safe-switch-fixture-page-b",
+        "case_id": "safe-switch-fixture-page-b",
+        "target_id": "tm-v2-pages-main",
+        "target_marker": "PF_PAGES_MAIN",
+        "allowed_action_family": "switch_fixture_page",
+        "validation_status": "accepted_for_capture",
+        "mutates_business_data": false,
+        "status_reason": "dry-run dispatcher accepted validated allowlisted row",
+        "owner": "project:qa-mcp",
+        "residual_risk": "candidate only until recovery proof shows page A is restored",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": false,
+        "status": "success",
+        "blocked_before_action": false,
+        "action_result_markers": [
+          "PF_PAGES_MAIN",
+          "PF_PAGE_B",
+          "PF_SELECTED_PAGE"
+        ],
+        "recovery_result": {
+          "status": "known_state_planned",
+          "route": "select_page_a",
+          "expected_recovery_markers": [
+            "PF_PAGE_A"
+          ],
+          "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+          "live_recovery_executed": false
+        },
+        "recovery_frame_range": null,
+        "rerun_determinism": {
+          "status": "dry_run_repeatable",
+          "pre_state": {
+            "selected_page": "PF_PAGE_A",
+            "last_action": "PF_STATE_INITIAL"
+          },
+          "action_result_markers": [
+            "PF_PAGES_MAIN",
+            "PF_PAGE_B",
+            "PF_SELECTED_PAGE"
+          ],
+          "live_rerun_executed": false
+        },
+        "phase_results": [
+          {
+            "phase": "pre_read",
+            "status": "success",
+            "observed_state": {
+              "selected_page": "PF_PAGE_A",
+              "last_action": "PF_STATE_INITIAL"
+            }
+          },
+          {
+            "phase": "action_start",
+            "status": "success",
+            "action": {
+              "family": "switch_fixture_page",
+              "api_intent": "select existing fixture page B"
+            },
+            "allowed_action_family": "switch_fixture_page"
+          },
+          {
+            "phase": "action_end",
+            "status": "success",
+            "action_result_markers": [
+              "PF_PAGES_MAIN",
+              "PF_PAGE_B",
+              "PF_SELECTED_PAGE"
+            ]
+          },
+          {
+            "phase": "post_read",
+            "status": "success",
+            "observed_state": {
+              "selected_page": "PF_PAGE_B",
+              "selected_page_marker": "PF_SELECTED_PAGE"
+            },
+            "action_result_markers": [
+              "PF_PAGES_MAIN",
+              "PF_PAGE_B",
+              "PF_SELECTED_PAGE"
+            ]
+          },
+          {
+            "phase": "recovery",
+            "status": "success",
+            "recovery_expectation": {
+              "route": "select_page_a",
+              "expected_marker": "PF_PAGE_A"
+            }
+          },
+          {
+            "phase": "recovery_read",
+            "status": "success",
+            "recovery_result": {
+              "status": "known_state_planned",
+              "route": "select_page_a",
+              "expected_recovery_markers": [
+                "PF_PAGE_A"
+              ],
+              "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+              "live_recovery_executed": false
+            }
+          }
+        ],
+        "reasons": []
+      },
+      "availability": "supported",
+      "capture_id": "recovery-sequence",
+      "frame_range": null,
+      "request_size": 0,
+      "response_size": 0,
+      "dynamic_fields": [],
+      "pre_normalization_hash": null,
+      "normalized_hash": null,
+      "normalization_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "pending",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "accepted_for_capture",
+      "non_accepted_reasons": [
+        "missing_action_frame_range",
+        "replay_or_probe_unavailable"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "semantic_sources": [],
+      "notes": ""
+    },
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "safe-select-local-row-002",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "selected_row_marker": "PF_ROW_NONE",
+        "table_marker": "PF_TABLE_ITEMS"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "safe-select-local-row-002",
+      "target_id": "tm-v2-table-items",
+      "target_marker": "PF_TABLE_ITEMS",
+      "mutates_business_data": false,
+      "allowed_action_family": "select_local_table_row",
+      "expected_action_result_markers": [
+        "PF_TABLE_ITEMS",
+        "PF_ROW_002",
+        "PF_SELECTED_ROW_MARKER"
+      ],
+      "pre_state": {
+        "selected_row_marker": "PF_ROW_NONE",
+        "table_marker": "PF_TABLE_ITEMS"
+      },
+      "action": {
+        "family": "select_local_table_row",
+        "api_intent": "select existing local fixture table row PF_ROW_002"
+      },
+      "post_state": {
+        "selected_row_marker": "PF_ROW_002",
+        "state_field_marker": "PF_SELECTED_ROW_MARKER"
+      },
+      "recovery_expectation": {
+        "route": "reset_fixture_state",
+        "expected_marker": "PF_ROW_NONE"
+      },
+      "recovery_result": {
+        "status": "known_state_planned",
+        "route": "reset_fixture_state",
+        "expected_recovery_markers": [
+          "PF_ROW_NONE"
+        ],
+        "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+        "live_recovery_executed": false
+      },
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "recovery_frame_range": null,
+      "action_result_markers": [
+        "PF_TABLE_ITEMS",
+        "PF_ROW_002",
+        "PF_SELECTED_ROW_MARKER"
+      ],
+      "rerun_determinism": {
+        "status": "dry_run_repeatable",
+        "pre_state": {
+          "selected_row_marker": "PF_ROW_NONE",
+          "table_marker": "PF_TABLE_ITEMS"
+        },
+        "action_result_markers": [
+          "PF_TABLE_ITEMS",
+          "PF_ROW_002",
+          "PF_SELECTED_ROW_MARKER"
+        ],
+        "live_rerun_executed": false
+      },
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "recovery-sequence",
+        "sequence": 4,
+        "scenario": "manager-fixture-v2-safe-action",
+        "action_id": "safe-select-local-row-002",
+        "case_id": "safe-select-local-row-002",
+        "target_id": "tm-v2-table-items",
+        "target_marker": "PF_TABLE_ITEMS",
+        "allowed_action_family": "select_local_table_row",
+        "validation_status": "accepted_for_capture",
+        "mutates_business_data": false,
+        "status_reason": "dry-run dispatcher accepted validated allowlisted row",
+        "owner": "project:qa-mcp",
+        "residual_risk": "candidate only until reset proof shows PF_ROW_NONE after recovery",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": false,
+        "status": "success",
+        "blocked_before_action": false,
+        "action_result_markers": [
+          "PF_TABLE_ITEMS",
+          "PF_ROW_002",
+          "PF_SELECTED_ROW_MARKER"
+        ],
+        "recovery_result": {
+          "status": "known_state_planned",
+          "route": "reset_fixture_state",
+          "expected_recovery_markers": [
+            "PF_ROW_NONE"
+          ],
+          "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+          "live_recovery_executed": false
+        },
+        "recovery_frame_range": null,
+        "rerun_determinism": {
+          "status": "dry_run_repeatable",
+          "pre_state": {
+            "selected_row_marker": "PF_ROW_NONE",
+            "table_marker": "PF_TABLE_ITEMS"
+          },
+          "action_result_markers": [
+            "PF_TABLE_ITEMS",
+            "PF_ROW_002",
+            "PF_SELECTED_ROW_MARKER"
+          ],
+          "live_rerun_executed": false
+        },
+        "phase_results": [
+          {
+            "phase": "pre_read",
+            "status": "success",
+            "observed_state": {
+              "selected_row_marker": "PF_ROW_NONE",
+              "table_marker": "PF_TABLE_ITEMS"
+            }
+          },
+          {
+            "phase": "action_start",
+            "status": "success",
+            "action": {
+              "family": "select_local_table_row",
+              "api_intent": "select existing local fixture table row PF_ROW_002"
+            },
+            "allowed_action_family": "select_local_table_row"
+          },
+          {
+            "phase": "action_end",
+            "status": "success",
+            "action_result_markers": [
+              "PF_TABLE_ITEMS",
+              "PF_ROW_002",
+              "PF_SELECTED_ROW_MARKER"
+            ]
+          },
+          {
+            "phase": "post_read",
+            "status": "success",
+            "observed_state": {
+              "selected_row_marker": "PF_ROW_002",
+              "state_field_marker": "PF_SELECTED_ROW_MARKER"
+            },
+            "action_result_markers": [
+              "PF_TABLE_ITEMS",
+              "PF_ROW_002",
+              "PF_SELECTED_ROW_MARKER"
+            ]
+          },
+          {
+            "phase": "recovery",
+            "status": "success",
+            "recovery_expectation": {
+              "route": "reset_fixture_state",
+              "expected_marker": "PF_ROW_NONE"
+            }
+          },
+          {
+            "phase": "recovery_read",
+            "status": "success",
+            "recovery_result": {
+              "status": "known_state_planned",
+              "route": "reset_fixture_state",
+              "expected_recovery_markers": [
+                "PF_ROW_NONE"
+              ],
+              "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+              "live_recovery_executed": false
+            }
+          }
+        ],
+        "reasons": []
+      },
+      "availability": "supported",
+      "capture_id": "recovery-sequence",
+      "frame_range": null,
+      "request_size": 0,
+      "response_size": 0,
+      "dynamic_fields": [],
+      "pre_normalization_hash": null,
+      "normalized_hash": null,
+      "normalization_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "pending",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "accepted_for_capture",
+      "non_accepted_reasons": [
+        "missing_action_frame_range",
+        "replay_or_probe_unavailable"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "semantic_sources": [],
+      "notes": ""
+    },
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "safe-expand-commandbar-main",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_state": "collapsed_or_not_open"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "safe-expand-commandbar-main",
+      "target_id": "tm-v2-commandbar-main",
+      "target_marker": "PF_COMMAND_BAR_MAIN",
+      "mutates_business_data": false,
+      "allowed_action_family": "expand_or_collapse_menu_or_group",
+      "expected_action_result_markers": [
+        "PF_COMMAND_BAR_MAIN",
+        "PF_COMMAND_POPUP"
+      ],
+      "pre_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_state": "collapsed_or_not_open"
+      },
+      "action": {
+        "family": "expand_or_collapse_menu_or_group",
+        "api_intent": "expand command bar menu without invoking a command item"
+      },
+      "post_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_marker": "PF_COMMAND_POPUP"
+      },
+      "recovery_expectation": {
+        "route": "collapse_or_focus_form_shell",
+        "expected_marker": "PF_COMMAND_BAR_MAIN"
+      },
+      "recovery_result": {
+        "status": "known_state_planned",
+        "route": "collapse_or_focus_form_shell",
+        "expected_recovery_markers": [
+          "PF_COMMAND_BAR_MAIN"
+        ],
+        "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+        "live_recovery_executed": false
+      },
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "recovery_frame_range": null,
+      "action_result_markers": [
+        "PF_COMMAND_BAR_MAIN",
+        "PF_COMMAND_POPUP"
+      ],
+      "rerun_determinism": {
+        "status": "dry_run_repeatable",
+        "pre_state": {
+          "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+          "popup_state": "collapsed_or_not_open"
+        },
+        "action_result_markers": [
+          "PF_COMMAND_BAR_MAIN",
+          "PF_COMMAND_POPUP"
+        ],
+        "live_rerun_executed": false
+      },
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "recovery-sequence",
+        "sequence": 5,
+        "scenario": "manager-fixture-v2-safe-action",
+        "action_id": "safe-expand-commandbar-main",
+        "case_id": "safe-expand-commandbar-main",
+        "target_id": "tm-v2-commandbar-main",
+        "target_marker": "PF_COMMAND_BAR_MAIN",
+        "allowed_action_family": "expand_or_collapse_menu_or_group",
+        "validation_status": "accepted_for_capture",
+        "mutates_business_data": false,
+        "status_reason": "dry-run dispatcher accepted validated allowlisted row",
+        "owner": "project:qa-mcp",
+        "residual_risk": "candidate only until live proof confirms no command click occurs",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": false,
+        "status": "success",
+        "blocked_before_action": false,
+        "action_result_markers": [
+          "PF_COMMAND_BAR_MAIN",
+          "PF_COMMAND_POPUP"
+        ],
+        "recovery_result": {
+          "status": "known_state_planned",
+          "route": "collapse_or_focus_form_shell",
+          "expected_recovery_markers": [
+            "PF_COMMAND_BAR_MAIN"
+          ],
+          "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+          "live_recovery_executed": false
+        },
+        "recovery_frame_range": null,
+        "rerun_determinism": {
+          "status": "dry_run_repeatable",
+          "pre_state": {
+            "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+            "popup_state": "collapsed_or_not_open"
+          },
+          "action_result_markers": [
+            "PF_COMMAND_BAR_MAIN",
+            "PF_COMMAND_POPUP"
+          ],
+          "live_rerun_executed": false
+        },
+        "phase_results": [
+          {
+            "phase": "pre_read",
+            "status": "success",
+            "observed_state": {
+              "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+              "popup_state": "collapsed_or_not_open"
+            }
+          },
+          {
+            "phase": "action_start",
+            "status": "success",
+            "action": {
+              "family": "expand_or_collapse_menu_or_group",
+              "api_intent": "expand command bar menu without invoking a command item"
+            },
+            "allowed_action_family": "expand_or_collapse_menu_or_group"
+          },
+          {
+            "phase": "action_end",
+            "status": "success",
+            "action_result_markers": [
+              "PF_COMMAND_BAR_MAIN",
+              "PF_COMMAND_POPUP"
+            ]
+          },
+          {
+            "phase": "post_read",
+            "status": "success",
+            "observed_state": {
+              "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+              "popup_marker": "PF_COMMAND_POPUP"
+            },
+            "action_result_markers": [
+              "PF_COMMAND_BAR_MAIN",
+              "PF_COMMAND_POPUP"
+            ]
+          },
+          {
+            "phase": "recovery",
+            "status": "success",
+            "recovery_expectation": {
+              "route": "collapse_or_focus_form_shell",
+              "expected_marker": "PF_COMMAND_BAR_MAIN"
+            }
+          },
+          {
+            "phase": "recovery_read",
+            "status": "success",
+            "recovery_result": {
+              "status": "known_state_planned",
+              "route": "collapse_or_focus_form_shell",
+              "expected_recovery_markers": [
+                "PF_COMMAND_BAR_MAIN"
+              ],
+              "known_state_rationale": "dry-run recovery contract records the expected baseline or known-state markers; live marker proof is required before acceptance",
+              "live_recovery_executed": false
+            }
+          }
+        ],
+        "reasons": []
+      },
+      "availability": "supported",
+      "capture_id": "recovery-sequence",
+      "frame_range": null,
+      "request_size": 0,
+      "response_size": 0,
+      "dynamic_fields": [],
+      "pre_normalization_hash": null,
+      "normalized_hash": null,
+      "normalization_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "pending",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "accepted_for_capture",
+      "non_accepted_reasons": [
+        "missing_action_frame_range",
+        "replay_or_probe_unavailable"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "semantic_sources": [],
+      "notes": ""
+    },
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "blocked-expand-popup-child",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_state": "unknown"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "blocked-expand-popup-child",
+      "target_id": "tm-v2-popup-child",
+      "target_marker": "PF_COMMAND_POPUP_CHILD",
+      "mutates_business_data": false,
+      "allowed_action_family": "expand_or_collapse_menu_or_group",
+      "expected_action_result_markers": [
+        "PF_COMMAND_POPUP_CHILD"
+      ],
+      "pre_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_state": "unknown"
+      },
+      "action": {
+        "family": "expand_or_collapse_menu_or_group",
+        "api_intent": "attempt child popup expansion"
+      },
+      "post_state": {
+        "popup_child_marker": "PF_COMMAND_POPUP_CHILD"
+      },
+      "recovery_expectation": {
+        "route": "blocked_before_execution",
+        "expected_marker": "PF_COMMAND_BAR_MAIN"
+      },
+      "recovery_result": null,
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "recovery_frame_range": null,
+      "action_result_markers": [],
+      "rerun_determinism": null,
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "recovery-sequence",
+        "sequence": 6,
+        "scenario": "manager-fixture-v2-safe-action",
+        "action_id": "blocked-expand-popup-child",
+        "case_id": "blocked-expand-popup-child",
+        "target_id": "tm-v2-popup-child",
+        "target_marker": "PF_COMMAND_POPUP_CHILD",
+        "allowed_action_family": "expand_or_collapse_menu_or_group",
+        "validation_status": "blocked",
+        "mutates_business_data": false,
+        "status_reason": "popup child target identity is not reviewed enough for V2 execution",
+        "owner": "project:qa-mcp",
+        "residual_risk": "a child popup target could invoke a command if marker identity drifts",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": false,
+        "status": "blocked",
+        "blocked_before_action": true,
+        "action_result_markers": [],
+        "phase_results": [],
+        "reasons": [
+          "non_executable_status:blocked"
+        ]
+      },
+      "availability": "supported",
+      "capture_id": "recovery-sequence",
+      "frame_range": null,
+      "request_size": 0,
+      "response_size": 0,
+      "dynamic_fields": [],
+      "pre_normalization_hash": null,
+      "normalized_hash": null,
+      "normalization_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "blocked",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "blocked",
+      "non_accepted_reasons": [
+        "missing_action_frame_range",
+        "missing_action_result_markers",
+        "missing_recovery_frame_range_or_known_state",
+        "missing_recovery_result",
+        "non_executable_status:blocked"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "semantic_sources": [],
+      "notes": ""
+    },
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "rejected-click-inert-button",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "button_marker": "PF_BUTTON_INERT",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "rejected-click-inert-button",
+      "target_id": "tm-v2-button-inert",
+      "target_marker": "PF_BUTTON_INERT",
+      "mutates_business_data": false,
+      "allowed_action_family": "business_command_click",
+      "expected_action_result_markers": [
+        "PF_BUTTON_INERT"
+      ],
+      "pre_state": {
+        "button_marker": "PF_BUTTON_INERT",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "business_command_click",
+        "api_intent": "click fixture button"
+      },
+      "post_state": {
+        "blocked_before_execution": true
+      },
+      "recovery_expectation": {
+        "route": "blocked_before_execution",
+        "expected_marker": "PF_STATE_INITIAL"
+      },
+      "recovery_result": null,
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "recovery_frame_range": null,
+      "action_result_markers": [],
+      "rerun_determinism": null,
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "recovery-sequence",
+        "sequence": 7,
+        "scenario": "manager-fixture-v2-safe-action",
+        "action_id": "rejected-click-inert-button",
+        "case_id": "rejected-click-inert-button",
+        "target_id": "tm-v2-button-inert",
+        "target_marker": "PF_BUTTON_INERT",
+        "allowed_action_family": "business_command_click",
+        "validation_status": "rejected",
+        "mutates_business_data": false,
+        "status_reason": "button clicks and business command clicks are outside V2 safe-action scope",
+        "owner": "project:qa-mcp",
+        "residual_risk": "button behavior must move to a later mutation/recovery card",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": false,
+        "status": "rejected",
+        "blocked_before_action": true,
+        "action_result_markers": [],
+        "phase_results": [],
+        "reasons": [
+          "unsupported_action_family:business_command_click"
+        ]
+      },
+      "availability": "supported",
+      "capture_id": "recovery-sequence",
+      "frame_range": null,
+      "request_size": 0,
+      "response_size": 0,
+      "dynamic_fields": [],
+      "pre_normalization_hash": null,
+      "normalized_hash": null,
+      "normalization_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "rejected",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "rejected",
+      "non_accepted_reasons": [
+        "missing_action_frame_range",
+        "missing_action_result_markers",
+        "missing_recovery_frame_range_or_known_state",
+        "missing_recovery_result",
+        "unsupported_action_family:business_command_click"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "semantic_sources": [],
+      "notes": ""
+    }
+  ]
+}

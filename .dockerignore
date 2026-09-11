@@ -1,0 +1,22 @@
+# Docker build context = only what package installation and image verification
+# need. The development/research harness stays outside the delivered image.
+
+# everything by default...
+*
+# ...then re-include the product surface (NOTE: the image ships the PRODUCT readme
+# `delivery/README.md`, NOT the dev/research root README.md):
+!pyproject.toml
+!uv.lock
+!delivery/
+delivery/*
+!delivery/README.md
+!src/
+!docker/
+docker/*
+!docker/entrypoint.sh
+!docker/verify_open_image.py
+
+# defensively drop heavy/irrelevant things even if a re-include pulls a parent dir
+**/__pycache__
+*.egg-info
+*.pyc

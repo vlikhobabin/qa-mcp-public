@@ -1,0 +1,45 @@
+{
+  "run_id": "20260605-source",
+  "change": "finish-manager-fixture-v1-harness-run-loop",
+  "generated_at": "2026-06-05T00:00:00+03:00",
+  "source_files": {
+    "module": "C:\\1C_BASES\\EDT\\vanessa_qa\\vanessa_manager\\src\\DataProcessors\\ProtocolFixtureTestManager\\Forms\\ManagerHarness\\Module.bsl",
+    "form": "C:\\1C_BASES\\EDT\\vanessa_qa\\vanessa_manager\\src\\DataProcessors\\ProtocolFixtureTestManager\\Forms\\ManagerHarness\\Form.form"
+  },
+  "checks": [
+    {
+      "name": "form_xml_parse",
+      "status": "passed",
+      "evidence": "PowerShell [xml] parse completed without exception"
+    },
+    {
+      "name": "form_command_attribute_assertion",
+      "status": "passed",
+      "evidence": "TM_RUN_MANIFEST_V1 command and TM_MANIFEST_PATH attribute were found in Form.form"
+    },
+    {
+      "name": "bsl_routine_boundary_count",
+      "status": "passed",
+      "evidence": "23 routine starts and 23 routine ends"
+    },
+    {
+      "name": "edt_probe_readiness",
+      "status": "provider_gap",
+      "evidence": "lab.edt.bslprobe missing; interactive EDT shell timed out during readiness check"
+    },
+    {
+      "name": "metadata_structural_lookup",
+      "status": "provider_gap",
+      "evidence": "Default demo10413 snapshot has no ProtocolFixtureTestManager form command evidence"
+    }
+  ],
+  "source_contract": {
+    "entrypoint": "TM_RUN_MANIFEST_V1",
+    "server_runner": "ВыполнитьЗапускМанифестаV1",
+    "manifest_field": "TM_MANIFEST_PATH",
+    "event_schema": "manager_case_event.v1",
+    "result_schema": "manager_harness_result.v1",
+    "non_read_only_rejection": true,
+    "accepted_protocol_mapping": false
+  }
+}

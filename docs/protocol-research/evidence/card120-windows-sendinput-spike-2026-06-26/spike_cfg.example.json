@@ -1,0 +1,10 @@
+{
+  "src": "C:\\Users\\historical-user\\TEMP\\qa_spike\\src",
+  "capture": "C:\\Users\\historical-user\\TEMP\\qa_spike\\captures\\genuine-card98-demo-write",
+  "value": "WIN-SENDINPUT-OK-Кириллица-2026",
+  "pid": 17372,
+  "port": 15381,
+  "save": false,
+  "out": "C:\\Users\\historical-user\\TEMP\\qa_spike_result.json",
+  "shot": "C:\\Users\\historical-user\\TEMP\\qa_spike_after.png"
+}

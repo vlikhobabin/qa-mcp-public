@@ -1,0 +1,169 @@
+{
+  "schema": "readonly-element-request-hashes.v1",
+  "generated_at": "2026-06-03T10:29:00+03:00",
+  "change": "capture-readonly-element-request-hashes",
+  "source": {
+    "kind": "reviewed_compact_corpus",
+    "path": "docs/protocol-research/evidence/corpus/20260602-172319-expanded-readonly/corpus_cases.jsonl",
+    "capture_id": "20260602-172319",
+    "raw_capture_path": "runtime/protocol-research/captures/20260602-172319/",
+    "raw_capture_committed": false
+  },
+  "runtime": {
+    "live_capture_started": false,
+    "reason": "Existing reviewed compact corpus rows satisfied the request-hash evidence need.",
+    "owned_process_cleanup_required": false
+  },
+  "rows": [
+    {
+      "case_id": "form-element-details",
+      "query": "form-element-details",
+      "operation_family": "form_element_details",
+      "safety_class": "read_only",
+      "element_family": "EditField",
+      "capture_id": "20260602-172319",
+      "frame_range": {
+        "manager_to_client": {
+          "from": 101,
+          "to": 106
+        },
+        "client_to_manager": {
+          "from": 102,
+          "to": 107
+        }
+      },
+      "request_size": 1200,
+      "response_size": 972,
+      "pre_normalization_hash": "dc8ff61706fd4187ba0c5863c3d4175354f15d8f0245b08ed7cb54cc4ad406e1",
+      "normalized_hash": "b56da7520da52418f0941530becea763233f5affc658a7bb3da9c1c3162e630a",
+      "dynamic_field_groups": [
+        {
+          "name": "ack_guid_uuid_le",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [2],
+          "length": 16,
+          "replacement": "<ack_guid_uuid_le>"
+        },
+        {
+          "name": "sequence_uint16_le",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [19],
+          "length": 2,
+          "replacement": "<sequence_uint16_le>"
+        },
+        {
+          "name": "nonce",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [68],
+          "length": 16,
+          "replacement": "<nonce>"
+        },
+        {
+          "name": "ascii_guid",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [95, 145],
+          "length": 36,
+          "replacement": "<ascii_guid>"
+        }
+      ],
+      "operation_token": {
+        "kind": "operation_token_51_hex",
+        "normalization_role": "preserved_semantic_token",
+        "frames": "101..106",
+        "offset": 51,
+        "length": 16,
+        "values": [
+          "0a102bc90b462c40b5aeb6e2329a7234"
+        ],
+        "known_response_echo_offset": 13
+      },
+      "response_markers": [
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[0d7cc276-ebc0-499a-be8f-f58555e01af2]",
+        "EditField"
+      ],
+      "replay_status": "accepted",
+      "probe_status": "ok",
+      "source_evidence_path": "docs/protocol-research/evidence/corpus/20260602-172319-expanded-readonly/",
+      "notes": "Reviewed request-hash evidence extracted from compact corpus row."
+    },
+    {
+      "case_id": "typed-input-field-readonly",
+      "query": "form-element-details",
+      "operation_family": "typed_input_field_readonly",
+      "safety_class": "read_only",
+      "element_family": "EditField",
+      "capture_id": "20260602-172319",
+      "frame_range": {
+        "manager_to_client": {
+          "from": 101,
+          "to": 106
+        },
+        "client_to_manager": {
+          "from": 102,
+          "to": 107
+        }
+      },
+      "request_size": 1200,
+      "response_size": 972,
+      "pre_normalization_hash": "dc8ff61706fd4187ba0c5863c3d4175354f15d8f0245b08ed7cb54cc4ad406e1",
+      "normalized_hash": "b56da7520da52418f0941530becea763233f5affc658a7bb3da9c1c3162e630a",
+      "dynamic_field_groups": [
+        {
+          "name": "ack_guid_uuid_le",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [2],
+          "length": 16,
+          "replacement": "<ack_guid_uuid_le>"
+        },
+        {
+          "name": "sequence_uint16_le",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [19],
+          "length": 2,
+          "replacement": "<sequence_uint16_le>"
+        },
+        {
+          "name": "nonce",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [68],
+          "length": 16,
+          "replacement": "<nonce>"
+        },
+        {
+          "name": "ascii_guid",
+          "direction": "manager_to_client",
+          "frames": "101..106",
+          "offsets": [95, 145],
+          "length": 36,
+          "replacement": "<ascii_guid>"
+        }
+      ],
+      "operation_token": {
+        "kind": "operation_token_51_hex",
+        "normalization_role": "preserved_semantic_token",
+        "frames": "101..106",
+        "offset": 51,
+        "length": 16,
+        "values": [
+          "0a102bc90b462c40b5aeb6e2329a7234"
+        ],
+        "known_response_echo_offset": 13
+      },
+      "response_markers": [
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[0d7cc276-ebc0-499a-be8f-f58555e01af2]",
+        "EditField"
+      ],
+      "replay_status": "accepted",
+      "probe_status": "ok",
+      "source_evidence_path": "docs/protocol-research/evidence/corpus/20260602-172319-expanded-readonly/",
+      "notes": "Reviewed request-hash evidence extracted from compact corpus row; later classification must confirm the typed-input operation join."
+    }
+  ]
+}

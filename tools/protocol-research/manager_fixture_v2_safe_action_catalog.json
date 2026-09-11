@@ -1,0 +1,280 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2.safe-action-catalog.v1",
+  "catalog_version": "2026-06-07.1",
+  "scenario": "manager-fixture-v2-safe-action",
+  "fixture_version": "protocol-fixture.v2-safe-action-candidate",
+  "reviewed_target_map_path": "docs/protocol-research/evidence/fixture-target-maps/20260607-client-fixture-v2-safe-action-target-map/target_map_summary.md",
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths",
+  "safe_action_targets": [
+    {
+      "target_id": "tm-v2-window-main",
+      "target_marker": "PF_FORM_MAIN",
+      "target_kind": "existing_window_or_form",
+      "target_status": "reviewed",
+      "allowed_action_families": ["activate_existing_window_or_form"],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260607-client-fixture-v2-safe-action-target-map/target_map_summary.md"
+    },
+    {
+      "target_id": "tm-v2-edit-string",
+      "target_marker": "PF_EDIT_STRING",
+      "target_kind": "visible_form_element",
+      "target_status": "reviewed",
+      "allowed_action_families": ["focus_existing_element"],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json"
+    },
+    {
+      "target_id": "tm-v2-pages-main",
+      "target_marker": "PF_PAGES_MAIN",
+      "target_kind": "fixture_page_group",
+      "target_status": "reviewed",
+      "allowed_action_families": ["switch_fixture_page"],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json"
+    },
+    {
+      "target_id": "tm-v2-table-items",
+      "target_marker": "PF_TABLE_ITEMS",
+      "target_kind": "local_fixture_table",
+      "target_status": "reviewed",
+      "allowed_action_families": ["select_local_table_row"],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json"
+    },
+    {
+      "target_id": "tm-v2-commandbar-main",
+      "target_marker": "PF_COMMAND_BAR_MAIN",
+      "target_kind": "fixture_command_bar",
+      "target_status": "reviewed",
+      "allowed_action_families": ["expand_or_collapse_menu_or_group"],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json"
+    },
+    {
+      "target_id": "tm-v2-popup-child",
+      "target_marker": "PF_COMMAND_POPUP_CHILD",
+      "target_kind": "fixture_command_bar_popup_child",
+      "target_status": "blocked",
+      "allowed_action_families": ["expand_or_collapse_menu_or_group"],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json",
+      "status_reason": "popup child identity is not reviewed enough for manager V2 execution"
+    },
+    {
+      "target_id": "tm-v2-button-inert",
+      "target_marker": "PF_BUTTON_INERT",
+      "target_kind": "fixture_button",
+      "target_status": "reviewed",
+      "allowed_action_families": [],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json",
+      "status_reason": "button clicks remain outside manager V2 safe-action execution"
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "safe-activate-existing-window",
+      "case_id": "safe-activate-existing-window",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-window-main",
+      "target_marker": "PF_FORM_MAIN",
+      "pre_state": {
+        "active_window_marker": "PF_FORM_MAIN",
+        "fixture_state_marker": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "activate_existing_window_or_form",
+        "api_intent": "activate already opened fixture window"
+      },
+      "post_state": {
+        "active_window_marker": "PF_FORM_MAIN",
+        "fixture_state_marker": "PF_STATE_INITIAL"
+      },
+      "recovery_expectation": {
+        "route": "no_cleanup_required",
+        "expected_marker": "PF_FORM_MAIN"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "activate_existing_window_or_form",
+      "expected_action_result_markers": ["PF_FORM_MAIN", "PF_STATE_INITIAL"],
+      "safety_class": "safe_ui_action",
+      "provider_owner": "project:qa-mcp",
+      "status_reason": "existing window/form activation is fixture-local and non-persistent",
+      "residual_risk": "candidate only until manager live proof separates action traffic"
+    },
+    {
+      "action_id": "safe-focus-existing-edit-string",
+      "case_id": "safe-focus-existing-edit-string",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-edit-string",
+      "target_marker": "PF_EDIT_STRING",
+      "pre_state": {
+        "focus_marker": "PF_FORM_MAIN",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "focus_existing_element",
+        "api_intent": "set focus to existing edit field without changing value"
+      },
+      "post_state": {
+        "focus_marker": "PF_EDIT_STRING",
+        "value_marker": "PF_EDIT_STRING_VALUE"
+      },
+      "recovery_expectation": {
+        "route": "focus_form_shell",
+        "expected_marker": "PF_FORM_MAIN"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "focus_existing_element",
+      "expected_action_result_markers": ["PF_EDIT_STRING", "PF_EDIT_STRING_VALUE"],
+      "safety_class": "safe_ui_action",
+      "provider_owner": "project:qa-mcp",
+      "status_reason": "focus change targets an existing fixture field and does not edit data",
+      "residual_risk": "candidate only until live focus proof confirms the same target identity"
+    },
+    {
+      "action_id": "safe-switch-fixture-page-b",
+      "case_id": "safe-switch-fixture-page-b",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-pages-main",
+      "target_marker": "PF_PAGES_MAIN",
+      "pre_state": {
+        "selected_page": "PF_PAGE_A",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "switch_fixture_page",
+        "api_intent": "select existing fixture page B"
+      },
+      "post_state": {
+        "selected_page": "PF_PAGE_B",
+        "selected_page_marker": "PF_SELECTED_PAGE"
+      },
+      "recovery_expectation": {
+        "route": "select_page_a",
+        "expected_marker": "PF_PAGE_A"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "switch_fixture_page",
+      "expected_action_result_markers": ["PF_PAGES_MAIN", "PF_PAGE_B", "PF_SELECTED_PAGE"],
+      "safety_class": "safe_ui_action",
+      "provider_owner": "project:qa-mcp",
+      "status_reason": "page switching changes only transient fixture UI state",
+      "residual_risk": "candidate only until recovery proof shows page A is restored"
+    },
+    {
+      "action_id": "safe-select-local-row-002",
+      "case_id": "safe-select-local-row-002",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-table-items",
+      "target_marker": "PF_TABLE_ITEMS",
+      "pre_state": {
+        "selected_row_marker": "PF_ROW_NONE",
+        "table_marker": "PF_TABLE_ITEMS"
+      },
+      "action": {
+        "family": "select_local_table_row",
+        "api_intent": "select existing local fixture table row PF_ROW_002"
+      },
+      "post_state": {
+        "selected_row_marker": "PF_ROW_002",
+        "state_field_marker": "PF_SELECTED_ROW_MARKER"
+      },
+      "recovery_expectation": {
+        "route": "reset_fixture_state",
+        "expected_marker": "PF_ROW_NONE"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "select_local_table_row",
+      "expected_action_result_markers": ["PF_TABLE_ITEMS", "PF_ROW_002", "PF_SELECTED_ROW_MARKER"],
+      "safety_class": "safe_ui_action",
+      "provider_owner": "project:qa-mcp",
+      "status_reason": "row selection targets local fixture table state only",
+      "residual_risk": "candidate only until reset proof shows PF_ROW_NONE after recovery"
+    },
+    {
+      "action_id": "safe-expand-commandbar-main",
+      "case_id": "safe-expand-commandbar-main",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-commandbar-main",
+      "target_marker": "PF_COMMAND_BAR_MAIN",
+      "pre_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_state": "collapsed_or_not_open"
+      },
+      "action": {
+        "family": "expand_or_collapse_menu_or_group",
+        "api_intent": "expand command bar menu without invoking a command item"
+      },
+      "post_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_marker": "PF_COMMAND_POPUP"
+      },
+      "recovery_expectation": {
+        "route": "collapse_or_focus_form_shell",
+        "expected_marker": "PF_COMMAND_BAR_MAIN"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "expand_or_collapse_menu_or_group",
+      "expected_action_result_markers": ["PF_COMMAND_BAR_MAIN", "PF_COMMAND_POPUP"],
+      "safety_class": "safe_ui_action",
+      "provider_owner": "project:qa-mcp",
+      "status_reason": "menu expansion is allowed only when no command item is invoked",
+      "residual_risk": "candidate only until live proof confirms no command click occurs"
+    },
+    {
+      "action_id": "blocked-expand-popup-child",
+      "case_id": "blocked-expand-popup-child",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-popup-child",
+      "target_marker": "PF_COMMAND_POPUP_CHILD",
+      "pre_state": {
+        "commandbar_marker": "PF_COMMAND_BAR_MAIN",
+        "popup_state": "unknown"
+      },
+      "action": {
+        "family": "expand_or_collapse_menu_or_group",
+        "api_intent": "attempt child popup expansion"
+      },
+      "post_state": {
+        "popup_child_marker": "PF_COMMAND_POPUP_CHILD"
+      },
+      "recovery_expectation": {
+        "route": "blocked_before_execution",
+        "expected_marker": "PF_COMMAND_BAR_MAIN"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "expand_or_collapse_menu_or_group",
+      "expected_action_result_markers": ["PF_COMMAND_POPUP_CHILD"],
+      "safety_class": "safe_ui_action",
+      "tooling_status": "blocked",
+      "provider_owner": "project:qa-mcp",
+      "blocked_reason": "popup child target identity is not reviewed enough for V2 execution",
+      "residual_risk": "a child popup target could invoke a command if marker identity drifts"
+    },
+    {
+      "action_id": "rejected-click-inert-button",
+      "case_id": "rejected-click-inert-button",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-button-inert",
+      "target_marker": "PF_BUTTON_INERT",
+      "pre_state": {
+        "button_marker": "PF_BUTTON_INERT",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "business_command_click",
+        "api_intent": "click fixture button"
+      },
+      "post_state": {
+        "blocked_before_execution": true
+      },
+      "recovery_expectation": {
+        "route": "blocked_before_execution",
+        "expected_marker": "PF_STATE_INITIAL"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "business_command_click",
+      "expected_action_result_markers": ["PF_BUTTON_INERT"],
+      "safety_class": "safe_ui_action",
+      "tooling_status": "rejected",
+      "provider_owner": "project:qa-mcp",
+      "rejection_reason": "button clicks and business command clicks are outside V2 safe-action scope",
+      "residual_risk": "button behavior must move to a later mutation/recovery card"
+    }
+  ]
+}

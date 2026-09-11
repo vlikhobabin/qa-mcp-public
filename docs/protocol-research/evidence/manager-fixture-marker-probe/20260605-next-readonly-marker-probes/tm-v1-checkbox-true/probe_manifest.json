@@ -1,0 +1,13 @@
+{
+  "schema": "manager-fixture-marker-probe.manifest.v1",
+  "started_at": "2026-06-05T11:30:46.773318Z",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-full-readonly-bootstrap-second-boundary-guard",
+  "case_id": "tm-v1-checkbox-true",
+  "query": "manager-fixture-marker",
+  "target_marker": "PF_CHECKBOX_TRUE",
+  "expected_marker": "CheckBox",
+  "target_host": "127.0.0.1",
+  "target_port": 15381,
+  "warmup_active_window": true,
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\manager-fixture-marker-probe\\20260605-next-readonly-marker-probes\\tm-v1-checkbox-true"
+}

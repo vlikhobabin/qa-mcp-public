@@ -1,0 +1,284 @@
+"""Build an objective API coverage report for the protocol corpus.
+
+The report joins the machine-readable automated-testing API inventory with a
+curated case-to-API map. The inventory is the denominator: every member of
+every inventory object counts as one coverage unit. The case map links corpus
+case ids and their proof status to inventory members.
+
+Coverage buckets:
+
+- ``accepted_reviewed``: the mapping is ``reviewed`` and the linked cases have
+  accepted proof. Only this bucket counts as confirmed coverage.
+- ``accepted_seed``: linked cases have accepted proof but the case-to-API
+  correspondence is still a ``seed`` assumption awaiting review.
+- ``candidate``: linked cases have non-accepted proof status.
+- ``uncovered``: no mapping references the member.
+
+The tool fails closed when a mapping references an API member that does not
+exist in the inventory.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+from collections import OrderedDict
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_INVENTORY = (
+    REPO_ROOT
+    / "docs"
+    / "protocol-research"
+    / "api-inventory"
+    / "automated-testing-8.3.27.1786.json"
+)
+DEFAULT_CASE_MAP = (
+    REPO_ROOT / "docs" / "protocol-research" / "api-inventory" / "case-api-map.json"
+)
+DEFAULT_OUTPUT = REPO_ROOT / "docs" / "protocol-research" / "coverage-report.md"
+
+ACCEPTED_PROOF_STATUSES = {"accepted", "accepted_side_channel"}
+BUCKET_ORDER = ("accepted_reviewed", "accepted_seed", "candidate", "uncovered")
+
+
+def load_json(path: Path) -> dict:
+    with path.open(encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def inventory_members(inventory: dict) -> "OrderedDict[str, dict]":
+    """Return an ordered map of ``Object.Member`` keys to member descriptors."""
+
+    members: "OrderedDict[str, dict]" = OrderedDict()
+    for obj in inventory.get("objects", []):
+        object_name = obj.get("english_name") or obj.get("name")
+        for member in obj.get("members", []):
+            member_name = member.get("english_name") or member.get("name")
+            key = f"{object_name}.{member_name}"
+            members[key] = {
+                "object": object_name,
+                "member": member_name,
+                "kind": member.get("kind"),
+                "safety_class": member.get("safety_class"),
+            }
+    return members
+
+
+def classify_mapping(mapping: dict) -> str:
+    proof_status = mapping.get("proof_status")
+    confidence = mapping.get("mapping_confidence")
+    if proof_status in ACCEPTED_PROOF_STATUSES:
+        if confidence == "reviewed":
+            return "accepted_reviewed"
+        return "accepted_seed"
+    return "candidate"
+
+
+def build_coverage(inventory: dict, case_map: dict) -> dict:
+    members = inventory_members(inventory)
+    coverage = {key: {"bucket": "uncovered", "mappings": []} for key in members}
+    unmatched = []
+
+    for mapping in case_map.get("mappings", []):
+        api = mapping.get("api")
+        if api not in coverage:
+            unmatched.append(api)
+            continue
+        bucket = classify_mapping(mapping)
+        entry = coverage[api]
+        entry["mappings"].append(mapping)
+        current = entry["bucket"]
+        if BUCKET_ORDER.index(bucket) < BUCKET_ORDER.index(current):
+            entry["bucket"] = bucket
+
+    bucket_counts = {bucket: 0 for bucket in BUCKET_ORDER}
+    per_object: "OrderedDict[str, dict]" = OrderedDict()
+    per_safety: "OrderedDict[str, dict]" = OrderedDict()
+    for key, descriptor in members.items():
+        bucket = coverage[key]["bucket"]
+        bucket_counts[bucket] += 1
+        obj_stats = per_object.setdefault(
+            descriptor["object"], {b: 0 for b in BUCKET_ORDER} | {"total": 0}
+        )
+        obj_stats[bucket] += 1
+        obj_stats["total"] += 1
+        safety = descriptor["safety_class"] or "unclassified"
+        safety_stats = per_safety.setdefault(
+            safety, {b: 0 for b in BUCKET_ORDER} | {"total": 0}
+        )
+        safety_stats[bucket] += 1
+        safety_stats["total"] += 1
+
+    return {
+        "members": members,
+        "coverage": coverage,
+        "bucket_counts": bucket_counts,
+        "per_object": per_object,
+        "per_safety": per_safety,
+        "unmatched_mappings": unmatched,
+        "total_members": len(members),
+    }
+
+
+def percent(part: int, total: int) -> str:
+    if total == 0:
+        return "0.0%"
+    return f"{100.0 * part / total:.1f}%"
+
+
+def render_markdown(result: dict, inventory: dict, case_map: dict) -> str:
+    total = result["total_members"]
+    counts = result["bucket_counts"]
+    source_version = inventory.get("source", {}).get("platform_version") or (
+        inventory.get("objects") or [{}]
+    )[0].get("source_platform_version", "unknown")
+
+    lines = [
+        "# Protocol Corpus API Coverage Report",
+        "",
+        "This report is generated by `tools/protocol-research/coverage_report.py`.",
+        "Do not edit it by hand; regenerate it after accepted-mapping or",
+        "case-map changes.",
+        "",
+        f"- Inventory: `{case_map.get('inventory', 'unknown')}`"
+        f" (help snapshot `{source_version}`)",
+        f"- Case map: `docs/protocol-research/api-inventory/case-api-map.json`"
+        f" (updated `{case_map.get('updated_at', 'unknown')}`)",
+        f"- Coverage denominator: `{total}` inventory members.",
+        "",
+        "Seed mappings are semantic correspondences awaiting review against the",
+        "manager harness source or direct probe call shape. Only",
+        "`accepted_reviewed` counts as confirmed coverage; `accepted_seed` and",
+        "`candidate` are planning signals, not protocol claims.",
+        "",
+        "## Summary",
+        "",
+        "| Bucket | Members | Share |",
+        "| --- | ---: | ---: |",
+    ]
+    for bucket in BUCKET_ORDER:
+        lines.append(
+            f"| `{bucket}` | {counts[bucket]} | {percent(counts[bucket], total)} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Coverage By Object",
+            "",
+            "| Object | Total | Accepted reviewed | Accepted seed | Candidate | Uncovered |",
+            "| --- | ---: | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for obj, stats in result["per_object"].items():
+        lines.append(
+            f"| `{obj}` | {stats['total']} | {stats['accepted_reviewed']} |"
+            f" {stats['accepted_seed']} | {stats['candidate']} |"
+            f" {stats['uncovered']} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Coverage By Safety Class",
+            "",
+            "| Safety class | Total | Accepted reviewed | Accepted seed | Candidate | Uncovered |",
+            "| --- | ---: | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for safety, stats in result["per_safety"].items():
+        lines.append(
+            f"| `{safety}` | {stats['total']} | {stats['accepted_reviewed']} |"
+            f" {stats['accepted_seed']} | {stats['candidate']} |"
+            f" {stats['uncovered']} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Mapped Members",
+            "",
+            "| API member | Bucket | Proof status | Confidence | Case ids |",
+            "| --- | --- | --- | --- | --- |",
+        ]
+    )
+    for key, entry in result["coverage"].items():
+        if not entry["mappings"]:
+            continue
+        for mapping in entry["mappings"]:
+            case_ids = ", ".join(f"`{c}`" for c in mapping.get("case_ids", []))
+            lines.append(
+                f"| `{key}` | `{entry['bucket']}` |"
+                f" `{mapping.get('proof_status')}` |"
+                f" `{mapping.get('mapping_confidence')}` | {case_ids} |"
+            )
+    if result["unmatched_mappings"]:
+        lines.extend(
+            [
+                "",
+                "## Unmatched Mappings",
+                "",
+            ]
+        )
+        for api in result["unmatched_mappings"]:
+            lines.append(f"- `{api}` does not match any inventory member.")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--inventory", type=Path, default=DEFAULT_INVENTORY)
+    parser.add_argument("--case-map", type=Path, default=DEFAULT_CASE_MAP)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument(
+        "--json-output",
+        type=Path,
+        default=None,
+        help="Optional machine-readable summary path.",
+    )
+    args = parser.parse_args()
+
+    inventory = load_json(args.inventory)
+    case_map = load_json(args.case_map)
+    result = build_coverage(inventory, case_map)
+
+    markdown = render_markdown(result, inventory, case_map)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(markdown, encoding="utf-8", newline="\n")
+
+    if args.json_output:
+        summary = {
+            "schema": "qa-mcp.api-coverage-summary.v1",
+            "total_members": result["total_members"],
+            "bucket_counts": result["bucket_counts"],
+            "unmatched_mappings": result["unmatched_mappings"],
+        }
+        args.json_output.parent.mkdir(parents=True, exist_ok=True)
+        args.json_output.write_text(
+            json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
+
+    counts = result["bucket_counts"]
+    print(f"coverage-report={args.output}")
+    print(
+        "coverage-summary: total={total} accepted_reviewed={ar}"
+        " accepted_seed={as_} candidate={c} uncovered={u}".format(
+            total=result["total_members"],
+            ar=counts["accepted_reviewed"],
+            as_=counts["accepted_seed"],
+            c=counts["candidate"],
+            u=counts["uncovered"],
+        )
+    )
+    if result["unmatched_mappings"]:
+        print(
+            "coverage-error: unmatched mappings: "
+            + ", ".join(result["unmatched_mappings"])
+        )
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

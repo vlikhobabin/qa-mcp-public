@@ -1,0 +1,29 @@
+{
+  "schema": "qa-mcp.frame-minimization-ablation.v1",
+  "run": "probe-min (keep_every_poll=4)",
+  "finding": {
+    "total_manager_frames": 861,
+    "dominant_poll_frames": 642,
+    "poll_clusters": 3,
+    "poll_cluster_sizes": [
+      194,
+      221,
+      227
+    ],
+    "essential_non_poll_frames": 219,
+    "distinct_normalized_forms": 85
+  },
+  "ablation": {
+    "keep_every_poll": 4,
+    "frames_sent": 380,
+    "frames_skipped": 481,
+    "reduction": "56%",
+    "exchanges_with_response": 380,
+    "diverged_at": null
+  },
+  "verification": {
+    "Большой_Склад_responses": 22,
+    "Средний_Склад_responses": 0,
+    "conclusion": "dropping 481 of 642 poll frames (keeping every 4th) still drives the synthesized navigation chain to the re-targeted Большой card with zero divergence — the busy-wait poll frames are largely redundant and the flow is minimizable by 56% live. Offline floor is ~219 essential frames (keep_every=20 -> 252)."
+  }
+}

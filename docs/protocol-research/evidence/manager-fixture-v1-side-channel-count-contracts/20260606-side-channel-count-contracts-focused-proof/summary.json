@@ -1,0 +1,46 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.side-channel-count-contract-summary.v1",
+  "catalog_version": "2026-06-06.2",
+  "catalog_path": "tools/protocol-research/manager_fixture_v1_command_catalog.json",
+  "dry_run_capture": "runtime/protocol-research/captures/20260606-side-channel-count-contracts-dryrun",
+  "focused_proof_capture": "runtime/protocol-research/captures/20260606-side-channel-count-contracts-focused-proof",
+  "focused_proof_report": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-side-channel-count-contracts-focused-proof/",
+  "catalog_comparison": "docs/protocol-research/evidence/manager-fixture-v1-side-channel-count-contracts/20260606-side-channel-count-contracts-focused-proof/catalog_comparison.json",
+  "accepted_side_channel_cases": [
+    {
+      "case_id": "tm-v1-diag-command-interface-dump",
+      "contract_kind": "manager_result_preview_contains",
+      "expected_result_preview_marker": "ci_children_count=",
+      "observed_result_preview": "ci_source=active_window;ci_children_count=0",
+      "manager_frame_range": {
+        "from": 16,
+        "to": 18
+      },
+      "normalized_hash": "45b82b8a5f5febcc6ca5086bd872984206d54d3ffd7e3c6fa3e7546e4ee6311b",
+      "validation_status": "accepted"
+    },
+    {
+      "case_id": "tm-v1-diag-window-children",
+      "contract_kind": "manager_result_preview_contains",
+      "expected_result_preview_marker": "window_children_count=",
+      "observed_result_preview": "window_children_count=1",
+      "manager_frame_range": {
+        "from": 19,
+        "to": 20
+      },
+      "normalized_hash": "a606b8eda4f9e3a65f15110b36bb28b04a965c6b8d3bcae9a9b0319d7e6a973f",
+      "validation_status": "accepted"
+    }
+  ],
+  "remaining_former_pending_case_ids": [
+    "tm-v1-diag-window-get-form-path"
+  ],
+  "verification": {
+    "catalog_drift_status": "ok",
+    "focused_command_count": 2,
+    "focused_joined_count": 2,
+    "accepted_side_channel_count": 2,
+    "direct_wire_marker_claimed": false,
+    "raw_output_policy": "raw capture and generated probe output stay under ignored runtime/protocol-research paths"
+  }
+}

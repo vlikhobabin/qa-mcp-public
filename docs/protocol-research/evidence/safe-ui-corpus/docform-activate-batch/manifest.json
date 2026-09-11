@@ -1,0 +1,27 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "docform-activate-batch",
+  "api_member": "TestedFormField.Activate",
+  "operation_family": "form_element_activate",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "act_field_activate",
+  "notes": "Multi-phase safe_ui_action batch on a new Корректировка остатка form: activate a field, the table and the page group (each .Активизировать via 'я активизирую поле с именем'), and Tab between form items (GotoNextItem/GotoPreviousItem via 'я перехожу к следующему/предыдущему реквизиту'). Read-only focus moves; nothing persists. vanessa_client only.",
+  "phase_member_map": {
+    "act_field_activate": "TestedFormField.Activate",
+    "act_table_activate": "TestedFormTable.Activate",
+    "act_group_activate": "TestedFormGroup.Activate",
+    "act_form_next": "TestedForm.GotoNextItem",
+    "act_form_prev": "TestedForm.GotoPreviousItem"
+  },
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Документ.ОперацияПоУчетуТоваров.Создать\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "act_field_activate", "text": "И я активизирую поле с именем 'Организация'"},
+    {"phase": "act_table_activate", "text": "И я активизирую поле с именем 'ТоварныеЗапасы'"},
+    {"phase": "act_group_activate", "text": "И я активизирую поле с именем 'ГруппаТоварныеЗапасы'"},
+    {"phase": "act_form_next", "text": "И я перехожу к следующему реквизиту"},
+    {"phase": "act_form_prev", "text": "И я перехожу к предыдущему реквизиту"},
+    {"phase": "post_read", "read": true}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "qa-mcp.protocol-capture-metadata.v1",
+  "capture_id": "demo10413-nextrow-flat",
+  "platform_build": "8.3.27.2130",
+  "configuration": {
+    "name": "demo10413",
+    "version": "",
+    "vendor": ""
+  },
+  "capture_dir": "src/qa_mcp/_bundled/8.3/captures/nextrow-flat",
+  "manager_templates": "src/qa_mcp/_bundled/8.3/templates/manager_frame_templates.json",
+  "generated_at": "2026-07-08T07:23:40Z",
+  "notes": "Sanitized metadata sidecar for bundled demo10413 flat-list capture; raw capture payloads stay in the bundled traffic artifact."
+}

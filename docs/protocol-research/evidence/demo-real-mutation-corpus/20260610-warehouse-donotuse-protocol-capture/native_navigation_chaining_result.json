@@ -1,0 +1,21 @@
+{
+  "schema": "qa-mcp.native-navigation-chaining.v1",
+  "run": "probe-nav-20260611-191229",
+  "driver": "run_replay_with_renderers (operation frames synthesized, rest rebound-replayed)",
+  "synthesized_operations": [
+    "open_list (render_form_command)",
+    "select_row (render_select_row_command, Средний->Большой)",
+    "open_card (render_form_command)"
+  ],
+  "flow": {
+    "manager_frames": 861,
+    "exchanges_with_response": 861,
+    "synthesized_frames": 3,
+    "diverged_at": null
+  },
+  "verification": {
+    "Большой_Склад_responses": 22,
+    "Средний_Склад_responses": 0,
+    "conclusion": "the package navigation-command synthesizers, chained via run_replay_with_renderers, drove the flow live end-to-end and opened the re-targeted Большой warehouse card — semantic operation control via constructed commands, not raw replay."
+  }
+}

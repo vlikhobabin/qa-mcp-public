@@ -1,0 +1,27 @@
+{
+  "schema": "qa-mcp.compare-probe-reference.by-ordinal.v1",
+  "generated_at": "2026-06-13T05:27:01Z",
+  "mode": "probe-ordinal",
+  "phase": "act_group_expand",
+  "reference": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\groupce-ref2",
+  "probe": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\groupce-ref2\\probe-live\\proxy-capture",
+  "phase_ordinal_counts": {
+    "client_to_manager": 6,
+    "manager_to_client": 6
+  },
+  "reference_hash_by_direction": {
+    "client_to_manager": "dc9c7468cb7a60b89d337ff5fb65133230d7983805f625f064aba7fc69a07ae3",
+    "manager_to_client": "d7fc308dfbec54f47c6fd27252808ed58ade9e2e855a0ce5b72510aee6b673c7"
+  },
+  "probe_hash_by_direction": {
+    "client_to_manager": "dc9c7468cb7a60b89d337ff5fb65133230d7983805f625f064aba7fc69a07ae3",
+    "manager_to_client": "d7fc308dfbec54f47c6fd27252808ed58ade9e2e855a0ce5b72510aee6b673c7"
+  },
+  "hash_match_by_direction": {
+    "client_to_manager": true,
+    "manager_to_client": true
+  },
+  "structural_match": true,
+  "all_hashes_match": true,
+  "verdict": "accepted"
+}

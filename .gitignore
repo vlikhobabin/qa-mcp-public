@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Local GitHub token(s) — NEVER commit
+*.key
+vlikhobabin.key
+
+# Local AI/MCP state
+.ai1c/
+.ai/
+.codex/*
+!.codex/config.toml
+!.codex/skills/
+.codex/skills/*
+!.codex/skills/changerail-*
+!.codex/skills/chrl-*
+!.codex/skills/openspec-*
+.codex/tmp/
+.codex/auth.json
+.codex/auth.toml
+.codex/sessions/
+.metadata/
+
+# Local configuration
+config/local.json
+*.local.json
+.claude/template_settings.json
+.claude/settings.local.json
+
+# Runtime and generated artifacts
+runtime/**
+!runtime/.gitkeep
+!runtime/protocol-research/
+!runtime/protocol-research/.gitkeep
+!runtime/protocol-research/captures/
+!runtime/protocol-research/captures/.gitkeep
+artifacts/**
+!artifacts/.gitkeep
+.runtime/
+.artifacts/
+.workspaces/
+
+# Card-by-card verification proof dumps — kept local, not shipped to the public repo
+# Anchored to repo root so it does NOT match docs/protocol-research/evidence/ (kept dev-harness fixtures)
+/evidence/
+# Heavy protocol proof-dump run output (regenerated under runtime/, never committed)
+docs/protocol-research/**/frame_join_report.json
+docs/protocol-research/**/*.png
+
+# 1C local binaries and infobases
+infobases/**
+!infobases/
+!infobases/manager/
+!infobases/manager/.gitkeep
+releases/**
+!releases/
+!releases/vanessa/
+!releases/vanessa/single/
+!releases/vanessa/single/.gitkeep
+*.dt
+*.cf
+*.cfu
+
+# Logs and captures
+*.log
+*.pid
+*.pcap
+*.pcapng
+*.tmp
+
+# host-agent Go build artifacts (e.g. `go build ./...` without -o drops the
+# 10MB module binary into the package dir — never commit it)
+host-agent/windows-display-agent/qa-mcp-host-agent
+host-agent/windows-display-agent/qa-mcp-host-agent.exe
+
+# Third-party (1C:EDT) proprietary model/schema files — kept locally as decode reference, not redistributed
+*.xcore
+evidence/card110-edt-xcore-schemas-2026-06-22/plugin.xml

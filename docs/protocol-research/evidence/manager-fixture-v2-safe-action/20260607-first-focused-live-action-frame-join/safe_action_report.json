@@ -1,0 +1,583 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2-safe-action.report.v1",
+  "generated_at": "2026-06-07T19:33:22Z",
+  "capture_id": "20260607-first-focused-v2-safe-action-live-runner-2",
+  "validation": {
+    "schema": "qa-mcp.v2-safe-action-manifest-validation.v1",
+    "generated_at": "2026-06-07T19:16:24Z",
+    "source_manifest": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v2-safe-action\\20260607-first-focused-subset\\focused_safe_action_manifest.json",
+    "scenario": "manager-fixture-v2-safe-action",
+    "row_count": 2,
+    "executable_count": 2,
+    "status_counts": {
+      "accepted_for_capture": 2
+    },
+    "allowed_action_families": [
+      "activate_existing_window_or_form",
+      "expand_or_collapse_menu_or_group",
+      "focus_existing_element",
+      "select_local_table_row",
+      "switch_fixture_page"
+    ],
+    "required_fields": [
+      "action_id",
+      "target_id",
+      "target_marker",
+      "pre_state",
+      "action",
+      "post_state",
+      "recovery_expectation",
+      "mutates_business_data",
+      "allowed_action_family",
+      "expected_action_result_markers"
+    ],
+    "target_count": 2,
+    "reviewed_target_map_path": "docs/protocol-research/evidence/fixture-target-maps/20260607-client-fixture-v2-safe-action-target-map/target_map_summary.md",
+    "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths",
+    "rows": [
+      {
+        "action_id": "safe-switch-fixture-page-b",
+        "case_id": "safe-switch-fixture-page-b",
+        "target_id": "tm-v2-pages-main",
+        "target_marker": "PF_PAGES_MAIN",
+        "allowed_action_family": "switch_fixture_page",
+        "validation_status": "accepted_for_capture",
+        "executable": true,
+        "owner": "project:qa-mcp",
+        "status_reason": "page switching changes only transient fixture UI state",
+        "residual_risk": "candidate only until recovery proof shows page A is restored",
+        "reasons": [],
+        "row": {
+          "action_id": "safe-switch-fixture-page-b",
+          "case_id": "safe-switch-fixture-page-b",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-pages-main",
+          "target_marker": "PF_PAGES_MAIN",
+          "pre_state": {
+            "selected_page": "PF_PAGE_A",
+            "last_action": "PF_STATE_INITIAL"
+          },
+          "action": {
+            "family": "switch_fixture_page",
+            "api_intent": "select existing fixture page B"
+          },
+          "post_state": {
+            "selected_page": "PF_PAGE_B",
+            "selected_page_marker": "PF_SELECTED_PAGE"
+          },
+          "recovery_expectation": {
+            "route": "select_page_a",
+            "expected_marker": "PF_PAGE_A"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "switch_fixture_page",
+          "expected_action_result_markers": [
+            "PF_PAGES_MAIN",
+            "PF_PAGE_B",
+            "PF_SELECTED_PAGE"
+          ],
+          "safety_class": "safe_ui_action",
+          "provider_owner": "project:qa-mcp",
+          "status_reason": "page switching changes only transient fixture UI state",
+          "residual_risk": "candidate only until recovery proof shows page A is restored"
+        }
+      },
+      {
+        "action_id": "safe-focus-existing-edit-string",
+        "case_id": "safe-focus-existing-edit-string",
+        "target_id": "tm-v2-edit-string",
+        "target_marker": "PF_EDIT_STRING",
+        "allowed_action_family": "focus_existing_element",
+        "validation_status": "accepted_for_capture",
+        "executable": true,
+        "owner": "project:qa-mcp",
+        "status_reason": "focus change targets an existing fixture field and does not edit data",
+        "residual_risk": "candidate only until live focus proof confirms the same target identity",
+        "reasons": [],
+        "row": {
+          "action_id": "safe-focus-existing-edit-string",
+          "case_id": "safe-focus-existing-edit-string",
+          "scenario": "manager-fixture-v2-safe-action",
+          "target_id": "tm-v2-edit-string",
+          "target_marker": "PF_EDIT_STRING",
+          "pre_state": {
+            "focus_marker": "PF_FORM_MAIN",
+            "last_action": "PF_STATE_INITIAL"
+          },
+          "action": {
+            "family": "focus_existing_element",
+            "api_intent": "set focus to existing edit field without changing value"
+          },
+          "post_state": {
+            "focus_marker": "PF_EDIT_STRING",
+            "value_marker": "PF_EDIT_STRING_VALUE"
+          },
+          "recovery_expectation": {
+            "route": "focus_form_shell",
+            "expected_marker": "PF_FORM_MAIN"
+          },
+          "mutates_business_data": false,
+          "allowed_action_family": "focus_existing_element",
+          "expected_action_result_markers": [
+            "PF_EDIT_STRING",
+            "PF_EDIT_STRING_VALUE"
+          ],
+          "safety_class": "safe_ui_action",
+          "provider_owner": "project:qa-mcp",
+          "status_reason": "focus change targets an existing fixture field and does not edit data",
+          "residual_risk": "candidate only until live focus proof confirms the same target identity"
+        }
+      }
+    ]
+  },
+  "phase_event_count": 12,
+  "rows": [
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "safe-switch-fixture-page-b",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "selected_page": "PF_PAGE_A",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "safe-switch-fixture-page-b",
+      "target_id": "tm-v2-pages-main",
+      "target_marker": "PF_PAGES_MAIN",
+      "mutates_business_data": false,
+      "allowed_action_family": "switch_fixture_page",
+      "expected_action_result_markers": [
+        "PF_PAGES_MAIN",
+        "PF_PAGE_B",
+        "PF_SELECTED_PAGE"
+      ],
+      "pre_state": {
+        "selected_page": "PF_PAGE_A",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "switch_fixture_page",
+        "api_intent": "select existing fixture page B"
+      },
+      "post_state": {
+        "selected_page": "PF_PAGE_B",
+        "selected_page_marker": "PF_SELECTED_PAGE"
+      },
+      "recovery_expectation": {
+        "route": "select_page_a",
+        "expected_marker": "PF_PAGE_A"
+      },
+      "recovery_result": {
+        "status": "known_state_restored",
+        "route": "select_page_a",
+        "live_recovery_executed": true,
+        "known_state_rationale": "live recovery activated fixture page A",
+        "expected_recovery_markers": [
+          "PF_PAGE_A"
+        ]
+      },
+      "action_frame_range": {
+        "manager_to_client": {
+          "from": 59,
+          "to": 61,
+          "count": 3
+        },
+        "client_to_manager": {
+          "from": 60,
+          "to": 62,
+          "count": 3
+        }
+      },
+      "background_frame_ranges": [
+        {
+          "manager_to_client": {
+            "from": 55,
+            "to": 62,
+            "count": 5
+          },
+          "client_to_manager": {
+            "from": 56,
+            "to": 63,
+            "count": 5
+          }
+        }
+      ],
+      "recovery_frame_range": {
+        "manager_to_client": {
+          "from": 63,
+          "to": 65,
+          "count": 3
+        },
+        "client_to_manager": {
+          "from": 64,
+          "to": 66,
+          "count": 3
+        }
+      },
+      "action_result_markers": [
+        "PF_PAGES_MAIN",
+        "PF_PAGE_B",
+        "PF_SELECTED_PAGE"
+      ],
+      "rerun_determinism": null,
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "20260607-first-focused-v2-safe-action-live-runner-2",
+        "scenario": "manager-fixture-v2-safe-action",
+        "case_id": "safe-switch-fixture-page-b",
+        "action_id": "safe-switch-fixture-page-b",
+        "target_id": "tm-v2-pages-main",
+        "target_marker": "PF_PAGES_MAIN",
+        "allowed_action_family": "switch_fixture_page",
+        "status": "success",
+        "status_reason": "live dispatcher executed switch_fixture_page and recovery",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": true,
+        "action_result_markers": [
+          "PF_PAGES_MAIN",
+          "PF_PAGE_B",
+          "PF_SELECTED_PAGE"
+        ],
+        "recovery_result": {
+          "status": "known_state_restored",
+          "route": "select_page_a",
+          "live_recovery_executed": true,
+          "known_state_rationale": "live recovery activated fixture page A",
+          "expected_recovery_markers": [
+            "PF_PAGE_A"
+          ]
+        },
+        "frame_join": {
+          "status": "joined",
+          "action_chunk_count": 6,
+          "recovery_chunk_count": 6
+        }
+      },
+      "availability": "supported",
+      "capture_id": "20260607-first-focused-v2-safe-action-live-runner-2",
+      "frame_range": null,
+      "request_size": 731,
+      "response_size": 622,
+      "dynamic_fields": [
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 217
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 387
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 257
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 219
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 257
+        },
+        {
+          "name": "binary_frame_without_semantic_token",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 16
+        },
+        {
+          "name": "safe_action_frame_repeat_dedup",
+          "source": "action_window",
+          "replacement": "<unique-binary-frame-signature>",
+          "length": 1
+        }
+      ],
+      "pre_normalization_hash": "ec4f0b51b077d9a340251aea69b66f6fc17453d5448a556321967bf7ff3f1218",
+      "normalized_hash": "191824eda15e75980801e07ab5f443a9b0065f9f28d1ee5162bbbb6c803ded4a",
+      "normalization_replacements": [
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 217
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 387
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 257
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 219
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 257
+        },
+        {
+          "name": "binary_frame_without_semantic_token",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 16
+        },
+        {
+          "name": "safe_action_frame_repeat_dedup",
+          "source": "action_window",
+          "replacement": "<unique-binary-frame-signature>",
+          "length": 1
+        }
+      ],
+      "normalization_strategy": "manager_fixture_v2_safe_action_binary_frame_signature.v1",
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "pending",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "accepted_for_capture",
+      "non_accepted_reasons": [
+        "replay_or_probe_unavailable"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join",
+      "semantic_sources": [],
+      "notes": ""
+    },
+    {
+      "schema": "protocol-corpus-case-row.v1",
+      "case_id": "safe-focus-existing-edit-string",
+      "scenario": "manager-fixture-v2-safe-action",
+      "api_call": null,
+      "ui_target": null,
+      "expected_state": {
+        "focus_marker": "PF_FORM_MAIN",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "safety_class": "safe_ui_action",
+      "action_id": "safe-focus-existing-edit-string",
+      "target_id": "tm-v2-edit-string",
+      "target_marker": "PF_EDIT_STRING",
+      "mutates_business_data": false,
+      "allowed_action_family": "focus_existing_element",
+      "expected_action_result_markers": [
+        "PF_EDIT_STRING",
+        "PF_EDIT_STRING_VALUE"
+      ],
+      "pre_state": {
+        "focus_marker": "PF_FORM_MAIN",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "focus_existing_element",
+        "api_intent": "set focus to existing edit field without changing value"
+      },
+      "post_state": {
+        "focus_marker": "PF_EDIT_STRING",
+        "value_marker": "PF_EDIT_STRING_VALUE"
+      },
+      "recovery_expectation": {
+        "route": "focus_form_shell",
+        "expected_marker": "PF_FORM_MAIN"
+      },
+      "recovery_result": {
+        "status": "known_state_restored",
+        "route": "focus_form_shell",
+        "live_recovery_executed": true,
+        "known_state_rationale": "live recovery activated the fixture form shell",
+        "expected_recovery_markers": [
+          "PF_FORM_MAIN"
+        ]
+      },
+      "action_frame_range": {
+        "manager_to_client": {
+          "from": 70,
+          "to": 71,
+          "count": 2
+        },
+        "client_to_manager": {
+          "from": 71,
+          "to": 72,
+          "count": 2
+        }
+      },
+      "background_frame_ranges": [
+        {
+          "manager_to_client": {
+            "from": 66,
+            "to": 72,
+            "count": 5
+          },
+          "client_to_manager": {
+            "from": 67,
+            "to": 73,
+            "count": 5
+          }
+        }
+      ],
+      "recovery_frame_range": {
+        "manager_to_client": {
+          "from": 73,
+          "to": 74,
+          "count": 2
+        },
+        "client_to_manager": {
+          "from": 74,
+          "to": 75,
+          "count": 2
+        }
+      },
+      "action_result_markers": [
+        "PF_EDIT_STRING",
+        "PF_EDIT_STRING_VALUE"
+      ],
+      "rerun_determinism": null,
+      "action_runtime_result": {
+        "schema": "qa-mcp.manager-fixture-v2.safe-action-runner-results.v1",
+        "run_id": "20260607-first-focused-v2-safe-action-live-runner-2",
+        "scenario": "manager-fixture-v2-safe-action",
+        "case_id": "safe-focus-existing-edit-string",
+        "action_id": "safe-focus-existing-edit-string",
+        "target_id": "tm-v2-edit-string",
+        "target_marker": "PF_EDIT_STRING",
+        "allowed_action_family": "focus_existing_element",
+        "status": "success",
+        "status_reason": "live dispatcher executed focus_existing_element and recovery",
+        "candidate_only": true,
+        "accepted_protocol_mapping": false,
+        "live_action_executed": true,
+        "action_result_markers": [
+          "PF_EDIT_STRING",
+          "PF_EDIT_STRING_VALUE"
+        ],
+        "recovery_result": {
+          "status": "known_state_restored",
+          "route": "focus_form_shell",
+          "live_recovery_executed": true,
+          "known_state_rationale": "live recovery activated the fixture form shell",
+          "expected_recovery_markers": [
+            "PF_FORM_MAIN"
+          ]
+        },
+        "frame_join": {
+          "status": "joined",
+          "action_chunk_count": 4,
+          "recovery_chunk_count": 4
+        }
+      },
+      "availability": "supported",
+      "capture_id": "20260607-first-focused-v2-safe-action-live-runner-2",
+      "frame_range": null,
+      "request_size": 534,
+      "response_size": 245,
+      "dynamic_fields": [
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 267
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 229
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 267
+        },
+        {
+          "name": "binary_frame_without_semantic_token",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 16
+        },
+        {
+          "name": "safe_action_frame_repeat_dedup",
+          "source": "action_window",
+          "replacement": "<unique-binary-frame-signature>",
+          "length": 1
+        }
+      ],
+      "pre_normalization_hash": "89b115e77d7d4b411488b272d1c95a92844a70428b3b5aae34b05a83b0b34abb",
+      "normalized_hash": "bbfa2978b211f2f6e54d84f3bc53f19aff713ee0ba66f5a7d8392ef619869b19",
+      "normalization_replacements": [
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 267
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 229
+        },
+        {
+          "name": "binary_frame_dynamic_bytes",
+          "source": "manager_to_client",
+          "replacement": "<binary-frame-signature>",
+          "length": 267
+        },
+        {
+          "name": "binary_frame_without_semantic_token",
+          "source": "client_to_manager",
+          "replacement": "<binary-frame-signature>",
+          "length": 16
+        },
+        {
+          "name": "safe_action_frame_repeat_dedup",
+          "source": "action_window",
+          "replacement": "<unique-binary-frame-signature>",
+          "length": 1
+        }
+      ],
+      "normalization_strategy": "manager_fixture_v2_safe_action_binary_frame_signature.v1",
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "operation_token": null,
+      "response_markers": [],
+      "replay_status": "pending",
+      "probe_evidence": null,
+      "side_channel_evidence": null,
+      "acceptance_evidence": [],
+      "accepted_protocol_mapping": false,
+      "validation_status": "accepted_for_capture",
+      "non_accepted_reasons": [
+        "replay_or_probe_unavailable"
+      ],
+      "evidence_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join",
+      "semantic_sources": [],
+      "notes": ""
+    }
+  ]
+}

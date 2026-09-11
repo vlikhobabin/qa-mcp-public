@@ -1,0 +1,126 @@
+{
+  "schema": "qa-mcp.publication-policy.v1",
+  "license_spdx": "Apache-2.0",
+  "history": {
+    "mode": "audited-source-snapshot",
+    "include_ancestors": false,
+    "rationale": "Pre-snapshot internal history contains personal author metadata and historical private-lab identifiers.",
+    "public_root": "the reviewed OSS-07 published tree selected by OSS-08"
+  },
+  "contacts": {
+    "support": "repository issues or discussions",
+    "security": "repository private vulnerability reporting"
+  },
+  "required_paths": [
+    "LICENSE",
+    "NOTICE",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "GOVERNANCE.md",
+    "SUPPORT.md",
+    "CODE_OF_CONDUCT.md"
+  ],
+  "i2_gate": {
+    "command": "python3 tools/protocol-research/oss07_i2/verify_matrix.py --run-mutations",
+    "expected_control": [46, 14, 5, "D14"],
+    "expected_hostile_mutations": 23,
+    "artifacts": [
+      {
+        "path": "docs/protocol-research/evidence/oss-07-i2-fail-closed-public-safety-matrix-2026-09-02/matrix.json",
+        "sha256": "0de299bc935d3f7d9ac8aa3f855b0bead62f0249ed5e44e6db7c05f4bfa26ec3"
+      },
+      {
+        "path": "docs/protocol-research/evidence/oss-07-i2-fail-closed-public-safety-matrix-2026-09-02/freeze.json",
+        "sha256": "fbfba8abdc249f152a9e5270d78933e463d53cae351efdf88502bf974979c884"
+      },
+      {
+        "path": "docs/protocol-research/evidence/oss-07-i2-fail-closed-public-safety-matrix-2026-09-02/findings.md",
+        "sha256": "56721ad16da35918b322774aaea74e9dc94326c0448ad0708a669620510649e9"
+      },
+      {
+        "path": "tools/protocol-research/oss07_i2/audit_design.py",
+        "sha256": "1356bd4c954fb5178d009bd28e1c031ecef9ab46db90bcc61619c03d7d335cbc"
+      },
+      {
+        "path": "tools/protocol-research/oss07_i2/verify_matrix.py",
+        "sha256": "cd2ed10c512c10a494c7072f34df18540438040910303582c9ed5decfa7ea0f2"
+      },
+      {
+        "path": "openspec/specs/qa-mcp-fail-closed-public-safety-matrix/spec.md",
+        "sha256": "2af1286837becb7221bbfcef4dc4ec97351952f0866ca798c0fef3071fa6403e"
+      }
+    ]
+  },
+  "scanner_fixture_allowlist": {
+    "private_lab_endpoint": {
+      "delivery/bootstrap.ps1": {"raw": {"MTkyLjE2OC42NS4w": 1}},
+      "delivery/windows-agent-runbook.md": {"raw": {"MTkyLjE2OC42NS4w": 1}},
+      "docker/README.md": {"raw": {"MTkyLjE2OC42NS4w": 1}},
+      "docs/protocol-research/evidence/card120-e2e-from-container-2026-06-26/findings.md": {"raw": {"MTkyLjE2OC42NS4yNTQ=": 1}},
+      "host-agent/README.md": {"raw": {"MTkyLjE2OC42NS4w": 1}},
+      "host-agent/install-windows-host-agent.ps1": {"raw": {"MTkyLjE2OC42NS4w": 3}},
+      "src/qa_mcp/protocol/display_backend.py": {"raw": {"MTkyLjE2OC42NS4w": 1}},
+      "tests/test_delivery_config.py": {"raw": {"MTkyLjE2OC4wLjEw": 3}},
+      "tests/test_positive_core_operation_boundary.py": {"raw": {"MTAuMC4wLjE=": 1}},
+      "tests/test_public_repository_readiness.py": {"raw": {"MTAuMjMuNC41": 1, "MTcyLjIwLjQuOA==": 1, "MTkyLjE2OC40NC43": 1}}
+    },
+    "private_key": {
+      "docker/verify_open_image.py": {"raw": {"LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0t": 1, "LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0=": 1}}
+    },
+    "password_assignment": {
+      ".github/workflows/release.yml": {"raw": {"cGFzc3dvcmQ6ICR7ew==": 1}},
+      "delivery/bootstrap.ps1": {"raw": {"SGFzUG9ydGFsUGFzc3dvcmQgPSAtbm90": 1, "cGFzc3dvcmQgPSAkUGFzc3dvcmQ=": 1}},
+      "docker/docker-compose.yml": {"raw": {"VEVTVF9DTElFTlRfUEFTU1dPUkQ6ICIke1RFU1RfQ0xJRU5UX1BBU1NXT1JEOi0=": 1}},
+      "docker/run-host-platform.sh": {"raw": {"VEVTVF9DTElFTlRfUEFTU1dPUkQ9IiR7VEVTVF9DTElFTlRfUEFTU1dPUkQ6LQ==": 1}},
+      "docs/protocol-research/evidence/infrastructure-checks/20260603-edt-client-binding/edt_client_binding.md": {"raw": {"cGFzc3dvcmQ6IHByb3ZpZGVk": 1}},
+      "docs/qa-mcp-connection-issues-2.md": {"raw": {"UGFzc3dvcmQ6IGVtcHR5": 1}},
+      "host-agent/windows-display-agent/hidden_desktop_window_isolation_windows_test.go": {"raw": {"cGFzc3dvcmQgOj0=": 1}},
+      "host-agent/windows-display-agent/hidden_direct_execute_observation_windows_test.go": {"raw": {"cGFzc3dvcmQgOj0=": 1}},
+      "host-agent/windows-display-agent/hidden_prompt_admission_action_windows_test.go": {"raw": {"cGFzc3dvcmQgOj0=": 1}},
+      "host-agent/windows-display-agent/main_test.go": {"raw": {"InBhc3N3b3JkIjogICAgICAgICAic3VwZXJzZWNyZXQ=": 1}},
+      "host-agent/windows-display-agent/testclient_launch.go": {"raw": {"InBhc3N3b3JkIjogICAgICAgICAgcmVxLlBhc3N3b3Jk": 1, "cGFzc3dvcmQ9Iik7": 1, "cHdkPSIpOw==": 1}},
+      "openspec/board/4.done/host-agent-com-execute.md": {"raw": {"InBhc3N3b3JkIjoiPHNlY3JldD4=": 1}},
+      "openspec/changes/archive/2026-07-04-host-agent-platform-execute/design.md": {"raw": {"cGFzc3dvcmQ9Li4uYA==": 1, "cHdkPS4uLmA=": 1}},
+      "openspec/changes/archive/2026-07-04-host-agent-platform-execute/specs/qa-mcp-windows-host-agent-security/spec.md": {"raw": {"cGFzc3dvcmQ9Li4uYA==": 1, "cHdkPS4uLmA=": 1}},
+      "src/qa_mcp/com_host.py": {"raw": {"InBhc3N3b3JkIjogcGFzc3dvcmQ=": 2, "cGFzc3dvcmQ6IHN0cg==": 5, "cGFzc3dvcmQ9cGFzc3dvcmQ=": 3}},
+      "src/qa_mcp/config.py": {"raw": {"ZG9jdG9yX2NvbV9wYXNzd29yZDogc3Ry": 1, "b2RhdGFfcGFzc3dvcmQ6IHN0cg==": 1, "b2RhdGFfcGFzc3dvcmQ9dmFsdWVzLmdldChPREFUQV9QQVNTV09SRF9FTlY=": 1, "ZG9jdG9yX2NvbV9wYXNzd29yZD12YWx1ZXMuZ2V0KERPQ1RPUl9DT01fUEFTU1dPUkRfRU5W": 1}},
+      "src/qa_mcp/core/runtime_target.py": {"raw": {"dGVzdF9jbGllbnRfcGFzc3dvcmQ6IHN0cg==": 1, "dGVzdF9jbGllbnRfcGFzc3dvcmQ9dmFsdWVzLmdldCg=": 1}},
+      "src/qa_mcp/data/odata.py": {"raw": {"cGFzc3dvcmQ6IHN0cg==": 1, "cGFzc3dvcmQgPSBwYXNzd29yZA==": 1}},
+      "src/qa_mcp/doctor.py": {"raw": {"IlFBX01DUF9ET0NUT1JfQ09NX1BBU1NXT1JEIjogY29tX3Bhc3N3b3Jk": 1, "Y29tX3Bhc3N3b3JkOiBzdHI=": 1, "Y29tX3Bhc3N3b3JkPWFyZ3MuY29tX3Bhc3N3b3Jk": 1, "cGFzc3dvcmQ9c2V0dGluZ3MuZG9jdG9yX2NvbV9wYXNzd29yZA==": 1}},
+      "src/qa_mcp/mcp_server.py": {"raw": {"Im9kYXRhX3Bhc3N3b3JkIjogc2V0dGluZ3Mub2RhdGFfcGFzc3dvcmQ=": 1, "InBhc3N3b3JkIjogY29uZmlnLnRlc3RfY2xpZW50X3Bhc3N3b3Jk": 1, "Y29tX3Bhc3N3b3JkOiBzdHI=": 1, "Y29tX3Bhc3N3b3JkPWNvbV9wYXNzd29yZA==": 1, "b2RhdGFfcGFzc3dvcmQ6IHN0cg==": 1, "cGFzc3dvcmQ6IHN0cg==": 6, "cGFzc3dvcmQ9Y29uZmlnLnRlc3RfY2xpZW50X3Bhc3N3b3Jk": 1, "cGFzc3dvcmQ9dGFyZ2V0LnBhc3N3b3Jk": 2, "cGFzc3dvcmQ9cGFzc3dvcmQ=": 3}},
+      "src/qa_mcp/protocol/display_backend.py": {"raw": {"InBhc3N3b3JkIjogcGFzc3dvcmQ=": 1, "cGFzc3dvcmQ6IHN0cg==": 1}},
+      "src/qa_mcp/protocol/lifecycle.py": {"raw": {"cGFzc3dvcmQ6IHN0cg==": 1, "cGFzc3dvcmQ9cGljayg=": 1}},
+      "src/qa_mcp/regression/__main__.py": {"raw": {"b2RhdGFfcGFzc3dvcmQ9YXJncy5vZGF0YV9wYXNzd29yZA==": 1}},
+      "src/qa_mcp/regression/checks.py": {"raw": {"b2RhdGFfcGFzc3dvcmQ6IHN0cg==": 1, "cGFzc3dvcmQ9Y3R4Lm9kYXRhX3Bhc3N3b3Jk": 2}},
+      "tests/test_com_host.py": {"raw": {"cGFzc3dvcmQ9InNlY3JldA==": 1}},
+      "tests/test_config.py": {"raw": {"IlFBX01DUF9PREFUQV9QQVNTV09SRCI6ICJzZWNyZXQ=": 1, "T0RBVEFfREVGQVVMVF9QQVNTV09SRCA9PQ==": 1, "UUFfTUNQX09EQVRBX1BBU1NXT1JEPXRhcmdldC1zZWNyZXRcbg==": 1, "b2RhdGFfcGFzc3dvcmQgPT0=": 3}},
+      "tests/test_data_layer_extras.py": {"raw": {"InBhc3N3b3JkIjogIng=": 1}},
+      "tests/test_display_backend.py": {"raw": {"InBhc3N3b3JkIjogInNlY3JldA==": 1, "cGFzc3dvcmQ9InNlY3JldA==": 1}},
+      "tests/test_doctor.py": {"raw": {"ImNvbV9wYXNzd29yZCI6ICJzZWNyZXQ=": 1, "Y29tX3Bhc3N3b3JkPSJzZWNyZXQ=": 1}},
+      "tests/test_lifecycle.py": {"raw": {"IlRFU1RfQ0xJRU5UX1BBU1NXT1JEIjogInB3": 1, "VEVTVF9DTElFTlRfUEFTU1dPUkQ9J3MzY3JldA==": 1, "cGFzc3dvcmQgPT0=": 1, "cGFzc3dvcmQ9InB3": 1, "cGFzc3dvcmQ9InRvcHNlY3JldA==": 3, "cGFzc3dvcmQ9dG9wc2VjcmV0XG4=": 1}},
+      "tests/test_mcp_server.py": {"raw": {"IlRFU1RfQ0xJRU5UX1BBU1NXT1JEIjogInNlY3JldA==": 3, "UHdkPXNlY3JldDs=": 1, "VEVTVF9DTElFTlRfUEFTU1dPUkQ9czNjcmV0XG4=": 1}},
+      "tests/test_target_bound_evidence_cleanup.py": {"raw": {"InBhc3N3b3JkIjogIlBSSVZBVEUtU0VOVElORUw=": 1, "InBhc3N3b3JkIjogcGFzc3dvcmQ=": 1, "UHdkPSJQUklWQVRFLUNPTk5FQ1RJT04=": 2, "cGFzc3dvcmQ6IHN0cg==": 1}},
+      "tests/test_target_bound_lifecycle_admission.py": {"raw": {"InBhc3N3b3JkIjogIlBSSVZBVEUtU0VOVElORUw=": 1, "cGFzc3dvcmQgPT0=": 1}},
+      "tools/release/render_standalone_bootstrap.py": {"raw": {"UGFzc3dvcmQgPSBSZWFkLVByb3RlY3RlZElucHV0RmlsZQ==": 1}}
+    },
+    "personal_email": {
+      "tests/test_composed_transport_isolation.py": {"raw": {"dXNlckByZWxheS5leGFtcGxl": 1}},
+      "tests/integration/test_test_selection_processes.py": {"raw": {"dGVzdEBleGFtcGxlLmludmFsaWQ=": 2}},
+      "docs/protocol-research/evidence/oss-07-i2-fail-closed-public-safety-matrix-2026-09-02/findings.md": {"raw": {"ZWxpZ2libGVAZXhhbXBsZS5pbnZhbGlk": 1}},
+      "openspec/changes/archive/2026-09-02-freeze-fail-closed-public-safety-matrix/design.md": {"raw": {"ZWxpZ2libGVAZXhhbXBsZS5pbnZhbGlk": 1}},
+      "openspec/changes/archive/2026-09-02-freeze-fail-closed-public-safety-matrix/specs/qa-mcp-fail-closed-public-safety-matrix/spec.md": {"raw": {"ZWxpZ2libGVAZXhhbXBsZS5pbnZhbGlk": 1}},
+      "openspec/changes/archive/2026-09-02-freeze-fail-closed-public-safety-matrix/tasks.md": {"raw": {"ZWxpZ2libGVAZXhhbXBsZS5pbnZhbGlk": 1}},
+      "openspec/specs/qa-mcp-fail-closed-public-safety-matrix/spec.md": {"raw": {"ZWxpZ2libGVAZXhhbXBsZS5pbnZhbGlk": 1}},
+      "tests/test_positive_core_operation_boundary.py": {"raw": {"cGFzc0Bkb2NzLmV4YW1wbGUuY29t": 2, "dXNlckBkb2NzLmV4YW1wbGUuY29t": 1}},
+      "tests/test_positive_operation_boundary_integration.py": {"raw": {"cGFzc0Bkb2NzLmV4YW1wbGUuY29t": 1, "dXNlckBkb2NzLmV4YW1wbGUuY29t": 1}},
+      "tools/protocol-research/oss07_i2/audit_design.py": {"raw": {"Y2hhbmdlZEBleGFtcGxlLmludmFsaWQ=": 1, "ZWxpZ2libGVAZXhhbXBsZS5pbnZhbGlk": 1}},
+      "tools/protocol-research/oss07_i2/verify_matrix.py": {"raw": {"ZWxpZ2libGVAZXhhbXBsZS5pbnZhbGlk": 1}}
+    }
+  },
+  "excluded_scope": [
+    "failed OSS-07-I1 payload",
+    "OSS-08 release automation",
+    "OSS-09 downstream cutover",
+    "ignored runtime, credentials, captures and local environment state"
+  ]
+}

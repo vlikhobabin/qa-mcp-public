@@ -1,0 +1,27 @@
+{
+  "schema": "protocol-accepted-mappings.v1",
+  "generated_at": "2026-06-05T11:17:02Z",
+  "comparison_inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-bootstrap-second-boundary-guard/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-bootstrap-second-boundary-guard",
+      "capture_ids": [
+        "20260605-live-full-readonly-bootstrap-second-boundary-guard"
+      ],
+      "case_count": 11
+    },
+    {
+      "input_index": 1,
+      "cases_path": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-repeat-second-boundary-guard/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-repeat-second-boundary-guard",
+      "capture_ids": [
+        "20260605-live-full-readonly-repeat-second-boundary-guard"
+      ],
+      "case_count": 11
+    }
+  ],
+  "accepted_case_ids": [],
+  "case_count": 0,
+  "cases": []
+}

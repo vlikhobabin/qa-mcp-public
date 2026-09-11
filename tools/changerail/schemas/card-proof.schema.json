@@ -1,0 +1,538 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "changerail.card-proof.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "run",
+    "inventory_digest",
+    "payload",
+    "condition",
+    "method",
+    "stage",
+    "observation_id",
+    "recorder_role",
+    "kind",
+    "outcome",
+    "artifact",
+    "fragments"
+  ],
+  "properties": {
+    "schema": {
+      "const": "changerail.card-proof.v1"
+    },
+    "run": {
+      "$ref": "#/$defs/run"
+    },
+    "inventory_digest": {
+      "$ref": "#/$defs/digest"
+    },
+    "payload": {
+      "$ref": "#/$defs/payload"
+    },
+    "condition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method": {
+      "$ref": "#/$defs/method"
+    },
+    "stage": {
+      "enum": [
+        "implementation",
+        "review",
+        "final"
+      ]
+    },
+    "observation_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "recorder_role": {
+      "enum": [
+        "implementation",
+        "review",
+        "outer"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "test",
+        "inspection",
+        "runtime"
+      ]
+    },
+    "outcome": {
+      "const": "pass"
+    },
+    "artifact": {
+      "$ref": "#/$defs/reference"
+    },
+    "fragments": {
+      "$ref": "#/$defs/fragments"
+    },
+    "assertion_support": {
+      "$ref": "#/$defs/assertion_support"
+    },
+    "lane": {
+      "enum": [
+        "focused",
+        "pre_review",
+        "final"
+      ]
+    },
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{32}$"
+    },
+    "command_identity": {
+      "$ref": "#/$defs/command"
+    },
+    "selected_nodes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "runtime": {
+      "$ref": "#/$defs/runtime"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "test"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "assertion_support",
+          "lane",
+          "attempt_id",
+          "command_identity",
+          "selected_nodes"
+        ],
+        "not": {
+          "required": [
+            "runtime"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "inspection"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "assertion_support"
+              ]
+            },
+            {
+              "required": [
+                "lane"
+              ]
+            },
+            {
+              "required": [
+                "attempt_id"
+              ]
+            },
+            {
+              "required": [
+                "command_identity"
+              ]
+            },
+            {
+              "required": [
+                "selected_nodes"
+              ]
+            },
+            {
+              "required": [
+                "runtime"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "runtime"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "runtime"
+        ],
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "assertion_support"
+              ]
+            },
+            {
+              "required": [
+                "lane"
+              ]
+            },
+            {
+              "required": [
+                "attempt_id"
+              ]
+            },
+            {
+              "required": [
+                "command_identity"
+              ]
+            },
+            {
+              "required": [
+                "selected_nodes"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "safe_path": {
+      "type": "string",
+      "pattern": "^(?!.*(?:^|/)\\.{1,2}(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*$"
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "card"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "card": {
+          "$ref": "#/$defs/safe_path"
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "head_commit",
+        "payload_fingerprint"
+      ],
+      "properties": {
+        "head_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "payload_fingerprint": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
+    "method": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "target"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "test",
+            "inspection",
+            "runtime"
+          ]
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "size",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/safe_path"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash"
+        }
+      }
+    },
+    "fragment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "size",
+        "sha256",
+        "start",
+        "end",
+        "fragment_sha256"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/safe_path"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fragment_sha256": {
+          "$ref": "#/$defs/hash"
+        }
+      }
+    },
+    "fragments": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "before",
+        "action",
+        "after"
+      ],
+      "properties": {
+        "before": {
+          "$ref": "#/$defs/fragment"
+        },
+        "action": {
+          "$ref": "#/$defs/fragment"
+        },
+        "after": {
+          "$ref": "#/$defs/fragment"
+        }
+      }
+    },
+    "assertion_support": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "fragments"
+      ],
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/reference"
+        },
+        "fragments": {
+          "$ref": "#/$defs/fragments"
+        }
+      }
+    },
+    "command": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "argv"
+          ],
+          "properties": {
+            "kind": {
+              "const": "argv"
+            },
+            "argv": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "argv",
+            "shell_text"
+          ],
+          "properties": {
+            "kind": {
+              "const": "shell"
+            },
+            "argv": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "string"
+              }
+            },
+            "shell_text": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      ]
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "node",
+        "start",
+        "end"
+      ],
+      "properties": {
+        "node": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target",
+        "session",
+        "fixture_only",
+        "authorization",
+        "preflight",
+        "markers",
+        "recovery"
+      ],
+      "properties": {
+        "target": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "identity"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "minLength": 1
+            },
+            "identity": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "session": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "identity",
+            "started_at"
+          ],
+          "properties": {
+            "identity": {
+              "type": "string",
+              "minLength": 1
+            },
+            "started_at": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            }
+          }
+        },
+        "fixture_only": {
+          "type": "boolean"
+        },
+        "authorization": {
+          "$ref": "#/$defs/reference"
+        },
+        "preflight": {
+          "$ref": "#/$defs/reference"
+        },
+        "markers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "recovery": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "reference"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "recovery",
+                "not_applicable"
+              ]
+            },
+            "reference": {
+              "$ref": "#/$defs/reference"
+            }
+          }
+        }
+      }
+    }
+  }
+}

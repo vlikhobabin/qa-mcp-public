@@ -1,0 +1,21 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "group-collapse-expand-batch",
+  "api_member": "TestedFormGroup.Collapse",
+  "operation_family": "form_group_collapse_expand",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "act_group_collapse",
+  "notes": "Multi-phase safe_ui_action batch on a new Справочник.Контрагенты element form (flat catalog), which has a collapsible UsualGroup 'Прочее' (expanded by default): Collapse the group, then Expand it. Read-only UI toggles; the element is never saved, nothing persists. vanessa_client only.",
+  "phase_member_map": {
+    "act_group_collapse": "TestedFormGroup.Collapse",
+    "act_group_expand": "TestedFormGroup.Expand"
+  },
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Справочник.Контрагенты.Создать\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "act_group_collapse", "text": "И я сворачиваю группу с именем 'Прочее'"},
+    {"phase": "act_group_expand", "text": "И я разворачиваю группу с именем 'Прочее'"},
+    {"phase": "post_read", "read": true}
+  ]
+}

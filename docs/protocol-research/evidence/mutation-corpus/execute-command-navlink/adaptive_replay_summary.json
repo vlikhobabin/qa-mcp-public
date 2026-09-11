@@ -1,0 +1,15 @@
+{
+  "schema": "qa-mcp.adaptive-replay-probe.v1",
+  "generated_at": "2026-06-12T19:28:08.043291Z",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\execcmd-ref1",
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\execcmd-ref1\\probe-live",
+  "target": "127.0.0.1:15382",
+  "manager_frames_total": 147,
+  "captured_guid_count": 9,
+  "exchanges_attempted": 147,
+  "exchanges_with_response": 147,
+  "guid_map_final_size": 9,
+  "diverged_at_send_index": null,
+  "retarget_row": null,
+  "retarget_substitutions": 0
+}

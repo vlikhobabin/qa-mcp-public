@@ -1,0 +1,28 @@
+{
+ "schema": "qa-mcp.action-capture-manifest.v1",
+ "action_id": "fixture-table-choose",
+ "api_member": "TestedFormTable.Choose",
+ "operation_family": "form_table_choose",
+ "mutates_business_data": false,
+ "marker": "",
+ "action_phase": "action",
+ "notes": "Open the protocol fixture form; Choose (double-click/Enter) the current row of the in-memory value table PF_TABLE_ITEMS. Local form state only (not persisted). vanessa_client only.",
+ "steps": [
+  {
+   "phase": "bootstrap",
+   "text": "И я открываю основную форму обработки \"ФикстураПротоколаTestClient\""
+  },
+  {
+   "phase": "pre_read",
+   "read": true
+  },
+  {
+   "phase": "action",
+   "text": "И в таблице 'PF_TABLE_ITEMS' я выбираю текущую строку"
+  },
+  {
+   "phase": "post_read",
+   "read": true
+  }
+ ]
+}

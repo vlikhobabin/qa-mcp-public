@@ -1,0 +1,19 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "goods-doc-switchdeletemark",
+  "api_member": "TestedFormTable.SwitchRowDeleteMark",
+  "operation_family": "form_table_switch_row_delete_mark",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open a new (unsaved) Корректировка остатка document; in its ТоварныеЗапасы register-records table add a row, fill Количество=1, then commit the row (finish editing) — all bootstrap. Action: toggle the delete mark of the current committed row, which drives TestedFormTable.SwitchRowDeleteMark (ПереключитьПометкуУдаленияСтроки) via 'в таблице ... я меняю пометку удаления строки'. The document is never saved, so nothing persists. EMPIRICAL: validates whether a tabular-section/register-records row supports a delete mark; if the platform rejects it, the target moves to a list-based recoverable toggle. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Документ.ОперацияПоУчетуТоваров.Создать\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" в поле с именем 'ТоварныеЗапасыКоличество' я ввожу текст \"1\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я завершаю редактирование строки"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И в таблице \"ТоварныеЗапасы\" я меняю пометку удаления строки"},
+    {"phase": "post_read", "read": true}
+  ]
+}

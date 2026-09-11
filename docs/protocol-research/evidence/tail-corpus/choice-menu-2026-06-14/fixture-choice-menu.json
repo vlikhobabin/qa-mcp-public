@@ -1,0 +1,32 @@
+{
+ "schema": "qa-mcp.action-capture-manifest.v1",
+ "action_id": "fixture-choice-menu",
+ "api_member": "TestedForm.ExecuteChoiceFromMenu",
+ "operation_family": "form_choice_from_menu",
+ "mutates_business_data": false,
+ "marker": "",
+ "action_phase": "action",
+ "notes": "Open the protocol fixture form; click PF_SHOW_CHOICE_MENU (calls ПоказатьВыборИзМеню → form menu popup); ACTION: choose PF_MENU_2 from the menu (TestedForm.ExecuteChoiceFromMenu). Local form state only. vanessa_client only.",
+ "steps": [
+  {
+   "phase": "bootstrap",
+   "text": "И я открываю основную форму обработки \"ФикстураПротоколаTestClient\""
+  },
+  {
+   "phase": "bootstrap",
+   "text": "И я нажимаю на кнопку с именем 'PF_SHOW_CHOICE_MENU'"
+  },
+  {
+   "phase": "pre_read",
+   "read": true
+  },
+  {
+   "phase": "action",
+   "text": "И в меню формы я выбираю 'PF_MENU_2'"
+  },
+  {
+   "phase": "post_read",
+   "read": true
+  }
+ ]
+}

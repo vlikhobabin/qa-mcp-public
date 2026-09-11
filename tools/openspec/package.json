@@ -1,0 +1,12 @@
+{
+  "name": "changerail-local-openspec",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinned upstream OpenSpec dependency for the ChangeRail adapter",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "dependencies": {
+    "@fission-ai/openspec": "1.3.1"
+  }
+}

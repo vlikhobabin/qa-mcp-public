@@ -1,0 +1,22 @@
+{
+  "schema": "qa-mcp.protocol-capture-manifest.v1",
+  "platform_version": "8.5.1.1343",
+  "captured_at": "2026-06-25T16:45:25Z",
+  "notes": "8.5 validated via e2e on the 8.3 captures (protocol structurally unchanged); handshake version-fixed in synth (cead89c). Read/introspect/assert/open GREEN on live 8.5.",
+  "templates": [
+    {
+      "name": "manager_frame_templates",
+      "path": "docs/protocol-research/evidence/templates/20260602-frames08-106-utf16-managedform/manager_frame_templates.json",
+      "committed": true,
+      "present": true,
+      "sha256": "a4fb752970e042d820f74df317826fa3492088f3821215522ec6379144d361fc"
+    },
+    {
+      "name": "value_read_templates",
+      "path": "runtime/protocol-research/templates/tm-v1-open-plus-valueread/manager_frame_templates.json",
+      "committed": false,
+      "present": true,
+      "sha256": "ad8ab74b7da3d7c2cde6cd0ec057669c243783e3366aeb1695e9a2d129f3422e"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+# syntax=docker/dockerfile:1.7
+# Public source-visible standalone qa-mcp image. The 1C TestClient and optional
+# display agent run on the user-owned host; this image contains only the normal
+# Python package and its reviewed plaintext protocol assets.
+
+ARG PUBLIC_BASE_IMAGE=ghcr.io/astral-sh/uv:0.11.14-python3.12-trixie-slim@sha256:13b5883729ec534af5863facf5c40ac0869f2c124ad5620c9ed36fe7c03fa87d
+FROM ${PUBLIC_BASE_IMAGE}
+
+ARG SOURCE_COMMIT
+LABEL org.opencontainers.image.source="https://github.com/vlikhobabin/qa-mcp" \
+      org.opencontainers.image.title="qa-mcp standalone" \
+      org.opencontainers.image.revision=${SOURCE_COMMIT}
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /opt/qa-mcp
+COPY pyproject.toml uv.lock ./
+COPY delivery/README.md ./README.md
+
+# Resolve build/runtime dependencies before mutable source so source-only edits
+# reuse the stable dependency layer.
+RUN uv export --quiet --frozen --no-dev --group build --no-emit-project --no-header --no-annotate \
+      --output-file /tmp/qa-mcp-runtime-requirements.txt \
+ && uv pip install --system --no-cache --require-hashes -r /tmp/qa-mcp-runtime-requirements.txt \
+ && rm -f /tmp/qa-mcp-runtime-requirements.txt
+
+COPY src ./src
+COPY docker/verify_open_image.py /usr/local/bin/qa-mcp-verify-open-image
+RUN pip install --no-cache-dir --no-deps --no-build-isolation . \
+ && find /usr/local/lib/python3.12/site-packages/qa_mcp -type d -name __pycache__ -prune -exec rm -r {} +
+
+RUN python /usr/local/bin/qa-mcp-verify-open-image \
+      --package-root ./src/qa_mcp --source-commit "${SOURCE_COMMIT}" \
+      --write-inventory /tmp/qa-mcp-open-package-inventory.json \
+ && python /usr/local/bin/qa-mcp-verify-open-image \
+      --inventory /tmp/qa-mcp-open-package-inventory.json \
+ && python -c "import asyncio; from qa_mcp.mcp_server import mcp; tools=asyncio.run(mcp.list_tools()); assert tools; print('qa-mcp tool smoke OK:', len(tools))" \
+ && groupadd --system qa-mcp \
+ && useradd --system --gid qa-mcp --home-dir /home/qa-mcp --create-home --shell /usr/sbin/nologin qa-mcp \
+ && mkdir -p /work \
+ && chown -R qa-mcp:qa-mcp /work /home/qa-mcp
+
+ENV QA_MCP_HOME=/work \
+    QA_MCP_REMOTE_CLIENT=1 \
+    QA_MCP_CLIENT_HOST=host.docker.internal \
+    QA_MCP_CLIENT_PORT=15381 \
+    QA_MCP_PLATFORM_VERSION=8.3.27.2130 \
+    QA_MCP_TRANSPORT="streamable-http" \
+    QA_MCP_HTTP_HOST="0.0.0.0" \
+    QA_MCP_HTTP_PORT=8080 \
+    PATH="/usr/local/bin:${PATH}"
+WORKDIR /work
+VOLUME ["/work"]
+EXPOSE 8080
+USER qa-mcp
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3).read()"]
+
+CMD ["qa-native-mcp"]

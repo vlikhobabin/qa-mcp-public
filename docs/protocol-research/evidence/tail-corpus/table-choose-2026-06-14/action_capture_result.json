@@ -1,0 +1,36 @@
+﻿{
+    "schema":  "qa-mcp.action-capture.v1",
+    "runId":  "fixture-table-choose-cap",
+    "actionId":  "fixture-table-choose",
+    "apiMember":  "TestedFormTable.Choose",
+    "operationFamily":  "form_table_choose",
+    "mutatesBusinessData":  false,
+    "marker":  "",
+    "actionPhase":  "action",
+    "proxyTestclientPort":  15382,
+    "phaseTimeline":  [
+                          {
+                              "phase":  "bootstrap",
+                              "started_at":  "2026-06-14T05:44:34.3810145Z",
+                              "finished_at":  "2026-06-14T05:44:36.0252393Z"
+                          },
+                          {
+                              "phase":  "pre_read",
+                              "started_at":  "2026-06-14T05:44:36.0272460Z",
+                              "finished_at":  "2026-06-14T05:44:38.2826257Z",
+                              "flag":  ""
+                          },
+                          {
+                              "phase":  "action",
+                              "started_at":  "2026-06-14T05:44:38.2846054Z",
+                              "finished_at":  "2026-06-14T05:44:41.2340046Z"
+                          },
+                          {
+                              "phase":  "post_read",
+                              "started_at":  "2026-06-14T05:44:41.2340046Z",
+                              "finished_at":  "2026-06-14T05:44:43.0813611Z",
+                              "flag":  ""
+                          }
+                      ],
+    "notes":  "Manifest-driven action capture; phases attributable to traffic.jsonl by the recorded UTC timeline."
+}

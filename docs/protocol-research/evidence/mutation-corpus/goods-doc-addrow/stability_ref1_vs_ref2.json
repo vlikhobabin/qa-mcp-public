@@ -1,0 +1,85 @@
+{
+  "schema": "qa-mcp.compare-probe-reference.v1",
+  "generated_at": "2026-06-12T06:45:49Z",
+  "mode": "stability",
+  "phase": "action",
+  "left": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\addrow-ref1",
+  "right": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\addrow-ref2",
+  "left_hash_by_direction": {
+    "manager_to_client": "f7cbb4be5a29a3ccdf830eeaacb465e58d62db0e04bc30a801b3c5c1aec2c90c",
+    "client_to_manager": "086e920d812c345f9213d2f44708c126ddaf832ddfd3db21a765f4fe357bcd91"
+  },
+  "right_hash_by_direction": {
+    "manager_to_client": "f7cbb4be5a29a3ccdf830eeaacb465e58d62db0e04bc30a801b3c5c1aec2c90c",
+    "client_to_manager": "086e920d812c345f9213d2f44708c126ddaf832ddfd3db21a765f4fe357bcd91"
+  },
+  "hash_match_by_direction": {
+    "client_to_manager": true,
+    "manager_to_client": true
+  },
+  "all_hashes_match": true,
+  "structural_signature_left": {
+    "manager_to_client": [
+      99,
+      156,
+      236,
+      456,
+      456,
+      456,
+      456
+    ],
+    "client_to_manager": [
+      234,
+      443,
+      643,
+      418,
+      16,
+      418,
+      16
+    ]
+  },
+  "structural_signature_right": {
+    "manager_to_client": [
+      99,
+      156,
+      236,
+      456,
+      456,
+      456,
+      456
+    ],
+    "client_to_manager": [
+      234,
+      443,
+      643,
+      418,
+      16,
+      418,
+      16
+    ]
+  },
+  "structural_match": true,
+  "residual_dynamic_bytes": 0,
+  "left_typed_result": {
+    "preFlag": null,
+    "postFlag": null,
+    "recoveryFlag": null,
+    "status": null
+  },
+  "right_typed_result": {
+    "preFlag": null,
+    "postFlag": null,
+    "recoveryFlag": null,
+    "status": null
+  },
+  "typed_result_match": true,
+  "left_frame_count_by_direction": {
+    "manager_to_client": 7,
+    "client_to_manager": 7
+  },
+  "right_frame_count_by_direction": {
+    "manager_to_client": 7,
+    "client_to_manager": 7
+  },
+  "verdict": "fully_stable"
+}

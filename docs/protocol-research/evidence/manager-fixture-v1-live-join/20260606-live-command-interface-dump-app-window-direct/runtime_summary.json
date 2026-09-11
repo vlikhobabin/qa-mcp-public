@@ -1,0 +1,51 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.reviewed-summary.v1",
+  "generated_at": "2026-06-06T09:14:40Z",
+  "run_id": "20260606-live-command-interface-dump-app-window-direct",
+  "source_runtime_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260606-live-command-interface-dump-app-window-direct",
+  "reviewed_output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-live-command-interface-dump-app-window-direct",
+  "fixture_version": "protocol-fixture.v1",
+  "command_catalog_version": "qa-mcp.manager-fixture-v1.manifest.v1",
+  "manager_harness": "DataProcessor.ProtocolFixtureTestManager.Form.ManagerHarness",
+  "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+  "proxy_testclient_port": 15382,
+  "run_status": "ok",
+  "status_reason": "all_commands_completed",
+  "bootstrap_status": "connect_before",
+  "command_count": 1,
+  "event_count": 6,
+  "readonly_event_count": 2,
+  "completed_count": 1,
+  "failed_count": 0,
+  "case_status_counts": {
+    "connect_before": 1,
+    "connect_after": 1,
+    "second_boundary_wait": 2,
+    "started": 1,
+    "ok": 1
+  },
+  "frame_join_status_counts": {
+    "joined": 1
+  },
+  "accepted_protocol_mapping": false,
+  "accepted_case_ids": [],
+  "output_files": {
+    "runtime_manifest": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260606-live-command-interface-dump-app-window-direct\\manager_harness_manifest.json",
+    "runtime_result": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260606-live-command-interface-dump-app-window-direct\\manager_harness_result.json",
+    "runtime_case_events": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260606-live-command-interface-dump-app-window-direct\\case_events.jsonl",
+    "reviewed_summary_markdown": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-live-command-interface-dump-app-window-direct\\runtime_summary.md",
+    "reviewed_summary_json": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-live-command-interface-dump-app-window-direct\\runtime_summary.json",
+    "reviewed_frame_join_markdown": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-live-command-interface-dump-app-window-direct\\frame_join_report.md",
+    "reviewed_frame_join_json": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-live-command-interface-dump-app-window-direct\\frame_join_report.json",
+    "reviewed_corpus_rows": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-live-command-interface-dump-app-window-direct\\corpus_cases.jsonl"
+  },
+  "owner_routes": {
+    "runtime_apply": "project:qa-mcp",
+    "ui_proof": "/opt/vanessa-mcp-stack",
+    "bsl_diagnostics": "/opt/edt-lab",
+    "frame_join": "project:qa-mcp",
+    "replay_or_direct_probe": "project:qa-mcp"
+  },
+  "unresolved_gaps": [],
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths"
+}

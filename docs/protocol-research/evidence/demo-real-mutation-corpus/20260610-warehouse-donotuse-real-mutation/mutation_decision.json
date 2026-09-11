@@ -1,0 +1,54 @@
+{
+  "schema": "qa-mcp.demo-real-mutation-executed.v1",
+  "run_id": "20260610-warehouse-donotuse-real-mutation",
+  "date": "2026-06-10",
+  "infobase": "C:\\1C_BASES\\vanessa_client",
+  "infobase_role": "disposable demo copy (technical clone of demo10413)",
+  "runtime_route": "vanessa-mcp reference oracle",
+  "runtime_processes": {
+    "manager_pid": 3228,
+    "manager_mode": "/TestManager + Vanessa EPF runMcp mcpPort=64722",
+    "testclient_pid": 20020,
+    "testclient_mode": "/TESTCLIENT -TPort 48000 on vanessa_client"
+  },
+  "target_id": "demo-warehouse-sredniy-do-not-use-toggle",
+  "object": "Справочник.Склады",
+  "object_form": "Справочник.Склады.ФормаОбъекта",
+  "element_code": "000000003",
+  "element_name": "Средний",
+  "field_name": "НеИспользовать",
+  "field_caption": "Не использовать",
+  "field_kind": "boolean_attribute",
+  "operation_family": "catalog_boolean_attribute_toggle",
+  "mutates_business_data": true,
+  "pre_state": { "НеИспользовать": false, "presentation": "Нет", "source": "object form opened from list" },
+  "mutation": {
+    "set_value": true,
+    "presentation": "Да",
+    "write_action": "Записать",
+    "persistence_check": "Перечитать",
+    "post_write_db_read": { "НеИспользовать": true, "presentation": "Да" }
+  },
+  "recovery": {
+    "set_value": false,
+    "presentation": "Нет",
+    "write_action": "Записать",
+    "persistence_check": "Перечитать",
+    "post_recovery_db_read": { "НеИспользовать": false, "presentation": "Нет" },
+    "status": "known_state_restored"
+  },
+  "demo_data_changed": true,
+  "demo_data_residue": "none (original value restored and confirmed by DB reread)",
+  "runtime_action_attempted": true,
+  "proof_class": "same_channel_db_reread",
+  "proof_detail": "after each Записать the form was reloaded from the database via Перечитать and the reloaded value matched the intended state (Да after mutation, Нет after recovery)",
+  "independent_channel_probe": {
+    "attempted": true,
+    "channel": "live-mcp COM connection id 'client'",
+    "status": "failed",
+    "reason": "COM connector rejected credentials (Неверно указан пользователь или пароль); COM creds not aligned with empty-password TestClient user — separate config, out of scope"
+  },
+  "accepted_protocol_mapping": false,
+  "accepted_mapping_reason": "this run proves the real recoverable business-data mutation and live runtime, not a decoded TestClient protocol frame; the action ran through the vanessa reference oracle, not through the qa-mcp capture proxy, so no normalized protocol frames were captured",
+  "batch_readiness": "scheme_proven_for_real_mutation; protocol_capture_of_same_action_is_the_next_step"
+}

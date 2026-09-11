@@ -1,0 +1,155 @@
+{
+  "schema": "protocol-corpus-comparison.v1",
+  "generated_at": "2026-06-03T10:56:18Z",
+  "input_count": 1,
+  "inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260603-134132-safe-action/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260603-134132-safe-action",
+      "capture_ids": [
+        "20260603-134132"
+      ],
+      "case_count": 1
+    }
+  ],
+  "case_count": 1,
+  "classification_counts": {
+    "pending": 1
+  },
+  "stable_case_ids": [],
+  "accepted_case_ids": [],
+  "gap_case_ids": [
+    "safe-activate-existing-window"
+  ],
+  "normalizer_investigation_case_ids": [],
+  "cases": [
+    {
+      "case_id": "safe-activate-existing-window",
+      "classification": "pending",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260603-134132"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "pending"
+      ],
+      "availability": [
+        "supported"
+      ],
+      "safety_classes": [
+        "safe_ui_action"
+      ],
+      "safe_action_statuses": [
+        "pending"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "action_frame_ranges": [
+        null
+      ],
+      "background_frame_range_sets": [
+        []
+      ],
+      "action_result_marker_sets": [
+        [
+          "status=pending",
+          "window_title_observed"
+        ]
+      ],
+      "probe_evidence_paths": [],
+      "request_hash_evidence_paths": [],
+      "unresolved_reasons": [],
+      "precise_reasons": [
+        "missing_action_frame_range",
+        "missing_request_frames",
+        "missing_safe_action_hash",
+        "pending_action_result",
+        "replay_or_probe_unavailable"
+      ],
+      "provider_owners": [
+        "/opt/vanessa-mcp-stack",
+        "project:qa-mcp"
+      ],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260603-134132",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260603-134132-safe-action",
+          "availability": "supported",
+          "safety_class": "safe_ui_action",
+          "replay_status": "pending",
+          "effective_replay_status": "pending",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": null,
+          "pre_state": "Active internal window caption is recorded before activation.",
+          "action": "activate_window",
+          "post_state": "The target already-open internal window is active when the provider can switch it.",
+          "recovery_expectation": "Reactivate the original internal window when it differs from the selected target.",
+          "action_result_markers": [
+            "status=pending",
+            "window_title_observed"
+          ],
+          "action_frame_range": null,
+          "background_frame_ranges": [],
+          "action_runtime_result": {
+            "status": "pending",
+            "target_selected": true,
+            "post_matches_target": false,
+            "recovered_matches_pre": true,
+            "title_values_redacted": true,
+            "notes": "Vanessa activate_window was invoked for an already-open internal TestClient window; frame-range join remains a later analyzer/classification step."
+          },
+          "safe_action_status": "pending"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    }
+  ]
+}

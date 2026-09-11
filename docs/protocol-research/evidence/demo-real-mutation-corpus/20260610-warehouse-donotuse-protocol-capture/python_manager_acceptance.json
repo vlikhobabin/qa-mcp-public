@@ -1,0 +1,27 @@
+{
+  "schema": "qa-mcp.compare-probe-reference.by-ordinal.v1",
+  "generated_at": "2026-06-11T06:12:27Z",
+  "mode": "probe-ordinal",
+  "phase": "action_write",
+  "reference": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\mut-warehouse-donotuse-20260610",
+  "probe": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\probe-adaptive-20260611-084604",
+  "phase_ordinal_counts": {
+    "client_to_manager": 15,
+    "manager_to_client": 15
+  },
+  "reference_hash_by_direction": {
+    "client_to_manager": "37f5e98fc0b288cd37bf7dbe20cf0809b43fc3766b369d571b9b34bd593fe5e9",
+    "manager_to_client": "ad7752e69dae9f8b1d7b4422bb62eda53a838c5f4603c47f3037d6443af1c72b"
+  },
+  "probe_hash_by_direction": {
+    "client_to_manager": "37f5e98fc0b288cd37bf7dbe20cf0809b43fc3766b369d571b9b34bd593fe5e9",
+    "manager_to_client": "ad7752e69dae9f8b1d7b4422bb62eda53a838c5f4603c47f3037d6443af1c72b"
+  },
+  "hash_match_by_direction": {
+    "client_to_manager": true,
+    "manager_to_client": true
+  },
+  "structural_match": true,
+  "all_hashes_match": true,
+  "verdict": "accepted"
+}

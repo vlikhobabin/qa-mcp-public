@@ -1,0 +1,16 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "window-close-doclist",
+  "api_member": "TestedClientApplicationWindow.Close",
+  "operation_family": "client_application_window_close",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open the goods document list (Документ.ОперацияПоУчетуТоваров) — an unmodified list window that closes cleanly without a save prompt — then close the current window (action). Nothing persists. Drives TestedClientApplicationWindow.Close via 'И я закрываю текущее окно' (canonical Vanessa step, confirmed in upstream step definitions). vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/list/Документ.ОперацияПоУчетуТоваров\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И я закрываю текущее окно"},
+    {"phase": "post_read", "read": true}
+  ]
+}

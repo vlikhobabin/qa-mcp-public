@@ -1,0 +1,27 @@
+{
+  "schema": "qa-mcp.compare-probe-reference.by-ordinal.v1",
+  "generated_at": "2026-06-12T06:45:49Z",
+  "mode": "probe-ordinal",
+  "phase": "action",
+  "reference": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\addrow-ref1",
+  "probe": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\probe-addrow-20260612-094118",
+  "phase_ordinal_counts": {
+    "client_to_manager": 9,
+    "manager_to_client": 9
+  },
+  "reference_hash_by_direction": {
+    "client_to_manager": "c8e4c0fb72f5f2f0e7d4985cd77d64159c50af1bcebfc043b4b9d328515db95c",
+    "manager_to_client": "2da2ec750cbae9eb1439ead5965c086950f3e69889bb9a03e713eb346fce2548"
+  },
+  "probe_hash_by_direction": {
+    "client_to_manager": "c8e4c0fb72f5f2f0e7d4985cd77d64159c50af1bcebfc043b4b9d328515db95c",
+    "manager_to_client": "2da2ec750cbae9eb1439ead5965c086950f3e69889bb9a03e713eb346fce2548"
+  },
+  "hash_match_by_direction": {
+    "client_to_manager": true,
+    "manager_to_client": true
+  },
+  "structural_match": true,
+  "all_hashes_match": true,
+  "verdict": "accepted"
+}

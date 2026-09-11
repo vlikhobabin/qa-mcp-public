@@ -1,0 +1,19 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "goods-doc-changerow",
+  "api_member": "TestedFormTable.ChangeRow",
+  "operation_family": "form_table_change_row",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open a new (unsaved) Корректировка остатка document; in its ТоварныеЗапасы register-records table add a row, fill Количество=1 so the row is retained, then commit the row (finish editing) — all bootstrap. Action: begin editing that committed row, which drives TestedFormTable.ChangeRow (ТЧ.ИзменитьСтроку) via 'в таблице ... я начинаю редактирование строки'. The step calls ИзменитьСтроку only when the table is NOT already editing, so the bootstrap commit is required for the action to fire. The document is never saved, so nothing persists (the capture pipeline kills the TestClient afterward). Same family/form as the accepted AddRow/DeleteRow mappings. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Документ.ОперацияПоУчетуТоваров.Создать\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" в поле с именем 'ТоварныеЗапасыКоличество' я ввожу текст \"1\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я завершаю редактирование строки"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И в таблице \"ТоварныеЗапасы\" я начинаю редактирование строки"},
+    {"phase": "post_read", "read": true}
+  ]
+}

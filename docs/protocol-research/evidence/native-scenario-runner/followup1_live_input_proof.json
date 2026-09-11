@@ -1,0 +1,16 @@
+{
+  "schema": "card74.native-action-scenario.v1",
+  "scenario": "native-input-string",
+  "plan": [
+    {
+      "name": "input-pf-edit-string",
+      "kind": "input_text",
+      "marker": "PF_INPUT_PROOF",
+      "ordinal": 282
+    }
+  ],
+  "diverged_at_send_index": null,
+  "frames_sent": 281,
+  "exchanges_with_response": 281,
+  "status": "ok"
+}

@@ -1,0 +1,42 @@
+# qa-mcp — public standalone model B.
+#
+# The 1C TestClient runs on YOUR host (e.g. a licensed Windows 1C):
+#     1cv8 ENTERPRISE /IBConnectionString File="...your base..."; /N<user> /TESTCLIENT -TPort 15381 \
+#          /DisableStartupDialogs /DisableStartupMessages
+# (launch it in your INTERACTIVE session; on Windows over a remote shell use a `schtasks /RU <you> /IT` task —
+# a non-interactive/session-0 launch binds the port then the client dies. Open the inbound TPort in the firewall.)
+#
+# Then bring up the standalone container (no 1C platform / no X11 / no license):
+#     export QA_MCP_BEARER_TOKEN="$(openssl rand -hex 24)"
+#     docker compose -f docker/docker-compose.thin.yml up --build
+# and point your agent at  http://127.0.0.1:8000/mcp   (use 127.0.0.1, NOT localhost — on Windows `localhost`
+# resolves to IPv6 ::1 but the publish is IPv4, which fails with "Server disconnected"). No trailing slash.
+# Configure the MCP client with `Authorization: Bearer $QA_MCP_BEARER_TOKEN`.
+#
+# Tool calls then default to host=host.docker.internal, port=$QA_MCP_CLIENT_PORT — no need to pass host. The
+# display/XTEST/screenshot tools require the host-side input/screenshot agent. Set QA_MCP_HOST_AGENT and
+# QA_MCP_HOST_AGENT_TOKEN below after running host-agent/install-windows-host-agent.ps1 on the Windows host.
+
+services:
+  qa-mcp:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.thin
+    image: qa-mcp-standalone
+    # Host-only IPv4 publish. Connect the agent to http://127.0.0.1:8000/mcp
+    ports:
+      - "127.0.0.1:8000:8080"
+    # Reach the host's TestClient as a loopback-origin peer (the only address a Windows-built client accepts).
+    # Automatic on Docker Desktop; this makes it explicit + also works on Linux Docker.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      # Match these to YOUR host TestClient.
+      QA_MCP_CLIENT_PORT: "${QA_MCP_CLIENT_PORT:-15381}"
+      QA_MCP_PLATFORM_VERSION: "${QA_MCP_PLATFORM_VERSION:-8.3.27.2130}"
+      QA_MCP_HOST_AGENT: "${QA_MCP_HOST_AGENT:-}"
+      QA_MCP_HOST_AGENT_TOKEN: "${QA_MCP_HOST_AGENT_TOKEN:-}"
+      QA_MCP_BEARER_TOKEN: "${QA_MCP_BEARER_TOKEN:?set QA_MCP_BEARER_TOKEN for MCP HTTP bearer auth}"
+    volumes:
+      - ./.qa-mcp-work:/work        # evidence / lifecycle logs (optional)
+    restart: unless-stopped

@@ -1,0 +1,14 @@
+{
+  "card": 120,
+  "date": "2026-06-26",
+  "status": "passed_with_readback_limitation",
+  "agent_version": "0.1.0-card120",
+  "agent_sha256": "1fe93f6f7e447dacdb536b1d6da3fd4e662e3b2450c045dcfe68e45f0c336d9f",
+  "windows_host": "historical-user@192.0.2.202",
+  "testclient_pid": 12812,
+  "proof_value": "WOK-Ж120",
+  "proof_field": "Наименование",
+  "saved": false,
+  "screenshot_sha256": "abcc27e5f8c491151bdaec8d9be7a6e78b94054b98fc6dd49141488496e7e97b",
+  "raw_artifact": ".artifacts/openspec/remote-display-e2e/20260626-card120/write-form-value-final-clean-main.png"
+}

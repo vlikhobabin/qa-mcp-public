@@ -1,0 +1,58 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.reviewed-summary.v1",
+  "generated_at": "2026-06-05T05:03:04Z",
+  "run_id": "20260605-live-smoke-runtime-gap",
+  "source_runtime_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-smoke-runtime-gap",
+  "reviewed_output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260605-live-smoke-runtime-gap",
+  "fixture_version": "protocol-fixture.v1",
+  "command_catalog_version": "qa-mcp.manager-fixture-v1.manifest.v1",
+  "manager_harness": "DataProcessor.ProtocolFixtureTestManager.Form.ManagerHarness",
+  "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+  "proxy_testclient_port": 15382,
+  "run_status": "runtime_gap",
+  "status_reason": "manager fixture V1 live capture blocked during preflight: Vanessa EPF not found: C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\releases\\vanessa\\single\\vanessa-automation-single-51f920f-windows-screenshot-fixes.epf",
+  "bootstrap_status": "not_seen",
+  "command_count": 3,
+  "event_count": 0,
+  "readonly_event_count": 0,
+  "completed_count": 0,
+  "failed_count": 0,
+  "case_status_counts": {},
+  "frame_join_status_counts": {
+    "unresolved": 3
+  },
+  "accepted_protocol_mapping": false,
+  "accepted_case_ids": [],
+  "output_files": {
+    "runtime_manifest": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-smoke-runtime-gap\\manager_harness_manifest.json",
+    "runtime_result": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-smoke-runtime-gap\\manager_harness_result.json",
+    "runtime_case_events": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-smoke-runtime-gap\\case_events.jsonl",
+    "reviewed_summary_markdown": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260605-live-smoke-runtime-gap\\runtime_summary.md",
+    "reviewed_summary_json": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260605-live-smoke-runtime-gap\\runtime_summary.json",
+    "reviewed_frame_join_markdown": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260605-live-smoke-runtime-gap\\frame_join_report.md",
+    "reviewed_frame_join_json": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260605-live-smoke-runtime-gap\\frame_join_report.json",
+    "reviewed_corpus_rows": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260605-live-smoke-runtime-gap\\corpus_cases.jsonl"
+  },
+  "owner_routes": {
+    "runtime_apply": "project:qa-mcp",
+    "ui_proof": "/opt/vanessa-mcp-stack",
+    "bsl_diagnostics": "/opt/edt-lab",
+    "frame_join": "project:qa-mcp",
+    "replay_or_direct_probe": "project:qa-mcp"
+  },
+  "unresolved_gaps": [
+    {
+      "gap": "runtime_gap",
+      "owner_route": "project:qa-mcp",
+      "reason": "manager fixture V1 live capture blocked during preflight: Vanessa EPF not found: C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\releases\\vanessa\\single\\vanessa-automation-single-51f920f-windows-screenshot-fixes.epf",
+      "residual_risk": "no live TCP traffic exists for this run"
+    },
+    {
+      "gap": "no_before_event",
+      "owner_route": "project:qa-mcp",
+      "reason": "3 command(s) unresolved with reason=no_before_event",
+      "residual_risk": "command remains non-accepted until live range, replay or direct probe evidence is retained"
+    }
+  ],
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths"
+}

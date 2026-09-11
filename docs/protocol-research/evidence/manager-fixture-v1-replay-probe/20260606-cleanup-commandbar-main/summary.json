@@ -1,0 +1,36 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.replay-probe-summary.v1",
+  "source_capture": "runtime/protocol-research/captures/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "successful_replay_dir": "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-commandbar407-uipath-v1",
+  "send_count": 407,
+  "transport_status": "ok",
+  "no_response_frames": [],
+  "observed_dynamic_fields": {
+    "ack_guid_after_send_3": "d77d8242-0f3b-42c4-95ea-95553e764b3c",
+    "main_frame_guid_after_send_6": "6ca75e50-62a3-4842-b6cd-b429f7591ef2",
+    "secondary_frame_guid_after_send_15": "576ca02d-5064-4982-a2dc-880c0f4f5455",
+    "managed_form_guid_after_send_15": "a46eac50-71f0-495a-b7ea-dff953e08473"
+  },
+  "adaptation": {
+    "frame4_guid": true,
+    "frame5_guid": true,
+    "frame5_random_blocks": true,
+    "binary_single_block_through": 121,
+    "binary_single_block_frames": "123-129,131-174,176-187,189-210,212-231,233-294,296-300,302-307,309-359,361-367,369-371,373-381,383,386,388-394,396-399,402-405",
+    "binary_guid_through": 407,
+    "ui_path_guids": true
+  },
+  "accepted_probe_cases": [
+    {
+      "case_id": "tm-v1-commandbar-main",
+      "manager_frame_range": {"from": 402, "to": 407},
+      "response_after_send": 407,
+      "response_size": 2635,
+      "expected_marker": "PF_COMMAND_ENABLED",
+      "additional_markers": ["PF_COMMAND_DISABLED", "PF_COMMAND_POPUP", "PF_RESET_STATE"],
+      "normalized_hash": "a34f368171635aed20a1162e50a32be4977bfe5d265e0881b128fb4df8c13397",
+      "replay_status": "accepted_probe"
+    }
+  ],
+  "negative_controls": []
+}

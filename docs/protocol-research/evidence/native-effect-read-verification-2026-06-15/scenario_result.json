@@ -1,0 +1,30 @@
+{
+  "scenario": "Открыть форму фикстуры, прочитать ЖИВОЕ значение поля, ввести текст",
+  "status": "passed",
+  "steps": [
+    {
+      "name": "read form summary",
+      "kind": "read_form_summary",
+      "status": "ok",
+      "preview": "{\"schema\": \"python-manager-form-summary.result.v1\", \"status\": \"ok\", \"query\": \"form-summary\", \"case_id\": \"form-summary\", \"evidence_status\": \"partial\", \"descriptor\": {\"case_id\": \"form-summary\", \"query\": \"form-summary\", \"operation_family\": \"form_summary\", \"safety_class\": \"read_only\", \"acceptance_status\": \"partial\", \"evidence_path\": \"docs/protocol-research/evidence/accepted-mappings/expanded-readonly-20260602-193802-vs-20260602-195407-probe-accepted/accepted_mappings.json\", \"accepted_normalized_hash",
+      "assertion": null,
+      "error": null
+    },
+    {
+      "name": "value PF_EDIT_STRING contains PF_EDIT_STRING_VALUE",
+      "kind": "read_form_value",
+      "status": "ok",
+      "preview": "{\"schema\": \"python-manager-form-value.result.v1\", \"status\": \"ok\", \"query\": \"form-value-read\", \"case_id\": \"form-value-read\", \"evidence_status\": \"partial\", \"descriptor\": {\"case_id\": \"form-value-read\", \"query\": \"form-value-read\", \"operation_family\": \"form_value_read\", \"safety_class\": \"read_only\", \"acceptance_status\": \"partial\", \"evidence_path\": \"docs/protocol-research/evidence/accepted-mappings/expanded-readonly-20260602-193802-vs-20260602-195407-probe-accepted/accepted_mappings.json\", \"accepted_no",
+      "assertion": true,
+      "error": null
+    },
+    {
+      "name": "input PF_EDIT_STRING",
+      "kind": "input_text",
+      "status": "ok",
+      "preview": "{\"query_id\": \"input PF_EDIT_STRING\", \"sent_bytes\": 268, \"recv_bytes\": 476, \"adapted\": true, \"accepted\": true}",
+      "assertion": null,
+      "error": null
+    }
+  ]
+}

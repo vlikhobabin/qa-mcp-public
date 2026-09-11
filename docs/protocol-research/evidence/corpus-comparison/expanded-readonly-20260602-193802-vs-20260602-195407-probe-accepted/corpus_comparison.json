@@ -1,0 +1,3516 @@
+{
+  "schema": "protocol-corpus-comparison.v1",
+  "generated_at": "2026-06-02T19:35:48Z",
+  "input_count": 2,
+  "inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+      "capture_ids": [
+        "20260602-193802"
+      ],
+      "case_count": 10
+    },
+    {
+      "input_index": 1,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+      "capture_ids": [
+        "20260602-195407"
+      ],
+      "case_count": 10
+    }
+  ],
+  "case_count": 10,
+  "classification_counts": {
+    "incomplete_hash": 2,
+    "stable": 2,
+    "unsupported_gap": 6
+  },
+  "stable_case_ids": [
+    "active-form-context",
+    "active-window-context"
+  ],
+  "accepted_case_ids": [
+    "active-form-context",
+    "active-window-context"
+  ],
+  "gap_case_ids": [
+    "button-family-readonly-gap",
+    "checkbox-family-readonly-gap",
+    "commandbar-family-readonly-gap",
+    "form-element-details",
+    "label-family-readonly-gap",
+    "page-family-readonly-gap",
+    "table-family-readonly-gap",
+    "typed-input-field-readonly"
+  ],
+  "normalizer_investigation_case_ids": [],
+  "cases": [
+    {
+      "case_id": "active-form-context",
+      "classification": "stable",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "accepted"
+      ],
+      "availability": [
+        "supported"
+      ],
+      "pre_normalization_hash_values": [
+        "a80b3b8e82bb10b7a8045a34ba1119ffc91b7b291f2384daa7bf1aee92218c55",
+        "c63209d269d87024ba6131644ac0239e170f547ae512fbf96511f586f823ec99"
+      ],
+      "hash_values": [
+        "e43ce48cedae7b6df936a2e0db71e1afd93d32df8e0767d8750f4ff176231573"
+      ],
+      "stable_hash": "e43ce48cedae7b6df936a2e0db71e1afd93d32df8e0767d8750f4ff176231573",
+      "request_sizes": [
+        801
+      ],
+      "response_sizes": [
+        2337
+      ],
+      "operation_token_sets": [
+        [
+          "0a102bc90b462c40b5aeb6e2329a7234",
+          "554d850d068aee499e292f8d0e7a9f0e"
+        ]
+      ],
+      "response_marker_sets": [
+        [
+          ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb]",
+          "Продажи",
+          "Отчет.ДашбордПродажи.Форма.ФормаОтчета",
+          "HomePage",
+          "e1cib/navigationpoint/startpage",
+          "Начальная страница",
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "MainFrame",
+          "Демонстрационное приложение",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb].EditField[ДиаграммаПоПериодам]",
+          "ДиаграммаПоПериодам",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb].EditField[ДиаграммаПоТоварам]",
+          "ДиаграммаПоТоварам"
+        ],
+        [
+          ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538]",
+          "Продажи",
+          "Отчет.ДашбордПродажи.Форма.ФормаОтчета",
+          "HomePage",
+          "e1cib/navigationpoint/startpage",
+          "Начальная страница",
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "MainFrame",
+          "Демонстрационное приложение",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538].EditField[ДиаграммаПоПериодам]",
+          "ДиаграммаПоПериодам",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538].EditField[ДиаграммаПоТоварам]",
+          "ДиаграммаПоТоварам"
+        ]
+      ],
+      "dynamic_field_sets": [
+        [
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "replacement": "<ack_guid_uuid_le>",
+            "length": 16,
+            "count": 6
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "replacement": "<ascii_guid>",
+            "length": 36,
+            "count": 4
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "replacement": "<nonce>",
+            "length": 16,
+            "count": 6
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "replacement": "<sequence_uint16_le>",
+            "length": 2,
+            "count": 6
+          }
+        ]
+      ],
+      "normalization_replacement_sets": [
+        [
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "af7b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "ac0615018d2ac54e9db5956660bd239c"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 95,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 13,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 13,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "b07b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 13,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "70d7befcdfbf4748bec8fe7432b14cb7"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 14,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 14,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "b17b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 14,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "5960f260798a4c44b13b15942806da74"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 15,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 15,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "b27b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 15,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "46027f4e3469b94eaa7fe60105e4a1d2"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "b37b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "846b51d6643f5443ad33eaa4e853d337"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 95,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "b47b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "304dbd07f2daa84a91fe192781605578"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 95,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 145,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "a05bfad2-2211-4e46-a144-f6b8c4190538"
+          }
+        ],
+        [
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "df38"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "4e72933dc6efe6449447fdbe095379ba"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 95,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 13,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 13,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "e038"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 13,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "e91f4e8383c7054e8958e3318f25f02c"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 14,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 14,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "e138"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 14,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "e5a053831c5b774394a3414a5047afeb"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 15,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 15,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "e238"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 15,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "7906165de986dd43aaddb2c16a23c15c"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "e338"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "753dd6090f681443b0a664a2dc6bbfa9"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 95,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "e438"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "e41aa7bb3e1f8644b3fe4b530672029c"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 95,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+          },
+          {
+            "name": "ascii_guid",
+            "source": "ascii",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 145,
+            "length": 36,
+            "original_class": "guid",
+            "replacement": "<ascii_guid>",
+            "value": "5be10e9c-571a-42f9-beaa-460380e221bb"
+          }
+        ]
+      ],
+      "preserved_field_sets": [
+        [
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 12,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 13,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 14,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 15,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 16,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 17,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+          }
+        ]
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json"
+      ],
+      "unresolved_reasons": [
+        "row_status_promoted_from_pending_by_probe_evidence"
+      ],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-form-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": "a80b3b8e82bb10b7a8045a34ba1119ffc91b7b291f2384daa7bf1aee92218c55",
+          "normalized_hash": "e43ce48cedae7b6df936a2e0db71e1afd93d32df8e0767d8750f4ff176231573",
+          "request_size": 801,
+          "response_size": 2337,
+          "operation_tokens": [
+            "0a102bc90b462c40b5aeb6e2329a7234",
+            "554d850d068aee499e292f8d0e7a9f0e"
+          ],
+          "response_markers": [
+            ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538]",
+            "Продажи",
+            "Отчет.ДашбордПродажи.Форма.ФормаОтчета",
+            "HomePage",
+            "e1cib/navigationpoint/startpage",
+            "Начальная страница",
+            "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "MainFrame",
+            "Демонстрационное приложение",
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538].EditField[ДиаграммаПоПериодам]",
+            "ДиаграммаПоПериодам",
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538].EditField[ДиаграммаПоТоварам]",
+            "ДиаграммаПоТоварам"
+          ],
+          "response_marker_count": 14,
+          "dynamic_fields": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "replacement": "<ack_guid_uuid_le>",
+              "length": 16,
+              "count": 6
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "replacement": "<ascii_guid>",
+              "length": 36,
+              "count": 4
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "replacement": "<nonce>",
+              "length": 16,
+              "count": 6
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "replacement": "<sequence_uint16_le>",
+              "length": 2,
+              "count": 6
+            }
+          ],
+          "normalization_replacements": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "af7b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "ac0615018d2ac54e9db5956660bd239c"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 95,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "b07b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "70d7befcdfbf4748bec8fe7432b14cb7"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "b17b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "5960f260798a4c44b13b15942806da74"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "b27b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "46027f4e3469b94eaa7fe60105e4a1d2"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "b37b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "846b51d6643f5443ad33eaa4e853d337"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 95,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "b47b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "304dbd07f2daa84a91fe192781605578"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 95,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 145,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "a05bfad2-2211-4e46-a144-f6b8c4190538"
+            }
+          ],
+          "preserved_fields": [
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            }
+          ],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 12,
+              "to": 17
+            },
+            "client_to_manager": {
+              "from": 13,
+              "to": 18
+            }
+          },
+          "element_family": null
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-form-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": "c63209d269d87024ba6131644ac0239e170f547ae512fbf96511f586f823ec99",
+          "normalized_hash": "e43ce48cedae7b6df936a2e0db71e1afd93d32df8e0767d8750f4ff176231573",
+          "request_size": 801,
+          "response_size": 2337,
+          "operation_tokens": [
+            "0a102bc90b462c40b5aeb6e2329a7234",
+            "554d850d068aee499e292f8d0e7a9f0e"
+          ],
+          "response_markers": [
+            ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb]",
+            "Продажи",
+            "Отчет.ДашбордПродажи.Форма.ФормаОтчета",
+            "HomePage",
+            "e1cib/navigationpoint/startpage",
+            "Начальная страница",
+            "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "MainFrame",
+            "Демонстрационное приложение",
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb].EditField[ДиаграммаПоПериодам]",
+            "ДиаграммаПоПериодам",
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb].EditField[ДиаграммаПоТоварам]",
+            "ДиаграммаПоТоварам"
+          ],
+          "response_marker_count": 14,
+          "dynamic_fields": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "replacement": "<ack_guid_uuid_le>",
+              "length": 16,
+              "count": 6
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "replacement": "<ascii_guid>",
+              "length": 36,
+              "count": 4
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "replacement": "<nonce>",
+              "length": 16,
+              "count": 6
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "replacement": "<sequence_uint16_le>",
+              "length": 2,
+              "count": 6
+            }
+          ],
+          "normalization_replacements": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "df38"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "4e72933dc6efe6449447fdbe095379ba"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 95,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "e038"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "e91f4e8383c7054e8958e3318f25f02c"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "e138"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "e5a053831c5b774394a3414a5047afeb"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "e238"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "7906165de986dd43aaddb2c16a23c15c"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "e338"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "753dd6090f681443b0a664a2dc6bbfa9"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 95,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "e438"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "e41aa7bb3e1f8644b3fe4b530672029c"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 95,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "6ca75e50-62a3-4842-b6cd-b429f7591ef2"
+            },
+            {
+              "name": "ascii_guid",
+              "source": "ascii",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 145,
+              "length": 36,
+              "original_class": "guid",
+              "replacement": "<ascii_guid>",
+              "value": "5be10e9c-571a-42f9-beaa-460380e221bb"
+            }
+          ],
+          "preserved_fields": [
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 12,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 13,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 14,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 15,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 16,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 17,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            }
+          ],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 12,
+              "to": 17
+            },
+            "client_to_manager": {
+              "from": 13,
+              "to": 18
+            }
+          },
+          "element_family": null
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "active-window-context",
+      "classification": "stable",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "accepted"
+      ],
+      "availability": [
+        "supported"
+      ],
+      "pre_normalization_hash_values": [
+        "5193c81c798e0de0327c0dd91e235ae8736391ba0299b825ff14a219d8090082",
+        "af7098e700c1c522c4222c5524bfaa9a5a095a09b2053f4723f00f71e1d0ae53"
+      ],
+      "hash_values": [
+        "62e03d159d511173297af9ab9a287d9ab21f788a82ab840d97c639e726ad80ad"
+      ],
+      "stable_hash": "62e03d159d511173297af9ab9a287d9ab21f788a82ab840d97c639e726ad80ad",
+      "request_sizes": [
+        400
+      ],
+      "response_sizes": [
+        995
+      ],
+      "operation_token_sets": [
+        [
+          "0a102bc90b462c40b5aeb6e2329a7234",
+          "554d850d068aee499e292f8d0e7a9f0e"
+        ]
+      ],
+      "response_marker_sets": [
+        [
+          ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "HomePage",
+          "e1cib/navigationpoint/startpage",
+          "Начальная страница",
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "MainFrame",
+          "Демонстрационное приложение"
+        ]
+      ],
+      "dynamic_field_sets": [
+        [
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "replacement": "<ack_guid_uuid_le>",
+            "length": 16,
+            "count": 4
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "replacement": "<nonce>",
+            "length": 16,
+            "count": 4
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "replacement": "<sequence_uint16_le>",
+            "length": 2,
+            "count": 4
+          }
+        ]
+      ],
+      "normalization_replacement_sets": [
+        [
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 8,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 8,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "ab7b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 8,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "652f986c64686542856bd8195c6ea047"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 9,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 9,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "ac7b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 9,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "60c143cd5d06504cbe7f3013ce50e5c2"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 10,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 10,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "ad7b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 10,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "4e4224ebf1001145b145562016eab36e"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 11,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 11,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "ae7b"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 11,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "e768b86cfa2deb4f86b502d2824e3a35"
+          }
+        ],
+        [
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 8,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 8,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "db38"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 8,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "7c0303e79a4bdd42ab44d2e52b380437"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 9,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 9,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "dc38"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 9,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "e77dbc73ed8df247bad955c9cdd68084"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 10,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 10,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "dd38"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 10,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "4b036982c00c8e40888c55a34918748f"
+          },
+          {
+            "name": "ack_guid_uuid_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 11,
+            "offset": 2,
+            "length": 16,
+            "original_class": "guid",
+            "replacement": "<ack_guid_uuid_le>",
+            "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+          },
+          {
+            "name": "sequence_uint16_le",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 11,
+            "offset": 19,
+            "length": 2,
+            "original_class": "counter",
+            "replacement": "<sequence_uint16_le>",
+            "value_hex": "de38"
+          },
+          {
+            "name": "nonce",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 11,
+            "offset": 68,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "replacement": "<nonce>",
+            "value_hex": "90abea22f5785e429c0dad2a580e8a9b"
+          }
+        ]
+      ],
+      "preserved_field_sets": [
+        [
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 8,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 9,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 10,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+          },
+          {
+            "name": "operation_token",
+            "source": "binary",
+            "direction": "manager_to_client",
+            "frame": 11,
+            "offset": 51,
+            "length": 16,
+            "original_class": "opaque_bytes",
+            "normalization_role": "preserved_semantic_token",
+            "replacement": null,
+            "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+            "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+          }
+        ]
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json"
+      ],
+      "unresolved_reasons": [
+        "row_status_promoted_from_pending_by_probe_evidence"
+      ],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-window-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": "af7098e700c1c522c4222c5524bfaa9a5a095a09b2053f4723f00f71e1d0ae53",
+          "normalized_hash": "62e03d159d511173297af9ab9a287d9ab21f788a82ab840d97c639e726ad80ad",
+          "request_size": 400,
+          "response_size": 995,
+          "operation_tokens": [
+            "0a102bc90b462c40b5aeb6e2329a7234",
+            "554d850d068aee499e292f8d0e7a9f0e"
+          ],
+          "response_markers": [
+            ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "HomePage",
+            "e1cib/navigationpoint/startpage",
+            "Начальная страница",
+            "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "MainFrame",
+            "Демонстрационное приложение"
+          ],
+          "response_marker_count": 7,
+          "dynamic_fields": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "replacement": "<ack_guid_uuid_le>",
+              "length": 16,
+              "count": 4
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "replacement": "<nonce>",
+              "length": 16,
+              "count": 4
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "replacement": "<sequence_uint16_le>",
+              "length": 2,
+              "count": 4
+            }
+          ],
+          "normalization_replacements": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "ab7b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "652f986c64686542856bd8195c6ea047"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "ac7b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "60c143cd5d06504cbe7f3013ce50e5c2"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "ad7b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "4e4224ebf1001145b145562016eab36e"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "053b1e7509c7f2489e18f06f0f163c89"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "ae7b"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "e768b86cfa2deb4f86b502d2824e3a35"
+            }
+          ],
+          "preserved_fields": [
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            }
+          ],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 8,
+              "to": 11
+            },
+            "client_to_manager": {
+              "from": 9,
+              "to": 12
+            }
+          },
+          "element_family": null
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-window-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": "5193c81c798e0de0327c0dd91e235ae8736391ba0299b825ff14a219d8090082",
+          "normalized_hash": "62e03d159d511173297af9ab9a287d9ab21f788a82ab840d97c639e726ad80ad",
+          "request_size": 400,
+          "response_size": 995,
+          "operation_tokens": [
+            "0a102bc90b462c40b5aeb6e2329a7234",
+            "554d850d068aee499e292f8d0e7a9f0e"
+          ],
+          "response_markers": [
+            ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "HomePage",
+            "e1cib/navigationpoint/startpage",
+            "Начальная страница",
+            "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+            "MainFrame",
+            "Демонстрационное приложение"
+          ],
+          "response_marker_count": 7,
+          "dynamic_fields": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "replacement": "<ack_guid_uuid_le>",
+              "length": 16,
+              "count": 4
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "replacement": "<nonce>",
+              "length": 16,
+              "count": 4
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "replacement": "<sequence_uint16_le>",
+              "length": 2,
+              "count": 4
+            }
+          ],
+          "normalization_replacements": [
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "db38"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "7c0303e79a4bdd42ab44d2e52b380437"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "dc38"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "e77dbc73ed8df247bad955c9cdd68084"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "dd38"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "4b036982c00c8e40888c55a34918748f"
+            },
+            {
+              "name": "ack_guid_uuid_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 2,
+              "length": 16,
+              "original_class": "guid",
+              "replacement": "<ack_guid_uuid_le>",
+              "value_hex": "fe8e4d8bb47c684b8b60b180b71d3450"
+            },
+            {
+              "name": "sequence_uint16_le",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 19,
+              "length": 2,
+              "original_class": "counter",
+              "replacement": "<sequence_uint16_le>",
+              "value_hex": "de38"
+            },
+            {
+              "name": "nonce",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 68,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "replacement": "<nonce>",
+              "value_hex": "90abea22f5785e429c0dad2a580e8a9b"
+            }
+          ],
+          "preserved_fields": [
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 8,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 9,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "0a102bc90b462c40b5aeb6e2329a7234"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 10,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            },
+            {
+              "name": "operation_token",
+              "source": "binary",
+              "direction": "manager_to_client",
+              "frame": 11,
+              "offset": 51,
+              "length": 16,
+              "original_class": "opaque_bytes",
+              "normalization_role": "preserved_semantic_token",
+              "replacement": null,
+              "reason": "Command-like token is kept in the normalized request hash until repeatability evidence proves it is safe to replace.",
+              "value_hex": "554d850d068aee499e292f8d0e7a9f0e"
+            }
+          ],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 8,
+              "to": 11
+            },
+            "client_to_manager": {
+              "from": 9,
+              "to": 12
+            }
+          },
+          "element_family": null
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "button-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "unsupported"
+      ],
+      "effective_replay_statuses": [
+        "unsupported"
+      ],
+      "availability": [
+        "unsupported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Button"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Button"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "checkbox-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "unsupported"
+      ],
+      "effective_replay_statuses": [
+        "unsupported"
+      ],
+      "availability": [
+        "unsupported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "CheckBox"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "CheckBox"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "commandbar-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "unsupported"
+      ],
+      "effective_replay_statuses": [
+        "unsupported"
+      ],
+      "availability": [
+        "unsupported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "CommandBar"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "CommandBar"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "form-element-details",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "accepted"
+      ],
+      "availability": [
+        "supported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json"
+      ],
+      "unresolved_reasons": [
+        "accepted_probe_without_reviewed_request_hash",
+        "row_status_promoted_from_pending_by_probe_evidence"
+      ],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "form-element-details",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "accepted_probe_without_reviewed_request_hash",
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 101,
+              "to": 106
+            },
+            "client_to_manager": {
+              "from": 102,
+              "to": 107
+            }
+          },
+          "element_family": "EditField"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "form-element-details",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "accepted_probe_without_reviewed_request_hash",
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 101,
+              "to": 106
+            },
+            "client_to_manager": {
+              "from": 102,
+              "to": 107
+            }
+          },
+          "element_family": "EditField"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "label-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "unsupported"
+      ],
+      "effective_replay_statuses": [
+        "unsupported"
+      ],
+      "availability": [
+        "unsupported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Label"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Label"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "page-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "unsupported"
+      ],
+      "effective_replay_statuses": [
+        "unsupported"
+      ],
+      "availability": [
+        "unsupported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Page"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Page"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "table-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "unsupported"
+      ],
+      "effective_replay_statuses": [
+        "unsupported"
+      ],
+      "availability": [
+        "unsupported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Table"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "unsupported",
+          "replay_status": "unsupported",
+          "effective_replay_status": "unsupported",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Table"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "typed-input-field-readonly",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "accepted"
+      ],
+      "availability": [
+        "supported"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json"
+      ],
+      "unresolved_reasons": [
+        "accepted_probe_without_reviewed_request_hash",
+        "row_status_promoted_from_pending_by_probe_evidence"
+      ],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "typed-input-field-readonly",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "accepted_probe_without_reviewed_request_hash",
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 101,
+              "to": 106
+            },
+            "client_to_manager": {
+              "from": 102,
+              "to": 107
+            }
+          },
+          "element_family": "EditField"
+        },
+        {
+          "input_index": 1,
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "availability": "supported",
+          "replay_status": "pending",
+          "effective_replay_status": "accepted",
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "typed-input-field-readonly",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          },
+          "unresolved_reasons": [
+            "accepted_probe_without_reviewed_request_hash",
+            "row_status_promoted_from_pending_by_probe_evidence"
+          ],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": {
+            "manager_to_client": {
+              "from": 101,
+              "to": 106
+            },
+            "client_to_manager": {
+              "from": 102,
+              "to": 107
+            }
+          },
+          "element_family": "EditField"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    }
+  ]
+}

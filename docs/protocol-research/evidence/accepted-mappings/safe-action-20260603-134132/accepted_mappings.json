@@ -1,0 +1,18 @@
+{
+  "schema": "protocol-accepted-mappings.v1",
+  "generated_at": "2026-06-03T10:56:18Z",
+  "comparison_inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260603-134132-safe-action/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260603-134132-safe-action",
+      "capture_ids": [
+        "20260603-134132"
+      ],
+      "case_count": 1
+    }
+  ],
+  "accepted_case_ids": [],
+  "case_count": 0,
+  "cases": []
+}

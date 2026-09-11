@@ -1,0 +1,20 @@
+{
+  "schema": "card74.single-session-proof.v1",
+  "segments": [
+    {
+      "name": "active-window",
+      "status": "ok",
+      "frame_count": 1,
+      "frame4_sequence": 62245
+    },
+    {
+      "name": "form-summary",
+      "status": "ok",
+      "frame_count": 6,
+      "frame4_sequence": 62245
+    }
+  ],
+  "bootstrap_ack_guid": "fb4299a6-1205-4711-975a-4e44349e89cb",
+  "bootstrap_frame4_sequence": 62245,
+  "status": "ok"
+}

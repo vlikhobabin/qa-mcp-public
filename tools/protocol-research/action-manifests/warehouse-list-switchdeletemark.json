@@ -1,0 +1,16 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "warehouse-list-switchdeletemark",
+  "api_member": "TestedFormTable.SwitchRowDeleteMark",
+  "operation_family": "form_table_switch_row_delete_mark",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open the Справочник.Склады list and toggle the delete mark of the current (first) warehouse row, which drives TestedFormTable.SwitchRowDeleteMark (ПереключитьПометкуУдаленияСтроки) via 'в таблице ... я меняю пометку удаления строки'. EMPIRICAL FINDING (capture switchdel-learn1): the method only OPENS the confirmation dialog 'Пометить выбранный элемент на удаление?' — the delete mark is written to the DB only on 'Да', which the capture never clicks; the TestClient is then killed with the dialog pending, so nothing persists. A tabular-section row does NOT support a delete mark (proven: goods-doc-switchdeletemark rejected 'Неподходящий тип элемента управления'), so a dynamic list is required; toggling an EXISTING warehouse keeps the object ref stable across runs (fully_stable) and, because the confirmation is never answered, touches no data — strictly safer and simpler than a throwaway object. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/list/Справочник.Склады\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И в таблице \"Список\" я меняю пометку удаления строки"},
+    {"phase": "post_read", "read": true}
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2-safe-action.proof-summary.v1",
+  "generated_at": "2026-06-07T19:38:25Z",
+  "source_corpus_cases": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join/corpus_cases.jsonl",
+  "row_count": 2,
+  "decision_counts": {
+    "candidate": 2
+  },
+  "accepted_count": 0,
+  "candidate_count": 2,
+  "raw_output_policy": "raw replay/probe payloads, generated request series, platform logs and full TCP captures stay under ignored runtime/protocol-research paths",
+  "output_files": {
+    "proof_summary_json": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-proof-decision/proof_summary.json",
+    "proof_summary_markdown": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-proof-decision/proof_summary.md",
+    "proof_decisions": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-proof-decision/proof_decisions.jsonl"
+  },
+  "decisions": [
+    {
+      "schema": "qa-mcp.manager-fixture-v2-safe-action.proof-decision.v1",
+      "case_id": "safe-switch-fixture-page-b",
+      "action_id": "safe-switch-fixture-page-b",
+      "target_id": "tm-v2-pages-main",
+      "target_marker": "PF_PAGES_MAIN",
+      "allowed_action_family": "switch_fixture_page",
+      "status": "candidate",
+      "accepted_protocol_mapping": false,
+      "candidate_reason": "replay_or_probe_or_typed_contract_unavailable",
+      "proof_routes": {
+        "replay": "infeasible",
+        "direct_python_manager_probe": "infeasible",
+        "typed_contract": "insufficient"
+      },
+      "proof_route_reasons": {
+        "replay": "existing replay_probe tooling is read-only/bootstrap-oriented and does not safely replay manifest-gated V2 UI actions with recovery",
+        "direct_python_manager_probe": "current direct Python manager probes cover read-only context/marker queries, not same-action V2 switch/focus semantics",
+        "typed_contract": "phase markers and runner results prove live candidate execution, but do not prove that the isolated wire shape independently reproduces the same action"
+      },
+      "proof_prerequisites": {
+        "action_frame_range": true,
+        "normalized_hash": true,
+        "recovery_evidence": true,
+        "action_result_markers": true
+      },
+      "missing_for_acceptance": [
+        "accepted_replay_probe_or_typed_contract_proof"
+      ],
+      "action_frame_range": {
+        "manager_to_client": {
+          "from": 59,
+          "to": 61,
+          "count": 3
+        },
+        "client_to_manager": {
+          "from": 60,
+          "to": 62,
+          "count": 3
+        }
+      },
+      "background_frame_ranges": [
+        {
+          "manager_to_client": {
+            "from": 55,
+            "to": 62,
+            "count": 5
+          },
+          "client_to_manager": {
+            "from": 56,
+            "to": 63,
+            "count": 5
+          }
+        }
+      ],
+      "recovery_frame_range": {
+        "manager_to_client": {
+          "from": 63,
+          "to": 65,
+          "count": 3
+        },
+        "client_to_manager": {
+          "from": 64,
+          "to": 66,
+          "count": 3
+        }
+      },
+      "request_size": 731,
+      "response_size": 622,
+      "dynamic_field_count": 7,
+      "normalized_hash": "191824eda15e75980801e07ab5f443a9b0065f9f28d1ee5162bbbb6c803ded4a",
+      "pre_normalization_hash": "ec4f0b51b077d9a340251aea69b66f6fc17453d5448a556321967bf7ff3f1218",
+      "action_result_markers": [
+        "PF_PAGES_MAIN",
+        "PF_PAGE_B",
+        "PF_SELECTED_PAGE"
+      ],
+      "recovery_result": {
+        "status": "known_state_restored",
+        "route": "select_page_a",
+        "live_recovery_executed": true,
+        "known_state_rationale": "live recovery activated fixture page A",
+        "expected_recovery_markers": [
+          "PF_PAGE_A"
+        ]
+      },
+      "non_accepted_reasons": [
+        "missing_safe_action_acceptance_proof",
+        "replay_or_probe_unavailable"
+      ]
+    },
+    {
+      "schema": "qa-mcp.manager-fixture-v2-safe-action.proof-decision.v1",
+      "case_id": "safe-focus-existing-edit-string",
+      "action_id": "safe-focus-existing-edit-string",
+      "target_id": "tm-v2-edit-string",
+      "target_marker": "PF_EDIT_STRING",
+      "allowed_action_family": "focus_existing_element",
+      "status": "candidate",
+      "accepted_protocol_mapping": false,
+      "candidate_reason": "replay_or_probe_or_typed_contract_unavailable",
+      "proof_routes": {
+        "replay": "infeasible",
+        "direct_python_manager_probe": "infeasible",
+        "typed_contract": "insufficient"
+      },
+      "proof_route_reasons": {
+        "replay": "existing replay_probe tooling is read-only/bootstrap-oriented and does not safely replay manifest-gated V2 UI actions with recovery",
+        "direct_python_manager_probe": "current direct Python manager probes cover read-only context/marker queries, not same-action V2 switch/focus semantics",
+        "typed_contract": "phase markers and runner results prove live candidate execution, but do not prove that the isolated wire shape independently reproduces the same action"
+      },
+      "proof_prerequisites": {
+        "action_frame_range": true,
+        "normalized_hash": true,
+        "recovery_evidence": true,
+        "action_result_markers": true
+      },
+      "missing_for_acceptance": [
+        "accepted_replay_probe_or_typed_contract_proof"
+      ],
+      "action_frame_range": {
+        "manager_to_client": {
+          "from": 70,
+          "to": 71,
+          "count": 2
+        },
+        "client_to_manager": {
+          "from": 71,
+          "to": 72,
+          "count": 2
+        }
+      },
+      "background_frame_ranges": [
+        {
+          "manager_to_client": {
+            "from": 66,
+            "to": 72,
+            "count": 5
+          },
+          "client_to_manager": {
+            "from": 67,
+            "to": 73,
+            "count": 5
+          }
+        }
+      ],
+      "recovery_frame_range": {
+        "manager_to_client": {
+          "from": 73,
+          "to": 74,
+          "count": 2
+        },
+        "client_to_manager": {
+          "from": 74,
+          "to": 75,
+          "count": 2
+        }
+      },
+      "request_size": 534,
+      "response_size": 245,
+      "dynamic_field_count": 5,
+      "normalized_hash": "bbfa2978b211f2f6e54d84f3bc53f19aff713ee0ba66f5a7d8392ef619869b19",
+      "pre_normalization_hash": "89b115e77d7d4b411488b272d1c95a92844a70428b3b5aae34b05a83b0b34abb",
+      "action_result_markers": [
+        "PF_EDIT_STRING",
+        "PF_EDIT_STRING_VALUE"
+      ],
+      "recovery_result": {
+        "status": "known_state_restored",
+        "route": "focus_form_shell",
+        "live_recovery_executed": true,
+        "known_state_rationale": "live recovery activated the fixture form shell",
+        "expected_recovery_markers": [
+          "PF_FORM_MAIN"
+        ]
+      },
+      "non_accepted_reasons": [
+        "missing_safe_action_acceptance_proof",
+        "replay_or_probe_unavailable"
+      ]
+    }
+  ]
+}

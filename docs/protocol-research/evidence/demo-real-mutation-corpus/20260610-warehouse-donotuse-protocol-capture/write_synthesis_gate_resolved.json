@@ -1,0 +1,20 @@
+{
+  "schema": "qa-mcp.write-synthesis-gate-resolved.v1",
+  "run": "probe-fullsynth (Средний identity, fixed)",
+  "root_cause": {
+    "offset_2_18": "per-SESSION ack/connection GUID (bytes_le form 77393350-13dc-4aed-..., present in ~857/861 frames and learnable as an ASCII guid), NOT a per-frame message id as earlier mislabeled",
+    "render_write_frame_bug": "substituted only the template's 2 session GUIDs, leaving the offset-2 session ack GUID stale -> client rejected the write with a uniform 665 response (the long-standing native_mutation failure)",
+    "fresh_message_id_bug": "regenerating offset-2 with a random uuid clobbered the correctly-rebound ack GUID -> 47 uniform-665 responses"
+  },
+  "fix": "synthesize write/poll frames with navigation.render_form_command (GLOBAL guid rebind handles the ack GUID + session GUIDs in all encodings) + a fresh per-frame nonce at offset 68; never regenerate offset-2",
+  "result": {
+    "frames_sent": 252,
+    "synthesized_frames": 50,
+    "synthesized_writes": 14,
+    "synthesized_polls": 33,
+    "uniform_665_responses": 0,
+    "Средний_Склад_responses": 22,
+    "diverged_at": null,
+    "conclusion": "the synthesized write (and poll) frames are accepted live with zero 665 rejections; the card opens and the write executes. The write-synthesis gate is resolved: render_form_command is the correct write synthesizer. True capture-free synthesis is bounded by the inherent template structure + session-bound GUIDs (ack/SecondaryFrame/ManagedForm) which must be the live values; only the per-frame nonce is freely regenerated."
+  }
+}

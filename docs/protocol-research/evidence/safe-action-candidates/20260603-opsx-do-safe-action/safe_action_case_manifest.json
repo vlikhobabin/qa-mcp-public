@@ -1,0 +1,30 @@
+{
+  "schema": "protocol-safe-action-case-manifest.v1",
+  "source": "capture-safe-ui-action-evidence",
+  "cases": [
+    {
+      "case_id": "safe-activate-existing-window",
+      "scenario": "safe-action",
+      "api_call": "Vanessa MCP activate_window -> native TestClient internal window activation",
+      "ui_target": "Existing internal TestClient window selected at runtime from get_window_list_testclient",
+      "expected_state": "The TestClient is attached and at least one internal window is already open.",
+      "safety_class": "safe_ui_action",
+      "replay_expectation": "pending",
+      "frame_range": null,
+      "action_frame_range": null,
+      "background_frame_ranges": [],
+      "availability": "supported",
+      "expected_response_markers": [
+        "window_title"
+      ],
+      "pre_state": "Active internal window caption is recorded before activation.",
+      "action": "activate_window",
+      "post_state": "The target already-open internal window is active when the provider can switch it.",
+      "recovery_expectation": "Reactivate the original internal window when it differs from the selected target.",
+      "action_result_markers": [
+        "window_title=<postWindowTitle>"
+      ],
+      "notes": "The safe-action capture records Vanessa tool outputs and raw traffic. Frame-range join remains pending until classification can separate action frames from attach/refresh traffic."
+    }
+  ]
+}

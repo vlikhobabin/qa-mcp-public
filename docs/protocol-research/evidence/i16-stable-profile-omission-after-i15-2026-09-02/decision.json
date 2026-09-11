@@ -1,0 +1,67 @@
+{
+  "schema": "qa-mcp.i16-stable-profile-omission.v1",
+  "card": "oss-06-s4-r1-i16-record-stable-profile-omission-after-i15",
+  "status": "stable_profile_omitted",
+  "source": {
+    "published_i15_commit": "1be1829ee71b96f8c1c690c9fa55c2e8e14c1425",
+    "published_i15_card": "openspec/board/4.done/oss-06-s4-r1-i15-retry-i13-s4-isolation-after-session1-admission-restoration.md",
+    "published_i15_evidence_index_entry_count": 9
+  },
+  "i15_outcome": {
+    "authorized_canary_count": 1,
+    "typed_session1_receipt_present": false,
+    "candidate_invocation_count": 0,
+    "s4_i13_row_admitted": false,
+    "exact_cleanup_passed": true,
+    "topology_classification": "not_verifiable",
+    "retry_authority_remaining": false,
+    "certification_claimed": false
+  },
+  "support_decision": {
+    "tool": "open_external_processor",
+    "stable_release_support_profile_included": false,
+    "public_support_matrix_included": false,
+    "effective_until": "a separately reviewed future target-bound qualification publishes",
+    "current_pre_stable_standalone_catalog_unchanged": true,
+    "current_pre_stable_standalone_catalog_tool_count": 64,
+    "declared_stable_support_tool_count": 63,
+    "source_profile_membership_changed": false,
+    "catalog_membership_is_stable_admission": false
+  },
+  "preservation": {
+    "dormant_product_source_preserved": true,
+    "tests_preserved": true,
+    "tracked_epfs_preserved": true,
+    "runtime_authority_preserved": true,
+    "published_foundations_preserved": true,
+    "source_profile_code_preserved": true,
+    "license_paths_changed": false
+  },
+  "lineage": {
+    "i13_card": "openspec/board/3.inprogress/oss-06-s4-r1-i13-certify-published-i11-observation-lifecycle-evidence.md",
+    "i13_change_active": true,
+    "i13_archived": false,
+    "i13_certified": false,
+    "s4_r1_card": "openspec/board/2.todo/oss-06-s4-r1-stabilize-hidden-direct-execute-observation-lifecycle.md",
+    "s4_r1_complete": false,
+    "s7_card": "openspec/board/2.todo/oss-06-s7-admit-hidden-direct-execute-public-route.md",
+    "s7_complete": false
+  },
+  "handoff": {
+    "next_card": "openspec/board/1.backlog/oss-07-prepare-qa-mcp-public-repository-readiness.md",
+    "next_card_stage": "story",
+    "next_card_openspec_artifacts_present": false,
+    "license_choice": "Apache-2.0",
+    "license_choice_status": "operator-approved",
+    "implemented_in_i16": false
+  },
+  "execution": {
+    "live_contour_used": false,
+    "ssh_used": false,
+    "windows_or_historical-user_used": false,
+    "one_c_used": false,
+    "execute_used": false,
+    "canary_or_candidate_action_used": false,
+    "s4_s5_s7_action_used": false
+  }
+}

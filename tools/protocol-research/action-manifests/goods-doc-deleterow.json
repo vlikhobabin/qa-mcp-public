@@ -1,0 +1,17 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "goods-doc-deleterow",
+  "api_member": "TestedFormTable.DeleteRow",
+  "operation_family": "form_table_delete_row",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open a new (unsaved) Корректировка остатка document, add a row to its ТоварныеЗапасы tabular section (bootstrap), then delete that row (action). The document is never saved, so nothing persists (the capture pipeline kills the TestClient afterward). Drives TestedFormTable.DeleteRow via 'в таблице ... я удаляю строку'. Step validated live 2026-06-12. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Документ.ОперацияПоУчетуТоваров.Создать\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И в таблице \"ТоварныеЗапасы\" я удаляю строку"},
+    {"phase": "post_read", "read": true}
+  ]
+}

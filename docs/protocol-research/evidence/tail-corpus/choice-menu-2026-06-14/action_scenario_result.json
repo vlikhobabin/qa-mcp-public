@@ -1,0 +1,16 @@
+{
+  "schema": "card74.native-action-scenario.v1",
+  "scenario": "native-choice-menu",
+  "plan": [
+    {
+      "name": "choose-from-menu",
+      "kind": "form_command",
+      "marker": "PF_MENU_2",
+      "ordinal": 293
+    }
+  ],
+  "diverged_at_send_index": null,
+  "frames_sent": 292,
+  "exchanges_with_response": 292,
+  "status": "ok"
+}

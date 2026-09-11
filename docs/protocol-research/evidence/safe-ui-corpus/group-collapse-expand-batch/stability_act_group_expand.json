@@ -1,0 +1,77 @@
+{
+  "schema": "qa-mcp.compare-probe-reference.v1",
+  "generated_at": "2026-06-13T05:13:26Z",
+  "mode": "stability",
+  "phase": "act_group_expand",
+  "left": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\groupce-ref1",
+  "right": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\groupce-ref2",
+  "left_hash_by_direction": {
+    "manager_to_client": "02be90f14a82570abe1f9d93c372f80932ee63ccc4a7c1a559c21b1f591f3a6c",
+    "client_to_manager": "516c221d519154cf0398042c9aec044bb6efbb6e01b0dc36b592917bc9d828eb"
+  },
+  "right_hash_by_direction": {
+    "manager_to_client": "02be90f14a82570abe1f9d93c372f80932ee63ccc4a7c1a559c21b1f591f3a6c",
+    "client_to_manager": "516c221d519154cf0398042c9aec044bb6efbb6e01b0dc36b592917bc9d828eb"
+  },
+  "hash_match_by_direction": {
+    "client_to_manager": true,
+    "manager_to_client": true
+  },
+  "all_hashes_match": true,
+  "structural_signature_left": {
+    "manager_to_client": [
+      170,
+      328,
+      328,
+      328,
+      328
+    ],
+    "client_to_manager": [
+      455,
+      290,
+      16,
+      290,
+      16
+    ]
+  },
+  "structural_signature_right": {
+    "manager_to_client": [
+      170,
+      328,
+      328,
+      328,
+      328
+    ],
+    "client_to_manager": [
+      455,
+      290,
+      16,
+      290,
+      16
+    ]
+  },
+  "structural_match": true,
+  "residual_dynamic_bytes": 0,
+  "left_typed_result": {
+    "preFlag": null,
+    "postFlag": null,
+    "recoveryFlag": null,
+    "status": null
+  },
+  "right_typed_result": {
+    "preFlag": null,
+    "postFlag": null,
+    "recoveryFlag": null,
+    "status": null
+  },
+  "typed_result_match": true,
+  "left_frame_count_by_direction": {
+    "manager_to_client": 5,
+    "client_to_manager": 5
+  },
+  "right_frame_count_by_direction": {
+    "manager_to_client": 5,
+    "client_to_manager": 5
+  },
+  "verdict": "fully_stable"
+}

@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Observed check attempt, not semantic acceptance proof",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "state",
+    "attempt_id",
+    "run_id",
+    "card",
+    "lane",
+    "command_identity",
+    "label",
+    "command",
+    "started_at",
+    "before"
+  ],
+  "properties": {
+    "schema": {
+      "const": "changerail.check-result.v1"
+    },
+    "state": {
+      "enum": [
+        "running",
+        "terminal"
+      ]
+    },
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{32}$"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "card": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane": {
+      "enum": [
+        "focused",
+        "pre_review",
+        "final"
+      ]
+    },
+    "command_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "argv"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "argv",
+            "shell"
+          ]
+        },
+        "argv": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "shell_text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "shell"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "shell_text"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "shell_text"
+          ]
+        }
+      }
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command": {
+      "type": "string",
+      "minLength": 1
+    },
+    "started_at": {
+      "$ref": "#/$defs/utc"
+    },
+    "observed_at": {
+      "$ref": "#/$defs/utc"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "before": {
+      "$ref": "#/$defs/payload"
+    },
+    "fingerprint": {
+      "$ref": "#/$defs/payload"
+    },
+    "outcome": {
+      "enum": [
+        "exit",
+        "spawn_failure",
+        "interrupted",
+        "unknown"
+      ]
+    },
+    "exit_code": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "verdict": {
+      "enum": [
+        "verified",
+        "unconfirmed"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "log": {
+      "type": "string",
+      "minLength": 1
+    },
+    "log_size": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "log_sha256": {
+      "$ref": "#/$defs/sha"
+    },
+    "dependency_snapshot": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "const": "terminal"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "observed_at",
+          "duration_seconds",
+          "fingerprint",
+          "outcome",
+          "exit_code",
+          "verdict",
+          "reason"
+        ]
+      },
+      "else": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "verdict"
+              ]
+            },
+            {
+              "required": [
+                "exit_code"
+              ]
+            },
+            {
+              "required": [
+                "observed_at"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "outcome"
+        ],
+        "properties": {
+          "outcome": {
+            "const": "exit"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "exit_code": {
+            "type": "integer"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "exit_code": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "verdict"
+        ],
+        "properties": {
+          "verdict": {
+            "const": "verified"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "log",
+          "log_size",
+          "log_sha256"
+        ],
+        "properties": {
+          "state": {
+            "const": "terminal"
+          },
+          "outcome": {
+            "const": "exit"
+          },
+          "exit_code": {
+            "const": 0
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "head_commit",
+        "payload_fingerprint"
+      ],
+      "properties": {
+        "head_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "payload_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    }
+  }
+}

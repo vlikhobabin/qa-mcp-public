@@ -1,0 +1,29 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.live-smoke-summary.v1",
+  "run_id": "20260605-live-smoke-runtime-gap",
+  "scenario": "manager-fixture-v1-readonly",
+  "status": "provider_gapped",
+  "missing_asset": "Vanessa EPF",
+  "smoke_subset": [
+    "tm-v1-active-window",
+    "tm-v1-active-form",
+    "tm-v1-field-version"
+  ],
+  "runtime_dir": "runtime/protocol-research/captures/20260605-live-smoke-runtime-gap",
+  "runtime_status": "runtime_gap",
+  "pids_started": {},
+  "case_events_status": "empty",
+  "join_report": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-smoke-runtime-gap/frame_join_report.md",
+  "corpus_rows": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-smoke-runtime-gap/corpus_cases.jsonl",
+  "join_status_counts": {
+    "unresolved": 3
+  },
+  "unresolved_reasons": {
+    "no_before_event": 3
+  },
+  "accepted_case_ids": [],
+  "accepted_protocol_mapping": false,
+  "replay_or_direct_probe_attempted": false,
+  "full_catalog_expansion": "blocked",
+  "next_blocker": "Restore or provide Vanessa EPF/runtime profile and rerun the three-command manager fixture V1 smoke."
+}

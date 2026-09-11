@@ -1,0 +1,3480 @@
+{
+  "schema": "protocol-case-probe-evidence.v1",
+  "kind": "direct_python_manager_marker_replay",
+  "status": "ok",
+  "probe_status": "rejected",
+  "case_id": "tm-v1-field-version",
+  "query": "manager-fixture-marker",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-full-readonly-bootstrap-second-boundary-guard",
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\manager-fixture-marker-probe\\20260605-window-sequence-probes\\tm-v1-field-version",
+  "ack_guid": "d9570e5d-f625-41d5-a103-93466e7f8a8e",
+  "frame4_sequence": 15701,
+  "replay_mode": "window",
+  "case_manager_frame_count": 126,
+  "sent_byte_count": 17668,
+  "received_byte_count": 12074,
+  "target_marker": "PF_FIXTURE_VERSION",
+  "expected_marker": "protocol-fixture.v1",
+  "response_markers": [
+    "PF_FIXTURE_VERSION",
+    "pf_fixture_version"
+  ],
+  "response_marker_count": 2,
+  "marker_observed": false,
+  "frames": [
+    {
+      "send_index": 6,
+      "response_byte_count": 212,
+      "response_sha256": "1dab83109ffe47a0236c3272000dca666e180c413adc1c22ff42caa8457985ef",
+      "response_head_hex": "428f5ace7ce984838183cb2395554d850d068aee499e292f8d0e7a9f0ed538572a5cad7c111546f471681d8a282881818181e04b2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "38572a5cad7c111546f471681d8a2828",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 121,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   ",
+        "Начальная страница"
+      ],
+      "semantic_guess": "home_page_navigation_point",
+      "label": "warmup-active-window",
+      "case_frame_ordinal": null,
+      "response_markers": [
+        "homepage[<guid>]",
+        "homepage",
+        "e1cib/navigationpoint/startpage"
+      ]
+    },
+    {
+      "send_index": 7,
+      "response_byte_count": 86,
+      "response_sha256": "a3b4d6567d08c95c8d23dab7e3327c51bb0f76c2361e47230071ceabe72b4dea",
+      "response_head_hex": "428f5bce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d58b4c1d8db41cc159cf672e846521acae8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "8b4c1d8db41cc159cf672e846521acae",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 1,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 8,
+      "response_byte_count": 86,
+      "response_sha256": "d3fd76293c5b73de8f052d90588835ad182ea22cdf964bcca18e0acdcfaa2703",
+      "response_head_hex": "428f5cce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5dd645b9f60a954536ed43bdbb523f4a18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "dd645b9f60a954536ed43bdbb523f4a1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 2,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 9,
+      "response_byte_count": 86,
+      "response_sha256": "a4b42e311cb35bfe4cb7f8cbe2186f21398349908ffd417d304aa28427046881",
+      "response_head_hex": "428f5dce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d577c1aad990e72e5dee96f1af2d907b9d8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "77c1aad990e72e5dee96f1af2d907b9d",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 3,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 10,
+      "response_byte_count": 86,
+      "response_sha256": "3a33bc446ca992df49ec9ad465d18b7a9b99eb5898615438ecc7104e6b59fc86",
+      "response_head_hex": "428f5ece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d513cec9bfa58a3b940cd6ed6542957c228181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "13cec9bfa58a3b940cd6ed6542957c22",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 4,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 11,
+      "response_byte_count": 86,
+      "response_sha256": "ef92e9b0d752da92b262c1cbe90f9c8c960ceca447f1bf91840ed5f255844f31",
+      "response_head_hex": "428f5fce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d520e2a8a829fea4bd6466f412fcf678a48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "20e2a8a829fea4bd6466f412fcf678a4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 5,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 12,
+      "response_byte_count": 86,
+      "response_sha256": "5c41b444a6b25e42fd557f8b77f738ed1950c285f375058eb5c38949cfb17d61",
+      "response_head_hex": "428f60ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d52d09b3fc10ada5531c0f6effd0bc27728181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "2d09b3fc10ada5531c0f6effd0bc2772",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 6,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 13,
+      "response_byte_count": 86,
+      "response_sha256": "8dfe723bcc94cec02c86aa367170cb5f339011362b32626cd9d0a629ed062d7a",
+      "response_head_hex": "428f61ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d503247489518b9010a2c2b24bdc0adba38181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "03247489518b9010a2c2b24bdc0adba3",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 7,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 14,
+      "response_byte_count": 86,
+      "response_sha256": "32e7bf20bed690e64ded5290292ecb5278d101f65a8c5dae49a7b272893aec9d",
+      "response_head_hex": "428f62ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c0ce17af84f1687c2eae76e2e0ebfe728181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c0ce17af84f1687c2eae76e2e0ebfe72",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 8,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 15,
+      "response_byte_count": 86,
+      "response_sha256": "3cc40782e43656d2cffb516666ecf30ad867e445c57387078faff6f4394bc32a",
+      "response_head_hex": "428f63ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d53ad101ebfae4d99234e1b4cf7f5c24468181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "3ad101ebfae4d99234e1b4cf7f5c2446",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 9,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 16,
+      "response_byte_count": 86,
+      "response_sha256": "cefe7c7e301b8d325c7ec5655826c32e4638766ddad1f79c30c08bcd6ac92709",
+      "response_head_hex": "428f64ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5a33939ecf559c2443f6381810894f7d58181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "a33939ecf559c2443f6381810894f7d5",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 10,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 17,
+      "response_byte_count": 86,
+      "response_sha256": "63e55350c01947a26ab5dccd819fd5ef4e00efb82c2db4cd5b68dace75bbe97b",
+      "response_head_hex": "428f65ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d53d1e577d432534c70c23da13145f00c68181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "3d1e577d432534c70c23da13145f00c6",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "W}C%4",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 11,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 18,
+      "response_byte_count": 86,
+      "response_sha256": "1ed620839dae6a7f2ec1511380b0b3bf428d02f9698b4011f98516acbfce8f1b",
+      "response_head_hex": "428f66ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d50c5729528dfedd3f92bd7d14d7415c048181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "0c5729528dfedd3f92bd7d14d7415c04",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 12,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 19,
+      "response_byte_count": 86,
+      "response_sha256": "858a63b425c10596f84bc4ca3cb8da35165ab197cb7154598a720468bee7de11",
+      "response_head_hex": "428f67ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5370c815712e3cade73cdf8eb25e70d698181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "370c815712e3cade73cdf8eb25e70d69",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 13,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 20,
+      "response_byte_count": 86,
+      "response_sha256": "e5187d2d81fff2b5257137b5de949fe49ed4a7127f5c721682d054382e842a06",
+      "response_head_hex": "428f68ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d57c6fb9065fc91c884031bc8ff5aba4828181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "7c6fb9065fc91c884031bc8ff5aba482",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 14,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 21,
+      "response_byte_count": 86,
+      "response_sha256": "85cc60df35908618ebcf9dda60e58e93cb98b6087fac7320f55d59d9f9c91906",
+      "response_head_hex": "428f69ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5dee4b2dd80881403c9e811b5be840ea28181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "dee4b2dd80881403c9e811b5be840ea2",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 15,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 22,
+      "response_byte_count": 86,
+      "response_sha256": "319329c1b3e8f465a401c5c4f55a01855ae2f319aa9ab52ff0dd0ae66d12f721",
+      "response_head_hex": "428f6ace7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d590da46ff1df013bd3ac8be281f9206698181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "90da46ff1df013bd3ac8be281f920669",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 16,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 23,
+      "response_byte_count": 86,
+      "response_sha256": "3deff68f06551f107a6c625223abc1ec3f424e381de95369bf18fe7c8b3e9cc0",
+      "response_head_hex": "428f6bce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5b12c7b83d1bb7213e181ed23f1257f8b8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "b12c7b83d1bb7213e181ed23f1257f8b",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 17,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 24,
+      "response_byte_count": 86,
+      "response_sha256": "940efc49c85431b0ab0462921d33e1a6a6c419646bd30bf81a83270aeacf1f49",
+      "response_head_hex": "428f6cce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5ab8a4fb65086f017f425011795dfe1e88181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "ab8a4fb65086f017f425011795dfe1e8",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 18,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 25,
+      "response_byte_count": 86,
+      "response_sha256": "c48af32dfc67a9425bc8fb49162995a50c8b4cecfa966dc2e27203e6c065be8b",
+      "response_head_hex": "428f6dce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d50ca4e521cf66bfedb8050521faae84a18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "0ca4e521cf66bfedb8050521faae84a1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 19,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 26,
+      "response_byte_count": 86,
+      "response_sha256": "0630605160dd5fc4eb4e719f0406e6c4b06c847d057a7aed988b0654bfbef2cb",
+      "response_head_hex": "428f6ece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d528d61f749097134576fc5acd8130994f8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "28d61f749097134576fc5acd8130994f",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 20,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 27,
+      "response_byte_count": 86,
+      "response_sha256": "f56a0f86d03f0ad6bb12d2a385981a040e58030312ccb0faf5612efab0931b1c",
+      "response_head_hex": "428f6fce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d514c9aa87800f1e4e9d83d56bf4ea48178181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "14c9aa87800f1e4e9d83d56bf4ea4817",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 21,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 28,
+      "response_byte_count": 86,
+      "response_sha256": "80847befbd21270a3d683bda03215f0c8b9624a57e8cefbe04c30b89381d9763",
+      "response_head_hex": "428f70ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c3c6c8c99221f61895662a9836443d0a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c3c6c8c99221f61895662a9836443d0a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 22,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 29,
+      "response_byte_count": 86,
+      "response_sha256": "6dfc508c1780ae51e7f58ce62b4b5517c281f458a87f572cca07e38852967fe2",
+      "response_head_hex": "428f71ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d57bc1053e19fbf74e2583359935774bd68181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "7bc1053e19fbf74e2583359935774bd6",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 23,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 30,
+      "response_byte_count": 86,
+      "response_sha256": "2e47ba1c08142e97d4a9c195120529c792deab8329d278f2e0835783c9c0389c",
+      "response_head_hex": "428f72ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d51d178848eeec483ef491a54cb518a26b8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1d178848eeec483ef491a54cb518a26b",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 24,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 31,
+      "response_byte_count": 86,
+      "response_sha256": "badf79083fd0d13272a29e63fc7dd6262ae9e4f53ead31c7592b83cc0ed68158",
+      "response_head_hex": "428f73ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d55d3f29d3cdb4b9b3f9ca759fa37ad3268181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "5d3f29d3cdb4b9b3f9ca759fa37ad326",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 25,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 32,
+      "response_byte_count": 86,
+      "response_sha256": "e9f3be9e70efe89adb4a7b8f6865158e27cb0590e900df8f3c3c1f2120153572",
+      "response_head_hex": "428f74ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5707a03b0659e2d9f7d305d96249be0f18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "707a03b0659e2d9f7d305d96249be0f1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 26,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 33,
+      "response_byte_count": 86,
+      "response_sha256": "5388e8bbeb8d24e3df67caf89b3de28bdfed3ead1f937eab7cf59cc784ef08f2",
+      "response_head_hex": "428f75ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d52cfab748d2862a5715675830e51536e68181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "2cfab748d2862a5715675830e51536e6",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 27,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 34,
+      "response_byte_count": 86,
+      "response_sha256": "725713ce3c5d15b8adb4076c4780196faee7f5760f5b957c17fd17852c2bb1b2",
+      "response_head_hex": "428f76ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d564f747064149b53ff9b1daef1cfa5f2a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "64f747064149b53ff9b1daef1cfa5f2a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 28,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 35,
+      "response_byte_count": 86,
+      "response_sha256": "e05f69b3a493ab36c9642e8edec75c945c24576bc7b781271440e486f7e57967",
+      "response_head_hex": "428f77ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5fe01c5cf877a658b03734ae6d874785f8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "fe01c5cf877a658b03734ae6d874785f",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 29,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 36,
+      "response_byte_count": 86,
+      "response_sha256": "25f138a20f9fcebd363d45e73fea83d871dbc16ff4a91dbcbbaa2c8d00f5d815",
+      "response_head_hex": "428f78ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5cc2e23121c2313b0804613271c548f298181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "cc2e23121c2313b0804613271c548f29",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 30,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 37,
+      "response_byte_count": 86,
+      "response_sha256": "7b06a14a189b0fc9ea2162a3141527da9d208c4e6b5fe09aa49cf82d3864f7bc",
+      "response_head_hex": "428f79ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d56a6bb36b9fb4c0405d595be44f78ab5a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "6a6bb36b9fb4c0405d595be44f78ab5a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 31,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 38,
+      "response_byte_count": 86,
+      "response_sha256": "39a59cb1d936c50cfeeb586807f2122225c0a96e6c2c8448081fa640d50e92c5",
+      "response_head_hex": "428f7ace7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d51246a251a8825841f141b0bba6877e758181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1246a251a8825841f141b0bba6877e75",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 32,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 39,
+      "response_byte_count": 86,
+      "response_sha256": "bfb7fdc6182ca7441f438f18a7aeaa4a2b83a7fe6b9dc4e1fd6d54874631437f",
+      "response_head_hex": "428f7bce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d55bcb20b9a19639ebb58e74040fd0a3ec8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "5bcb20b9a19639ebb58e74040fd0a3ec",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 33,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 40,
+      "response_byte_count": 86,
+      "response_sha256": "d7ad3f54b3b9efd172f596b929eba290b9166711f8b7048c93d48e4e2d0c34f5",
+      "response_head_hex": "428f7cce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d59bb42e2b4b6856ec3bf7980770156eb48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "9bb42e2b4b6856ec3bf7980770156eb4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".+KhV",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 34,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 41,
+      "response_byte_count": 86,
+      "response_sha256": "f301626d1b2030a0649dc721b21dd2bbf244c78174589736de21cb8e5c3787b9",
+      "response_head_hex": "428f7dce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5353e6970cbeb0b59a6b5a352d9c7c8c78181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "353e6970cbeb0b59a6b5a352d9c7c8c7",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 35,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 42,
+      "response_byte_count": 86,
+      "response_sha256": "dc9f94cd927802224469d48121e4aec81eaecf71a282851e672a90d675b97751",
+      "response_head_hex": "428f7ece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d56c62abda89cc10f035e70dbf480c81db8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "6c62abda89cc10f035e70dbf480c81db",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 36,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 43,
+      "response_byte_count": 86,
+      "response_sha256": "7f2fc2ca467df19afdeb3b0143085ce5d0eac3e5c89f8b3370dddeeb2d59ccd3",
+      "response_head_hex": "428f7fce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d51c9144c232ce88cdd342c1df0c5eeb6f8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1c9144c232ce88cdd342c1df0c5eeb6f",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 37,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 44,
+      "response_byte_count": 86,
+      "response_sha256": "1b900b20ac14b239218c32ea4e2214b3e91d104bc2ef757409f69db3717266b9",
+      "response_head_hex": "428f80ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d572ae23f92cb11af5bd81f2b916b49cc28181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "72ae23f92cb11af5bd81f2b916b49cc2",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 38,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 45,
+      "response_byte_count": 86,
+      "response_sha256": "b5466f7b25d4505d47c38e158376aee6a1c3aeb53528ed6413bd492e887fcb8c",
+      "response_head_hex": "428f81ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d529fe74c7778063e23aa99d17344e56938181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "29fe74c7778063e23aa99d17344e5693",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 39,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 46,
+      "response_byte_count": 86,
+      "response_sha256": "67a2e15bbd9c2ac2dbf9f4019f69d1555e9a9223d78a960d72afa186f80fe5b2",
+      "response_head_hex": "428f82ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5817fbb0a90a5976a248ab8a1da8954e78181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "817fbb0a90a5976a248ab8a1da8954e7",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 40,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 47,
+      "response_byte_count": 86,
+      "response_sha256": "8eac6df2d879bed87be62ba43a7fc41a5c76e980b734fd83ed8bd74e9c445c5b",
+      "response_head_hex": "428f83ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5abde09c5e04bbf8349832b383cd1251f8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "abde09c5e04bbf8349832b383cd1251f",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 41,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 48,
+      "response_byte_count": 86,
+      "response_sha256": "229d81831085c187a71f8b3427c9d70b46420837c8e12bf4b689bb11a917464e",
+      "response_head_hex": "428f84ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d531c20274c7632e678c1c25ad9d8220e28181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "31c20274c7632e678c1c25ad9d8220e2",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 42,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 49,
+      "response_byte_count": 86,
+      "response_sha256": "f95bf350c74c8ee8e183c6ff76dbe730780d48fc1a77584ae1ef8e0073323b37",
+      "response_head_hex": "428f85ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5dcd0d2e5a2c7365819cb1d89fe07fb848181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "dcd0d2e5a2c7365819cb1d89fe07fb84",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 43,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 50,
+      "response_byte_count": 86,
+      "response_sha256": "308ece2e41ddd8f6afaad28332063fb1b53775bcb8f1f6a2315e36dd286b7624",
+      "response_head_hex": "428f86ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c8a1a3bfae6046a398155f0bc4e4afc88181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c8a1a3bfae6046a398155f0bc4e4afc8",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 44,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 51,
+      "response_byte_count": 86,
+      "response_sha256": "5703017f70e41b981e27cbce55247c0cd990d2f6fbde6edfad618bec965107bd",
+      "response_head_hex": "428f87ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5fb41d0965e724867758805204a1ac2298181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "fb41d0965e724867758805204a1ac229",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "^rHgu",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 45,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 52,
+      "response_byte_count": 86,
+      "response_sha256": "c3662189413355cfd558b754c9d6932a0d9f5d78fa881968f6e0ba4b7e006fed",
+      "response_head_hex": "428f88ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d53d2e726075e5ffe362114df5127734818181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "3d2e726075e5ffe362114df512773481",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "=.r`u",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 46,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 53,
+      "response_byte_count": 86,
+      "response_sha256": "75bae18008c7d120d54d0a2ba58bdca61008a7575ea9fc323210f1e6d2015199",
+      "response_head_hex": "428f89ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d56f9a2fd437daaf77feeef0d9c9b005068181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "6f9a2fd437daaf77feeef0d9c9b00506",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 47,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 54,
+      "response_byte_count": 86,
+      "response_sha256": "5f032181280e096749132a2481d7fa0c0e82a8c3e1b86029e0e92ffc8c366e17",
+      "response_head_hex": "428f8ace7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5dffac382f24f4956b930e86fe26fc0208181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "dffac382f24f4956b930e86fe26fc020",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 48,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 55,
+      "response_byte_count": 86,
+      "response_sha256": "59ad929b4c1676cb4d4e81e6dd37b2fa73c2edc70bcd62e206344f666e0d68ca",
+      "response_head_hex": "428f8bce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d588b50c68b494e3cca29cdad48b4bf9628181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "88b50c68b494e3cca29cdad48b4bf962",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 49,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 56,
+      "response_byte_count": 86,
+      "response_sha256": "c1cb688ac50849fa2d363ad9bb1dadcb3b759b111eecb7a4efd295a901128e71",
+      "response_head_hex": "428f8cce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5f57b5b6ca5018a5b5070155b367617958181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "f57b5b6ca5018a5b5070155b36761795",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 50,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 57,
+      "response_byte_count": 86,
+      "response_sha256": "68de5143ebe0ea55541aa2a3dcbaed57e060b54814c18cef0f0db4f0c59823a3",
+      "response_head_hex": "428f8dce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d571f0d325887950beb46fe9725f9a94e08181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "71f0d325887950beb46fe9725f9a94e0",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 51,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 58,
+      "response_byte_count": 86,
+      "response_sha256": "94946ce79f33e7271c056393f281d88271f1f003efd47c8fff5f84a1a56020da",
+      "response_head_hex": "428f8ece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5fce8e5adab2416a9bf9c7dbd152f89bd8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "fce8e5adab2416a9bf9c7dbd152f89bd",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 52,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 59,
+      "response_byte_count": 86,
+      "response_sha256": "ebbc7c507d514af904f66417576f158088a502525a19cb053857fc5bcd41275b",
+      "response_head_hex": "428f8fce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c7fabd1f7a8c7b890bdac8788037f6388181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c7fabd1f7a8c7b890bdac8788037f638",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 53,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 60,
+      "response_byte_count": 86,
+      "response_sha256": "4ec84a6037ab25f5da376da82ab5f461a0f9e64d93afc374496bfb670560f8d7",
+      "response_head_hex": "428f90ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d57b692c4a034925e7289f259170bb1ad28181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "7b692c4a034925e7289f259170bb1ad2",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 54,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 61,
+      "response_byte_count": 86,
+      "response_sha256": "e3549c1a29209f3112979016a06621e633f37db903b9e95ba3e90e4c082868c3",
+      "response_head_hex": "428f91ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5fdec823726a7c8737a4e31313e5772178181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "fdec823726a7c8737a4e31313e577217",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "szN11>Wr",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 55,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 62,
+      "response_byte_count": 86,
+      "response_sha256": "b0e51a8f0d14ccea5cb2f6fa42516b3a9d5e18e076319af0805427750eb7aa50",
+      "response_head_hex": "428f92ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d58452a6e75b48e3853f7bfecea8a87c0a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "8452a6e75b48e3853f7bfecea8a87c0a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 56,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 63,
+      "response_byte_count": 86,
+      "response_sha256": "67b994a06fb244e43709a4411aab45c2f58c84f1ad48b2d0b4c14eaca7f85352",
+      "response_head_hex": "428f93ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d594238533a7f30eda34bae5c6057c51048181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "94238533a7f30eda34bae5c6057c5104",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 57,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 64,
+      "response_byte_count": 86,
+      "response_sha256": "3a1d93b96ce875938e1eca740b3d24b6bd5323dc5089664b6c509197335b3739",
+      "response_head_hex": "428f94ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5f74488c53fb9c8015838eeff0c77840f8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "f74488c53fb9c8015838eeff0c77840f",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 58,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 65,
+      "response_byte_count": 86,
+      "response_sha256": "aa75769acf1f6c146561806ead69db65730848efa39306f3137baf9020b98d82",
+      "response_head_hex": "428f95ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d52a0f7dd485bafa4bf3a8ef341b7e2a7d8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "2a0f7dd485bafa4bf3a8ef341b7e2a7d",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 59,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 66,
+      "response_byte_count": 86,
+      "response_sha256": "a3f8a6df16171acd6f258c4ab752bccd099d2614525e1f1c9cb08f2bf3f0cb5c",
+      "response_head_hex": "428f96ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5a1f5038cf11211b6d66f648169d549b48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "a1f5038cf11211b6d66f648169d549b4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 60,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 67,
+      "response_byte_count": 86,
+      "response_sha256": "a28f113fec4ee988cfd5deb7946ca19444643ef6d3bcd9152fed956559e5f9b8",
+      "response_head_hex": "428f97ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d50e7ec505ccdf1ff2d5377caf62f43f8a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "0e7ec505ccdf1ff2d5377caf62f43f8a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 61,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 68,
+      "response_byte_count": 86,
+      "response_sha256": "c988959cf839dbeb7312380929dcc916beef1e6ae0cf45c2c1de69a62b448e85",
+      "response_head_hex": "428f98ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5a030b7e4269b92e538fce72ce7c96a678181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "a030b7e4269b92e538fce72ce7c96a67",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 62,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 69,
+      "response_byte_count": 86,
+      "response_sha256": "084ae0a6c0067e8efa83092dba0a2e72fb09e86137863e6c42ec358467e35ea0",
+      "response_head_hex": "428f99ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5280e1c530a3ff974237a691579108a118181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "280e1c530a3ff974237a691579108a11",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 63,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 70,
+      "response_byte_count": 86,
+      "response_sha256": "f94423e4ecf51447f9f70a7cee3d5bf051ce32580000663b1fb0d402c3015c48",
+      "response_head_hex": "428f9ace7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d57908a93ec3f90039066eb3d05e63e2378181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "7908a93ec3f90039066eb3d05e63e237",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 64,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 71,
+      "response_byte_count": 86,
+      "response_sha256": "531fab2648f5508d237ccbe602a09fc2c5e9b521c711c158c5b0e954cb6d87f2",
+      "response_head_hex": "428f9bce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d59fdf810caec6b0193a000f0884219ee28181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "9fdf810caec6b0193a000f0884219ee2",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 65,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 72,
+      "response_byte_count": 86,
+      "response_sha256": "e0558d7c3bbe8c5713dad0a62a6d9ef2f3fb8c00d36c4e8f5e0798f57d2556fe",
+      "response_head_hex": "428f9cce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c25cf091675a845ff68746e0a2bbddbd8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c25cf091675a845ff68746e0a2bbddbd",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 66,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 73,
+      "response_byte_count": 86,
+      "response_sha256": "fb8c24b6607adbc8ab26f757dca60519e5587380c04bdbb45967ffe54a73d465",
+      "response_head_hex": "428f9dce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5654436026eac88ace0a852d996d6cdd18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "654436026eac88ace0a852d996d6cdd1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 67,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 74,
+      "response_byte_count": 86,
+      "response_sha256": "92029fa612e70bf6da262067917a0a2a8a4e5f70fd7c1329167b91aa8d52ade9",
+      "response_head_hex": "428f9ece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5b35d08a04a15e58199cb24a1dc627c058181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "b35d08a04a15e58199cb24a1dc627c05",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 68,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 75,
+      "response_byte_count": 86,
+      "response_sha256": "3c5b23ab5597fc379f32e2a81facf5331064371a79d0fb99ee29f1e7d68aeb62",
+      "response_head_hex": "428f9fce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5ef344aa864958078f5936610fbfa7bf08181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "ef344aa864958078f5936610fbfa7bf0",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 69,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 76,
+      "response_byte_count": 86,
+      "response_sha256": "cb0b88ac798bec4353f8df8d715e8207b0702482777270cf9caa0f2b6d8b95c0",
+      "response_head_hex": "428fa0ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5b052bdc715ff5198fedc9dc0052c8d6f8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "b052bdc715ff5198fedc9dc0052c8d6f",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 70,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 77,
+      "response_byte_count": 86,
+      "response_sha256": "34064c1686e5aa07c9dfef26407301c08a4c8908c2e2e2d3b424a3c2264064bf",
+      "response_head_hex": "428fa1ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d59e927c57fdeeda62c131458dc21a525c8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "9e927c57fdeeda62c131458dc21a525c",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 71,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 78,
+      "response_byte_count": 86,
+      "response_sha256": "ce161271f0d01ba1ef87c629ce59ed52c9c8a4a3717285680e9d0c3d9afbe09a",
+      "response_head_hex": "428fa2ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d55937500e0fbfa9f1d04d5b6b93e65c078181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "5937500e0fbfa9f1d04d5b6b93e65c07",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 72,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 79,
+      "response_byte_count": 86,
+      "response_sha256": "1e6e45d55f9babc08a90394fcd338f6c7497dfc01dab9abd7fb4bae9dce79dd8",
+      "response_head_hex": "428fa3ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d58e61b037c4f70f5bdf52c0cd94001cb48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "8e61b037c4f70f5bdf52c0cd94001cb4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 73,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 80,
+      "response_byte_count": 86,
+      "response_sha256": "68840e497915ff8d056c0a84a6fdb8ea6ffdfdfd464514a0c8c777affb91fb31",
+      "response_head_hex": "428fa4ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d536683994a778945014156a9ce66431bb8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "36683994a778945014156a9ce66431bb",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 74,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 81,
+      "response_byte_count": 86,
+      "response_sha256": "339964990de5b084bc934cf6429e5cc1d14951dd853b6ca7b5f3bdf3d3347253",
+      "response_head_hex": "428fa5ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d547e3158d704a614f179c74c93a3ae4fe8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "47e3158d704a614f179c74c93a3ae4fe",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 75,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 82,
+      "response_byte_count": 86,
+      "response_sha256": "ef2bb92f431bd9e2a23a04617f223a69f9de23363fd8dd531e0380c7ff059109",
+      "response_head_hex": "428fa6ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d572efdd3c0ecc2c64303e5c339162cb838181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "72efdd3c0ecc2c64303e5c339162cb83",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ",d0>\\3",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 76,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 83,
+      "response_byte_count": 86,
+      "response_sha256": "6d6408afd659b87663046e795419095a1b1a887df64b580dad683a48017eec01",
+      "response_head_hex": "428fa7ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d510fb6bdb0dd87046db903de778abbdb18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "10fb6bdb0dd87046db903de778abbdb1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 77,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 84,
+      "response_byte_count": 86,
+      "response_sha256": "b45a0c4a0d4888172a540d17736b20f6f7df64a95fdfca148fb27db4eab792ea",
+      "response_head_hex": "428fa8ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5bb216d3fb887d0f5438a093959c06fe18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "bb216d3fb887d0f5438a093959c06fe1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 78,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 85,
+      "response_byte_count": 86,
+      "response_sha256": "fc0b5c8aa5d82674a01792806474651634b89585e5ce446e70285626bd4fd423",
+      "response_head_hex": "428fa9ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5ae13dee7b0aeb891a09e5391093913058181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "ae13dee7b0aeb891a09e539109391305",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 79,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 86,
+      "response_byte_count": 86,
+      "response_sha256": "82ca7b34db22515a7f816509a45fed1e2cd762a619a2d54000806f5c7433c040",
+      "response_head_hex": "428faace7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d58e9389446cb84fd49d31975edca3c02a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "8e9389446cb84fd49d31975edca3c02a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 80,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 87,
+      "response_byte_count": 86,
+      "response_sha256": "e9d209c6757fb6c7abf1ded1330279ee67561fb325a0e5839f4b5eaef7cabb1f",
+      "response_head_hex": "428fabce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d51e5e26ff7e3f331cb55dd84f6948fb688181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1e5e26ff7e3f331cb55dd84f6948fb68",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 81,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 88,
+      "response_byte_count": 86,
+      "response_sha256": "4e7f8209dd72d850bac546a2802e3d25d495ef0fe9dbb46426818436cf11a097",
+      "response_head_hex": "428facce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d51c8ee8fd04f76ae3ebb1064021c5681a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1c8ee8fd04f76ae3ebb1064021c5681a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 82,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 89,
+      "response_byte_count": 86,
+      "response_sha256": "b38483cdb52fe028dfb13ade10e4c554fb5c13b66374a964a3243ddd0788bf6c",
+      "response_head_hex": "428fadce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d542e676cc015f81d4f26ccbc91b424c838181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "42e676cc015f81d4f26ccbc91b424c83",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 83,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 90,
+      "response_byte_count": 86,
+      "response_sha256": "5d67e8c874c95b7082e9a7e5f12d04c266ad7ed2625f025b8de2b8c84a36a262",
+      "response_head_hex": "428faece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5cabf811145e24b5dd17cdff0fda5a8b18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "cabf811145e24b5dd17cdff0fda5a8b1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 84,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 91,
+      "response_byte_count": 86,
+      "response_sha256": "7bc1f0d8840431723cffbdf94e4601fbfac8d4063ad7590e1b1a68e2c143c89e",
+      "response_head_hex": "428fafce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e796af09b7c6e908f9b9be024f2437368181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "e796af09b7c6e908f9b9be024f243736",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 85,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 92,
+      "response_byte_count": 86,
+      "response_sha256": "1f3525e43fdb447e2b3449dc298dd96c1fbbbc5bc1295afc01bc5928c7978fe3",
+      "response_head_hex": "428fb0ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d52b252befdf5767cc24aa9ca8a54002328181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "2b252befdf5767cc24aa9ca8a5400232",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 86,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 93,
+      "response_byte_count": 86,
+      "response_sha256": "87f43139f39c292421e7c115675beeeac03b3c2eae0d397644f111fb06d94a87",
+      "response_head_hex": "428fb1ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c33d625ec259f27d89569ed6f298beb48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c33d625ec259f27d89569ed6f298beb4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 87,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 94,
+      "response_byte_count": 86,
+      "response_sha256": "5aa37e63c42656a15f4ab735d72a3b9d94575499fa9c578b958a3469d08346f3",
+      "response_head_hex": "428fb2ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5ad11fe17de8e4d6197eb1072cfafc19d8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "ad11fe17de8e4d6197eb1072cfafc19d",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 88,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 95,
+      "response_byte_count": 86,
+      "response_sha256": "123043214461556f153ba34c495ab50dbff49cedfef5451e16a2bf639e454621",
+      "response_head_hex": "428fb3ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5a29df9b3608283135c07148a156a24368181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "a29df9b3608283135c07148a156a2436",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 89,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 96,
+      "response_byte_count": 86,
+      "response_sha256": "8d9f3ac1a754a8ad1f9071cdf670d6d456eeb15cb71e53b635ff71980ff3c9b4",
+      "response_head_hex": "428fb4ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5881de02c37436467a3a20446efa6fb838181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "881de02c37436467a3a20446efa6fb83",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ",7Cdg",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 90,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 97,
+      "response_byte_count": 86,
+      "response_sha256": "721e33f033500a4ce52465624c68895df28ec793c9746a2490412e1f93745ee4",
+      "response_head_hex": "428fb5ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d56db634a58db18159ed5c4f70980626338181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "6db634a58db18159ed5c4f7098062633",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 91,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 98,
+      "response_byte_count": 86,
+      "response_sha256": "8f7eabcd4b8bb04c0ddca0081e26f43f0bcc84019630a5efee4e9a99b36b6728",
+      "response_head_hex": "428fb6ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d51793e0ba5e31e7adc2e508b4d63ee4918181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1793e0ba5e31e7adc2e508b4d63ee491",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 92,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 99,
+      "response_byte_count": 86,
+      "response_sha256": "c3a2a8aa4a9ab455de2ae5f853714c4bfe09c2f82e3802ef0dbcf6131b594ada",
+      "response_head_hex": "428fb7ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d51e17068bd369fc1195e21f7b38f980698181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1e17068bd369fc1195e21f7b38f98069",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 93,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 100,
+      "response_byte_count": 86,
+      "response_sha256": "5cb8cbfdbbb6c00eda27bc1a2294f1d152117a4c4164b6e0a27d8aff1b9064d6",
+      "response_head_hex": "428fb8ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d52577784062906e0d44fca9f949ec44f48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "2577784062906e0d44fca9f949ec44f4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "%wx@b",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 94,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 101,
+      "response_byte_count": 86,
+      "response_sha256": "4ddd9aa9ea64ab91298b1f5eb329acd02a835ef681cb3e974ea1d463c73e3e49",
+      "response_head_hex": "428fb9ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5da7f5984cb4962a26deb464e010872bd8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "da7f5984cb4962a26deb464e010872bd",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 95,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 102,
+      "response_byte_count": 86,
+      "response_sha256": "d0805bdcf5c73700d703eec9635eebeb9d0f8da484bf7141c13dfb188082d4a7",
+      "response_head_hex": "428fbace7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5cb24459c8f67b509b19015b2ed4639228181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "cb24459c8f67b509b19015b2ed463922",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 96,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 103,
+      "response_byte_count": 86,
+      "response_sha256": "0a24d1375d7bce66b6b758be9259863c0895cbff7d09dbb245c6c70800a1eca7",
+      "response_head_hex": "428fbbce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d50f4c1505af2931fae7d2dfed7ff4040f8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "0f4c1505af2931fae7d2dfed7ff4040f",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 97,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 104,
+      "response_byte_count": 86,
+      "response_sha256": "853d30575da08279309f43df125270c5029708afe17133bff75a9a29233bef91",
+      "response_head_hex": "428fbcce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d579964aeb21b6837b9492eae7256856268181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "79964aeb21b6837b9492eae725685626",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 98,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 105,
+      "response_byte_count": 86,
+      "response_sha256": "3cbda287594d8dce0a43de94224d03816fc7cd157ea7688e51d9ece5abfb60c3",
+      "response_head_hex": "428fbdce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c7c4470375e321f3da2e8788998a5c2b8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c7c4470375e321f3da2e8788998a5c2b",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 99,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 106,
+      "response_byte_count": 86,
+      "response_sha256": "e787958f7509ef3202c5e992174258732a50648f70a13ffb3af04f9e10c62c4b",
+      "response_head_hex": "428fbece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d56df96ad86df10abcdebcbe25b3d31df38181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "6df96ad86df10abcdebcbe25b3d31df3",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 100,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 107,
+      "response_byte_count": 86,
+      "response_sha256": "20f683054a95d63c438014b4c5adb1f36da5b7a241754f2790eef8dbf36e16a0",
+      "response_head_hex": "428fbfce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e110ad77ab6dbe0f0d25124e4b7a06b18181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "e110ad77ab6dbe0f0d25124e4b7a06b1",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 101,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 108,
+      "response_byte_count": 86,
+      "response_sha256": "7394242b3b4174b525469d3cc1b0c5d55c85c781d989892e8730eb0dab6ca0c1",
+      "response_head_hex": "428fc0ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e50b1196b819f4e618ce2ffb2a1c10288181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "e50b1196b819f4e618ce2ffb2a1c1028",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 102,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 109,
+      "response_byte_count": 86,
+      "response_sha256": "6cc6a32a886ef79c2ba5064123d5578d409a548df80d4cb53f80d62db205b91e",
+      "response_head_hex": "428fc1ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5844faa28b5b917bb0d95c0040b6fc6618181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "844faa28b5b917bb0d95c0040b6fc661",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 103,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 110,
+      "response_byte_count": 86,
+      "response_sha256": "a67ab9373a999f58908654685b5039fbe0de9ce85e6cd01b75ccb1f0905528e9",
+      "response_head_hex": "428fc2ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d57e2e482c6d509d35dd120ba35ee6e6ee8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "7e2e482c6d509d35dd120ba35ee6e6ee",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "~.H,mP",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 104,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 111,
+      "response_byte_count": 86,
+      "response_sha256": "90c1b76b6d21ad15651d195858a5e0a40fc299022f58f85ad3d5711b9a7be420",
+      "response_head_hex": "428fc3ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5b5014b610ca14399080ed97b2dcf8bdf8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "b5014b610ca14399080ed97b2dcf8bdf",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 105,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 112,
+      "response_byte_count": 86,
+      "response_sha256": "809b7158ea7828957dbf5ae773e8d00f3996e46c43d036d339ce026a8094a7c2",
+      "response_head_hex": "428fc4ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e94a6b736c0dee8a73eb4927357b1f0a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "e94a6b736c0dee8a73eb4927357b1f0a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 106,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 113,
+      "response_byte_count": 86,
+      "response_sha256": "3231f3df0ffeb3f9ffa2bddc5bd16ae5ecc60c47e538585a3d18d3232e89a3ea",
+      "response_head_hex": "428fc5ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5238b9d5ca5a1cf59cb8c39b49a91a06b8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "238b9d5ca5a1cf59cb8c39b49a91a06b",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 107,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 114,
+      "response_byte_count": 86,
+      "response_sha256": "63a788e21827d088327e48effc756dc462d1c42757c4309fac57e4e7fa6cf945",
+      "response_head_hex": "428fc6ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d55f03acac5fd1ae04ef84731fb73973ca8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "5f03acac5fd1ae04ef84731fb73973ca",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 108,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 115,
+      "response_byte_count": 86,
+      "response_sha256": "246f7a37ef272506dc92d11a929cd90a1a6921124388e1a1c2fb25b37a405ae7",
+      "response_head_hex": "428fc7ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5b9dca07303cc42d1da17f03ad1cc8fd48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "b9dca07303cc42d1da17f03ad1cc8fd4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 109,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 116,
+      "response_byte_count": 86,
+      "response_sha256": "5cb212848718ca381054f40c879e240358a8f5748b8f6019208cb471f71cd1af",
+      "response_head_hex": "428fc8ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d50bdafe649549632faae3e46c2d8d30288181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "0bdafe649549632faae3e46c2d8d3028",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 110,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 117,
+      "response_byte_count": 86,
+      "response_sha256": "2b8e68e075dbe0fba812dd8d2325eb58018b3599fff935f6b3913a3dcbb6fee7",
+      "response_head_hex": "428fc9ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c9307ae463b1acbbc3c5058fa43590078181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c9307ae463b1acbbc3c5058fa4359007",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 111,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 118,
+      "response_byte_count": 86,
+      "response_sha256": "f8bbc8a28c467d7b80090c0c154788b149079a10bfa68278d64e53706d2ed53a",
+      "response_head_hex": "428fcace7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5fc05a7627c0685632cddfa558b8ea5ad8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "fc05a7627c0685632cddfa558b8ea5ad",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 112,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 119,
+      "response_byte_count": 86,
+      "response_sha256": "4cbd2d3c7e6bbd62e6ff04cc64883a6cacdb7ed1fe14eb1f4569eb948c873bc2",
+      "response_head_hex": "428fcbce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5ef38379d5fdb82e08c2cab67c46edbf98181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "ef38379d5fdb82e08c2cab67c46edbf9",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 113,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 120,
+      "response_byte_count": 86,
+      "response_sha256": "8df1b503fcd4aeccfedf38389919441616266ef8ef22b1bb510946a7964ce99f",
+      "response_head_hex": "428fccce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5847814c804266485aac2b540a1a45c288181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "847814c804266485aac2b540a1a45c28",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 114,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 121,
+      "response_byte_count": 86,
+      "response_sha256": "0f6b96d0640b260f6ae2eea1e041feff8e7a38954e2d646286bccd8e55e1bca8",
+      "response_head_hex": "428fcdce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d540254f1766637ba32cfbd711e273e6908181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "40254f1766637ba32cfbd711e273e690",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 115,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 122,
+      "response_byte_count": 86,
+      "response_sha256": "99f6b6222cbb56e31b6560902d7f653cf706b95b4e470bb4ae7c6f845801ea3b",
+      "response_head_hex": "428fcece7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d517624124655804914b84282649cf40358181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "17624124655804914b84282649cf4035",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "bA$eX",
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 116,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 123,
+      "response_byte_count": 86,
+      "response_sha256": "74318be117babc58093e268835a878037a6f0bd6ec035dc848108791b5afa2cb",
+      "response_head_hex": "428fcfce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d54dddeff16fb4d803edf1f64290ce62a48181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "4dddeff16fb4d803edf1f64290ce62a4",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 117,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 124,
+      "response_byte_count": 86,
+      "response_sha256": "e9d0ddff019e9a7995186937aec12b7aca2db224614cd0f52c7c9f9884bf3da7",
+      "response_head_hex": "428fd0ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d557f8096dc0d39496f05c518f38533e458181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "57f8096dc0d39496f05c518f38533e45",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 118,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 125,
+      "response_byte_count": 86,
+      "response_sha256": "8b05aeb13747e01659892a160f35906e367fdae7a8bb091a68d7cb40385a11b5",
+      "response_head_hex": "428fd1ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5725871f69cde8094d98f14c289af5a0a8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "725871f69cde8094d98f14c289af5a0a",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 119,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 126,
+      "response_byte_count": 86,
+      "response_sha256": "54b798688896bc7f336e9acf6214eda0cadb0cf78757ada70dcb9ed50effffb2",
+      "response_head_hex": "428fd2ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e51b9571ba43ef0daaa68bb2ad8f34be8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "e51b9571ba43ef0daaa68bb2ad8f34be",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 120,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 127,
+      "response_byte_count": 86,
+      "response_sha256": "ac5a439796b620928af58c6a00457c2ec07fc7248f2322ddcc17a08b86ef03bf",
+      "response_head_hex": "428fd3ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c589ade79b357d06894d6a96dd8d4e578181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "c589ade79b357d06894d6a96dd8d4e57",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 121,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 128,
+      "response_byte_count": 86,
+      "response_sha256": "7b46a060d2f378741aa124a17f8fd98a151875a00551483659f969d6cd2d9079",
+      "response_head_hex": "428fd4ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5be0227bb73d84e8a48757b2384453b0c8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "be0227bb73d84e8a48757b2384453b0c",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 122,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 129,
+      "response_byte_count": 86,
+      "response_sha256": "503d230e709c5490c6907bda2dad5dbf0127dcd37e7d06710f4d0a078ac352ee",
+      "response_head_hex": "428fd5ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e58548d05cfad2f3b66228ffcc55dc378181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "e58548d05cfad2f3b66228ffcc55dc37",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 123,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 130,
+      "response_byte_count": 86,
+      "response_sha256": "da1901d938f6e8ef99ffe74b6269d0ae0538bd5f46b89a41fac5023e1c7dc5e4",
+      "response_head_hex": "428fd6ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d5ed66cf77708ecd4adb08a7414d369aff8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "ed66cf77708ecd4adb08a7414d369aff",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 124,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 131,
+      "response_byte_count": 86,
+      "response_sha256": "d94d7e8487ce383e32766cfc7bb4c3b937ef8a6cb44019f481485b376cfa30b9",
+      "response_head_hex": "428fd7ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d50f9be3f2b50eb3f34e4463959e67677d8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "0f9be3f2b50eb3f34e4463959e67677d",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 125,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    },
+    {
+      "send_index": 132,
+      "response_byte_count": 86,
+      "response_sha256": "02e80c41e19c89869cd4121972ed55e4cb2949e085405a34af960e28e2a78f13",
+      "response_head_hex": "428fd8ce7ce984838183cb23950a102bc90b462c40b5aeb6e2329a7234d526b81b2680e6a0e67bd0f5a1194fe69d8181818b0fe182818481829a1270665f6669",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "26b81b2680e6a0e67bd0f5a1194fe69d",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_fixture_version"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-field-version",
+      "case_frame_ordinal": 126,
+      "response_markers": [
+        "PF_FIXTURE_VERSION",
+        "pf_fixture_version"
+      ]
+    }
+  ],
+  "finished_at": "2026-06-05T11:49:38.903974Z",
+  "notes": "Read-only marker replay uses captured manager-fixture request shape and dynamic ACK/sequence/nonce replacement."
+}

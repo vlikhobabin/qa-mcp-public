@@ -1,0 +1,1758 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.command-catalog.v1",
+  "catalog_version": "2026-06-06.3",
+  "scenario": "manager-fixture-v1-readonly",
+  "fixture_version": "protocol-fixture.v1",
+  "manager_harness": "DataProcessor.ProtocolFixtureTestManager.Form.ManagerHarness",
+  "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+  "smoke_subset": [
+    "tm-v1-active-window",
+    "tm-v1-active-form",
+    "tm-v1-field-version"
+  ],
+  "rejected_command_kinds": [
+    "text_input",
+    "click",
+    "page_switch",
+    "row_select",
+    "business_command",
+    "object_write"
+  ],
+  "commands": [
+    {
+      "case_id": "tm-v1-active-window",
+      "command_id": "active_window",
+      "command_kind": "active_window",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "ApplicationWindow",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-active-form",
+      "command_id": "active_form",
+      "command_kind": "active_form",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "TestedForm",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-diag-command-interface-dump",
+      "command_id": "diagnostic_command_interface_dump",
+      "command_kind": "diagnostic_command_interface_dump",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "ci_children_count=",
+      "element_family": "DiagnosticCommandInterface",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "ci_children_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-diag-command-interface-section-dump",
+      "command_id": "diagnostic_command_interface_section_dump",
+      "command_kind": "diagnostic_command_interface_section_dump",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "Предприятие",
+      "expected_marker": "Фикстура протокола TestClient",
+      "element_family": "DiagnosticCommandInterface",
+      "safety_class": "bootstrap_navigation"
+    },
+    {
+      "case_id": "tm-v1-diag-window-children",
+      "command_id": "diagnostic_window_children",
+      "command_kind": "diagnostic_window_children",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "window_children_count=",
+      "element_family": "DiagnosticWindowChildren",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "window_children_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "command_id": "diagnostic_window_find_form_marker",
+      "command_kind": "diagnostic_window_find_form_marker",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "DiagnosticWindowFindForm",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "command_id": "diagnostic_window_get_form_path",
+      "command_kind": "diagnostic_window_get_form_path",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "form_path_attempted=",
+      "element_family": "DiagnosticWindowGetForm",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "form_path_attempted=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-field-marker",
+      "command_id": "diagnostic_window_find_field_marker",
+      "command_kind": "diagnostic_window_find_field_marker",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_FIXTURE_VERSION",
+      "target_marker": "PF_FIXTURE_VERSION",
+      "expected_marker": "protocol-fixture.v1",
+      "element_family": "DiagnosticWindowFindField",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "protocol-fixture.v1",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-diag-form-find-field-marker",
+      "command_id": "diagnostic_form_find_field_marker",
+      "command_kind": "diagnostic_form_find_field_marker",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_FIXTURE_VERSION",
+      "target_marker": "PF_FIXTURE_VERSION",
+      "expected_marker": "protocol-fixture.v1",
+      "element_family": "DiagnosticFormFindField",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "protocol-fixture.v1",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "command_id": "form_summary",
+      "command_kind": "form_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "TestedForm",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-field-version",
+      "command_id": "element_details",
+      "command_kind": "element_details",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_FIXTURE_VERSION",
+      "target_marker": "PF_FIXTURE_VERSION",
+      "expected_marker": "protocol-fixture.v1",
+      "element_family": "EditField",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "protocol-fixture.v1",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-field-string",
+      "command_id": "element_details",
+      "command_kind": "element_details",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_EDIT_STRING",
+      "target_marker": "PF_EDIT_STRING",
+      "expected_marker": "PF_EDIT_STRING_VALUE",
+      "element_family": "EditField",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-checkbox-true",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "CheckBox",
+      "element_family": "CheckBox",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_BUTTON_INERT",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "PF_BUTTON_INERT",
+      "element_family": "Button",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-table-items",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "PF_TABLE_ITEMS",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "PF_TABLE_ITEMS",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-commandbar-main",
+      "command_id": "commandbar_summary",
+      "command_kind": "commandbar_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.CommandBar.PF_COMMAND_BAR_MAIN",
+      "target_marker": "PF_COMMAND_BAR_MAIN",
+      "expected_marker": "PF_COMMAND_ENABLED",
+      "element_family": "CommandBar",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "PF_COMMAND_ENABLED",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-group-main",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "PF_GROUP_MAIN",
+      "element_family": "FormGroup",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-pages-main",
+      "command_id": "pages_summary",
+      "command_kind": "pages_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_PAGES_MAIN",
+      "target_marker": "PF_PAGES_MAIN",
+      "expected_marker": "PF_PAGE_A",
+      "element_family": "Pages",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "ro-button-name",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_BUTTON_INERT",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "name=PF_BUTTON_INERT",
+      "element_family": "Button",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "name=PF_BUTTON_INERT",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-button-type",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_BUTTON_INERT",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "family=Button",
+      "element_family": "Button",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "family=Button",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-button-title",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_BUTTON_INERT",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "title=PF_BUTTON_INERT",
+      "element_family": "Button",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "title=PF_BUTTON_INERT",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-button-visible",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_BUTTON_INERT",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "visible=Да",
+      "element_family": "Button",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "visible=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-button-enable",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_BUTTON_INERT",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "enabled=Да",
+      "element_family": "Button",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "enabled=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-field-name",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "name=PF_CHECKBOX_TRUE",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "name=PF_CHECKBOX_TRUE",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-field-type",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "family=CheckBox",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "family=CheckBox",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-field-title",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "title=PF_CHECKBOX_TRUE",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "title=PF_CHECKBOX_TRUE",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-field-visible",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "visible=Да",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "visible=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-field-enable",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "enabled=Да",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "enabled=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-table-name",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "name=PF_TABLE_ITEMS",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "name=PF_TABLE_ITEMS",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-table-title",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "title=PF_TABLE_ITEMS",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "title=PF_TABLE_ITEMS",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-table-visible",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "visible=Да",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "visible=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-table-enable",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "enabled=Да",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "enabled=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-name",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "name=PF_GROUP_MAIN",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "name=PF_GROUP_MAIN",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-type",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "family=FormGroup",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "family=FormGroup",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-title",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "title=PF_FORM_MAIN",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "title=PF_FORM_MAIN",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-visible",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "visible=Да",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "visible=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-enable",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "enabled=Да",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "enabled=Да",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-field-children",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "child_count=0",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "child_count=0",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-children",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "child_count=13",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "child_count=13",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-table-children",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "child_count=8",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "child_count=8",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-field-readonly",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "readonly=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "readonly=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-readonly",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "readonly=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "readonly=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-table-readonly",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "readonly=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "readonly=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "ro-group-opened",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "opened=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "opened=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bd-button-check",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_BUTTON_INERT",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "check=",
+      "element_family": "Button",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "check=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bd-table-mode",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "tablemode=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "tablemode=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bd-table-canexpand",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "canexpand=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "canexpand=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bd-table-expanded",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "expanded=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "expanded=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "be-form-readonly",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "readonly=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "readonly=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "be-form-modified",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "modified=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "modified=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bf-form-titletext",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "titletext=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "titletext=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bf-form-formname",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "formname=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "formname=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bf-form-enable",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "formenable=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "formenable=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bf-field-tooltip",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "tooltip=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "tooltip=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bf-group-tooltip",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "tooltip=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "tooltip=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bf-table-tooltip",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "tooltip=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "tooltip=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bg-window-caption",
+      "command_id": "window_state",
+      "command_kind": "window_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "caption=",
+      "element_family": "Window",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "caption=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bg-window-url",
+      "command_id": "window_state",
+      "command_kind": "window_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "url=",
+      "element_family": "Window",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "url=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bg-window-homepage",
+      "command_id": "window_state",
+      "command_kind": "window_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "homepage=",
+      "element_family": "Window",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "homepage=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bg-window-ismain",
+      "command_id": "window_state",
+      "command_kind": "window_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "ismain=",
+      "element_family": "Window",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "ismain=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bh-app-maxexec",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "maxexec=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "maxexec=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bh-app-perf",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "perf=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "perf=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bh-app-errorinfo",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "errorinfo=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "errorinfo=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bh-app-children",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "app_child_count=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "app_child_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-field-parent",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "parent_type=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "parent_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-field-commandbar",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "commandbar_type=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "commandbar_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-field-contextmenu",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "contextmenu_type=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "contextmenu_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-group-parent",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "parent_type=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "parent_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-group-commandbar",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "commandbar_type=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "commandbar_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-group-contextmenu",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "contextmenu_type=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "contextmenu_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-table-parent",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "parent_type=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "parent_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-table-commandbar",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "commandbar_type=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "commandbar_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bi-table-contextmenu",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "contextmenu_type=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "contextmenu_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bj-form-parent",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "form_parent_type=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "form_parent_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bj-form-getobject",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "form_getobject_type=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "form_getobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bj-form-findobjects",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "form_findobjects_count=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "form_findobjects_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bj-form-currentitem",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "form_currentitem_type=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "form_currentitem_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-field-findobjects",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "el_findobjects_count=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobjects_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-field-findobject",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "el_findobject_type=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-group-findobjects",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "el_findobjects_count=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobjects_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-group-findobject",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "el_findobject_type=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-table-findobjects",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "el_findobjects_count=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobjects_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-table-findobject",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "el_findobject_type=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-group-getobject",
+      "command_id": "group_summary",
+      "command_kind": "group_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_GROUP_MAIN",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "el_getobject_type=",
+      "element_family": "FormGroup",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_getobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bk-table-getobject",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "el_getobject_type=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_getobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bl-app-findobject",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "app_findobject_type=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "app_findobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bl-app-findobjects",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "app_findobjects_count=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "app_findobjects_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bl-app-getobject",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "app_getobject_type=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "app_getobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bl-window-findobjects",
+      "command_id": "window_state",
+      "command_kind": "window_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "win_findobjects_count=",
+      "element_family": "Window",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "win_findobjects_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bm-field-titleshown",
+      "command_id": "element_state",
+      "command_kind": "element_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_CHECKBOX_TRUE",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "titleshown=",
+      "element_family": "CheckBox",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "titleshown=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bm-pages-currentpage",
+      "command_id": "pages_summary",
+      "command_kind": "pages_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_PAGES_MAIN",
+      "target_marker": "PF_PAGES_MAIN",
+      "expected_marker": "currentpage_type=",
+      "element_family": "Pages",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "currentpage_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bm-table-selrows",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "selrows_count=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "selrows_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bm-table-currentitem",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "table_currentitem_type=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "table_currentitem_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bm-app-waitobj",
+      "command_id": "app_state",
+      "command_kind": "app_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "waitobj=",
+      "element_family": "Application",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "waitobj=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bn-form-defaultbutton",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "defaultbutton_type=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "defaultbutton_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bn-form-waitclosing",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "waitclosing=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "waitclosing=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bn-table-celltext",
+      "command_id": "table_summary",
+      "command_kind": "table_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_TABLE_ITEMS",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "celltext=",
+      "element_family": "Table",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "celltext=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-name",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "name=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "name=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-title",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "title=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "title=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-type",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "type=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-visible",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "visible=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "visible=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-enable",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "enabled=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "enabled=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-readonly",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "readonly=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "readonly=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-tooltip",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "tooltip=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "tooltip=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-parent",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "parent_type=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "parent_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-commandbar",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "commandbar_type=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "commandbar_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-contextmenu",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "contextmenu_type=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "contextmenu_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-children",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "child_count=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "child_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-findobjects",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "el_findobjects_count=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobjects_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-findobject",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL",
+      "target_marker": "PF_DECORATION_LABEL",
+      "expected_marker": "el_findobject_type=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "el_findobject_type=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bo-deco-fmthyperlinks",
+      "command_id": "decoration_summary",
+      "command_kind": "decoration_summary",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_DECORATION_LABEL_LINK",
+      "target_marker": "PF_DECORATION_LABEL_LINK",
+      "expected_marker": "fmthyperlinks_count=",
+      "element_family": "Decoration",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "fmthyperlinks_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bp-form-choicelist",
+      "command_id": "form_state",
+      "command_kind": "form_state",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "choicelist_count=",
+      "element_family": "Form",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "choicelist_count=",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "bq-window-usermessages",
+      "command_id": "window_messages",
+      "command_kind": "window_messages",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "msg=PF_DECORATION_LABEL_LINKНажатие",
+      "element_family": "Window",
+      "safety_class": "read_only",
+      "acceptance_contract": {
+        "kind": "manager_result_preview_contains",
+        "expected_result_preview_marker": "msg=PF_DECORATION_LABEL_LINKНажатие",
+        "evidence_source": "manager_case_event.after.result_preview"
+      }
+    },
+    {
+      "case_id": "tm-v1-form-activate",
+      "command_id": "form_activate",
+      "command_kind": "form_activate",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "Form",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-active-form-activate",
+      "command_id": "active_form_activate",
+      "command_kind": "active_form_activate",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "Form",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-button-activate",
+      "command_id": "button_activate",
+      "command_kind": "button_activate",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "FormButton",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-window-goto-next",
+      "command_id": "window_goto_next",
+      "command_kind": "window_goto_next",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "ApplicationWindow",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-window-goto-prev",
+      "command_id": "window_goto_prev",
+      "command_kind": "window_goto_prev",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "ApplicationWindow",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-window-goto-startpage",
+      "command_id": "window_goto_startpage",
+      "command_kind": "window_goto_startpage",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "ApplicationWindow",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-choose-user-message",
+      "command_id": "choose_user_message",
+      "command_kind": "choose_user_message",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_DECORATION_LABEL_LINK",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "ApplicationWindow",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-tree-probe",
+      "command_id": "tree_probe",
+      "command_kind": "tree_probe",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "FormTable",
+      "safety_class": "safe_ui_action"
+    },
+    {
+      "case_id": "tm-v1-table-expand",
+      "command_id": "table_expand",
+      "command_kind": "table_expand",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "target_marker": "ДенамическийСписокИерархия",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "FormTable",
+      "safety_class": "safe_ui_action"
+    }
+  ]
+}

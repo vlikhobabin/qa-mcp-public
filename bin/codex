@@ -1,0 +1,100 @@
+#!/usr/bin/env bash
+# =============================================================================
+# qa-mcp Codex launcher.
+#
+# Codex has no per-directory auto-config, so a plain `codex` in this repo would
+# NOT load qa-mcp's profile or skills. This launcher composes a CODEX_HOME so a
+# Codex session started here loads qa-mcp's `.codex/config.toml` + `.codex/skills`
+# (including qa-add-platform and the local chrl skills) with the operator's
+# auth. Mirror of agent-core/bin/codex, but it COMPOSES the home because a
+# component's tracked `.codex/auth.json` is often absent or points at an
+# unreadable path — we reuse the operator auth instead and never touch `.codex`.
+#
+# Usage:
+#   ./bin/codex                                        # interactive Codex, qa-mcp skills loaded
+#   ./bin/codex exec '$qa-add-platform 8.3.27.XXXX'    # unattended: run the platform-support router
+#   ./bin/chrl-run <todo-card>                     # delivery including commit/push; explicit authorization required
+#
+# Env: AI1C_CODEX_AUTH (default ~/.codex/auth.json), AI1C_CODEX_WRAPPER,
+#      SUITE_ROOT (default /opt/ai-dev-suite-for-1c), REAL_CODEX_BIN, CODEX_PROXY_URL.
+# =============================================================================
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+suite_root="${SUITE_ROOT:-/opt/ai-dev-suite-for-1c}"
+codex_wrapper="${AI1C_CODEX_WRAPPER:-/usr/local/lib/codex/codex-unlocked-portable.sh}"
+proxy_env_script="${PROXY_ENV_SCRIPT:-$suite_root/agent-core/scripts/ai_codex_proxy_env.py}"
+operator_auth="${AI1C_CODEX_AUTH:-$HOME/.codex/auth.json}"
+
+# The machine dispatcher supplies a Sol default unless CLI model/effort are
+# explicit. Preserve caller overrides (including the runner's Terra role).
+qa_model_args=()
+qa_has_model=0
+qa_has_effort=0
+qa_args=("$@")
+for ((qa_i=0; qa_i<${#qa_args[@]}; qa_i++)); do
+  case "${qa_args[$qa_i]}" in
+    -m|--model|--model=*) qa_has_model=1 ;;
+    -c|--config)
+      if ((qa_i+1<${#qa_args[@]})); then
+        case "${qa_args[$((qa_i+1))]}" in
+          model=*) qa_has_model=1 ;;
+          model_reasoning_effort=*) qa_has_effort=1 ;;
+        esac
+      fi ;;
+  esac
+done
+[[ "$qa_has_model" == 1 ]] || qa_model_args+=(--model gpt-6-astra)
+[[ "$qa_has_effort" == 1 ]] || qa_model_args+=(-c 'model_reasoning_effort="high"')
+
+# Self-heal the qa-add-platform skill delivery. The tracked source is
+# skills/qa-add-platform; the `.codex` tree is git-ignored / machine-rendered, so
+# on a fresh machine the delivery symlink may be missing.
+if [ -d "$repo_root/.codex/skills" ] && [ ! -e "$repo_root/.codex/skills/qa-add-platform" ] \
+   && [ -d "$repo_root/skills/qa-add-platform" ]; then
+  ln -sfn ../../skills/qa-add-platform "$repo_root/.codex/skills/qa-add-platform" 2>/dev/null || true
+fi
+
+# Compose CODEX_HOME under runtime/ (git-ignored, NOT /tmp -> avoids codex helper refusal).
+ch="$repo_root/.runtime/changerail/codex-home"
+mkdir -p "$ch"
+# A symlink back to the project config makes the machine pool dispatcher drop
+# CODEX_HOME. Materialize a private regular copy so local skills stay selected.
+if [ ! -f "$repo_root/.codex/config.toml" ]; then
+  printf '%s\n' 'Missing qa-mcp .codex/config.toml' >&2
+  exit 2
+fi
+qa_config_tmp="$(mktemp "$ch/config.toml.XXXXXX")"
+cp "$repo_root/.codex/config.toml" "$qa_config_tmp"
+chmod 600 "$qa_config_tmp"
+mv -f "$qa_config_tmp" "$ch/config.toml"
+mkdir -p "$ch/skills"
+# Reconcile composed links without following or deleting their skill sources.
+for skill_entry in "$ch/skills/"*; do
+  [ -L "$skill_entry" ] || continue
+  unlink "$skill_entry"
+done
+for skill_source in "$repo_root/.codex/skills/"* "$repo_root/tools/changerail/skills/"*; do
+  [ -d "$skill_source" ] || continue
+  skill_name="$(basename "$skill_source")"
+  case "$(realpath "$skill_source")" in /opt/changerail/*) continue ;; esac
+  ln -sfn "$(realpath "$skill_source")" "$ch/skills/$skill_name"
+done
+if [ -r "$operator_auth" ]; then
+  ln -sfn "$operator_auth" "$ch/auth.json"
+elif [ -L "$ch/auth.json" ]; then
+  unlink "$ch/auth.json"
+fi
+
+# Start the suite trace proxy (best-effort; skipped if the script or python is absent).
+if proxy_exports="$(python3 "$proxy_env_script" --start "$repo_root" 2>/dev/null)"; then
+  [ -n "$proxy_exports" ] && eval "$proxy_exports"
+fi
+
+exec env \
+  CODEX_WORKDIR="$repo_root" \
+  CODEX_HOME="$ch" \
+  CODEX_PROXY_URL="${CODEX_PROXY_URL:-http://127.0.0.1:1081}" \
+  PATH="$repo_root/bin:${PATH}" \
+  REAL_CODEX_BIN="${REAL_CODEX_BIN:-/usr/local/bin/codex}" \
+  "$codex_wrapper" "${qa_model_args[@]}" "$@"

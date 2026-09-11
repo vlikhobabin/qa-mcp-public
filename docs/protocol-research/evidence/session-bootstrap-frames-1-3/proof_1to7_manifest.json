@@ -1,0 +1,13 @@
+{
+  "schema": "python-manager-probe.manifest.v1",
+  "started_at": "2026-06-13T17:01:23.294649Z",
+  "query": "active-window-context",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\tm-v1-ro-batchQ3",
+  "templates": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\templates\\20260602-frames08-106-utf16-managedform\\manager_frame_templates.json",
+  "target_host": "127.0.0.1",
+  "target_port": 15381,
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\bootstrap-synth-proof\\20260613-200118\\synth",
+  "synthesize_bootstrap": true,
+  "synthesized_counter_base": 58102,
+  "synthesized_ticket_guid": "d58bb5779edc201aaa2fffe0a7e5403d"
+}

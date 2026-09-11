@@ -1,0 +1,33 @@
+{
+  "schema": "qa-mcp.protocol-capture-manifest.v1",
+  "platform_version": "8.3.27.2130",
+  "compatible_platform_versions": [
+    "8.3.27.1606",
+    "8.3.27.1644",
+    "8.3.27.1688",
+    "8.3.27.1719",
+    "8.3.27.1786",
+    "8.3.27.1936",
+    "8.3.27.2074",
+    "8.3.27.2170",
+    "8.3.27.2214"
+  ],
+  "captured_at": "2026-06-22T07:02:28Z",
+  "notes": "irreducible handshake + UTF16 ManagedForm frame templates; baseline capture 20260602 builds validated GREEN via qa_mcp.platform_support 2026-07-07 (7 required live checks incl UI->DB write) 8.3.27.2214 validated read-only on 2026-08-17: genuine Vanessa open-list capture plus existing bundled 8.3 replay GREEN 4/4; 2026-09-02 public-readiness scrub changed only the non-runtime capture_dir provenance label and re-bound this digest; frame/template payloads are unchanged",
+  "templates": [
+    {
+      "name": "manager_frame_templates",
+      "path": "docs/protocol-research/evidence/templates/20260602-frames08-106-utf16-managedform/manager_frame_templates.json",
+      "committed": true,
+      "present": true,
+      "sha256": "c05a870bd8d62c1c0cd9bf7d0c008a37acb7cde346fadd24c81cfdccd968e808"
+    },
+    {
+      "name": "value_read_templates",
+      "path": "runtime/protocol-research/templates/tm-v1-open-plus-valueread/manager_frame_templates.json",
+      "committed": false,
+      "present": true,
+      "sha256": "ad8ab74b7da3d7c2cde6cd0ec057669c243783e3366aeb1695e9a2d129f3422e"
+    }
+  ]
+}

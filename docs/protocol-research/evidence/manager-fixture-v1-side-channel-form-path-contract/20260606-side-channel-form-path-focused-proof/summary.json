@@ -1,0 +1,39 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.side-channel-form-path-contract-summary.v1",
+  "catalog_version": "2026-06-06.3",
+  "catalog_path": "tools/protocol-research/manager_fixture_v1_command_catalog.json",
+  "focused_proof_capture": "runtime/protocol-research/captures/20260606-side-channel-form-path-focused-proof",
+  "focused_proof_report": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-side-channel-form-path-focused-proof/",
+  "catalog_comparison": "docs/protocol-research/evidence/manager-fixture-v1-side-channel-form-path-contract/20260606-side-channel-form-path-focused-proof/catalog_comparison.json",
+  "accepted_side_channel_cases": [
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "contract_kind": "manager_result_preview_contains",
+      "expected_result_preview_marker": "form_path_attempted=",
+      "observed_result_preview": "form_path_attempted=DataProcessor.ФикстураПротоколаTestClient.Form.Форма;form_title=QA MCP Protocol Fixture V1;child_count=2",
+      "manager_frame_range": {
+        "from": 16,
+        "to": 326,
+        "count": 311
+      },
+      "client_frame_range": {
+        "from": 17,
+        "to": 326,
+        "count": 310
+      },
+      "request_size": 81319,
+      "response_size": 69493,
+      "normalized_hash": "0244782c3c4f28c8b3ad0bbf5dfaf37916cb642f0d82debe8543fdd08c71f85a",
+      "validation_status": "accepted"
+    }
+  ],
+  "remaining_former_pending_case_ids": [],
+  "verification": {
+    "catalog_drift_status": "ok",
+    "focused_command_count": 1,
+    "focused_joined_count": 1,
+    "accepted_side_channel_count": 1,
+    "direct_wire_marker_claimed": false,
+    "raw_output_policy": "raw capture and generated probe output stay under ignored runtime/protocol-research paths"
+  }
+}

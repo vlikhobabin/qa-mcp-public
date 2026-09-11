@@ -1,0 +1,26 @@
+{
+  "schema": "card78.action-session-spike.v1",
+  "captured_managed_form_guid": "7d9b688c-4f4d-4ef9-825a-8a40791c4e70",
+  "bootstrap_ack_guid": "9078d155-234f-40e9-b015-db693cae18c6",
+  "nav": [
+    {
+      "name": "active-window",
+      "status": "ok",
+      "frames": 1
+    },
+    {
+      "name": "form-summary",
+      "status": "ok",
+      "frames": 6
+    }
+  ],
+  "live_managed_form_guid": "cb05d8bc-211e-497e-9d39-6e3b2994c474",
+  "action": {
+    "query_id": "input-action",
+    "sent_bytes": 254,
+    "recv_bytes": 665,
+    "adapted": true,
+    "accepted": true
+  },
+  "status": "ok"
+}

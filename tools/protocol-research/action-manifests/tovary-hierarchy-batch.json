@@ -1,0 +1,26 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "tovary-hierarchy-batch",
+  "api_member": "TestedFormTable.GotoRow",
+  "operation_family": "form_table_hierarchy",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "act_gotorow",
+  "notes": "Multi-phase safe_ui_action batch on the hierarchical Справочник.Товары list (table 'Список', HierarchyFoldersAndItems): GotoRow to the 'Обувь' folder, GoOneLevelDown/Up (drill in/out), re-position (glue, not a member), Collapse the folder. Expand (Развернуть) is NOT included: it throws 'Неподходящее состояние элемента управления' on a collapsed dynamic-list group row (both Развернуть() and Развернуть(,Истина)), an asymmetric platform/test-API limitation vs Collapse — recorded as candidate. Read-only navigation; nothing persists. vanessa_client only.",
+  "phase_member_map": {
+    "act_gotorow": "TestedFormTable.GotoRow",
+    "act_golevel_down": "TestedFormTable.GoOneLevelDown",
+    "act_golevel_up": "TestedFormTable.GoOneLevelUp",
+    "act_collapse": "TestedFormTable.Collapse"
+  },
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/list/Справочник.Товары\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "act_gotorow", "text": "И в таблице \"Список\" я перехожу к строке\n\t\t| 'Наименование' |\n\t\t| 'Обувь' |"},
+    {"phase": "act_golevel_down", "text": "И в таблице \"Список\" я перехожу на один уровень вниз"},
+    {"phase": "act_golevel_up", "text": "И в таблице \"Список\" я перехожу на один уровень вверх"},
+    {"phase": "reposition_a", "text": "И в таблице \"Список\" я перехожу к строке\n\t\t| 'Наименование' |\n\t\t| 'Обувь' |"},
+    {"phase": "act_collapse", "text": "И в таблице \"Список\" я сворачиваю текущую строку"},
+    {"phase": "post_read", "read": true}
+  ]
+}

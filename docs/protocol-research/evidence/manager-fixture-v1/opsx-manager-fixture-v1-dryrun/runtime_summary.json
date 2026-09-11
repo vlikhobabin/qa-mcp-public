@@ -1,0 +1,60 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.reviewed-summary.v1",
+  "generated_at": "2026-06-04T19:04:00Z",
+  "run_id": "opsx-manager-fixture-v1-dryrun",
+  "source_runtime_dir": "runtime\\protocol-research\\captures\\opsx-manager-fixture-v1-dryrun",
+  "reviewed_output_dir": "docs\\protocol-research\\evidence\\manager-fixture-v1\\opsx-manager-fixture-v1-dryrun",
+  "fixture_version": "protocol-fixture.v1",
+  "command_catalog_version": "qa-mcp.manager-fixture-v1.manifest.v1",
+  "manager_harness": "DataProcessor.ProtocolFixtureTestManager.Form.ManagerHarness",
+  "target_fixture_path": "DataProcessor.ProtocolFixtureTestClient.Form.Main",
+  "proxy_testclient_port": 15382,
+  "run_status": "dry_run_ok",
+  "status_reason": "dry-run preflight wrote manager fixture manifest, event and result files without starting 1C",
+  "bootstrap_status": "dry_run_ok",
+  "command_count": 6,
+  "event_count": 2,
+  "readonly_event_count": 1,
+  "completed_count": 0,
+  "failed_count": 0,
+  "case_status_counts": {
+    "dry_run_ok": 2
+  },
+  "frame_join_status_counts": {
+    "blocked": 5,
+    "unresolved": 1
+  },
+  "accepted_protocol_mapping": false,
+  "accepted_case_ids": [],
+  "output_files": {
+    "runtime_manifest": "runtime\\protocol-research\\captures\\opsx-manager-fixture-v1-dryrun\\manager_harness_manifest.json",
+    "runtime_result": "runtime\\protocol-research\\captures\\opsx-manager-fixture-v1-dryrun\\manager_harness_result.json",
+    "runtime_case_events": "runtime\\protocol-research\\captures\\opsx-manager-fixture-v1-dryrun\\case_events.jsonl",
+    "reviewed_summary_markdown": "docs\\protocol-research\\evidence\\manager-fixture-v1\\opsx-manager-fixture-v1-dryrun\\runtime_summary.md",
+    "reviewed_summary_json": "docs\\protocol-research\\evidence\\manager-fixture-v1\\opsx-manager-fixture-v1-dryrun\\runtime_summary.json",
+    "reviewed_frame_join_markdown": "docs\\protocol-research\\evidence\\manager-fixture-v1\\opsx-manager-fixture-v1-dryrun\\frame_join_report.md",
+    "reviewed_frame_join_json": "docs\\protocol-research\\evidence\\manager-fixture-v1\\opsx-manager-fixture-v1-dryrun\\frame_join_report.json"
+  },
+  "owner_routes": {
+    "runtime_apply": "project:qa-mcp",
+    "ui_proof": "/opt/vanessa-mcp-stack",
+    "bsl_diagnostics": "/opt/edt-lab",
+    "frame_join": "project:qa-mcp",
+    "replay_or_direct_probe": "project:qa-mcp"
+  },
+  "unresolved_gaps": [
+    {
+      "gap": "live_manager_fixture_smoke",
+      "owner_route": "project:qa-mcp",
+      "reason": "retained run is a dry-run because the configured Vanessa EPF was absent",
+      "residual_risk": "live startup, attach timing and manager harness invocation still need one run"
+    },
+    {
+      "gap": "frame_join",
+      "owner_route": "project:qa-mcp",
+      "reason": "no proxy chunk counters exist for the retained dry-run",
+      "residual_risk": "no command can be accepted as a protocol mapping from this run"
+    }
+  ],
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths"
+}

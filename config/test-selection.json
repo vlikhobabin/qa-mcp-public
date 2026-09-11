@@ -1,0 +1,196 @@
+{
+  "schema": "qa-mcp.test-selection.v1",
+  "tests": {
+    "tests/test_public_repository_readiness.py": {
+      "inputs": [
+        "tools/public_readiness.py",
+        "config/publication-policy.json",
+        "docs/public/*",
+        "pyproject.toml",
+        "LICENSE",
+        "NOTICE",
+        ".github/workflows/release.yml"
+      ]
+    },
+    "tests/test_open_source_delivery.py": {
+      "inputs": [
+        "Dockerfile",
+        "docker/*",
+        "pyproject.toml",
+        ".github/workflows/*",
+        ".dockerignore"
+      ]
+    },
+    "tests/test_component_manifest.py": {
+      "inputs": [
+        "component.yaml",
+        "component.json",
+        "component.toml"
+      ]
+    },
+    "tests/test_imports.py": {
+      "inputs": [
+        "pyproject.toml",
+        "uv.lock"
+      ]
+    },
+    "tests/test_test_selection.py": {
+      "inputs": [
+        "scripts/qa_test_selection.py",
+        "scripts/qa_pytest.py",
+        "conftest.py",
+        "config/test-selection.json",
+        "pyproject.toml"
+      ]
+    },
+    "tests/integration/test_test_selection_processes.py": {
+      "lane": "integration",
+      "inputs": [
+        "scripts/qa_test_selection.py",
+        "scripts/qa_pytest.py",
+        "conftest.py",
+        "config/test-selection.json",
+        "pyproject.toml"
+      ]
+    },
+    "tests/test_element_ref.py": {
+      "inputs": [
+        "src/qa_mcp/_bundled/*",
+        "tests/fixtures/*"
+      ]
+    },
+    "tests/test_window_list.py": {
+      "inputs": [
+        "src/qa_mcp/_bundled/*",
+        "tests/fixtures/*"
+      ]
+    },
+    "tests/test_bootstrap_synth.py": {
+      "inputs": [
+        "tests/fixtures/bootstrap_frames_1to3_independent.json"
+      ]
+    },
+    "tests/test_gates.py": {
+      "inputs": [
+        "tests/fixtures/card110-measure-event.json"
+      ]
+    },
+    "tests/test_measure.py": {
+      "inputs": [
+        "tests/fixtures/card110-measure-event.json"
+      ]
+    },
+    "tests/test_coverage_report.py": {
+      "inputs": [
+        "tests/fixtures/card110-measure-event.json"
+      ]
+    },
+    "tests/test_bundled_versions.py": {
+      "inputs": [
+        "src/qa_mcp/_bundled/*",
+        "src/qa_mcp/protocol/*.json"
+      ]
+    },
+    "tests/test_protocol_contract.py": {
+      "inputs": [
+        "src/qa_mcp/_bundled/*"
+      ]
+    },
+    "tests/test_protocol_primitives.py": {
+      "inputs": [
+        "src/qa_mcp/_bundled/*"
+      ]
+    },
+    "tests/integration/test_mcp_stdio.py": {
+      "lane": "integration",
+      "inputs": [
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/scenario/*",
+        "pyproject.toml",
+        "uv.lock"
+      ]
+    },
+    "tests/integration/test_screenshot_xvfb.py": {
+      "lane": "integration"
+    },
+    "tests/integration/test_self_hosted_release_scripts.py": {
+      "inputs": [
+        "scripts/release/*",
+        "tools/release/*",
+        "bin/ai-build-*",
+        ".github/workflows/*"
+      ],
+      "lane": "integration"
+    },
+    "tests/integration/test_windows_host_agent_artifact.py": {
+      "lane": "integration",
+      "inputs": [
+        "tools/release/*",
+        "bin/ai-build-windows-host-agent",
+        "host-agent/windows-display-agent/*"
+      ]
+    },
+    "tests/test_bootstrap_platform_selection.py": {
+      "inputs": [
+        "delivery/bootstrap.ps1"
+      ]
+    },
+    "tests/test_host_agent_installer_contract.py": {
+      "inputs": [
+        "host-agent/install-windows-host-agent.ps1"
+      ]
+    },
+    "tests/test_multi_version_delivery_docs.py": {
+      "inputs": [
+        "delivery/README.md",
+        "delivery/windows-agent-runbook.md",
+        "docker/README.md",
+        "docs/self-hosted-release-delivery-plan.md",
+        "config/protocol-capture-manifest-8.3.json",
+        "config/protocol-capture-manifest-8.5.json"
+      ]
+    },
+    "tests/test_protocol_tool_wrappers.py": {
+      "inputs": [
+        "tools/protocol-research/python_manager_client.py",
+        "tools/protocol-research/python_manager_probe.py",
+        "tools/protocol-research/protocol_corpus_runner.py",
+        "src/qa_mcp/protocol/*"
+      ]
+    },
+    "tests/test_standalone_http_delivery.py": {
+      "inputs": [
+        "Dockerfile",
+        "docker/*",
+        "delivery/bootstrap.ps1",
+        ".github/workflows/release.yml",
+        "tools/release/*"
+      ]
+    },
+    "tests/test_verify_open_image_archive.py": {
+      "inputs": [
+        "docker/verify_open_image.py"
+      ]
+    },
+    "tests/test_native_xtest.py": {
+      "inputs": [
+        "src/qa_mcp/protocol/assets/*"
+      ]
+    },
+    "tests/test_self_hosted_release_contract.py": {
+      "inputs": [
+        "Dockerfile",
+        "docker/*",
+        "delivery/*",
+        "tools/release/publish_self_hosted.sh",
+        "tools/release/render_standalone_bootstrap.py",
+        ".github/workflows/release.yml"
+      ]
+    },
+    "tests/test_windows_host_agent_artifact_contract.py": {
+      "inputs": [
+        "tools/release/windows_host_agent_artifact.py"
+      ]
+    }
+  }
+}

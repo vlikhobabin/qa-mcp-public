@@ -1,0 +1,53 @@
+{
+  "schema": "qa-mcp.post-i11-observation-certification-handoff-decision.v1",
+  "published_i11_commit": "964e29fa7ee8ba87df12d0db903ca7a331113c2f",
+  "parent_card": "openspec/board/2.todo/oss-06-s4-r1-stabilize-hidden-direct-execute-observation-lifecycle.md",
+  "decision_card": "openspec/board/3.inprogress/oss-06-s4-r1-i12-decide-post-i11-observation-certification-handoff.md",
+  "successor_card": "openspec/board/2.todo/oss-06-s4-r1-i13-certify-published-i11-observation-lifecycle-evidence.md",
+  "successor_change": "certify-published-i11-observation-lifecycle-evidence",
+  "parent_complete": false,
+  "implementation_authority": false,
+  "wire_authority": false,
+  "successor_mutation_authority": "published-s5-r1-two-exact-addressed-confirmations",
+  "successor_action_counts": [0, 0, 0, 0, 1, 1],
+  "external_execution_in_i12": false,
+  "criteria": [
+    {
+      "id": "preserve-predecessor-series",
+      "classification": "remaining_certification"
+    },
+    {
+      "id": "deterministic-observation-hold",
+      "classification": "remaining_certification"
+    },
+    {
+      "id": "inventory-errors-fail-closed",
+      "classification": "closed_offline"
+    },
+    {
+      "id": "privacy-safe-marker-hash",
+      "classification": "remaining_certification"
+    },
+    {
+      "id": "exact-source-matrix",
+      "classification": "remaining_certification"
+    },
+    {
+      "id": "exact-restoration-and-owned-cleanup",
+      "classification": "remaining_certification"
+    },
+    {
+      "id": "downstream-block",
+      "classification": "preserved_block"
+    }
+  ],
+  "required_evidence": [
+    "exact-s3-control",
+    "two-fresh-tracked-s4-run1-rows",
+    "one-uninstrumented-s4-confirmation",
+    "two-run-distinct-s5-rows",
+    "stable-two-sample-marker-hash",
+    "exact-restoration-and-owned-cleanup"
+  ],
+  "failure_policy": "stop-for-separately-authorized-investigation"
+}

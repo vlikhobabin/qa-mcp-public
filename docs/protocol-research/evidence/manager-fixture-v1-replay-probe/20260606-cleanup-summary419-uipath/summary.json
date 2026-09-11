@@ -1,0 +1,102 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.replay-probe-summary.v1",
+  "source_capture": "runtime/protocol-research/captures/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "successful_replay_dir": "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-summary419-uipath-v1",
+  "send_count": 419,
+  "transport_status": "ok",
+  "no_response_frames": [],
+  "observed_dynamic_fields": {
+    "ack_guid_after_send_3": "65769232-e953-4b39-9eaf-8ba6df5faf1f",
+    "main_frame_guid_after_send_6": "6ca75e50-62a3-4842-b6cd-b429f7591ef2",
+    "secondary_frame_guid_after_send_15": "2757ad56-6318-4d52-993f-6db40b2ba9db",
+    "managed_form_guid_after_send_15": "95d7e9d7-5ff3-476b-afc8-ffb2c084be35"
+  },
+  "adaptation": {
+    "frame4_guid": true,
+    "frame5_guid": true,
+    "frame5_random_blocks": true,
+    "binary_single_block_through": 121,
+    "binary_single_block_frames": "123-129,131-174,176-187,189-210,212-231,233-294,296-300,302-307,309-359,361-367,369-371,373-381,383,386,388-394,396-399,402-405,408-411,414-417",
+    "binary_guid_through": 419,
+    "ui_path_guids": true
+  },
+  "accepted_probe_cases": [
+    {
+      "case_id": "tm-v1-active-window",
+      "manager_frame_range": {"from": 16, "to": 16},
+      "response_after_send": 16,
+      "response_size": 277,
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "normalized_hash": "957a636f135c2e62f55dd276f5e63e55c025f1b1f59c3bb27035f6bbd13f2276",
+      "replay_status": "accepted_probe"
+    },
+    {
+      "case_id": "tm-v1-active-form",
+      "manager_frame_range": {"from": 17, "to": 17},
+      "response_after_send": 17,
+      "response_size": 361,
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "normalized_hash": "ef520f4818b5280f39ccdc970dbb1bb4a4657f5a5e53a029679dd245f4cbf2da",
+      "replay_status": "accepted_probe"
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-field-marker",
+      "manager_frame_range": {"from": 110, "to": 112},
+      "response_after_send": 112,
+      "response_size": 236,
+      "expected_marker": "protocol-fixture.v1",
+      "normalized_hash": "2a8d204d56acf5dd4b277c94c471de02daa1851d747d5257b2fbb5101cd99641",
+      "replay_status": "accepted_probe"
+    },
+    {
+      "case_id": "tm-v1-diag-form-find-field-marker",
+      "manager_frame_range": {"from": 113, "to": 116},
+      "response_after_send": 116,
+      "response_size": 236,
+      "expected_marker": "protocol-fixture.v1",
+      "normalized_hash": "405796082d6061cd8656ec59db08b72eab762ccc112d5d72c2de06b8c13cd9b9",
+      "replay_status": "accepted_probe"
+    },
+    {
+      "case_id": "tm-v1-pages-main",
+      "manager_frame_range": {"from": 414, "to": 419},
+      "response_after_send": 419,
+      "response_size": 626,
+      "expected_marker": "PF_PAGE_A",
+      "additional_markers": ["PF_PAGE_B", "PF_PAGES_MAIN"],
+      "normalized_hash": "cd46b1bbc7b51ece7c7e6dfee8062d1f805a62113cf745b44aeb1b7a310aaee7",
+      "replay_status": "accepted_probe"
+    }
+  ],
+  "non_accepted_observations": [
+    {
+      "case_id": "tm-v1-checkbox-true",
+      "manager_frame_range": {"from": 126, "to": 130},
+      "response_after_send": 130,
+      "observed_marker": "PF_CHECKBOX_TRUE",
+      "missing_expected_marker": "CheckBox"
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "manager_frame_range": {"from": 131, "to": 390},
+      "response_after_send": 390,
+      "observed_marker": "pf_button_inert",
+      "missing_expected_marker": "TestedFormButton"
+    },
+    {
+      "case_id": "tm-v1-table-items",
+      "manager_frame_range": {"from": 396, "to": 401},
+      "response_after_send": 401,
+      "observed_marker": "PF_TABLE_ITEMS",
+      "missing_expected_marker": "PF_ROW_001"
+    },
+    {
+      "case_id": "tm-v1-group-main",
+      "manager_frame_range": {"from": 408, "to": 413},
+      "response_after_send": 413,
+      "observed_marker": "PF_GROUP_MAIN",
+      "missing_expected_marker": "PF_FORM_MAIN"
+    }
+  ],
+  "negative_controls": []
+}

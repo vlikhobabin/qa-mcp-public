@@ -1,0 +1,18 @@
+﻿{
+    "schema":  "protocol-capture.manifest.v1",
+    "timestamp":  "20260602-084433",
+    "clientBin":  "C:\\Program Files\\1cv8\\8.3.27.2130\\bin\\1cv8.exe",
+    "clientInfobasePath":  "C:\\1C_BASES\\vanessa_client",
+    "managerInfobasePath":  "C:\\1C_BASES\\vanessa_manager",
+    "managerTemplatePath":  "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\infobases\\manager",
+    "vanessaEpf":  "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\releases\\vanessa\\single\\vanessa-automation-single-51f920f-windows-screenshot-fixes.epf",
+    "pythonExe":  "C:\\Users\\historical-user\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "realTestClientPort":  15381,
+    "proxyPort":  15382,
+    "mcpPort":  19874,
+    "mcpUrl":  "http://127.0.0.1:19874/mcp",
+    "testClientUser":  "\u003credacted\u003e",
+    "testClientPasswordPresent":  false,
+    "scenario":  "all",
+    "recreateManagerFromTemplate":  false
+}

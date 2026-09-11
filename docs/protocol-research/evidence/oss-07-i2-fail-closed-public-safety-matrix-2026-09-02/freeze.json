@@ -1,0 +1,16 @@
+{
+  "schema": "qa-mcp.oss-07-i2.public-safety-freeze.v1",
+  "license_spdx": "Apache-2.0",
+  "artifacts": [
+    {
+      "path": "docs/protocol-research/evidence/oss-07-i2-fail-closed-public-safety-matrix-2026-09-02/matrix.json",
+      "byte_size": 865,
+      "sha256": "0de299bc935d3f7d9ac8aa3f855b0bead62f0249ed5e44e6db7c05f4bfa26ec3"
+    },
+    {
+      "path": "tools/protocol-research/oss07_i2/audit_design.py",
+      "byte_size": 4259,
+      "sha256": "1356bd4c954fb5178d009bd28e1c031ecef9ab46db90bcc61619c03d7d335cbc"
+    }
+  ]
+}

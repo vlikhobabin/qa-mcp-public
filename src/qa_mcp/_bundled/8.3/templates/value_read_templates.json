@@ -1,0 +1,1385 @@
+{
+  "schema": "protocol-manager-frame-templates.v1",
+  "generated_at": "2026-06-15T14:27:56Z",
+  "note": "card 79: open fixture form (8-17) + value-read (218-221), SecondaryFrame GUID rebindable",
+  "frames": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    218,
+    219,
+    220,
+    221
+  ],
+  "templates": [
+    {
+      "frame_index": 8,
+      "direction": "manager_to_client",
+      "body_length": 174,
+      "payload_length": 178,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8de668818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e2329a7234d58ede05b988ae7c4db5eb18e2b1f458309a324d61696e4672616d655b36636137356535302d363261332d343834322d623663642d6234323966373539316566325d2e4349888181e182828a8182970b3f044004350434043f04400438044f044204380435048181202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 4,
+          "template_value": 26854,
+          "template_hex": "e668"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "8ede05b988ae7c4db5eb18e2b1f45830",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 174,
+          "length": 90
+        }
+      ],
+      "response": {
+        "byte_count": 371,
+        "head_hex": "428f022d68a484838183cb23950a102bc90b462c40b5aeb6e2329a7234d58ede05b988ae7c4db5eb18e2b1f458309a324d61696e4672616d655b366361373565",
+        "ascii_strings": [
+          "2MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI",
+          "lMainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SubSystems.CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083]"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 234,
+            "text": "Предприятие"
+          },
+          {
+            "offset": 260,
+            "text": "e1cib/command/Подсистема.Предприятие"
+          },
+          {
+            "offset": 340,
+            "text": "предприятие"
+          }
+        ],
+        "ui_identifiers": [
+          "2MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI",
+          "lMainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SubSystems.CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083]",
+          "Предприятие",
+          "e1cib/command/Подсистема.Предприятие",
+          "предприятие"
+        ],
+        "semantic_guess": "ui_payload",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "8ede05b988ae7c4db5eb18e2b1f45830",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 9,
+      "direction": "manager_to_client",
+      "body_length": 200,
+      "payload_length": 204,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8de768818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23956b6f8d3121a0b042acf8125671dfa516d5914f1c653487ff40a0e3d2d106fa67ac9a6c4d61696e4672616d655b36636137356535302d363261332d343834322d623663642d6234323966373539316566325d2e43492e53756253797374656d732e4349427574746f6e5b30623865333335382d326139642d343639322d613535642d6332663737366439383038335d888281202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 5,
+          "template_value": 26855,
+          "template_hex": "e768"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "914f1c653487ff40a0e3d2d106fa67ac",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 200,
+          "length": 116
+        }
+      ],
+      "response": {
+        "byte_count": 166,
+        "head_hex": "428f032d68a484838183cb23956b6f8d3121a0b042acf8125671dfa516d5914f1c653487ff40a0e3d2d106fa67ac9a6c4d61696e4672616d655b366361373565",
+        "ascii_strings": [
+          "lMainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SubSystems.CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "lMainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SubSystems.CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083]"
+        ],
+        "semantic_guess": "ui_payload",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "914f1c653487ff40a0e3d2d106fa67ac",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 10,
+      "direction": "manager_to_client",
+      "body_length": 200,
+      "payload_length": 204,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8de868818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a1cb23956b6f8d3121a0b042acf8125671dfa516d5914f1c653487ff40a0e3d2d106fa67ac9a6c4d61696e4672616d655b36636137356535302d363261332d343834322d623663642d6234323966373539316566325d2e43492e53756253797374656d732e4349427574746f6e5b30623865333335382d326139642d343639322d613535642d6332663737366439383038335d818181202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 6,
+          "template_value": 26856,
+          "template_hex": "e868"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "914f1c653487ff40a0e3d2d106fa67ac",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 200,
+          "length": 116
+        }
+      ],
+      "response": {
+        "byte_count": 16,
+        "head_hex": "428f042d68a48483818181a36653b2a6",
+        "ascii_strings": [],
+        "utf16le_strings": [],
+        "ui_identifiers": [],
+        "semantic_guess": "",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "914f1c653487ff40a0e3d2d106fa67ac",
+            "response_positions": [],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 11,
+      "direction": "manager_to_client",
+      "body_length": 143,
+      "payload_length": 147,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8de968818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23957d318afb2c934243abeb2494a167cb7ad5a8319c4690ae8247a2e65cf41d413ba69a2f4d61696e4672616d655b36636137356535302d363261332d343834322d623663642d6234323966373539316566325d888181e04b5520202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 7,
+          "template_value": 26857,
+          "template_hex": "e968"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "a8319c4690ae8247a2e65cf41d413ba6",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 143,
+          "length": 59
+        }
+      ],
+      "response": {
+        "byte_count": 223,
+        "head_hex": "428f052d68a484838183cb23957d318afb2c934243abeb2494a167cb7ad5a8319c4690ae8247a2e65cf41d413ba69a2f4d61696e4672616d655b366361373565",
+        "ascii_strings": [
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "2MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 173,
+            "text": "Командный интерфейс"
+          }
+        ],
+        "ui_identifiers": [
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "2MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI",
+          "Командный интерфейс"
+        ],
+        "semantic_guess": "ui_payload",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "a8319c4690ae8247a2e65cf41d413ba6",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 12,
+      "direction": "manager_to_client",
+      "body_length": 210,
+      "payload_length": 214,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8dea68818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e2329a7234d52e58e12550830f4e9ec1b9d96682fe519a324d61696e4672616d655b36636137356535302d363261332d343834322d623663642d6234323966373539316566325d2e4349888181e182828a8182971d440438043a044104420443044004300420003f0440043e0442043e043a043e043b0430042000740065007300740063006c00690065006e0074008181202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 8,
+          "template_value": 26858,
+          "template_hex": "ea68"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "2e58e12550830f4e9ec1b9d96682fe51",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 210,
+          "length": 126
+        }
+      ],
+      "response": {
+        "byte_count": 605,
+        "head_hex": "428f062d68a484838183cb23950a102bc90b462c40b5aeb6e2329a7234d52e58e12550830f4e9ec1b9d96682fe519a324d61696e4672616d655b366361373565",
+        "ascii_strings": [
+          "2MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI",
+          "MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SWINFP.CIGroup[0b8e3358-2a9d-4692-a55d-c2f776d98083:aabb34e1-98c1-4bd0-bf7f-243f95437b44].CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083:085a8c57-ebee-4ba4-9b7f-3e42837c3917]"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 350,
+            "text": "Фикстура протокола TestClient"
+          },
+          {
+            "offset": 412,
+            "text": "e1cib/command/Обработка.ФикстураПротоколаTestClient.Открыть"
+          },
+          {
+            "offset": 538,
+            "text": "фикстура протокола testclient"
+          }
+        ],
+        "ui_identifiers": [
+          "2MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI",
+          "MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SWINFP.CIGroup[0b8e3358-2a9d-4692-a55d-c2f776d98083:aabb34e1-98c1-4bd0-bf7f-243f95437b44].CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083:085a8c57-ebee-4ba4-9b7f-3e42837c3917]",
+          "Фикстура протокола TestClient",
+          "e1cib/command/Обработка.ФикстураПротоколаTestClient.Открыть",
+          "фикстура протокола testclient"
+        ],
+        "semantic_guess": "ui_payload",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "2e58e12550830f4e9ec1b9d96682fe51",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 13,
+      "direction": "manager_to_client",
+      "body_length": 316,
+      "payload_length": 320,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8deb68818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23956b6f8d3121a0b042acf8125671dfa516d5593173cba70ba54885c248a3985a32329ae04d61696e4672616d655b36636137356535302d363261332d343834322d623663642d6234323966373539316566325d2e43492e5357494e46502e434947726f75705b30623865333335382d326139642d343639322d613535642d6332663737366439383038333a61616262333465312d393863312d346264302d626637662d3234336639353433376234345d2e4349427574746f6e5b30623865333335382d326139642d343639322d613535642d6332663737366439383038333a30383561386335372d656265652d346261342d396237662d3365343238333763333931375d888281202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 9,
+          "template_value": 26859,
+          "template_hex": "eb68"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "593173cba70ba54885c248a3985a3232",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 316,
+          "length": 232
+        }
+      ],
+      "response": {
+        "byte_count": 282,
+        "head_hex": "428f072d68a484838183cb23956b6f8d3121a0b042acf8125671dfa516d5593173cba70ba54885c248a3985a32329ae04d61696e4672616d655b366361373565",
+        "ascii_strings": [
+          "MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SWINFP.CIGroup[0b8e3358-2a9d-4692-a55d-c2f776d98083:aabb34e1-98c1-4bd0-bf7f-243f95437b44].CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083:085a8c57-ebee-4ba4-9b7f-3e42837c3917]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2].CI.SWINFP.CIGroup[0b8e3358-2a9d-4692-a55d-c2f776d98083:aabb34e1-98c1-4bd0-bf7f-243f95437b44].CIButton[0b8e3358-2a9d-4692-a55d-c2f776d98083:085a8c57-ebee-4ba4-9b7f-3e42837c3917]"
+        ],
+        "semantic_guess": "ui_payload",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "593173cba70ba54885c248a3985a3232",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 14,
+      "direction": "manager_to_client",
+      "body_length": 316,
+      "payload_length": 320,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8dec68818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a1cb23956b6f8d3121a0b042acf8125671dfa516d5593173cba70ba54885c248a3985a32329ae04d61696e4672616d655b36636137356535302d363261332d343834322d623663642d6234323966373539316566325d2e43492e5357494e46502e434947726f75705b30623865333335382d326139642d343639322d613535642d6332663737366439383038333a61616262333465312d393863312d346264302d626637662d3234336639353433376234345d2e4349427574746f6e5b30623865333335382d326139642d343639322d613535642d6332663737366439383038333a30383561386335372d656265652d346261342d396237662d3365343238333763333931375d818181202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 10,
+          "template_value": 26860,
+          "template_hex": "ec68"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "593173cba70ba54885c248a3985a3232",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 316,
+          "length": 232
+        }
+      ],
+      "response": {
+        "byte_count": 16,
+        "head_hex": "428f082d68a48483818181a36653b2a6",
+        "ascii_strings": [],
+        "utf16le_strings": [],
+        "ui_identifiers": [],
+        "semantic_guess": "",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "593173cba70ba54885c248a3985a3232",
+            "response_positions": [],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 15,
+      "direction": "manager_to_client",
+      "body_length": 128,
+      "payload_length": 132,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8ded68818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e2329a7234d56cfe93d02c97664b873fbc248f0cef3b8188818b0fe182818481829a1a7161206d63702070726f746f636f6c20666978747572652076318181202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 11,
+          "template_value": 26861,
+          "template_hex": "ed68"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "6cfe93d02c97664b873fbc248f0cef3b",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 128,
+          "length": 44
+        }
+      ],
+      "response": {
+        "byte_count": 361,
+        "head_hex": "428f092d68a484838183cb23950a102bc90b462c40b5aeb6e2329a7234d56cfe93d02c97664b873fbc248f0cef3b8181818b0fe2cb2395abff6d0eae705b4aa5",
+        "ascii_strings": [
+          "fSecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01]",
+          "QA MCP Protocol Fixture V1",
+          "ManagedForm",
+          "qa mcp protocol fixture v1"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 220,
+            "text": "Обработка.ФикстураПротоколаTestClient.Форма.Форма"
+          }
+        ],
+        "ui_identifiers": [
+          "Обработка.ФикстураПротоколаTestClient.Форма.Форма"
+        ],
+        "semantic_guess": "ui_payload",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "6cfe93d02c97664b873fbc248f0cef3b",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 16,
+      "direction": "manager_to_client",
+      "body_length": 127,
+      "payload_length": 131,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8dee68818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e2329a7234d591f18151866dfb4dac01e1f4bc162e8e81888181e182828481829a1a7161206d63702070726f746f636f6c20666978747572652076318181202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 12,
+          "template_value": 26862,
+          "template_hex": "ee68"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "91f18151866dfb4dac01e1f4bc162e8e",
+          "expected_response_offsets": [
+            30
+          ]
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 127,
+          "length": 43
+        }
+      ],
+      "response": {
+        "byte_count": 360,
+        "head_hex": "428f0a2d68a484838183cb23950a102bc90b462c40b5aeb6e2329a7234d591f18151866dfb4dac01e1f4bc162e8e81818181e2cb2395abff6d0eae705b4aa59b",
+        "ascii_strings": [
+          "fSecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01]",
+          "QA MCP Protocol Fixture V1",
+          "ManagedForm",
+          "qa mcp protocol fixture v1"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 219,
+            "text": "Обработка.ФикстураПротоколаTestClient.Форма.Форма"
+          }
+        ],
+        "ui_identifiers": [
+          "Обработка.ФикстураПротоколаTestClient.Форма.Форма"
+        ],
+        "semantic_guess": "ui_payload",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "91f18151866dfb4dac01e1f4bc162e8e",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 17,
+      "direction": "manager_to_client",
+      "body_length": 228,
+      "payload_length": 232,
+      "body_hex": "41959d074394f9308f40bd0e80c3a55e9f1d8def68818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e2329a7234d5a2c27df73d865a4b9e564301e9d67f5d9a665365636f6e646172794672616d655b37336338323266662d653136302d343664332d623764352d6435653530613932633666345d2e4d616e61676564466f726d5b66613331303361332d393335372d343532322d616134312d3963393338356136316430315d888181e1828289829a1870665f6465636f726174696f6e5f6c6162656c5f6c696e6b818181202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "9d074394f9308f40bd0e80c3a55e9f1d"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 13,
+          "template_value": 26863,
+          "template_hex": "ef68"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "a2c27df73d865a4b9e564301e9d67f5d",
+          "expected_response_offsets": [
+            30
+          ]
+        },
+        {
+          "name": "managed_form_guid",
+          "kind": "managed_form_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "source": "latest_client_response_managed_form_ref",
+          "template_value": "fa3103a3-9357-4522-aa41-9c9385a61d01",
+          "template_hex": "66613331303361332d393335372d343532322d616134312d396339333835613631643031"
+        },
+        {
+          "name": "secondary_frame_guid",
+          "kind": "secondary_frame_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "source": "latest_client_response_secondary_frame_ref",
+          "template_value": "73c822ff-e160-46d3-b7d5-d5e50a92c6f4",
+          "template_hex": "37336338323266662d653136302d343664332d623764352d643565353061393263366634"
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 151,
+          "length": 67
+        },
+        {
+          "start": 187,
+          "end": 228,
+          "length": 41
+        }
+      ],
+      "response": {
+        "byte_count": 580,
+        "head_hex": "428f0b2d68a484838183cb23950a102bc90b462c40b5aeb6e2329a7234d5a2c27df73d865a4b9e564301e9d67f5d9a665365636f6e646172794672616d655b37",
+        "ascii_strings": [
+          "fSecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01]",
+          "P f DECORATION LABEL LINK",
+          "PF_DECORATION_LABEL_LINK",
+          "pf_decoration_label_link"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 175,
+            "text": "SecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01].Group[Группа1].Decoration[PF_DECORATION_LABEL_LINK]"
+          }
+        ],
+        "ui_identifiers": [
+          "SecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01].Group[Группа1].Decoration[PF_DECORATION_LABEL_LINK]"
+        ],
+        "semantic_guess": "managed_form_ref",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "a2c27df73d865a4b9e564301e9d67f5d",
+            "response_positions": [
+              30
+            ],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 218,
+      "direction": "manager_to_client",
+      "body_length": 288,
+      "payload_length": 292,
+      "body_hex": "4195a1d6981ef0c8be468a714a259a654dbb8db869818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb2395b2c3815e482c61428e8e621adcf59922d5c058015bf19db84e96dc734938e2694a9ac35365636f6e646172794672616d655b37336338323266662d653136302d343664332d623764352d6435653530613932633666345d2e4d616e61676564466f726d5b66613331303361332d393335372d343532322d616134312d3963393338356136316430315d2e47726f75705b50465f47524f55505f4d41494e5d2e47726f75705b50465f47524f55505f4449414c4f475f5245434f564552595f56345d2e456469744669656c645b50465f56345f535550504f525445445f5343454e4152494f535d888181e1202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "a1d6981ef0c8be468a714a259a654dbb"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 214,
+          "template_value": 27064,
+          "template_hex": "b869"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "c058015bf19db84e96dc734938e2694a",
+          "expected_response_offsets": [
+            30
+          ]
+        },
+        {
+          "name": "managed_form_guid",
+          "kind": "managed_form_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "source": "latest_client_response_managed_form_ref",
+          "template_value": "fa3103a3-9357-4522-aa41-9c9385a61d01",
+          "template_hex": "66613331303361332d393335372d343532322d616134312d396339333835613631643031"
+        },
+        {
+          "name": "secondary_frame_guid",
+          "kind": "secondary_frame_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "source": "latest_client_response_secondary_frame_ref",
+          "template_value": "73c822ff-e160-46d3-b7d5-d5e50a92c6f4",
+          "template_hex": "37336338323266662d653136302d343664332d623764352d643565353061393263366634"
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 151,
+          "length": 67
+        },
+        {
+          "start": 187,
+          "end": 288,
+          "length": 101
+        }
+      ],
+      "response": {
+        "byte_count": 254,
+        "head_hex": "428fa19abe2e84838183cb239523c842fb38ad0a40a81b02d5c7822a18d5a0386c6e0eb8b248864c225d956c2b6b9ac35365636f6e646172794672616d655b37",
+        "ascii_strings": [
+          "SecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01].Group[PF_GROUP_MAIN].Group[PF_GROUP_DIALOG_RECOVERY_V4].EditField[PF_V4_SUPPORTED_SCENARIOS]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [],
+        "semantic_guess": "",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "c058015bf19db84e96dc734938e2694a",
+            "response_positions": [],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 219,
+      "direction": "manager_to_client",
+      "body_length": 264,
+      "payload_length": 268,
+      "body_hex": "4195a1d6981ef0c8be468a714a259a654dbb8db969818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23952603cee9c164de47ab5ba07142ceaf79d52a3c9a5082e1c143a31e6a91efac419d9aab5365636f6e646172794672616d655b37336338323266662d653136302d343664332d623764352d6435653530613932633666345d2e4d616e61676564466f726d5b66613331303361332d393335372d343532322d616134312d3963393338356136316430315d2e47726f75705b50465f47524f55505f4d41494e5d2e47726f75705b50465f47524f55505f45444954535d2e456469744669656c645b50465f454449545f535452494e475d888181e1202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "a1d6981ef0c8be468a714a259a654dbb"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 215,
+          "template_value": 27065,
+          "template_hex": "b969"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "2a3c9a5082e1c143a31e6a91efac419d",
+          "expected_response_offsets": [
+            30
+          ]
+        },
+        {
+          "name": "managed_form_guid",
+          "kind": "managed_form_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "source": "latest_client_response_managed_form_ref",
+          "template_value": "fa3103a3-9357-4522-aa41-9c9385a61d01",
+          "template_hex": "66613331303361332d393335372d343532322d616134312d396339333835613631643031"
+        },
+        {
+          "name": "secondary_frame_guid",
+          "kind": "secondary_frame_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "source": "latest_client_response_secondary_frame_ref",
+          "template_value": "73c822ff-e160-46d3-b7d5-d5e50a92c6f4",
+          "template_hex": "37336338323266662d653136302d343664332d623764352d643565353061393263366634"
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 151,
+          "length": 67
+        },
+        {
+          "start": 187,
+          "end": 264,
+          "length": 77
+        }
+      ],
+      "response": {
+        "byte_count": 254,
+        "head_hex": "428fa29abe2e84838183cb2395b2c3815e482c61428e8e621adcf59922d5c058015bf19db84e96dc734938e2694a9ac35365636f6e646172794672616d655b37",
+        "ascii_strings": [
+          "^H,aB",
+          "SecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01].Group[PF_GROUP_MAIN].Group[PF_GROUP_DIALOG_RECOVERY_V4].EditField[PF_V4_SUPPORTED_SCENARIOS]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [],
+        "semantic_guess": "",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "2a3c9a5082e1c143a31e6a91efac419d",
+            "response_positions": [],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 220,
+      "direction": "manager_to_client",
+      "body_length": 267,
+      "payload_length": 271,
+      "body_hex": "4195a1d6981ef0c8be468a714a259a654dbb8dba69818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23951be7cf1ba4c1aa42a5847a908c18466fd55c1fae7b061db24491a7dc74e187d4739aab5365636f6e646172794672616d655b37336338323266662d653136302d343664332d623764352d6435653530613932633666345d2e4d616e61676564466f726d5b66613331303361332d393335372d343532322d616134312d3963393338356136316430315d2e47726f75705b50465f47524f55505f4d41494e5d2e47726f75705b50465f47524f55505f45444954535d2e456469744669656c645b50465f454449545f535452494e475d888181e04b5520202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "a1d6981ef0c8be468a714a259a654dbb"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 216,
+          "template_value": 27066,
+          "template_hex": "ba69"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "5c1fae7b061db24491a7dc74e187d473",
+          "expected_response_offsets": [
+            30
+          ]
+        },
+        {
+          "name": "managed_form_guid",
+          "kind": "managed_form_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "source": "latest_client_response_managed_form_ref",
+          "template_value": "fa3103a3-9357-4522-aa41-9c9385a61d01",
+          "template_hex": "66613331303361332d393335372d343532322d616134312d396339333835613631643031"
+        },
+        {
+          "name": "secondary_frame_guid",
+          "kind": "secondary_frame_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "source": "latest_client_response_secondary_frame_ref",
+          "template_value": "73c822ff-e160-46d3-b7d5-d5e50a92c6f4",
+          "template_hex": "37336338323266662d653136302d343664332d623764352d643565353061393263366634"
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 151,
+          "length": 67
+        },
+        {
+          "start": 187,
+          "end": 267,
+          "length": 80
+        }
+      ],
+      "response": {
+        "byte_count": 251,
+        "head_hex": "428fa39abe2e84838183cb23952603cee9c164de47ab5ba07142ceaf79d52a3c9a5082e1c143a31e6a91efac419d9aab5365636f6e646172794672616d655b37",
+        "ascii_strings": [
+          "SecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01].Group[PF_GROUP_MAIN].Group[PF_GROUP_EDITS].EditField[PF_EDIT_STRING]",
+          "PF_EDIT_STRING_VALUE "
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [],
+        "semantic_guess": "",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "5c1fae7b061db24491a7dc74e187d473",
+            "response_positions": [],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frame_index": 221,
+      "direction": "manager_to_client",
+      "body_length": 264,
+      "payload_length": 268,
+      "body_hex": "4195a1d6981ef0c8be468a714a259a654dbb8dbb69818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb239523c842fb38ad0a40a81b02d5c7822a18d5e5f82f3885fe4e45a1ef7ea3cd5b92e79aab5365636f6e646172794672616d655b37336338323266662d653136302d343664332d623764352d6435653530613932633666345d2e4d616e61676564466f726d5b66613331303361332d393335372d343532322d616134312d3963393338356136316430315d2e47726f75705b50465f47524f55505f4d41494e5d2e47726f75705b50465f47524f55505f45444954535d2e456469744669656c645b50465f454449545f535452494e475d888181e1202020",
+      "tail_hex": "6653b2a6",
+      "dynamic_fields": [
+        {
+          "name": "ack_guid",
+          "kind": "uuid_le",
+          "offset": 2,
+          "length": 16,
+          "source": "client_response_after_manager_frame_3",
+          "template_hex": "a1d6981ef0c8be468a714a259a654dbb"
+        },
+        {
+          "name": "sequence",
+          "kind": "uint16_le",
+          "offset": 19,
+          "length": 2,
+          "source": "template_frame4_sequence_plus_delta",
+          "delta_from_frame4_sequence": 217,
+          "template_value": 27067,
+          "template_hex": "bb69"
+        },
+        {
+          "name": "nonce",
+          "kind": "random_bytes",
+          "offset": 68,
+          "length": 16,
+          "source": "manager_generated",
+          "template_hex": "e5f82f3885fe4e45a1ef7ea3cd5b92e7",
+          "expected_response_offsets": [
+            30
+          ]
+        },
+        {
+          "name": "managed_form_guid",
+          "kind": "managed_form_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "source": "latest_client_response_managed_form_ref",
+          "template_value": "fa3103a3-9357-4522-aa41-9c9385a61d01",
+          "template_hex": "66613331303361332d393335372d343532322d616134312d396339333835613631643031"
+        },
+        {
+          "name": "secondary_frame_guid",
+          "kind": "secondary_frame_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "source": "latest_client_response_secondary_frame_ref",
+          "template_value": "73c822ff-e160-46d3-b7d5-d5e50a92c6f4",
+          "template_hex": "37336338323266662d653136302d343664332d623764352d643565353061393263366634"
+        }
+      ],
+      "stable_ranges": [
+        {
+          "start": 0,
+          "end": 2,
+          "length": 2
+        },
+        {
+          "start": 18,
+          "end": 19,
+          "length": 1
+        },
+        {
+          "start": 21,
+          "end": 68,
+          "length": 47
+        },
+        {
+          "start": 84,
+          "end": 151,
+          "length": 67
+        },
+        {
+          "start": 187,
+          "end": 264,
+          "length": 77
+        }
+      ],
+      "response": {
+        "byte_count": 255,
+        "head_hex": "428fa49abe2e84838183cb23951be7cf1ba4c1aa42a5847a908c18466fd55c1fae7b061db24491a7dc74e187d4739aab5365636f6e646172794672616d655b37",
+        "ascii_strings": [
+          "SecondaryFrame[73c822ff-e160-46d3-b7d5-d5e50a92c6f4].ManagedForm[fa3103a3-9357-4522-aa41-9c9385a61d01].Group[PF_GROUP_MAIN].Group[PF_GROUP_EDITS].EditField[PF_EDIT_STRING]",
+          "PF_EDIT_STRING_VALUE  "
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [],
+        "semantic_guess": "",
+        "nonce_echoes": [
+          {
+            "field": "nonce",
+            "manager_offset": 68,
+            "template_hex": "e5f82f3885fe4e45a1ef7ea3cd5b92e7",
+            "response_positions": [],
+            "expected_response_offsets": [
+              30
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

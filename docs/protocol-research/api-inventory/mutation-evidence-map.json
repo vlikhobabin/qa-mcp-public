@@ -1,0 +1,875 @@
+{
+  "schema": "qa-mcp.mutation-evidence-map.v1",
+  "updated_at": "2026-06-13",
+  "description": "Per-API-member status contributed by real mutation work, separate from the read-only case-api-map. Bucket values use the same taxonomy as coverage_report (accepted_reviewed, accepted_seed, candidate). The scope tracker merges this with case-api-map.json, keeping the strongest bucket per member.",
+  "members": [
+    {
+      "api": "TestedFormButton.Click",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/demo-real-mutation-corpus/20260610-warehouse-donotuse-protocol-capture/",
+      "note": "Real warehouse НеИспользовать write via the Записать command button. Proof chain: (1) DB-confirmed mutation+recovery (Нет→Да→Нет); (2) action-write frames isolated; (3) two reference captures fully_stable (byte-identical normalized hash); (4) a Python-manager-driven probe replayed the full 861-frame flow against a live TestClient with zero divergence (all 861 frames answered) and its action-write phase normalized hash matches the Vanessa reference (python_manager_acceptance.json, verdict=accepted). The Python manager reproduced the write exchange without the Vanessa manager."
+    },
+    {
+      "api": "TestedFormTable.AddRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/goods-doc-addrow/",
+      "note": "Add a row to the goods document ТоварныеЗапасы tabular section (unsaved, no persistence). Two reference captures fully_stable; Python-manager adaptive replay reproduced the action live and matched the Vanessa reference (probe-ordinal accepted, phase=action)."
+    },
+    {
+      "api": "TestedFormTable.DeleteRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/goods-doc-deleterow/",
+      "note": "Delete a row from the goods document ТоварныеЗапасы tabular section (bootstrap adds the row; action deletes it; unsaved, no persistence). Exposed and fixed a normalizer gap: the per-session managed-form GUID appeared only as UTF-16LE text, so session_guids missed it (336 residual bytes). After teaching session_guids to scan UTF-16LE, two reference captures are fully_stable and the Python-manager adaptive replay matched the Vanessa reference (probe-ordinal accepted, phase=action)."
+    },
+    {
+      "api": "TestedClientApplicationWindow.Close",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/window-close-doclist/",
+      "note": "Close the current window after opening the goods document list (Документ.ОперацияПоУчетуТоваров) — an unmodified list window that closes without a save prompt; nothing persists. Driven via 'И я закрываю текущее окно' (canonical Vanessa step, confirmed in upstream definitions). Two reference captures fully_stable; Python-manager adaptive replay reproduced the action live (146/146, zero divergence) and matched the Vanessa reference (probe-ordinal accepted, phase=action)."
+    },
+    {
+      "api": "TestedFormDecoration.Click",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/ext-decoration-hyperlink-click/",
+      "note": "Hyperlink decoration Декорация1 (Гиперссылка=Истина, OnClick=Сообщить) in extension Расширение1 on vanessa_client; capture fully_stable, probe 125/125 zero divergence, probe-ordinal accepted (phase=action)."
+    },
+    {
+      "api": "TestedFormTable.ChangeRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/goods-doc-changerow/",
+      "note": "Begin editing a committed ТоварныеЗапасы row (ИзменитьСтроку) on Корректировка остатка; capture fully_stable, probe 182/182 zero divergence, probe-ordinal accepted (phase=action)."
+    },
+    {
+      "api": "TestedFormTable.CopyRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/goods-doc-copyrow/",
+      "note": "Copy a committed ТоварныеЗапасы row (СкопироватьСтроку/F9) on Корректировка остатка; capture fully_stable, probe 186/186 zero divergence, probe-ordinal accepted (phase=action)."
+    },
+    {
+      "api": "TestedFormTable.SwitchRowDeleteMark",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/warehouse-list-switchdeletemark/",
+      "note": "Toggle the delete mark of a Справочник.Склады list row (ПереключитьПометкуУдаленияСтроки); the method only opens the 'Пометить?' confirmation which the capture never answers, so nothing persists. Capture fully_stable, probe 260/260 zero divergence, probe-ordinal accepted (phase=action)."
+    },
+    {
+      "api": "TestedClientApplicationWindow.ExecuteCommand",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/mutation-corpus/execute-command-navlink/",
+      "note": "Navigate the main window to the Склады list via ВыполнитьКоманду (ExecuteCommand); read-only, nothing persists. Capture fully_stable, probe 147/147 zero divergence, probe-ordinal accepted (phase=action)."
+    },
+    {
+      "api": "TestedFormTable.SelectAllRows",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/table-rownav-batch/",
+      "note": "safe_ui_action row navigation on ТоварныеЗапасы; multi-phase batch (phase=act_selectall), fully_stable, probe 202/202, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormTable.GotoPreviousRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/table-rownav-batch/",
+      "note": "safe_ui_action row navigation on ТоварныеЗапасы; multi-phase batch (phase=act_gotoprev), fully_stable, probe 202/202, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormTable.GotoFirstRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/table-rownav-batch/",
+      "note": "safe_ui_action row navigation on ТоварныеЗапасы; multi-phase batch (phase=act_gotofirst), fully_stable, probe 202/202, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormTable.GotoLastRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/table-rownav-batch/",
+      "note": "safe_ui_action row navigation on ТоварныеЗапасы; multi-phase batch (phase=act_gotolast), fully_stable, probe 202/202, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormTable.GotoNextRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/table-rownav-batch/",
+      "note": "safe_ui_action row navigation on ТоварныеЗапасы; multi-phase batch (phase=act_gotonext), fully_stable, probe 202/202, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormGroup.Activate",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-activate-batch/",
+      "note": "safe_ui_action on Корректировка остатка form; multi-phase batch (phase=act_group_activate), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormTable.Activate",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-activate-batch/",
+      "note": "safe_ui_action on Корректировка остатка form; multi-phase batch (phase=act_table_activate), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormField.Activate",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-activate-batch/",
+      "note": "safe_ui_action on Корректировка остатка form; multi-phase batch (phase=act_field_activate), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedForm.GotoNextItem",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-activate-batch/",
+      "note": "safe_ui_action on Корректировка остатка form; multi-phase batch (phase=act_form_next), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedForm.GotoPreviousItem",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-activate-batch/",
+      "note": "safe_ui_action on Корректировка остатка form; multi-phase batch (phase=act_form_prev), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormTable.SetOrder",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-tableops-batch/",
+      "note": "safe_ui_action table op on ТоварныеЗапасы; multi-phase batch (phase=act_table_setorder), fully_stable, probe-ordinal accepted vs small ref2."
+    },
+    {
+      "api": "TestedFormTable.GotoPreviousItem",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-tableops-batch/",
+      "note": "safe_ui_action table op on ТоварныеЗапасы; multi-phase batch (phase=act_table_prevcell), fully_stable, probe-ordinal accepted vs small ref2."
+    },
+    {
+      "api": "TestedFormTable.GotoNextItem",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/docform-tableops-batch/",
+      "note": "safe_ui_action table op on ТоварныеЗапасы; multi-phase batch (phase=act_table_nextcell), fully_stable, probe-ordinal accepted vs small ref2."
+    },
+    {
+      "api": "TestedFormTable.GoOneLevelUp",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/tovary-hierarchy-batch/",
+      "note": "safe_ui_action hierarchical list op on Справочник.Товары; multi-phase batch (phase=act_golevel_up), fully_stable, probe-ordinal accepted vs small ref2."
+    },
+    {
+      "api": "TestedFormTable.GotoRow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/tovary-hierarchy-batch/",
+      "note": "safe_ui_action hierarchical list op on Справочник.Товары; multi-phase batch (phase=act_gotorow), fully_stable, probe-ordinal accepted vs small ref2."
+    },
+    {
+      "api": "TestedFormTable.GoOneLevelDown",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/tovary-hierarchy-batch/",
+      "note": "safe_ui_action hierarchical list op on Справочник.Товары; multi-phase batch (phase=act_golevel_down), fully_stable, probe-ordinal accepted vs small ref2."
+    },
+    {
+      "api": "TestedFormTable.Collapse",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/tovary-hierarchy-batch/",
+      "note": "safe_ui_action hierarchical list op on Справочник.Товары; multi-phase batch (phase=act_collapse), fully_stable, probe-ordinal accepted vs small ref2."
+    },
+    {
+      "api": "TestedFormTable.Expand",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/table-expand-result-contract-2026-06-14/",
+      "note": "result-contract: command_kind table_expand on fixture tree ДенамическийСписокИерархия -> table_expanded=Да. Развернуть executed live via raw test-API. Zero-divergence deferred to card 76."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GotoStartPage",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/window-goto-startpage-result-contract-2026-06-14/",
+      "note": "result-contract: goto_startpage_active=Начальная страница via raw test-API on main app window. Zero-divergence deferred to card 76."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GotoNextWindow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/window-goto-next-result-contract-2026-06-14/",
+      "note": "result-contract: goto_next_active=QA MCP Protocol Fixture V1 (prev-then-next; next needs a forward target). Raw test-API. Zero-divergence deferred to card 76."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GotoPreviousWindow",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/window-goto-prev-result-contract-2026-06-14/",
+      "note": "result-contract: goto_prev_active=Начальная страница via raw test-API on main app window. Zero-divergence deferred to card 76."
+    },
+    {
+      "api": "TestedClientApplicationWindow.ChooseUserMessage",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/choose-user-message-result-contract-2026-06-14/",
+      "note": "result-contract: chose_message=PF_DECORATION_LABEL_LINKНажатие (link-click message source, no mutation). Raw test-API. Zero-divergence deferred to card 76."
+    },
+    {
+      "api": "TestedClientApplicationWindow.CloseUserMessagesPanel",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/extform-window-batch/",
+      "note": "safe_ui_action on Расш1_Обработка1 ext form; multi-phase batch (phase=act_close_messages), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormDecoration.Activate",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/extform-window-batch/",
+      "note": "safe_ui_action on Расш1_Обработка1 ext form; multi-phase batch (phase=act_decoration_activate), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedClientApplicationWindow.Activate",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/extform-window-batch/",
+      "note": "safe_ui_action on Расш1_Обработка1 ext form; multi-phase batch (phase=act_window_activate), fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormGroup.Collapse",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/group-collapse-expand-batch/",
+      "note": "safe_ui_action on Контрагенты form collapsible group Прочее; fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedFormGroup.Expand",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/group-collapse-expand-batch/",
+      "note": "safe_ui_action on Контрагенты form collapsible group Прочее; fully_stable, probe-ordinal accepted."
+    },
+    {
+      "api": "TestedForm.Activate",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/form-activate-result-contract-2026-06-14/",
+      "note": "result-contract (manager-fixture-v1): command_kind form_activate -> form_activated=QA MCP Protocol Fixture V1; TestedForm.Активизировать executed live via raw test-API + frames captured. Zero-divergence replay deferred to card 76 (raw-API session-GUID synthesis)."
+    },
+    {
+      "api": "TestedFormButton.Activate",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/safe-ui-corpus/button-activate-result-contract-2026-06-14/",
+      "note": "result-contract: command_kind button_activate -> button_activated=PF_SHOW_CHOICE_LIST; TestedFormButton.Активизировать executed live via raw test-API. Zero-divergence deferred to card 76."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GetCommandInterface",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-full-2026-06-13/",
+      "note": "read_only same-action result-contract: live manager-fixture-v1-readonly run tm-v1-ro-full, case tm-v1-diag-command-interface-dump, manager_result_preview_contains 'ci_children_count=' -> accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GetChildObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-full-2026-06-13/",
+      "note": "read_only same-action result-contract: live manager-fixture-v1-readonly run tm-v1-ro-full, case tm-v1-diag-window-children, contract accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.GetChildObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-openfix2-2026-06-13/",
+      "note": "read_only same-action result-contract: live manager-fixture-v1-readonly run tm-v1-ro-openfix2 (fixture form opened via command interface), case tm-v1-table-items (PF_TABLE_ITEMS); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.FindObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-openfix2-2026-06-13/",
+      "note": "read_only same-action result-contract: live manager-fixture-v1-readonly run tm-v1-ro-openfix2 (fixture form opened via command interface), case tm-v1-diag-form-find-field-marker (protocol-fixture.v1); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GetObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-openfix2-2026-06-13/",
+      "note": "read_only same-action result-contract: live manager-fixture-v1-readonly run tm-v1-ro-openfix2 (fixture form opened via command interface), case tm-v1-diag-window-get-form-path (ПолучитьОбъект; form_path_attempted=); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.GetDataPresentation",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-openfix2-2026-06-13/",
+      "note": "read_only same-action result-contract: live manager-fixture-v1-readonly run tm-v1-ro-openfix2 (fixture form opened via command interface), case tm-v1-field-version (protocol-fixture.v1); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.GetCommandBar",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-openfix2-2026-06-13/",
+      "note": "read_only same-action result-contract: live manager-fixture-v1-readonly run tm-v1-ro-openfix2 (fixture form opened via command interface), case tm-v1-commandbar-main (PF_COMMAND_ENABLED); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.FindObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-openfix2-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-openfix2, case tm-v1-diag-window-find-field-marker (protocol-fixture.v1); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormButton.Name",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-button-name, manager_result_preview_contains 'name=PF_BUTTON_INERT'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormButton.Type",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-button-type, manager_result_preview_contains 'family=Button'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormButton.TitleText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-button-title, manager_result_preview_contains 'title=PF_BUTTON_INERT'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormButton.CurrentVisible",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-button-visible, manager_result_preview_contains 'visible=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormButton.CurrentEnable",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-button-enable, manager_result_preview_contains 'enabled=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.Name",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-field-name, manager_result_preview_contains 'name=PF_CHECKBOX_TRUE'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.Type",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-field-type, manager_result_preview_contains 'family=CheckBox'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.TitleText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-field-title, manager_result_preview_contains 'title=PF_CHECKBOX_TRUE'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.CurrentVisible",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-field-visible, manager_result_preview_contains 'visible=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.CurrentEnable",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-field-enable, manager_result_preview_contains 'enabled=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.Name",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-table-name, manager_result_preview_contains 'name=PF_TABLE_ITEMS'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.TitleText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-table-title, manager_result_preview_contains 'title=PF_TABLE_ITEMS'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.CurrentVisible",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-table-visible, manager_result_preview_contains 'visible=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.CurrentEnable",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-table-enable, manager_result_preview_contains 'enabled=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.Name",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-group-name, manager_result_preview_contains 'name=PF_GROUP_MAIN'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.Type",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-group-type, manager_result_preview_contains 'family=FormGroup'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.TitleText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-group-title, manager_result_preview_contains 'title=PF_FORM_MAIN'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.CurrentVisible",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-group-visible, manager_result_preview_contains 'visible=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.CurrentEnable",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchA-2026-06-13/",
+      "note": "read_only same-action result-contract: live run tm-v1-ro-batchA (fixture form open), case ro-group-enable, manager_result_preview_contains 'enabled=Да'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.GetChildObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchB-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchB, case ro-field-children, manager_result_preview_contains 'child_count=0' (ПолучитьПодчиненныеОбъекты)."
+    },
+    {
+      "api": "TestedFormGroup.GetChildObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchB-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchB, case ro-group-children, manager_result_preview_contains 'child_count=13' (ПолучитьПодчиненныеОбъекты)."
+    },
+    {
+      "api": "TestedFormTable.GetChildObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchB-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchB, case ro-table-children, manager_result_preview_contains 'child_count=8' (ПолучитьПодчиненныеОбъекты)."
+    },
+    {
+      "api": "TestedFormField.CurrentReadOnly",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchC3-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchC3 (fixture form open), case ro-field-readonly, manager_result_preview_contains 'readonly=Нет' (ТекущееТолькоПросмотр/ТекущееОткрыта); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.CurrentReadOnly",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchC3-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchC3 (fixture form open), case ro-group-readonly, manager_result_preview_contains 'readonly=Нет' (ТекущееТолькоПросмотр/ТекущееОткрыта); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.CurrentReadOnly",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchC3-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchC3 (fixture form open), case ro-table-readonly, manager_result_preview_contains 'readonly=Нет' (ТекущееТолькоПросмотр/ТекущееОткрыта); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.CurrentOpened",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchC3-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchC3 (fixture form open), case ro-group-opened, manager_result_preview_contains 'opened=Да' (ТекущееТолькоПросмотр/ТекущееОткрыта); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormButton.CurrentCheck",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchD-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchD (fixture form open), case bd-button-check, manager_result_preview_contains 'check=Нет' (ТекущееПометка); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.CurrentModeIsEdit",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchD-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchD (fixture form open), case bd-table-mode, manager_result_preview_contains 'tablemode=Нет' (ТекущийРежимРедактирование); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.CanBeExpanded",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchD-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchD (fixture form open), case bd-table-canexpand, manager_result_preview_contains 'canexpand=Нет' (ВозможноРазвернуть); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.Expanded",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchD-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchD (fixture form open), case bd-table-expanded, manager_result_preview_contains 'expanded=Нет' (Развернут); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.CurrentReadOnly",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchE-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchE (fixture form open), case be-form-readonly, form_state handler, manager_result_preview_contains 'readonly=Нет' (ТекущееТолькоПросмотр); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.CurrentModified",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchE-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchE (fixture form open), case be-form-modified, form_state handler, manager_result_preview_contains 'modified=Нет' (ТекущаяМодифицированность); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.TitleText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchF-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchF (fixture form open), case bf-form-titletext, manager_result_preview_contains 'titletext=QA MCP Protocol Fixture V1' (ТекстЗаголовка (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.FormName",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchF-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchF (fixture form open), case bf-form-formname, manager_result_preview_contains 'formname=Обработка.ФикстураПротоколаTestClient.Форма.Форма' (ИмяФормы (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.CurrentEnable",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchF-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchF (fixture form open), case bf-form-enable, manager_result_preview_contains 'formenable=Да' (ТекущаяДоступность (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.GetToolTipText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchF-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchF (fixture form open), case bf-field-tooltip, manager_result_preview_contains 'tooltip=' (ПолучитьТекстПодсказки); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.GetToolTipText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchF-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchF (fixture form open), case bf-group-tooltip, manager_result_preview_contains 'tooltip=PF_FORM_MAIN' (ПолучитьТекстПодсказки); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetToolTipText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchF-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchF (fixture form open), case bf-table-tooltip, manager_result_preview_contains 'tooltip=' (ПолучитьТекстПодсказки); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.Caption",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchG-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchG (fixture form open), case bg-window-caption, window_state handler, manager_result_preview_contains 'caption=QA MCP Protocol Fixture V1' (Заголовок (window_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.URL",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchG-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchG (fixture form open), case bg-window-url, window_state handler, manager_result_preview_contains 'url=e1cib/app/Обработка.ФикстураПротоколаTestClient' (НавигационнаяСсылка (window_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.HomePage",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchG-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchG (fixture form open), case bg-window-homepage, window_state handler, manager_result_preview_contains 'homepage=Нет' (НачальнаяСтраница (window_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.IsMain",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchG-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchG (fixture form open), case bg-window-ismain, window_state handler, manager_result_preview_contains 'ismain=Нет' (Основное (window_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.GetMaxActionExecutionTime",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchH-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchH (fixture form open), case bh-app-maxexec, app_state handler, manager_result_preview_contains 'maxexec=0' (ПолучитьМаксимальноеВремяВыполненияДействия (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.GetAccumulatedPerformanceIndicators",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchH-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchH (fixture form open), case bh-app-perf, app_state handler, manager_result_preview_contains 'perf=Структура' (ПолучитьНакопленныеПоказателиПроизводительности (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.GetCurrentErrorInfo",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchH-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchH (fixture form open), case bh-app-errorinfo, app_state handler, manager_result_preview_contains 'errorinfo=' (ПолучитьТекущуюИнформациюОбОшибке→Неопределено (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.GetChildObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchH-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchH (fixture form open), case bh-app-children, app_state handler, manager_result_preview_contains 'app_child_count=3' (ПолучитьПодчиненныеОбъекты (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.GetParent",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-field-parent, element traversal token, manager_result_preview_contains 'parent_type=Тестируемая группа формы' (ПолучитьРодителя); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.GetCommandBar",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-field-commandbar, element traversal token, manager_result_preview_contains 'commandbar_type=Не определено' (ПолучитьКоманднуюПанель→Неопределено (no command bar)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.GetContextMenu",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-field-contextmenu, element traversal token, manager_result_preview_contains 'contextmenu_type=Тестируемая группа формы' (ПолучитьКонтекстноеМеню); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.GetParent",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-group-parent, element traversal token, manager_result_preview_contains 'parent_type=Тестируемая форма' (ПолучитьРодителя); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.GetCommandBar",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-group-commandbar, element traversal token, manager_result_preview_contains 'commandbar_type=Не определено' (ПолучитьКоманднуюПанель→Неопределено); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.GetContextMenu",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-group-contextmenu, element traversal token, manager_result_preview_contains 'contextmenu_type=Не определено' (ПолучитьКонтекстноеМеню→Неопределено); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetParent",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-table-parent, element traversal token, manager_result_preview_contains 'parent_type=Тестируемая группа формы' (ПолучитьРодителя); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetCommandBar",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-table-commandbar, element traversal token, manager_result_preview_contains 'commandbar_type=Не определено' (ПолучитьКоманднуюПанель→Неопределено); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetContextMenu",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchI-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchI (fixture form open), case bi-table-contextmenu, element traversal token, manager_result_preview_contains 'contextmenu_type=Тестируемая группа формы' (ПолучитьКонтекстноеМеню); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.GetParent",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchJ-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchJ (fixture form open), case bj-form-parent, form_state traversal, manager_result_preview_contains 'form_parent_type=Тестируемое окно клиентского приложения' (ПолучитьРодителя (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.GetObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchJ-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchJ (fixture form open), case bj-form-getobject, form_state traversal, manager_result_preview_contains 'form_getobject_type=Тестируемая таблица формы' (ПолучитьОбъект(PF_TABLE_ITEMS) (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.FindObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchJ-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchJ (fixture form open), case bj-form-findobjects, form_state traversal, manager_result_preview_contains 'form_findobjects_count=45' (НайтиОбъекты(ТестируемоеПолеФормы)=45 (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.GetCurrentItem",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchJ-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchJ (fixture form open), case bj-form-currentitem, form_state traversal, manager_result_preview_contains 'form_currentitem_type=Тестируемое поле формы' (ПолучитьТекущийЭлемент (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.FindObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-field-findobjects, element search token, manager_result_preview_contains 'el_findobjects_count=0' (НайтиОбъекты→0 (leaf, no descendants)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.FindObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-field-findobject, element search token, manager_result_preview_contains 'el_findobject_type=Не определено' (НайтиОбъект→Неопределено (leaf)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.FindObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-group-findobjects, element search token, manager_result_preview_contains 'el_findobjects_count=45' (НайтиОбъекты(ТестируемоеПолеФормы)=45); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.FindObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-group-findobject, element search token, manager_result_preview_contains 'el_findobject_type=Тестируемое поле формы' (НайтиОбъект); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.GetObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-group-getobject, element search token, manager_result_preview_contains 'el_getobject_type=Тестируемое поле формы' (ПолучитьОбъект); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.FindObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-table-findobjects, element search token, manager_result_preview_contains 'el_findobjects_count=4' (НайтиОбъекты(ТестируемоеПолеФормы)=4); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.FindObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-table-findobject, element search token, manager_result_preview_contains 'el_findobject_type=Тестируемое поле формы' (НайтиОбъект); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchK-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchK (fixture form open), case bk-table-getobject, element search token, manager_result_preview_contains 'el_getobject_type=Тестируемое поле формы' (ПолучитьОбъект); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.FindObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchL-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchL (fixture form open), case bl-app-findobject, manager_result_preview_contains 'app_findobject_type=Тестируемая таблица формы' (НайтиОбъект(PF_TABLE_ITEMS) (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.FindObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchL-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchL (fixture form open), case bl-app-findobjects, manager_result_preview_contains 'app_findobjects_count=50' (НайтиОбъекты(ТестируемоеПолеФормы)=50 (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.GetObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchL-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchL (fixture form open), case bl-app-getobject, manager_result_preview_contains 'app_getobject_type=Тестируемая таблица формы' (ПолучитьОбъект(PF_TABLE_ITEMS) (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.FindObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchL-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchL (fixture form open), case bl-window-findobjects, manager_result_preview_contains 'win_findobjects_count=45' (НайтиОбъекты(ТестируемоеПолеФормы)=45 (window_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormField.TitleIsShown",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchM-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchM (fixture form open), case bm-field-titleshown, manager_result_preview_contains 'titleshown=Да' (ЗаголовокОтображается); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormGroup.GetCurrentPage",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchM-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchM (fixture form open), case bm-pages-currentpage, manager_result_preview_contains 'currentpage_type=Тестируемая группа формы' (ПолучитьТекущуюСтраницу (PF_PAGES_MAIN)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetSelectedRows",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchM-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchM (fixture form open), case bm-table-selrows, manager_result_preview_contains 'selrows_count=1' (ПолучитьВыделенныеСтроки=1); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetCurrentItem",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchM-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchM (fixture form open), case bm-table-currentitem, manager_result_preview_contains 'table_currentitem_type=Тестируемое поле формы' (ПолучитьТекущийЭлемент); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedApplication.WaitForObjectDisplayed",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchM-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchM (fixture form open), case bm-app-waitobj, manager_result_preview_contains 'waitobj=Да' (ОжидатьОтображениеОбъекта→Истина (app_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.FindDefaultButton",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchN-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchN (fixture form open), case bn-form-defaultbutton, manager_result_preview_contains 'defaultbutton_type=Тестируемая кнопка формы' (НайтиКнопкуПоУмолчанию (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.WaitForClosing",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchN-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchN (fixture form open), case bn-form-waitclosing, manager_result_preview_contains 'waitclosing=Нет' (ОжидатьЗакрытие(2)→Ложь (form_state)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.GetCellText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchN-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchN (fixture form open), case bn-table-celltext, manager_result_preview_contains 'celltext=PF_ROW_001' (ПолучитьТекстЯчейки); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.Name",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-name, decoration_summary handler, manager_result_preview_contains 'name=PF_DECORATION_LABEL' (Имя); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.TitleText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-title, decoration_summary handler, manager_result_preview_contains 'title=' (ТекстЗаголовка); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.Type",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-type, decoration_summary handler, manager_result_preview_contains 'type=' (ТипЗнч=Тестируемая декорация формы); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.CurrentVisible",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-visible, decoration_summary handler, manager_result_preview_contains 'visible=Да' (ТекущаяВидимость); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.CurrentEnable",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-enable, decoration_summary handler, manager_result_preview_contains 'enabled=Да' (ТекущаяДоступность); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.CurrentReadOnly",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-readonly, decoration_summary handler, manager_result_preview_contains 'readonly=Да' (ТекущееТолькоПросмотр); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.GetToolTipText",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-tooltip, decoration_summary handler, manager_result_preview_contains 'tooltip=' (ПолучитьТекстПодсказки); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.GetParent",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-parent, decoration_summary handler, manager_result_preview_contains 'parent_type=Тестируемая группа формы' (ПолучитьРодителя); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.GetCommandBar",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-commandbar, decoration_summary handler, manager_result_preview_contains 'commandbar_type=Не определено' (ПолучитьКоманднуюПанель→Неопределено); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.GetContextMenu",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-contextmenu, decoration_summary handler, manager_result_preview_contains 'contextmenu_type=Тестируемая группа формы' (ПолучитьКонтекстноеМеню); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.GetChildObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-children, decoration_summary handler, manager_result_preview_contains 'child_count=0' (ПолучитьПодчиненныеОбъекты=0); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.FindObjects",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-findobjects, decoration_summary handler, manager_result_preview_contains 'el_findobjects_count=0' (НайтиОбъекты=0 (leaf)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.FindObject",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-findobject, decoration_summary handler, manager_result_preview_contains 'el_findobject_type=Не определено' (НайтиОбъект→Неопределено (leaf)); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormDecoration.GetFormattedStringHyperlinksPresentations",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchO2-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchO2 (fixture form open, PF_DECORATION_LABEL/_LINK), case bo-deco-fmthyperlinks, decoration_summary handler, manager_result_preview_contains 'fmthyperlinks_count=0' (ПолучитьПредставленияГиперссылокФорматированнойСтроки=0); accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedForm.GetChoiceListPresentation",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchP-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchP (fixture form open), case bp-form-choicelist, form_state activates ПолеСоСпискомВыбораСтрока then ПолучитьПредставлениеСпискаВыбора, manager_result_preview_contains 'choicelist_count=3'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GetUserMessageTexts",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/readonly-corpus/tm-v1-ro-batchQ3-2026-06-13/",
+      "note": "read_only result-contract: run tm-v1-ro-batchQ3 (fixture form open), case bq-window-usermessages, window_messages handler clicks PF_DECORATION_LABEL_LINK via Нажать (decoration click handler calls Сообщить) then reads ПолучитьТекстыСообщенийПользователю → usermessages_count=1, manager_result_preview_contains 'msg=PF_DECORATION_LABEL_LINKНажатие'; accepted_protocol_mapping=true."
+    },
+    {
+      "api": "TestedFormTable.Choose",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/tail-corpus/table-choose-2026-06-14/",
+      "note": "unsupported_initial → accepted: capture fixture-table-choose-cap (open fixture → 'в таблице PF_TABLE_ITEMS я выбираю текущую строку'), probe-ordinal compare verdict=accepted (action phase, client+manager hashes match). In-memory value-table, safe."
+    },
+    {
+      "api": "TestedForm.ExecuteChoiceFromList",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/tail-corpus/choice-list-2026-06-14/",
+      "note": "unsupported_initial → accepted: capture fixture-choice-list-cap2 (open fixture → click PF_SHOW_CHOICE_LIST [ПоказатьВыборИзСписка] → выбрать PF_CHOICE_B). Bounded native replay --max-ordinal 291 (choose command @ord290, located UTF-8) → diverged_at=null, 289/289 frames. Local form choice, safe."
+    },
+    {
+      "api": "TestedForm.ExecuteChoiceFromMenu",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/tail-corpus/choice-menu-2026-06-14/"
+    },
+    {
+      "api": "TestedFormDecoration.ClickFormattedStringHyperlink",
+      "bucket": "accepted_reviewed",
+      "evidence_path": "docs/protocol-research/evidence/tail-corpus/fmt-hyperlink-2026-06-14/"
+    }
+  ]
+}

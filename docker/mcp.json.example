@@ -1,0 +1,10 @@
+{
+  "//": "Point your Agent (Claude Code / Codex / etc.) at the running qa-mcp container over HTTP.",
+  "//transport": "FastMCP streamable-http serves at /mcp on the published port.",
+  "mcpServers": {
+    "qa-mcp": {
+      "type": "http",
+      "url": "http://127.0.0.1:8000/mcp"
+    }
+  }
+}

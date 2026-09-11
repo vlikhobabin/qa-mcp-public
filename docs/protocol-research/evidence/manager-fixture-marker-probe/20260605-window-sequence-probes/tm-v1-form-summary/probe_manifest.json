@@ -1,0 +1,16 @@
+{
+  "schema": "manager-fixture-marker-probe.manifest.v1",
+  "started_at": "2026-06-05T11:49:08.109234Z",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-full-readonly-bootstrap-second-boundary-guard",
+  "case_id": "tm-v1-form-summary",
+  "query": "manager-fixture-marker",
+  "target_marker": "PF_FORM_MAIN",
+  "expected_marker": "PF_FIXTURE_VERSION",
+  "target_host": "127.0.0.1",
+  "target_port": 15381,
+  "replay_mode": "window",
+  "case_manager_frame_count": 141,
+  "max_case_frames": null,
+  "warmup_active_window": true,
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\manager-fixture-marker-probe\\20260605-window-sequence-probes\\tm-v1-form-summary"
+}

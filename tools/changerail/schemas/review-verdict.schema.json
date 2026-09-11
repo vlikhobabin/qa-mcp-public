@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "changerail.review-verdict.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "card", "workspace", "reviewer", "result", "acceptance", "findings", "reviewed_at"],
+  "properties": {
+    "schema": {"const": "changerail.review-verdict.v1"},
+    "card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path"],
+      "properties": {"id": {"type": "string", "minLength": 1}, "path": {"type": "string", "minLength": 1}}
+    },
+    "workspace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["head_commit", "payload_fingerprint"],
+      "properties": {
+        "head_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "payload_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+      }
+    },
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "reasoning_effort", "fresh_context", "did_not_implement"],
+      "properties": {
+        "model": {"type": "string", "minLength": 1},
+        "reasoning_effort": {"type": "string", "minLength": 1},
+        "fresh_context": {"const": true},
+        "did_not_implement": {"const": true}
+      }
+    },
+    "result": {"enum": ["go", "no-go"]},
+    "acceptance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["criterion", "result", "evidence"],
+        "properties": {
+          "criterion": {"type": "string", "minLength": 1},
+          "result": {"enum": ["pass", "fail"]},
+          "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "severity", "summary", "preconditions", "expected", "observed", "repair_scope", "paths"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^R[1-9][0-9]*$"},
+          "severity": {"enum": ["blocker", "major", "minor"]},
+          "summary": {"type": "string", "minLength": 1},
+          "preconditions": {"type": "string", "minLength": 1},
+          "expected": {"type": "string", "minLength": 1},
+          "observed": {"type": "string", "minLength": 1},
+          "repair_scope": {"type": "string", "minLength": 1},
+          "paths": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "reviewed_at": {"type": "string", "format": "date-time"}
+  }
+}

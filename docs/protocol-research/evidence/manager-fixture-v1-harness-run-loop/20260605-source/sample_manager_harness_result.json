@@ -1,0 +1,19 @@
+{
+  "schema": "manager_harness_result.v1",
+  "run_id": "20260605-source-sample",
+  "scenario": "manager-fixture-v1-readonly",
+  "status": "ok",
+  "status_reason": "all_commands_completed",
+  "manifest_path": "runtime/protocol-research/manager-fixture-v1-readonly/20260605-source-sample/manager_harness_manifest.json",
+  "case_events_path": "runtime/protocol-research/manager-fixture-v1-readonly/20260605-source-sample/case_events.jsonl",
+  "proxy_testclient_port": 15381,
+  "output_dir": "runtime/protocol-research/manager-fixture-v1-readonly/20260605-source-sample",
+  "command_count": 2,
+  "completed_count": 2,
+  "failed_count": 0,
+  "rejected_count": 0,
+  "accepted_mapping_count": 0,
+  "accepted_protocol_mapping": false,
+  "raw_outputs_under_runtime": true,
+  "finished_at": "2026-06-05T00:00:04Z"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "ext-decoration-hyperlink-click",
+  "api_member": "TestedFormDecoration.Click",
+  "operation_family": "form_decoration_click",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open the main form of the extension data processor Расш1_Обработка1 (added to vanessa_client via Расширение1), then click the hyperlink label decoration Декорация1 ('Кликабельная ссылка 1', Гиперссылка=Истина). The OnClick handler only calls Сообщить(...), so nothing persists. Drives TestedFormDecoration.Click (.Нажать) via 'я нажимаю на гиперссылку с именем' — unlike the earlier eventlog-filter attempt (a plain label, rejected by the platform with 'Неподходящий тип элемента управления'), this decoration has Гиперссылка=Истина so .Нажать() executes. Confirmed against upstream VanessaAutomation step definitions and the dumped extension form. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю основную форму обработки \"Расш1_Обработка1\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И я нажимаю на гиперссылку с именем 'Декорация1'"},
+    {"phase": "post_read", "read": true}
+  ]
+}

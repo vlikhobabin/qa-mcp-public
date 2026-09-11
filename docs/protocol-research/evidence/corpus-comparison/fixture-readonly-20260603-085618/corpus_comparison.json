@@ -1,0 +1,495 @@
+{
+  "schema": "protocol-corpus-comparison.v1",
+  "generated_at": "2026-06-03T06:01:33Z",
+  "input_count": 1,
+  "inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "case_count": 6
+    }
+  ],
+  "case_count": 6,
+  "classification_counts": {
+    "incomplete_hash": 6
+  },
+  "stable_case_ids": [],
+  "accepted_case_ids": [],
+  "gap_case_ids": [
+    "fixture-button-readonly",
+    "fixture-checkbox-readonly",
+    "fixture-commandbar-readonly",
+    "fixture-label-readonly",
+    "fixture-page-readonly",
+    "fixture-table-readonly"
+  ],
+  "normalizer_investigation_case_ids": [],
+  "cases": [
+    {
+      "case_id": "fixture-button-readonly",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "pending"
+      ],
+      "availability": [
+        "pending"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260603-085618",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+          "availability": "pending",
+          "replay_status": "pending",
+          "effective_replay_status": "pending",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Button"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "fixture-checkbox-readonly",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "pending"
+      ],
+      "availability": [
+        "pending"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260603-085618",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+          "availability": "pending",
+          "replay_status": "pending",
+          "effective_replay_status": "pending",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "CheckBox"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "fixture-commandbar-readonly",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "pending"
+      ],
+      "availability": [
+        "pending"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260603-085618",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+          "availability": "pending",
+          "replay_status": "pending",
+          "effective_replay_status": "pending",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "CommandBar"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "fixture-label-readonly",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "pending"
+      ],
+      "availability": [
+        "pending"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260603-085618",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+          "availability": "pending",
+          "replay_status": "pending",
+          "effective_replay_status": "pending",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Label"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "fixture-page-readonly",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "pending"
+      ],
+      "availability": [
+        "pending"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260603-085618",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+          "availability": "pending",
+          "replay_status": "pending",
+          "effective_replay_status": "pending",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Page"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "fixture-table-readonly",
+      "classification": "incomplete_hash",
+      "missing_inputs": [],
+      "duplicate_inputs": [],
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "replay_statuses": [
+        "pending"
+      ],
+      "effective_replay_statuses": [
+        "pending"
+      ],
+      "availability": [
+        "pending"
+      ],
+      "pre_normalization_hash_values": [
+        null
+      ],
+      "hash_values": [
+        null
+      ],
+      "stable_hash": null,
+      "request_sizes": [
+        0
+      ],
+      "response_sizes": [
+        0
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        []
+      ],
+      "dynamic_field_sets": [
+        []
+      ],
+      "normalization_replacement_sets": [
+        []
+      ],
+      "preserved_field_sets": [
+        []
+      ],
+      "ambiguous_field_sets": [
+        []
+      ],
+      "probe_evidence_paths": [],
+      "unresolved_reasons": [],
+      "observations": [
+        {
+          "input_index": 0,
+          "capture_id": "20260603-085618",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+          "availability": "pending",
+          "replay_status": "pending",
+          "effective_replay_status": "pending",
+          "probe_evidence": null,
+          "unresolved_reasons": [],
+          "pre_normalization_hash": null,
+          "normalized_hash": null,
+          "request_size": 0,
+          "response_size": 0,
+          "operation_tokens": [],
+          "response_markers": [],
+          "response_marker_count": 0,
+          "dynamic_fields": [],
+          "normalization_replacements": [],
+          "preserved_fields": [],
+          "ambiguous_fields": [],
+          "frame_range": null,
+          "element_family": "Table"
+        }
+      ],
+      "normalizer_investigation_candidate": false
+    }
+  ]
+}

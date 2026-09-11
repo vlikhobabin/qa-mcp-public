@@ -1,0 +1,32 @@
+{
+ "schema": "qa-mcp.action-capture-manifest.v1",
+ "action_id": "fixture-choice-list",
+ "api_member": "TestedForm.ExecuteChoiceFromList",
+ "operation_family": "form_choice_from_list",
+ "mutates_business_data": false,
+ "marker": "",
+ "action_phase": "action",
+ "notes": "Open the protocol fixture form; click PF_SHOW_CHOICE_LIST (calls ПоказатьВыборИзСписка → form-attached choice popup); ACTION: choose PF_CHOICE_B from the list (TestedForm.ExecuteChoiceFromList). Local form state only. vanessa_client only.",
+ "steps": [
+  {
+   "phase": "bootstrap",
+   "text": "И я открываю основную форму обработки \"ФикстураПротоколаTestClient\""
+  },
+  {
+   "phase": "bootstrap",
+   "text": "И я нажимаю на кнопку с именем 'PF_SHOW_CHOICE_LIST'"
+  },
+  {
+   "phase": "pre_read",
+   "read": true
+  },
+  {
+   "phase": "action",
+   "text": "И я выбираю из списка \"PF_CHOICE_B\""
+  },
+  {
+   "phase": "post_read",
+   "read": true
+  }
+ ]
+}

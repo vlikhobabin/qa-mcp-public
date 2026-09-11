@@ -1,0 +1,54 @@
+{
+  "schema": "protocol-corpus-run.v1",
+  "generated_at": "2026-06-02T17:04:05Z",
+  "capture_id": "20260602-193802",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260602-193802",
+  "case_count": 10,
+  "case_ids": [
+    "active-window-context",
+    "active-form-context",
+    "form-element-details",
+    "typed-input-field-readonly",
+    "button-family-readonly-gap",
+    "table-family-readonly-gap",
+    "commandbar-family-readonly-gap",
+    "page-family-readonly-gap",
+    "label-family-readonly-gap",
+    "checkbox-family-readonly-gap"
+  ],
+  "replay_status_counts": {
+    "pending": 4,
+    "unsupported": 6
+  },
+  "availability_counts": {
+    "supported": 4,
+    "unsupported": 6
+  },
+  "element_families": [
+    "Button",
+    "CheckBox",
+    "CommandBar",
+    "EditField",
+    "Label",
+    "Page",
+    "Table"
+  ],
+  "supported_case_ids": [
+    "active-window-context",
+    "active-form-context",
+    "form-element-details",
+    "typed-input-field-readonly"
+  ],
+  "gap_case_ids": [
+    "button-family-readonly-gap",
+    "table-family-readonly-gap",
+    "commandbar-family-readonly-gap",
+    "page-family-readonly-gap",
+    "label-family-readonly-gap",
+    "checkbox-family-readonly-gap"
+  ],
+  "case_rows_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly/corpus_cases.jsonl",
+  "case_events_path": "runtime/protocol-research/captures/20260602-193802/case_events.jsonl",
+  "runtime_manifest_path": "runtime/protocol-research/captures/20260602-193802/case_manifest.json",
+  "raw_output_policy": "raw traffic and logs stay under ignored runtime/protocol-research paths"
+}

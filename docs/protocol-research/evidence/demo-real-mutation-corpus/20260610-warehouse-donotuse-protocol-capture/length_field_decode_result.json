@@ -1,0 +1,20 @@
+{
+  "schema": "qa-mcp.length-field-decode.v1",
+  "run": "probe-vlen (Средний->Малый)",
+  "decode": {
+    "string_length_encoding": "1-byte char-count immediately before the UTF-16LE string value",
+    "frame_delimiting": "tail marker 6653b2a6 (no frame total-length field)",
+    "nested_length_fields": "none observed — a shorter command frame is accepted as-is"
+  },
+  "implementation": "qa_mcp.protocol.navigation.substitute_length_prefixed_string + render_select_row_command (arbitrary length)",
+  "live": {
+    "target_row": "Малый",
+    "captured_row": "Средний",
+    "row_chars": "7 -> 5 (frame shortened 4 bytes)",
+    "frames_sent": 861,
+    "diverged_at": null,
+    "Малый_Склад_responses": 22,
+    "Средний_Склад_responses": 0,
+    "conclusion": "arbitrary-length re-target works live: the manager opened the Малый warehouse card by re-pointing the row value to a different-length name, updating only the 1-byte count prefix. The same-length constraint is lifted."
+  }
+}

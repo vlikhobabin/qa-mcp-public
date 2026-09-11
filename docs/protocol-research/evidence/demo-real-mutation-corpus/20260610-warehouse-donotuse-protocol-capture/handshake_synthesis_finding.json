@@ -1,0 +1,16 @@
+{
+  "schema": "qa-mcp.handshake-synthesis-finding.v1",
+  "run": "probe-handshake (--synthesize-handshake)",
+  "decode": {
+    "structure": "text-record handshake ({0,guid,seq,...}); the client ASSIGNS the ack/connection GUID (77393350-...) at cli frame 3 and the manager adopts it; the manager ORIGINATES 5 session GUIDs (e23134a2, 7f58f27d, ae135932, d450256e, 102301e1) in its first frames"
+  },
+  "experiment": "regenerate the 5 manager-originated GUIDs fresh (preseed_guid_map) while learning the client-assigned GUIDs as usual",
+  "result": {
+    "frames_sent": 252,
+    "synthesized_handshake_guids": 5,
+    "Средний_Склад_responses": 0,
+    "uniform_665_responses": 248,
+    "conclusion": "FAILS: regenerating the manager-originated handshake GUIDs makes the client reject the session (248 uniform-665, card never opens). Adaptive replay with the CAPTURED manager GUIDs works on a fresh TestClient, so the GUIDs are not arbitrary - the client validates/correlates them (a challenge/response or derivation not yet decoded). The 7-frame handshake is therefore the irreducible replay: it must be replayed with captured manager GUIDs, while everything after it (operations, navigation incl. arbitrary length, polls, writes) is synthesized from templates."
+  },
+  "practical_limit": "the Python manager drives the flow as: replay the 7-frame handshake (captured manager GUIDs) + synthesize every subsequent frame (template + live/learned GUID rebind + fresh nonce) + minimize polls (252 frames). The handshake decode (deeper challenge/response structure) is a separate follow-up."
+}

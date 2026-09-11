@@ -1,0 +1,53 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.reviewed-summary.v1",
+  "generated_at": "2026-06-06T18:23:06Z",
+  "run_id": "20260606-focused-pending-after-epf-restore-ci-bootstrap",
+  "source_runtime_dir": "runtime\\protocol-research\\captures\\20260606-focused-pending-after-epf-restore-ci-bootstrap",
+  "reviewed_output_dir": "docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-focused-pending-after-epf-restore-ci-bootstrap",
+  "fixture_version": "protocol-fixture.v1",
+  "command_catalog_version": "qa-mcp.manager-fixture-v1.manifest.v1",
+  "manager_harness": "DataProcessor.ProtocolFixtureTestManager.Form.ManagerHarness",
+  "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+  "proxy_testclient_port": 15382,
+  "run_status": "ok",
+  "status_reason": "all_commands_completed",
+  "bootstrap_status": "connect_before",
+  "command_count": 9,
+  "event_count": 33,
+  "readonly_event_count": 18,
+  "completed_count": 9,
+  "failed_count": 0,
+  "case_status_counts": {
+    "connect_before": 1,
+    "connect_after": 1,
+    "second_boundary_wait": 11,
+    "open_fixture_via_command_interface_before": 1,
+    "open_fixture_via_command_interface_after": 1,
+    "started": 9,
+    "ok": 9
+  },
+  "frame_join_status_counts": {
+    "joined": 9
+  },
+  "accepted_protocol_mapping": false,
+  "accepted_case_ids": [],
+  "output_files": {
+    "runtime_manifest": "runtime\\protocol-research\\captures\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\manager_harness_manifest.json",
+    "runtime_result": "runtime\\protocol-research\\captures\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\manager_harness_result.json",
+    "runtime_case_events": "runtime\\protocol-research\\captures\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\case_events.jsonl",
+    "reviewed_summary_markdown": "docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\runtime_summary.md",
+    "reviewed_summary_json": "docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\runtime_summary.json",
+    "reviewed_frame_join_markdown": "docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\frame_join_report.md",
+    "reviewed_frame_join_json": "docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\frame_join_report.json",
+    "reviewed_corpus_rows": "docs\\protocol-research\\evidence\\manager-fixture-v1-live-join\\20260606-focused-pending-after-epf-restore-ci-bootstrap\\corpus_cases.jsonl"
+  },
+  "owner_routes": {
+    "runtime_apply": "project:qa-mcp",
+    "ui_proof": "/opt/vanessa-mcp-stack",
+    "bsl_diagnostics": "/opt/edt-lab",
+    "frame_join": "project:qa-mcp",
+    "replay_or_direct_probe": "project:qa-mcp"
+  },
+  "unresolved_gaps": [],
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths"
+}

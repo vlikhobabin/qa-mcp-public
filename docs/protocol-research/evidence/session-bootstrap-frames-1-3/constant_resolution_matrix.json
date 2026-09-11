@@ -1,0 +1,12 @@
+{
+ "schema": "qa-mcp.bootstrap-const-resolution.v1",
+ "run": "20260613-200723",
+ "method": "one fresh TestClient boot per row, randomize one config-constant GUID at a time, query active-window-context",
+ "matrix": {
+  "none": "ACCEPTED:ok",
+  "guid2": "REJECTED",
+  "token_7f": "REJECTED",
+  "session_guid": "REJECTED"
+ },
+ "conclusion": "counter base + frame-3 ticket GUID = manager-free-choice; session_guid/token_7f/guid2 = client-validated config-required"
+}

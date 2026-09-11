@@ -1,0 +1,54 @@
+schema: spec-driven
+
+context: |
+  Mission:
+  Research the native 1C TestManager/TestClient protocol and develop a Python
+  QA manager/MCP runtime that can talk directly to a 1C TestClient without
+  starting a 1C TestManager instance.
+
+  Scope:
+  Keep protocol research docs, capture/replay tooling, Python manager code,
+  OpenSpec cards and provider integration plans here.
+
+  Out of scope:
+  Do not commit full 1C infobases, raw large captures, Vanessa EPF binaries,
+  local credentials, Qdrant/Postgres snapshots, or EDT workspace metadata.
+
+  Public baseline:
+  - Linux/POSIX source, packaging and offline verification are the default.
+  - Local lab targets, credentials, platform paths and captures are ignored
+    operator state, never public configuration.
+  - Windows/native or live 1C verification is required only when a change
+    affects that runtime surface and explicitly declares the acceptance gate.
+
+  Workflow:
+  New cards use the project-local openspec-v1 ChangeRail route. The board card
+  owns high-level scope, acceptance, dependencies, budget and QA evidence policy;
+  one linked stock OpenSpec change owns proposal, delta specs, design and tasks.
+  Ordered tasks.md groups are ChangeRail checkpoints. Board-only/FF execution is removed; historical records remain read-only,
+  and unmarked executable cards fail closed.
+  Existing pre-adoption openspec/changes artifacts remain immutable migration
+  context unless a separately accepted card explicitly adopts one.
+  Use changed-module checks by default. Full tests require epic closure or explicit
+  operator agreement, never ordinary per-card delivery. Windows behavior needs
+  native evidence; live TestClient work requires runtime intent and preflight.
+  Keep runtime artifacts, auth, credentials and customer data out of Git.
+
+rules:
+  specs:
+    - Write requirements as observable protocol-lab or Python-manager behavior.
+    - Include evidence expectations for any new protocol claim.
+    - Preserve public contracts unless the accepted card explicitly changes them.
+    - Prefix every top-level board Acceptance bullet with a unique `[C<number>]`.
+  design:
+    - Identify capture sources, frame ranges, dynamic fields, replay strategy,
+      safety constraints and expected runtime cleanup behavior.
+    - Declare a risk mechanism or concrete non-applicability for each evidence-plan risk.
+  tasks:
+    - Include risk-appropriate offline verification; include Windows-native or
+      live verification only when the changed behavior requires that surface.
+    - Include evidence generation or evidence index updates when protocol
+      knowledge changes.
+    - Keep raw captures out of reviewed changes unless explicitly requested.
+    - Map every Acceptance ID once in the closed Verify evidence-plan declaration.
+    - Group executable work under contiguous slug headings such as `## 1. implement-route`.

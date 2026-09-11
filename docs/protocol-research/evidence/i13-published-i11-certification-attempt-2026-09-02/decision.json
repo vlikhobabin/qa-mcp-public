@@ -1,0 +1,91 @@
+{
+  "schema": "qa-mcp.i13-certification-decision.v1",
+  "card": "oss-06-s4-r1-i13-certify-published-i11-observation-lifecycle-evidence",
+  "status": "not_verifiable",
+  "source": {
+    "workspace_head": "70d66b84cdefc2ded02d99343854afab711685db",
+    "published_i11_commit": "964e29fa7ee8ba87df12d0db903ca7a331113c2f",
+    "bound_blobs": [
+      "178167d47e89bd8620684300868c4a54c5051919",
+      "90f0b6be371e011a363958b2c2b8a18ef029f8e8",
+      "91a35c2700318fb19286fc4093d577e1edad6f48",
+      "f0021e00b18b071e06f8c4b45889dc0b95bb79b1",
+      "7eed6f0b47e8ab28038b9589a86133db124a03a4"
+    ],
+    "bound_diff_from_i11": false,
+    "candidate_sha256": "9e32429f6faba65abae187722e199b54f165e9c6d92c63d84ff89693afb8ccf7",
+    "candidate_build_pair_identical": true
+  },
+  "preflight": {
+    "authorized_identity_exact": true,
+    "platform_version": "8.3.27.2214",
+    "platform_sha256": "ca26ada2c7baaf97516c59ba10a2a4d30d7c509da062a8d09ad2b5a9528f8bac",
+    "target_present": true,
+    "interactive_session_present": true,
+    "run1_sha256": "ffd50b306cee13404e3be08d7c4f19e8529e78d86eb9ccf19f0aeb76b3ef5573",
+    "run2_sha256": "a9c35c020419b53dcb1e97c354dbce8c40919b902f9186f280296f87d5134b5a",
+    "candidate_and_fixture_paths_exact": true,
+    "argv_contract_exact": true,
+    "one_c_process_count": 0,
+    "exact_owned_task_count": 0,
+    "exact_owned_process_count": 0,
+    "configuration": {
+      "content_sha256": "90fb293ed45921a8daff17d75e5196049ca350485b979f01bd7af9092fb9ae0a",
+      "acl_sha256": "240cb608f43e53449d5cc872ad0e8093377d2ccfa8bb8a04de2bdce5b0c2891e",
+      "creation_sha256": "7046dafc0d7f83a403bac10c7aef7e3fadd3f4413efeb17380a3ea46f29d510b",
+      "last_write_sha256": "9d4eb7c4c9084d15d76375fb369165d753dfdc2a7f02811b00db6d101ba90242",
+      "last_access_sha256": "2181a0f6d1f08eadfb92addefabe5f25be0f1d763e7a0cea4ddb4ff1fdd61e66",
+      "attributes_sha256": "66f4804ee23ddc092d1bae43cb88186aa541187fff7c1cc8a4aa17e59a9f4123"
+    }
+  },
+  "observations": [
+    {
+      "row": "s3",
+      "status": "passed",
+      "argv_sha256": "c72a62efc048ce5b4ca68a31bf7b549d74a400addf09215d692ac9cc9440638c",
+      "candidate_output_sha256": "d938fa189912f8776c3deb31a6bec42f403f57b9c8e3ed936bdb076caf6bd61c",
+      "action_count": 0,
+      "internal_exact_cleanup": true,
+      "configuration_restored": true,
+      "second_cleanup_noop": true
+    },
+    {
+      "row": "s4-a",
+      "status": "failed_before_observation_receipt",
+      "argv_sha256": "00e676e5e03ec3344d311b4faeca7a4131143c7ab6dd2536b2d769f9acb3eb35",
+      "candidate_exit_code": 1,
+      "candidate_duration_ms": 1932,
+      "candidate_output_sha256": "e3dd3f479dfdea7747da95c75da681ad7a0ac2cb68e2effbd0fe7fe6d6764f12",
+      "observation_receipt_present": false,
+      "action_count": null,
+      "one_c_process_count_after": 0
+    }
+  ],
+  "matrix": {
+    "required_action_counts": [0, 0, 0, 0, 1, 1],
+    "completed_rows": 1,
+    "failed_rows": 1,
+    "not_started_rows": 4,
+    "certified": false
+  },
+  "cleanup": {
+    "configuration_content_acl_metadata_exact": true,
+    "exact_task_count_after": 0,
+    "exact_stage_present_after": false,
+    "one_c_process_count_after": 0,
+    "row_cleanup_second_pass_noop": true,
+    "final_stage_cleanup_second_pass_noop": true,
+    "unrelated_task_fingerprint_before": "25ed8ce8d6bb55d5886abb967e36114de568142f827d8f0243016a8f1d2e7f86",
+    "unrelated_task_fingerprint_after": "113c7390688e8c2f6a3e1a81a9df36198dfae1c225c6df5f325414abe948117a",
+    "unrelated_task_fingerprint_unchanged": false,
+    "unrelated_task_targeted": false
+  },
+  "privacy": {
+    "raw_ui_retained": false,
+    "screenshots_retained": false,
+    "credentials_retained": false,
+    "connection_strings_retained": false
+  },
+  "terminal_reason": "exact S4 row exited nonzero before an observation receipt, and protected unrelated-task topology drifted",
+  "next_card": "oss-06-s4-r1-i14-investigate-i13-s4-early-exit-and-task-topology-drift"
+}

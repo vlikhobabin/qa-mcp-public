@@ -1,0 +1,27 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2-safe-action.summary.v1",
+  "generated_at": "2026-06-07T17:33:09Z",
+  "capture_id": "recovery-sequence",
+  "run_dir": ".artifacts/openspec/verify-manager-fixture-v2-safe-action-recovery/20260607-manager-v2-recovery-smoke/recovery-sequence",
+  "row_count": 7,
+  "accepted_count": 0,
+  "status_counts": {
+    "blocked": 1,
+    "rejected": 1,
+    "success": 5
+  },
+  "validation_status_counts": {
+    "accepted_for_capture": 5,
+    "blocked": 1,
+    "rejected": 1
+  },
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths",
+  "phase_event_count": 49,
+  "runner_result_count": 7,
+  "output_files": {
+    "safe_action_report_json": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run/safe_action_report.json",
+    "safe_action_report_markdown": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run/safe_action_report.md",
+    "corpus_cases": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run/corpus_cases.jsonl",
+    "runtime_summary": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run/runtime_summary.json"
+  }
+}

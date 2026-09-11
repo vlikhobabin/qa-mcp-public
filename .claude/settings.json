@@ -1,0 +1,44 @@
+{
+  "env": {
+    "MCP_TIMEOUT": "90000"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Edit(*)",
+      "Write(*)",
+      "Read(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "mcp__context7__*",
+      "mcp__filesystem__*",
+      "mcp__bsl-mcp__*",
+      "mcp__config-mcp__*",
+      "mcp__meta-mcp__*",
+      "mcp__help-mcp__*",
+      "mcp__knowledge-mcp__*",
+      "mcp__admin-mcp__*",
+      "mcp__live-mcp__*",
+      "mcp__postgres-mcp__*",
+      "mcp__qa-mcp__*",
+      "mcp__agentic-rag__*",
+      "Agent(*)",
+      "TodoWrite(*)",
+      "TodoRead(*)",
+      "NotebookRead(*)",
+      "NotebookEdit(*)"
+    ],
+    "deny": [
+      "Bash(*DROP DATABASE*)",
+      "Bash(*DROP SCHEMA*)",
+      "Bash(*dropdb *)",
+      "Bash(*Remove-Item*1C_BASES*)",
+      "Bash(*rd /s*1C_BASES*)",
+      "Bash(*rmdir*1C_BASES*)",
+      "Bash(*git push*--force*)",
+      "Bash(*git push*-f *)"
+    ]
+  }
+}

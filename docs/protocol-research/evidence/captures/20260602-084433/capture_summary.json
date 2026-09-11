@@ -1,0 +1,17 @@
+﻿{
+    "schema":  "protocol-capture.summary.v1",
+    "status":  "ok",
+    "captureDir":  "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\runtime\\protocol-research\\captures\\20260602-084433",
+    "startedAt":  "2026-06-02T05:44:33.2448323Z",
+    "pids":  {
+                 "testClient":  2172,
+                 "proxy":  2372,
+                 "manager":  1768
+             },
+    "cleanup":  [
+                    "stopped manager pid=1768",
+                    "stopped proxy pid=2372",
+                    "stopped testClient pid=2172"
+                ],
+    "finishedAt":  "2026-06-02T05:45:01.6478159Z"
+}

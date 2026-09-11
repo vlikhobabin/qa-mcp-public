@@ -1,0 +1,11 @@
+# Copy to .ai1c\vanessa-qa-mcp.env for the local Vanessa MCP profile.
+# Keep the real file local.
+PROJECT_ROOT=C:\path\to\qa-mcp
+INFOBASE_PATH=C:\1C_BASES\vanessa_client
+PLATFORM_ROOT=C:\Program Files\1cv8\8.3.27.2130\bin
+TEST_CLIENT_KIND=thin
+TEST_CLIENT_USER=Администратор
+TEST_CLIENT_PROFILE=qa-mcp-vanessa-client
+TEST_CLIENT_BOOTSTRAP_MODE=ensure-profile
+TEST_CLIENT_PORT=15381
+TEST_CLIENT_PASSWORD=

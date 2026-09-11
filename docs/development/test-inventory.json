@@ -1,0 +1,2578 @@
+{
+  "schema": "qa-mcp.test-inventory.v1",
+  "observed_at": "2026-09-10T06:32:45.957909+00:00",
+  "method": "pytest collection only plus static source/import analysis; no full test execution or timing claim",
+  "collection_sha256": "78b2cee0713bcc45b63c41bfdd0a8d22f978605ac80ba110ccf0c5910f79af7e",
+  "total_python_cases": 1631,
+  "python_files": [
+    {
+      "file": "tests/integration/test_mcp_stdio.py",
+      "sha256": "a07b20170fcc35f956a435fb5a26a6353ecc5b01595b0ae1f8db00793e98b01f",
+      "cases": 1,
+      "test_functions": 1,
+      "lane": "integration",
+      "direct_inputs": [],
+      "dependency_count": 108,
+      "largest_parameter_groups": [
+        [
+          "test_mcp_stdio_transpile_roundtrip",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/integration/test_screenshot_xvfb.py",
+      "sha256": "2173c57a8c6baaa0e43c320c22c1da92e0cb1a4807308a8a912ec062de4282d8",
+      "cases": 1,
+      "test_functions": 1,
+      "lane": "integration",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/lifecycle.py",
+        "src/qa_mcp/protocol/screenshot.py"
+      ],
+      "dependency_count": 25,
+      "largest_parameter_groups": [
+        [
+          "test_real_capture_against_owned_xvfb",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/integration/test_self_hosted_release_scripts.py",
+      "sha256": "dc4231596021da142c954231c7a262085fb8bdb0bf973ef9ec8294709818c9c1",
+      "cases": 6,
+      "test_functions": 6,
+      "lane": "integration",
+      "direct_inputs": [
+        "docker/verify_open_image.py",
+        "host-agent/install-windows-host-agent.ps1",
+        "tests/support/archives.py",
+        "tools/release/component_manifest.py",
+        "tools/release/publish_self_hosted.sh",
+        "tools/release/validate_component_manifest.py",
+        "tools/release/windows_host_agent_artifact.py"
+      ],
+      "dependency_count": 13,
+      "largest_parameter_groups": [
+        [
+          "test_publish_helper_stages_manifest_and_sidecars",
+          1
+        ],
+        [
+          "test_publish_helper_aborts_when_manifest_validation_fails",
+          1
+        ],
+        [
+          "test_publish_helper_cli_values_override_release_env_defaults",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/integration/test_test_selection_processes.py",
+      "sha256": "0a5473b48ba4396e5e44b6a319d7c833155fe1bfd119b03a2cfffe20d5402398",
+      "cases": 4,
+      "test_functions": 3,
+      "lane": "integration",
+      "direct_inputs": [
+        "scripts/qa_test_selection.py",
+        "tests/support/selection_inputs.py"
+      ],
+      "dependency_count": 8,
+      "largest_parameter_groups": [
+        [
+          "test_real_pytest_refuses_unexplained_full_or_unauthorized_live",
+          2
+        ],
+        [
+          "test_git_selection_includes_staged_unstaged_untracked_and_both_rename_sides",
+          1
+        ],
+        [
+          "test_real_pytest_changed_selection_executes_consumer_and_never_unrelated",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/integration/test_windows_host_agent_artifact.py",
+      "sha256": "a642dabb77fd6b565975ab6f7388b1d886d847cda59c412bf1285c81fcd0df86",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "integration",
+      "direct_inputs": [
+        "tools/release/windows_host_agent_artifact.py"
+      ],
+      "dependency_count": 5,
+      "largest_parameter_groups": [
+        [
+          "test_windows_host_agent_builder_has_standalone_cli_contract",
+          1
+        ],
+        [
+          "test_two_fixed_setting_builds_are_byte_identical_and_verify",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_assert_wait.py",
+      "sha256": "69f6c6b28ba6a161372c57f7bacee8f03f5544a8f4c6579078744951b82e0075",
+      "cases": 13,
+      "test_functions": 13,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_match_value_modes",
+          1
+        ],
+        [
+          "test_parse_1c_number",
+          1
+        ],
+        [
+          "test_match_value_numeric_mode",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_autofill.py",
+      "sha256": "563cadfc47e5d42ab4ed0c78c5c0158d91a601717959be664dec638436842b76",
+      "cases": 12,
+      "test_functions": 12,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/data/__init__.py",
+        "src/qa_mcp/scenario/__init__.py"
+      ],
+      "dependency_count": 111,
+      "largest_parameter_groups": [
+        [
+          "test_smoke_value_for_type",
+          1
+        ],
+        [
+          "test_required_fields_catalog",
+          1
+        ],
+        [
+          "test_required_fields_document_date",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_bootstrap_platform_selection.py",
+      "sha256": "e12525d75e4d30d7cac295bac4e821cb8cf312738a9633b360b4691dc8031ec3",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "delivery/bootstrap.ps1"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_bootstrap_declares_only_capture_backed_8_3_as_direct_family",
+          1
+        ],
+        [
+          "test_bootstrap_source_wires_typed_version_sort_and_direct_capture_preference",
+          1
+        ],
+        [
+          "test_bootstrap_source_declares_fallback_and_wires_live_version_argument",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_bootstrap_synth.py",
+      "sha256": "c87ab9408b6a97cb9d14b157c61c946c88061f2474ac5759782ae2aa05726bf6",
+      "cases": 11,
+      "test_functions": 11,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/bootstrap_synth.py",
+        "tests/fixtures/bootstrap_frames_1to3_independent.json"
+      ],
+      "dependency_count": 25,
+      "largest_parameter_groups": [
+        [
+          "test_synth_reproduces_independent_session_frames",
+          1
+        ],
+        [
+          "test_frame4_round_trips_for_independent_session",
+          1
+        ],
+        [
+          "test_counter_base_must_be_five_digits",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_bundled_versions.py",
+      "sha256": "fca387325ba113b0bd810653e7eee7f3592b12601ba7ea56f33d9db2b608a475",
+      "cases": 22,
+      "test_functions": 19,
+      "lane": "offline",
+      "direct_inputs": [
+        "config/protocol-capture-manifest-8.3.json",
+        "config/protocol-capture-manifest-8.5.json",
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/_bundled/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/bootstrap.py",
+        "src/qa_mcp/protocol/evidence.py",
+        "src/qa_mcp/regression/__init__.py",
+        "src/qa_mcp/regression/versioning.py"
+      ],
+      "dependency_count": 32,
+      "largest_parameter_groups": [
+        [
+          "test_active_version_env_override",
+          3
+        ],
+        [
+          "test_active_version_unsupported_fails_closed",
+          2
+        ],
+        [
+          "test_version_key_maps_full_and_bare_versions",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_capture_metadata.py",
+      "sha256": "090c98c7f368c1035eb6c3e0f5431783c17fa0f464179143e3254260cc585693",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/capture_metadata.py"
+      ],
+      "dependency_count": 25,
+      "largest_parameter_groups": [
+        [
+          "test_capture_metadata_roundtrip_is_sanitized",
+          1
+        ],
+        [
+          "test_select_capture_metadata_prefers_exact_platform_and_config_match",
+          1
+        ],
+        [
+          "test_select_capture_metadata_fallback_is_observable",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_clean_tool_surface.py",
+      "sha256": "a2a032ad0204c3ec9f390887d4cda651260ddf1c2828ee8cae58ded32ecfdce1",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_every_tool_is_registered_with_a_description",
+          1
+        ],
+        [
+          "test_tool_descriptions_carry_no_internal_rnd_references",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_com_host.py",
+      "sha256": "8d85c5f2561954904d6bb9aea7997cb8abc07c14906fd39c1bc4efba8cfdfcee",
+      "cases": 5,
+      "test_functions": 5,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/com_host.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_query_com_builds_worker_request_and_returns_rows",
+          1
+        ],
+        [
+          "test_assert_com_count_compares_first_numeric_value",
+          1
+        ],
+        [
+          "test_query_com_rejects_write_shaped_query_before_transport",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_compare_corpus_runs.py",
+      "sha256": "59f9bcf848b626772c2041b2b7f4766d64914a17a3cd7684da336bea3de65e18",
+      "cases": 14,
+      "test_functions": 14,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/compare_corpus_runs.py"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_compare_inputs_classifies_stable_and_incomplete",
+          1
+        ],
+        [
+          "test_compare_inputs_detects_missing_cases",
+          1
+        ],
+        [
+          "test_probe_evidence_promotes_repeated_pending_rows",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_compare_probe_reference.py",
+      "sha256": "490f402c99696d22c86e6bd34056e497bc98646b05e41ecd15762f7f0fc33ea4",
+      "cases": 9,
+      "test_functions": 9,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/compare_probe_reference.py"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_normalize_replaces_ascii_and_le_guid",
+          1
+        ],
+        [
+          "test_session_guids_collects_unique",
+          1
+        ],
+        [
+          "test_session_guids_detects_utf16le_only_guid",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_component_manifest.py",
+      "sha256": "ef6741a6622820bb951a606d441b37511573f134b7d9419e83b833f469efbc34",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "offline",
+      "direct_inputs": [
+        "docker/verify_open_image.py",
+        "tools/release/component_manifest.py"
+      ],
+      "dependency_count": 7,
+      "largest_parameter_groups": [
+        [
+          "test_build_manifest_records_plaintext_runtime_assets",
+          1
+        ],
+        [
+          "test_cli_writes_manifest",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_config.py",
+      "sha256": "2de34d24dd7d74803a96388094ac4bb113082ca1ebfcdad44d24d0cacae99fad",
+      "cases": 7,
+      "test_functions": 7,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py"
+      ],
+      "dependency_count": 10,
+      "largest_parameter_groups": [
+        [
+          "test_settings_from_explicit_env_mapping",
+          1
+        ],
+        [
+          "test_remote_client_truth_values",
+          1
+        ],
+        [
+          "test_odata_defaults_preserve_client_and_regression_behavior",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_corpus_gate.py",
+      "sha256": "caef1e9b18ad40fd3ec5d6bb91a91bc40c77be2313ff676c93ce56889ae05f0d",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/scenario/__init__.py",
+        "tools/protocol-research/qa-vanessa-canonical-corpus.feature"
+      ],
+      "dependency_count": 106,
+      "largest_parameter_groups": [
+        [
+          "test_canonical_corpus_transpiles_fully",
+          1
+        ],
+        [
+          "test_lab_corpus_discovery_fails_loud_on_partial_union",
+          1
+        ],
+        [
+          "test_lab_corpus_discovery_preserves_four_plus_six_contract",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_coverage_report.py",
+      "sha256": "79b15f7a4259c272c1c998747cc1f7401d925db795a859ab618d0f0537227bf3",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/coverage_report.py"
+      ],
+      "dependency_count": 3,
+      "largest_parameter_groups": [
+        [
+          "test_classify_mapping_buckets",
+          1
+        ],
+        [
+          "test_build_coverage_counts_and_unmatched",
+          1
+        ],
+        [
+          "test_render_markdown_contains_summary_rows",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_data_layer_extras.py",
+      "sha256": "a950de353277551e4256ec6df3b59b6b03010ea3c77b052bc3a41fce24904ca5",
+      "cases": 10,
+      "test_functions": 10,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/data/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/scenario/__init__.py",
+        "src/qa_mcp/scenario/model.py",
+        "src/qa_mcp/scenario/runner.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_count_records_counts_rows",
+          1
+        ],
+        [
+          "test_assert_data_count_ops",
+          1
+        ],
+        [
+          "test_assert_data_count_absence",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_delivery_config.py",
+      "sha256": "0c77876b01d512d1dbec56950bf549cf5ca27a9a0a36e80a63d5cb299f57bcd0",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "docker/docker-compose.yml",
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 106,
+      "largest_parameter_groups": [
+        [
+          "test_model_a_compose_defaults_to_loopback_without_unsafe_bind",
+          1
+        ],
+        [
+          "test_http_bind_rejects_non_loopback_without_bearer_token",
+          1
+        ],
+        [
+          "test_http_bind_allows_non_loopback_with_bearer_token",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_direct_execute_receipt.py",
+      "sha256": "4a5fdfe49e8d9ab25dc48c8a74cb17d09da457a51365a198af10e53f2802b914",
+      "cases": 28,
+      "test_functions": 9,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/direct_execute_receipt.py"
+      ],
+      "dependency_count": 3,
+      "largest_parameter_groups": [
+        [
+          "test_receipt_rejects_malformed_schema_status_hash_count_and_type",
+          11
+        ],
+        [
+          "test_cleanup_pid_rejects_values_outside_exact_go_uint32",
+          9
+        ],
+        [
+          "test_receipt_lease_binds_exact_prompt_outcomes",
+          2
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_display_backend.py",
+      "sha256": "41871a613c4cdc820a3d613af2667f8210018b4cc234802ae9f1b47177568ed7",
+      "cases": 31,
+      "test_functions": 29,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/display_backend.py",
+        "src/qa_mcp/protocol/screenshot.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_remote_request_preserves_typed_desktop_session_error",
+          3
+        ],
+        [
+          "test_remote_client_enabled_and_agent_configured",
+          1
+        ],
+        [
+          "test_get_display_backend_selects_remote",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_doctor.py",
+      "sha256": "ccfe2bc5154938f297bbd23ef433cfae26037528f3d2914c9ead31fb514b7dc3",
+      "cases": 19,
+      "test_functions": 19,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py",
+        "src/qa_mcp/doctor.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_settings_reports_bearer_presence_without_value",
+          1
+        ],
+        [
+          "test_doctor_healthy_chain_is_green_and_secret_safe",
+          1
+        ],
+        [
+          "test_doctor_reports_host_agent_protocol_relationship",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_element_ref.py",
+      "sha256": "befdbf8c9968b164a25674269e6f67665bfd289d17b7e2a42ea19f9945768cad",
+      "cases": 15,
+      "test_functions": 15,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/element_ref.py",
+        "src/qa_mcp/protocol/frames.py",
+        "src/qa_mcp/protocol/native_write.py"
+      ],
+      "dependency_count": 31,
+      "largest_parameter_groups": [
+        [
+          "test_build_and_path_roundtrip",
+          1
+        ],
+        [
+          "test_parse_element_path",
+          1
+        ],
+        [
+          "test_extract_element_paths",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_form_descriptor.py",
+      "sha256": "d9e7c0eb3ecc18a976a81afd4f6ece877b4d8dd4ada03db0474352534aedccb3",
+      "cases": 61,
+      "test_functions": 61,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/bootstrap.py",
+        "src/qa_mcp/protocol/element_ref.py",
+        "src/qa_mcp/protocol/frames.py",
+        "src/qa_mcp/protocol/introspection.py",
+        "src/qa_mcp/protocol/native_write.py",
+        "src/qa_mcp/protocol/responses.py",
+        "src/qa_mcp/protocol/templates.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_enumerate_capture_fields_from_real_capture",
+          1
+        ],
+        [
+          "test_enumerate_capture_fields_includes_cyrillic",
+          1
+        ],
+        [
+          "test_retarget_read_to_cyrillic_field_builds_utf16_path",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_form_value_parser.py",
+      "sha256": "0bf64b51e576618c6c9f1b72ea85b0a402109bbd82662aa1ce3f08bfe2fb966a",
+      "cases": 16,
+      "test_functions": 16,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/responses.py"
+      ],
+      "dependency_count": 24,
+      "largest_parameter_groups": [
+        [
+          "test_extract_value_from_value_mode_response",
+          1
+        ],
+        [
+          "test_no_value_stub_returns_none",
+          1
+        ],
+        [
+          "test_other_field_not_matched",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_free_startup.py",
+      "sha256": "899697c2515bf7db19fa5b9ad0d41c3af93ff864b735f67fcc656a182401b9cb",
+      "cases": 1,
+      "test_functions": 1,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 105,
+      "largest_parameter_groups": [
+        [
+          "test_main_ignores_legacy_product_license_environment",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_gates.py",
+      "sha256": "589b926be7077cc8bd920c276780ec93ab72f08a6776d5998c4ee2c53cf1345f",
+      "cases": 12,
+      "test_functions": 12,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/debug/__init__.py",
+        "src/qa_mcp/debug/gates.py",
+        "src/qa_mcp/debug/measure.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/scenario/__init__.py",
+        "src/qa_mcp/scenario/model.py",
+        "src/qa_mcp/scenario/runner.py"
+      ],
+      "dependency_count": 106,
+      "largest_parameter_groups": [
+        [
+          "test_perf_budget_ok",
+          1
+        ],
+        [
+          "test_perf_budget_violation_reports_the_slow_step",
+          1
+        ],
+        [
+          "test_perf_budget_per_step_override",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_host_agent_installer_contract.py",
+      "sha256": "aebd666e26a467ebec9df275539ec9e9a635ab2519e2b6dc171b2ec8a2d758c9",
+      "cases": 7,
+      "test_functions": 7,
+      "lane": "offline",
+      "direct_inputs": [
+        "host-agent/install-windows-host-agent.ps1"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_installer_requires_verified_public_artifact",
+          1
+        ],
+        [
+          "test_installer_rebinds_executable_and_token_acls",
+          1
+        ],
+        [
+          "test_installer_creates_install_dir_independently_of_external_token_parent",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_imports.py",
+      "sha256": "413a1e8fc68d79d58651abb10a9eeb64899cbac0d8f089b7f1c749cd7375c870",
+      "cases": 1,
+      "test_functions": 1,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py"
+      ],
+      "dependency_count": 5,
+      "largest_parameter_groups": [
+        [
+          "test_package_imports",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_lifecycle.py",
+      "sha256": "50a80b5e7f36830bd1f20d03ec05da5306b38ac7b0adcf46245b87f043e8cb27",
+      "cases": 29,
+      "test_functions": 29,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/lifecycle.py"
+      ],
+      "dependency_count": 25,
+      "largest_parameter_groups": [
+        [
+          "test_ownership_root_follows_runtime_home",
+          1
+        ],
+        [
+          "test_explicit_ownership_root_overrides_runtime_home",
+          1
+        ],
+        [
+          "test_require_target_infobase_guards_wrong_base",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_manager_fixture_v1_report.py",
+      "sha256": "78178b5ea5348ca92403a963d4439608938b1012fda788d37266f45d596ebc4a",
+      "cases": 12,
+      "test_functions": 12,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/report_manager_fixture_v1.py"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_joined_case_events_map_to_directional_chunk_ranges",
+          1
+        ],
+        [
+          "test_missing_event_is_reported_with_precise_reason",
+          1
+        ],
+        [
+          "test_missing_traffic_is_reported_with_precise_reason",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_manager_fixture_v2_safe_action_report.py",
+      "sha256": "2988246ad99e7daa75ef89ece169885200be85871da68627d67ed16ec85c5a17",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/report_manager_fixture_v2_safe_action.py",
+        "tools/protocol-research/v2_safe_action_tooling.py"
+      ],
+      "dependency_count": 3,
+      "largest_parameter_groups": [
+        [
+          "test_v2_safe_action_report_publishes_candidate_rows_with_separated_ranges",
+          1
+        ],
+        [
+          "test_v2_safe_action_report_reads_runner_results",
+          1
+        ],
+        [
+          "test_v2_safe_action_report_joins_live_phase_events_to_traffic",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_manager_handshake_drift.py",
+      "sha256": "11f9712486e60d3575a2b55c4f315a9591bbb4a17225a1f77e7aa977668d4157",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/capture_metadata.py",
+        "src/qa_mcp/protocol/frames.py",
+        "src/qa_mcp/protocol/handshake.py"
+      ],
+      "dependency_count": 26,
+      "largest_parameter_groups": [
+        [
+          "test_manager_handshake_ack_success_records_guid",
+          1
+        ],
+        [
+          "test_manager_handshake_missing_ack_fails_loudly",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_mcp_server.py",
+      "sha256": "d8d1ba272078c397dd647b984f7d6d0bf00a274fdf06aed37fff1263ff3b990e",
+      "cases": 172,
+      "test_functions": 118,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/debug/__init__.py",
+        "src/qa_mcp/debug/measure.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/native_xtest.py",
+        "src/qa_mcp/scenario/__init__.py"
+      ],
+      "dependency_count": 107,
+      "largest_parameter_groups": [
+        [
+          "test_attach_endpoint_contract_for_action_tools",
+          26
+        ],
+        [
+          "test_direct_tools_resolve_annotations_before_fastmcp_registration",
+          20
+        ],
+        [
+          "test_open_list_incomplete_navigation_template_fails_before_session",
+          4
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_measure.py",
+      "sha256": "d4ab43b83653eaeb35d3b57c50e7019c2bcdf5de9f3f6636d1fb172a3cd4cd8b",
+      "cases": 9,
+      "test_functions": 9,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/debug/__init__.py",
+        "src/qa_mcp/debug/measure.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/lifecycle.py"
+      ],
+      "dependency_count": 106,
+      "largest_parameter_groups": [
+        [
+          "test_extract_measures_from_real_capture",
+          1
+        ],
+        [
+          "test_build_report_aggregates_coverage_and_perf",
+          1
+        ],
+        [
+          "test_build_report_with_resolver_names_modules",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_multi_version_delivery_docs.py",
+      "sha256": "bb194918aa3ce73defe9e3b183abb501303127860e387423d1ac84dedeeee04d",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "offline",
+      "direct_inputs": [
+        "config/protocol-capture-manifest-8.3.json",
+        "config/protocol-capture-manifest-8.5.json",
+        "delivery/README.md",
+        "delivery/windows-agent-runbook.md",
+        "docker/README.md"
+      ],
+      "dependency_count": 7,
+      "largest_parameter_groups": [
+        [
+          "test_active_delivery_urls_use_canonical_mcp_path",
+          1
+        ],
+        [
+          "test_docker_guidance_names_capture_baselines_and_runtime_configuration",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_mutation_render.py",
+      "sha256": "5163713ca03d4f9e8b49c11551c09d935509351a45b1c27bad7d45ab010b4678",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/mutation.py"
+      ],
+      "dependency_count": 25,
+      "largest_parameter_groups": [
+        [
+          "test_render_substitutes_all_dynamic_fields",
+          1
+        ],
+        [
+          "test_render_keeps_captured_guid_when_unmapped",
+          1
+        ],
+        [
+          "test_render_real_template_frame_if_present",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_native_mutation.py",
+      "sha256": "7c9476ef4281b82687ac6cbb08931c82ea277fef7bbfbc5624d9f03cf9fa44fb",
+      "cases": 9,
+      "test_functions": 9,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/native_mutation.py"
+      ],
+      "dependency_count": 26,
+      "largest_parameter_groups": [
+        [
+          "test_ascii_guids_in_order_dedup",
+          1
+        ],
+        [
+          "test_substitute_all_encodings",
+          1
+        ],
+        [
+          "test_rebinder_learns_by_first_appearance_order",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_native_write.py",
+      "sha256": "2a3d2f76ba268cc9adb27f2b6c4e00695ba4ac27baa5287c96a9781ba320bfea",
+      "cases": 69,
+      "test_functions": 69,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/element_ref.py",
+        "src/qa_mcp/protocol/frames.py",
+        "src/qa_mcp/protocol/native_write.py",
+        "src/qa_mcp/protocol/navigation.py"
+      ],
+      "dependency_count": 29,
+      "largest_parameter_groups": [
+        [
+          "test_encode_1c_length_leb128",
+          1
+        ],
+        [
+          "test_read_list_grid_keeps_adjacent_duplicate_rows",
+          1
+        ],
+        [
+          "test_read_list_grid_empty_socket_response_is_truncated",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_native_xtest.py",
+      "sha256": "368c0a15bf9b65e1c041f20c93cd502b42937af22d934b5e337a5dab5f245c8a",
+      "cases": 21,
+      "test_functions": 21,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/native_xtest.py"
+      ],
+      "dependency_count": 31,
+      "largest_parameter_groups": [
+        [
+          "test_xdotool_argv_type_unicode",
+          1
+        ],
+        [
+          "test_xdotool_argv_key_chords",
+          1
+        ],
+        [
+          "test_send_keys_sequence",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_navigation.py",
+      "sha256": "cf589a88972c881d0018cbeae086229368b2a87fffb785d34328a2acdc7dbfe1",
+      "cases": 21,
+      "test_functions": 21,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/navigation.py"
+      ],
+      "dependency_count": 25,
+      "largest_parameter_groups": [
+        [
+          "test_retarget_nav_link_variable_length",
+          1
+        ],
+        [
+          "test_retarget_nav_link_absent_raises",
+          1
+        ],
+        [
+          "test_extract_navigation_links_finds_list_link",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_odata.py",
+      "sha256": "713512a1d4b3a353f3b8ffc136fae852e756691bd740540efc195d2bb403c924",
+      "cases": 7,
+      "test_functions": 7,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/data/__init__.py"
+      ],
+      "dependency_count": 16,
+      "largest_parameter_groups": [
+        [
+          "test_build_url_filter_select_and_auth",
+          1
+        ],
+        [
+          "test_url_is_ascii_safe_for_cyrillic_entity_set",
+          1
+        ],
+        [
+          "test_filter_spaces_encode_as_percent20_not_plus",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_open_source_delivery.py",
+      "sha256": "4be65938200f48f9ce118a82f321bfc2e13bb1d6eb4f708e1f0b490d8aa76dd1",
+      "cases": 6,
+      "test_functions": 6,
+      "lane": "offline",
+      "direct_inputs": [
+        ".github/workflows/release.yml",
+        "delivery/bootstrap.ps1",
+        "docker/verify_open_image.py",
+        "tools/release/component_manifest.py",
+        "tools/release/render_standalone_bootstrap.py",
+        "tools/release/verify_standalone_bootstrap.ps1"
+      ],
+      "dependency_count": 13,
+      "largest_parameter_groups": [
+        [
+          "test_runtime_source_and_curated_assets_are_readable_plaintext",
+          1
+        ],
+        [
+          "test_clean_wheel_contains_readable_modules_and_plaintext_assets",
+          1
+        ],
+        [
+          "test_production_loaders_use_normal_package_reads",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_platform_support.py",
+      "sha256": "905fefe6b526d92bb4c5968ca37ab056ede6382fcacae383a6c9d63df3a4fdd1",
+      "cases": 13,
+      "test_functions": 13,
+      "lane": "offline",
+      "direct_inputs": [
+        "config/protocol-capture-manifest-8.3.json",
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/platform_support/__init__.py",
+        "src/qa_mcp/regression/__init__.py",
+        "src/qa_mcp/regression/versioning.py"
+      ],
+      "dependency_count": 20,
+      "largest_parameter_groups": [
+        [
+          "test_probe_baseline_is_already",
+          1
+        ],
+        [
+          "test_probe_compatible_is_already",
+          1
+        ],
+        [
+          "test_probe_new_same_family_build_is_case_a",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_positive_core_operation_boundary.py",
+      "sha256": "7041148bf4c6b0ea2cdff2b3e7021baeba6c8e0e5e8f0361c07fd0dc042ab527",
+      "cases": 408,
+      "test_functions": 42,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py",
+        "src/qa_mcp/core/__init__.py",
+        "tests/support/boundary_inputs.py",
+        "tests/support/runtime_targets.py"
+      ],
+      "dependency_count": 33,
+      "largest_parameter_groups": [
+        [
+          "test_documentation_url_rejects_controls_after_every_decode",
+          132
+        ],
+        [
+          "test_documentation_url_rejects_raw_parser_stripping_controls",
+          66
+        ],
+        [
+          "test_same_path_literal_hostiles_fail_at_value_and_error",
+          28
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_positive_operation_boundary_integration.py",
+      "sha256": "4cd36dbe0006ad44077f9285288fec9348e2161267fffb982415a372e5f154e7",
+      "cases": 116,
+      "test_functions": 14,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py",
+        "src/qa_mcp/core/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/session.py",
+        "src/qa_mcp/scenario/__init__.py",
+        "tests/support/boundary_inputs.py",
+        "tests/support/runtime_targets.py"
+      ],
+      "dependency_count": 109,
+      "largest_parameter_groups": [
+        [
+          "test_real_public_paths_execute_exact_40_cell_url_matrix",
+          40
+        ],
+        [
+          "test_bound_route_rejects_before_local_or_windows_adapter",
+          30
+        ],
+        [
+          "test_declared_mismatches_have_one_complete_public_result",
+          12
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_promote_member.py",
+      "sha256": "ce235778605f1b8b4bdab43ab83427ad071dfdba41333dcadcefff1a89fb1fe9",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/promote_member.py"
+      ],
+      "dependency_count": 4,
+      "largest_parameter_groups": [
+        [
+          "test_promote_adds_new_member",
+          1
+        ],
+        [
+          "test_promote_updates_existing_member",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_protocol_contract.py",
+      "sha256": "5001d8a4d994a5bb8edd945333d55eec2e7729afc8b9bdfca3af641287515998",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py"
+      ],
+      "dependency_count": 29,
+      "largest_parameter_groups": [
+        [
+          "test_readonly_descriptors_preserve_accepted_mapping_evidence",
+          1
+        ],
+        [
+          "test_unresolved_probe_paths_are_not_accepted",
+          1
+        ],
+        [
+          "test_readonly_element_resolution_preserves_descriptor_boundary",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_protocol_corpus_runner.py",
+      "sha256": "d3adc0f0e88bcd745bcb8f52cdf002eb5dc8a803d312fcadad881f88dff2ab20",
+      "cases": 6,
+      "test_functions": 6,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/protocol_corpus_runner.py"
+      ],
+      "dependency_count": 7,
+      "largest_parameter_groups": [
+        [
+          "test_default_cases_cover_readonly_surfaces",
+          1
+        ],
+        [
+          "test_expanded_cases_cover_supported_family_and_gaps",
+          1
+        ],
+        [
+          "test_normalize_payload_replaces_known_binary_fields",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_protocol_extracted_helpers.py",
+      "sha256": "724df1fc5642f256d406678ae897b4d8bc8df935a8ac20378291cfd2fcde54c9",
+      "cases": 5,
+      "test_functions": 5,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/foreground.py",
+        "src/qa_mcp/protocol/introspection.py"
+      ],
+      "dependency_count": 36,
+      "largest_parameter_groups": [
+        [
+          "test_open_bare_create_form_for_write_normalizes_link_and_sets_meta",
+          1
+        ],
+        [
+          "test_open_bare_create_form_for_write_structures_failures",
+          1
+        ],
+        [
+          "test_introspection_link_helpers",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_protocol_primitives.py",
+      "sha256": "a9e382f78238247a4601cd7c3647b68df89bd169fd9ebb4b032227a0e90263fe",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py"
+      ],
+      "dependency_count": 35,
+      "largest_parameter_groups": [
+        [
+          "test_frame_header_and_ack_helpers",
+          1
+        ],
+        [
+          "test_protocol_templates_render_dynamic_fields",
+          1
+        ],
+        [
+          "test_capture_bootstrap_loads_directional_frames",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_protocol_session.py",
+      "sha256": "4b7e3db7f4de6d8524df7d3a8cdd17a532d564274056d4bf634d6aba4e2236d0",
+      "cases": 6,
+      "test_functions": 6,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/evidence.py",
+        "src/qa_mcp/protocol/native_mutation.py",
+        "src/qa_mcp/protocol/responses.py",
+        "src/qa_mcp/protocol/session.py"
+      ],
+      "dependency_count": 31,
+      "largest_parameter_groups": [
+        [
+          "test_session_send_read_and_cleanup_uses_owned_socket",
+          1
+        ],
+        [
+          "test_read_available_waits_for_tail_after_idle_timeout",
+          1
+        ],
+        [
+          "test_read_available_tail_less_buffer_uses_hard_deadline",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_protocol_tool_wrappers.py",
+      "sha256": "597f6f728a2e280742d6b401def0ca88f64d7d0ff05f1833854371991eb4e0f7",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/protocol_corpus_runner.py",
+        "tools/protocol-research/python_manager_client.py",
+        "tools/protocol-research/python_manager_probe.py",
+        "tools/protocol-research/report_manager_fixture_v2_safe_action.py",
+        "tools/protocol-research/v2_safe_action_tooling.py"
+      ],
+      "dependency_count": 60,
+      "largest_parameter_groups": [
+        [
+          "test_python_manager_client_reexports_package_session_api",
+          1
+        ],
+        [
+          "test_python_manager_probe_help_uses_package_backed_queries",
+          1
+        ],
+        [
+          "test_protocol_corpus_runner_cli_still_available",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_public_repository_readiness.py",
+      "sha256": "68babcaa91b296662f657495041289ffb033f101e77cb6d188ea53b5fafdd93d",
+      "cases": 24,
+      "test_functions": 24,
+      "lane": "offline",
+      "direct_inputs": [
+        "config/publication-policy.json",
+        "host-agent/install-windows-host-agent.ps1",
+        "host-agent/windows-display-agent/main_test.go",
+        "tools/changerail/skills/chrl-review/SKILL.md",
+        "tools/public_readiness.py"
+      ],
+      "dependency_count": 17,
+      "largest_parameter_groups": [
+        [
+          "test_scanner_rejects_lowercase_credentials_and_test_tree_disclosures",
+          1
+        ],
+        [
+          "test_scanner_rejects_prefixed_mixed_case_credentials",
+          1
+        ],
+        [
+          "test_scanner_rejects_prefixed_structured_credentials",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_regression_harness.py",
+      "sha256": "4d29933b888ec6c4c9a735cc0598365a25df4698c12587cadcf30dfcd8512650",
+      "cases": 18,
+      "test_functions": 15,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/regression/__init__.py",
+        "src/qa_mcp/regression/checks.py",
+        "src/qa_mcp/regression/harness.py",
+        "src/qa_mcp/scenario/__init__.py",
+        "src/qa_mcp/scenario/reporting.py"
+      ],
+      "dependency_count": 110,
+      "largest_parameter_groups": [
+        [
+          "test_curated_features_transpile_clean",
+          4
+        ],
+        [
+          "test_run_check_passing",
+          1
+        ],
+        [
+          "test_run_check_clean_miss_is_assert_failed",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_replay.py",
+      "sha256": "1969cb875986686661af0fe8969aebc012c00f174d07bfc25c99b77d06d6a3f6",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/bootstrap_synth.py",
+        "src/qa_mcp/protocol/replay.py"
+      ],
+      "dependency_count": 27,
+      "largest_parameter_groups": [
+        [
+          "test_replay_session_stamps_live_platform_version",
+          1
+        ],
+        [
+          "test_replay_session_leaves_default_platform_unchanged",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_reporting.py",
+      "sha256": "db6940594402521f9865cfb048ce043af22e61dc5046acdcbcb3e6d7e246d246",
+      "cases": 8,
+      "test_functions": 8,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/scenario/__init__.py"
+      ],
+      "dependency_count": 107,
+      "largest_parameter_groups": [
+        [
+          "test_junit_xml_structure_counts_and_messages",
+          1
+        ],
+        [
+          "test_junit_from_model_to_dict",
+          1
+        ],
+        [
+          "test_junit_failed_scenario_without_bad_steps_is_failure",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_runtime_target_adapter.py",
+      "sha256": "43a4008eaeace644f0208be2e1773bccd4534f7e3b9c5f087a34b0fb9a280fd1",
+      "cases": 48,
+      "test_functions": 25,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py",
+        "src/qa_mcp/core/__init__.py",
+        "src/qa_mcp/core/runtime_target.py",
+        "src/qa_mcp/doctor.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 107,
+      "largest_parameter_groups": [
+        [
+          "test_partial_or_malformed_handoff_fails_secret_safe",
+          8
+        ],
+        [
+          "test_profile_or_observation_mismatch_fails_closed",
+          8
+        ],
+        [
+          "test_complete_handoff_resolves_one_immutable_target",
+          6
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_runtime_target_contract.py",
+      "sha256": "873d245e1b2f42f5e82d92060080698d6d635a4e9b45de227f50897b6cba0799",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/core/__init__.py"
+      ],
+      "dependency_count": 25,
+      "largest_parameter_groups": [
+        [
+          "test_public_contract_is_immutable_and_provider_neutral",
+          1
+        ],
+        [
+          "test_runtime_fingerprint_normalizes_and_rejects_unsafe_values",
+          1
+        ],
+        [
+          "test_packaged_profile_schema_is_closed_and_complete",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_runtime_target_test_support.py",
+      "sha256": "685a4079f92a1ee884131cddebb58452f1ba097f2896931420f019e8b7cfc31a",
+      "cases": 1,
+      "test_functions": 1,
+      "lane": "offline",
+      "direct_inputs": [
+        "tests/support/runtime_targets.py"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_profile_mutation_cannot_repair_its_observation_or_leak_to_next_case",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_scenario_actions.py",
+      "sha256": "cfeb6f554d7ccb0999b9d490af201e5a608ff072dd493a084ea2361a2876b683",
+      "cases": 18,
+      "test_functions": 18,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/scenario/__init__.py",
+        "src/qa_mcp/scenario/replay.py"
+      ],
+      "dependency_count": 108,
+      "largest_parameter_groups": [
+        [
+          "test_registry_covers_the_action_kinds",
+          1
+        ],
+        [
+          "test_new_nav_window_kinds_render_identity_and_rebind",
+          1
+        ],
+        [
+          "test_click_button_identity_rebind",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_scenario_gherkin.py",
+      "sha256": "117efe73760e939c363d8b1eb7a92ed7ba7f6273847e22baf12f1e9baad2d997",
+      "cases": 18,
+      "test_functions": 18,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/scenario/__init__.py"
+      ],
+      "dependency_count": 108,
+      "largest_parameter_groups": [
+        [
+          "test_card103_wave2_tags_background_datatable_outline",
+          1
+        ],
+        [
+          "test_card105_data_assert_step_maps",
+          1
+        ],
+        [
+          "test_card103_corpus_canonical_steps_map",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_scenario_runner.py",
+      "sha256": "bd1a761d7db7baacb97167e6c2924cbf515984bdbe04df2a6ff346fa71636143",
+      "cases": 39,
+      "test_functions": 39,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/data/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/bootstrap.py",
+        "src/qa_mcp/protocol/native_write.py",
+        "src/qa_mcp/scenario/__init__.py"
+      ],
+      "dependency_count": 106,
+      "largest_parameter_groups": [
+        [
+          "test_read_only_scenario_passes",
+          1
+        ],
+        [
+          "test_failed_assertion_marks_scenario_failed",
+          1
+        ],
+        [
+          "test_step_error_is_captured_not_raised",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_scope_tracker.py",
+      "sha256": "d9a0dfa41070ec62a46650143117a145377f93b743278d02c0f6ad2c92c0ea8e",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/scope_tracker.py"
+      ],
+      "dependency_count": 3,
+      "largest_parameter_groups": [
+        [
+          "test_build_tracker_merges_mutation_evidence",
+          1
+        ],
+        [
+          "test_build_tracker_fails_closed_on_unknown_member",
+          1
+        ],
+        [
+          "test_render_markdown_has_full_member_table_and_totals",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_screenshot.py",
+      "sha256": "4a38cf6586413d94551e8cb50a049888a60dccc76838759fba370b016f5e9315",
+      "cases": 6,
+      "test_functions": 6,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/screenshot.py"
+      ],
+      "dependency_count": 24,
+      "largest_parameter_groups": [
+        [
+          "test_capture_uses_scrot_for_whole_display",
+          1
+        ],
+        [
+          "test_capture_falls_back_to_import_when_scrot_fails",
+          1
+        ],
+        [
+          "test_capture_window_uses_xdotool_then_import",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_self_hosted_release_contract.py",
+      "sha256": "ab32188cb15c840cd230c8d1edd0fb3089ad37e6ed1e21295647b730c4ad7dbe",
+      "cases": 8,
+      "test_functions": 8,
+      "lane": "offline",
+      "direct_inputs": [
+        ".github/workflows/release.yml",
+        "delivery/README.md",
+        "delivery/bootstrap.ps1",
+        "delivery/windows-agent-runbook.md",
+        "docker/Dockerfile.thin",
+        "docker/verify_open_image.py",
+        "tools/release/publish_self_hosted.sh",
+        "tools/release/render_standalone_bootstrap.py"
+      ],
+      "dependency_count": 13,
+      "largest_parameter_groups": [
+        [
+          "test_bootstrap_is_self_hosted_manifest_driven",
+          1
+        ],
+        [
+          "test_bootstrap_uses_owned_lifecycle_and_authenticated_relay",
+          1
+        ],
+        [
+          "test_bootstrap_and_runbooks_use_canonical_mcp_path_and_windows_guidance",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_session_run_action.py",
+      "sha256": "fec16a9d78f40162d4ae7091004d643f527eb4dffe578ecd4d84a260f92a88b6",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/session.py"
+      ],
+      "dependency_count": 24,
+      "largest_parameter_groups": [
+        [
+          "test_run_action_sends_payload_and_records_response",
+          1
+        ],
+        [
+          "test_run_action_applies_rebinder",
+          1
+        ],
+        [
+          "test_run_action_no_response_marks_not_accepted",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_shared_core_extension.py",
+      "sha256": "41c1c13823512108525328414c3fb489672eb84468fbed47d415c437c09325ec",
+      "cases": 13,
+      "test_functions": 10,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py",
+        "src/qa_mcp/core/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/scenario/__init__.py"
+      ],
+      "dependency_count": 107,
+      "largest_parameter_groups": [
+        [
+          "test_real_mcp_and_scenario_paths_preserve_shared_taxonomy",
+          4
+        ],
+        [
+          "test_public_models_are_product_neutral_and_secret_safe",
+          1
+        ],
+        [
+          "test_mcp_and_scenario_paths_share_executor_and_verdict_taxonomy",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_smoke_gen.py",
+      "sha256": "fe156d5db3f969ed9f80c38009548c858f7215f9857d8ceb7e1afdd309fd9536",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/scenario/__init__.py"
+      ],
+      "dependency_count": 107,
+      "largest_parameter_groups": [
+        [
+          "test_open_link_for_known_and_unknown_kinds",
+          1
+        ],
+        [
+          "test_generate_scenarios_skips_unsupported_and_nameless",
+          1
+        ],
+        [
+          "test_generated_feature_transpiles_100_percent",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_standalone_host_bridge.py",
+      "sha256": "cc29571eca310af1e2bc2d9febaaae6bd5d337504618097ceff489fde7e55e9a",
+      "cases": 8,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "host-agent/install-windows-host-agent.ps1",
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/display_backend.py"
+      ],
+      "dependency_count": 34,
+      "largest_parameter_groups": [
+        [
+          "test_standalone_handshake_fails_closed",
+          6
+        ],
+        [
+          "test_supported_standalone_handshake_is_accepted",
+          1
+        ],
+        [
+          "test_installer_contains_only_standalone_inputs",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_standalone_http_delivery.py",
+      "sha256": "ecc1ee5653583117762328a0ba768baa5e54be5683cf43f1e593131b2dce1b47",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        ".github/workflows/release.yml",
+        "delivery/bootstrap.ps1",
+        "docker/Dockerfile.thin",
+        "docker/docker-compose.thin.yml",
+        "tools/release/publish_self_hosted.sh",
+        "tools/release/smoke_standalone_image.py"
+      ],
+      "dependency_count": 10,
+      "largest_parameter_groups": [
+        [
+          "test_standalone_dockerfile_uses_public_pinned_direct_runtime",
+          1
+        ],
+        [
+          "test_compose_and_bootstrap_use_project_bearer_and_loopback_publish",
+          1
+        ],
+        [
+          "test_release_paths_validate_same_public_base_and_keep_inventory_gate",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_step_library.py",
+      "sha256": "1bd4bffbcacda67006fb1959f3c793748d1ad5a2291b6d4cc8ad31eac8150bd2",
+      "cases": 5,
+      "test_functions": 5,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "src/qa_mcp/scenario/__init__.py",
+        "src/qa_mcp/scenario/gherkin.py",
+        "tools/protocol-research/qa-vanessa-style.feature"
+      ],
+      "dependency_count": 107,
+      "largest_parameter_groups": [
+        [
+          "test_library_entries_are_documented",
+          1
+        ],
+        [
+          "test_every_example_transpiles_to_its_kind",
+          1
+        ],
+        [
+          "test_search_steps_filters",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_target_bound_evidence_cleanup.py",
+      "sha256": "fd6e0d04f78191e91c643713b2b4431e6c93d3b12f3874016215b501def098d5",
+      "cases": 25,
+      "test_functions": 12,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py",
+        "src/qa_mcp/core/__init__.py",
+        "src/qa_mcp/data/__init__.py",
+        "src/qa_mcp/mcp_server.py",
+        "tests/support/runtime_targets.py"
+      ],
+      "dependency_count": 107,
+      "largest_parameter_groups": [
+        [
+          "test_remote_cleanup_refuses_stale_foreign_or_recycled_identity_without_signal",
+          11
+        ],
+        [
+          "test_registered_hidden_consumer_keeps_admitted_snapshot_after_fixture_changes",
+          2
+        ],
+        [
+          "test_bound_registered_diagnostics_serialize_only_logical_identity",
+          2
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_target_bound_lifecycle_admission.py",
+      "sha256": "9f96400d00b3ad36b37bf9f55088455727765721889c9aa8f0b2c10907bd9e1a",
+      "cases": 42,
+      "test_functions": 16,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/config.py",
+        "src/qa_mcp/core/__init__.py",
+        "src/qa_mcp/mcp_server.py"
+      ],
+      "dependency_count": 106,
+      "largest_parameter_groups": [
+        [
+          "test_remote_launch_fails_closed_on_incomplete_or_incoherent_raw_identity",
+          20
+        ],
+        [
+          "test_project_launch_override_blocks_before_profile_or_lifecycle_side_effect",
+          5
+        ],
+        [
+          "test_registered_bound_attach_refuses_reachable_endpoint_without_mutating_admitted_state",
+          4
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_telemetry_bridge.py",
+      "sha256": "92740a88f825706e24834b7b1f620e02cd9db4b8ef6f3797e82544bba7430264",
+      "cases": 4,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/telemetry_bridge.py"
+      ],
+      "dependency_count": 3,
+      "largest_parameter_groups": [
+        [
+          "test_missing_trace_context_is_noop",
+          1
+        ],
+        [
+          "test_context_file_supplies_trace_target",
+          1
+        ],
+        [
+          "test_observation_is_bounded_and_sanitized",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_test_selection.py",
+      "sha256": "fe4c0cae5050fd0b9b36b8ba01cb1c87102454c0cef38df4d6c518d3770deb28",
+      "cases": 5,
+      "test_functions": 5,
+      "lane": "offline",
+      "direct_inputs": [
+        "config/test-selection.json",
+        "scripts/qa_test_selection.py",
+        "src/qa_mcp/__init__.py",
+        "tests/support/selection_inputs.py"
+      ],
+      "dependency_count": 8,
+      "largest_parameter_groups": [
+        [
+          "test_changed_leaf_selects_transitive_consumer_without_unrelated_test",
+          1
+        ],
+        [
+          "test_deleted_module_still_selects_importing_test",
+          1
+        ],
+        [
+          "test_package_initializer_change_selects_submodule_consumer",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_testclient_relay_transport.py",
+      "sha256": "c621a577dd4e11b8f3a8e1426facda7433fefe9908f55a7c816d3fa7c80b6063",
+      "cases": 5,
+      "test_functions": 4,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/transport.py"
+      ],
+      "dependency_count": 24,
+      "largest_parameter_groups": [
+        [
+          "test_partial_relay_configuration_fails_closed_without_secret",
+          2
+        ],
+        [
+          "test_relay_connector_authenticates_only_the_exact_endpoint",
+          1
+        ],
+        [
+          "test_direct_connector_sends_no_preface_when_relay_is_absent_or_different",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_v2_safe_action_live_runner.py",
+      "sha256": "b7b5bb2f088f2e74cbfcf4b0a7ebc94716652b51e6e0dc156f9f6fb63ef558f7",
+      "cases": 2,
+      "test_functions": 2,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/v2_safe_action_live_runner.py",
+        "tools/protocol-research/v2_safe_action_tooling.py"
+      ],
+      "dependency_count": 3,
+      "largest_parameter_groups": [
+        [
+          "test_live_runner_builds_only_focused_manifest_gated_step",
+          1
+        ],
+        [
+          "test_live_runner_rejects_non_focused_executable_row",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_v2_safe_action_proof_summary.py",
+      "sha256": "2abd1d8ce6056304bc0e7c872fb0cf7bf8d5933115a6cfffd5846c38ed9fcd06",
+      "cases": 1,
+      "test_functions": 1,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/v2_safe_action_proof_summary.py"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_proof_summary_keeps_isolated_safe_action_candidate_without_proof",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_v2_safe_action_tooling.py",
+      "sha256": "bd4981b4dd05d5f883acbab73fe7da0307a55b911f65bafee759ef4adbaf3736",
+      "cases": 7,
+      "test_functions": 7,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/protocol-research/v2_safe_action_tooling.py"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_manifest_validation_accepts_complete_safe_action_row",
+          1
+        ],
+        [
+          "test_manifest_validation_rejects_mutating_or_unsupported_rows",
+          1
+        ],
+        [
+          "test_manifest_validation_checks_reviewed_target_bindings",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_verify_open_image_archive.py",
+      "sha256": "4b3c27c837cd06c879aec862053776cfd72975d6492ecda1744bc682db34e803",
+      "cases": 5,
+      "test_functions": 5,
+      "lane": "offline",
+      "direct_inputs": [
+        "docker/verify_open_image.py",
+        "tests/support/archives.py"
+      ],
+      "dependency_count": 4,
+      "largest_parameter_groups": [
+        [
+          "test_archive_scanner_accepts_readable_source_and_plaintext_assets",
+          1
+        ],
+        [
+          "test_archive_scanner_rejects_missing_source_and_encrypted_assets",
+          1
+        ],
+        [
+          "test_archive_scanner_rejects_protection_inputs_in_history",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_versioning.py",
+      "sha256": "c1cbdc7a33e82e8df8a00d0292038cf693320bdb03e1b9ede059826ae914e6ed",
+      "cases": 13,
+      "test_functions": 13,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/regression/__init__.py",
+        "src/qa_mcp/regression/versioning.py",
+        "src/qa_mcp/versioning.py"
+      ],
+      "dependency_count": 12,
+      "largest_parameter_groups": [
+        [
+          "test_leaf_versioning_is_import_leaf",
+          1
+        ],
+        [
+          "test_regression_versioning_reexports_leaf_helpers",
+          1
+        ],
+        [
+          "test_platform_version_from_root",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_window_list.py",
+      "sha256": "e0077318fe2233009c02c5d8c48a4a7e8f7aca59b7706dc1d2c12173c804f501",
+      "cases": 6,
+      "test_functions": 6,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/frames.py",
+        "src/qa_mcp/protocol/native_write.py",
+        "src/qa_mcp/protocol/responses.py"
+      ],
+      "dependency_count": 31,
+      "largest_parameter_groups": [
+        [
+          "test_extract_windows_synthetic",
+          1
+        ],
+        [
+          "test_extract_windows_dedupes_segmented_record",
+          1
+        ],
+        [
+          "test_extract_windows_empty",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_windows.py",
+      "sha256": "080d90a957217a8e2737e5f7d023da6d9d59a6ab79610cf8b4b2bb4ed38328cc",
+      "cases": 6,
+      "test_functions": 6,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/protocol/__init__.py",
+        "src/qa_mcp/protocol/windows.py"
+      ],
+      "dependency_count": 26,
+      "largest_parameter_groups": [
+        [
+          "test_argv_shapes",
+          1
+        ],
+        [
+          "test_parse_geometry",
+          1
+        ],
+        [
+          "test_parse_geometry_partial_and_garbage",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_windows_host_agent_artifact_contract.py",
+      "sha256": "2a428c7cfda466424ecaa7ad2f9606118bab0cea5988b953d8d2c4190307e222",
+      "cases": 3,
+      "test_functions": 3,
+      "lane": "offline",
+      "direct_inputs": [
+        "tools/release/windows_host_agent_artifact.py"
+      ],
+      "dependency_count": 2,
+      "largest_parameter_groups": [
+        [
+          "test_pe_inspection_rejects_malformed_and_missing_capability_markers",
+          1
+        ],
+        [
+          "test_source_state_refuses_dirty_host_inputs_without_explicit_opt_in",
+          1
+        ],
+        [
+          "test_vcs_validation_requires_exact_revision_and_modified_state",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "tests/test_workspace_proof_receipts.py",
+      "sha256": "66d984793233298878e5cb5a72a11bf2a5ef94f053a13e167a8744131956e64d",
+      "cases": 11,
+      "test_functions": 7,
+      "lane": "offline",
+      "direct_inputs": [
+        "src/qa_mcp/__init__.py",
+        "src/qa_mcp/workspace_proof_receipts.py"
+      ],
+      "dependency_count": 3,
+      "largest_parameter_groups": [
+        [
+          "test_required_qa_proof_needs_full_source_identity",
+          3
+        ],
+        [
+          "test_source_scope_rejects_mutable_or_absolute_routes",
+          3
+        ],
+        [
+          "test_optional_missing_qa_proof_is_not_required",
+          1
+        ]
+      ]
+    }
+  ],
+  "go_files": [
+    {
+      "file": "host-agent/windows-display-agent/effective_window_test.go",
+      "test_functions": 1,
+      "windows_only": false,
+      "sha256": "e91301305f9b0761c8bcd77ac7cf639f66f9c08048273c6d9345096c8b2a0c79"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_desktop_process_foundation_test.go",
+      "test_functions": 5,
+      "windows_only": false,
+      "sha256": "c2626a61d5a9bb57e378bf7e59ac9c3f6ad1f49288c4391ed5926b3b6a2a14e8"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_desktop_process_foundation_windows_test.go",
+      "test_functions": 4,
+      "windows_only": true,
+      "sha256": "f4b9f772a95645b1ba17fb2597c379744007b09e524f4ee9ebd2a51e0bc2baf4"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_desktop_window_isolation_test.go",
+      "test_functions": 5,
+      "windows_only": false,
+      "sha256": "92740faaa72c9e71cc751d7fadfe8de6973d81888029aaec562ae98cea83a787"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_desktop_window_isolation_windows_test.go",
+      "test_functions": 3,
+      "windows_only": true,
+      "sha256": "d7ea012b42098a5c3776285f1832330ccfe75d29689228467a1d1fa136c28779"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_desktop_worker_lifecycle_test.go",
+      "test_functions": 8,
+      "windows_only": false,
+      "sha256": "f0199b6403f1726fa90c1a105b2fbd60901e01587d2f426fc698f7efa84b183f"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_desktop_worker_lifecycle_windows_test.go",
+      "test_functions": 11,
+      "windows_only": true,
+      "sha256": "f245a9d09c16e8b092a77715d11ff7fd8b1828db5451b37f107b9176495bbaf6"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_direct_execute_investigation_contract_test.go",
+      "test_functions": 0,
+      "windows_only": false,
+      "sha256": "a5bda57858bfe4c7d0831a2ee81de639f1a24c8e7e2485f57f4b08c821a01606"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_direct_execute_investigation_test.go",
+      "test_functions": 4,
+      "windows_only": false,
+      "sha256": "0c9f0ff92a83e3633032ef726c7d07af4370b23122153d198af7d72823087a88"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_direct_execute_investigation_windows_test.go",
+      "test_functions": 2,
+      "windows_only": true,
+      "sha256": "c26f5aee0bcb92221a5f11110b91d732f379bb5289c130501ac2a6895a7a3171"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_direct_execute_observation_test.go",
+      "test_functions": 26,
+      "windows_only": false,
+      "sha256": "eea4ad76c2a20d0f2c5ffead7246ff1da944d3d80be489e4e69e805194eb5fc0"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_direct_execute_observation_windows_test.go",
+      "test_functions": 6,
+      "windows_only": true,
+      "sha256": "a447ce1adaf73a0bdbebda6e09ec8d05f03073e9a870e24057458d741e5ed694"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_direct_execute_receipt_foundation_test.go",
+      "test_functions": 9,
+      "windows_only": false,
+      "sha256": "603ed03fc1838fbac97ff375617f37f164411534a71d3fa4224d13722017d9ad"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_prompt_admission_action_test.go",
+      "test_functions": 8,
+      "windows_only": false,
+      "sha256": "c823d69381acbc306c2275c9e07995be9c1e8a073745b04a5600f07cb60f8309"
+    },
+    {
+      "file": "host-agent/windows-display-agent/hidden_prompt_admission_action_windows_test.go",
+      "test_functions": 3,
+      "windows_only": true,
+      "sha256": "df85388c1c8cab0ea5393255ecf884e17746c3bc819200f0f3f662a546b86e95"
+    },
+    {
+      "file": "host-agent/windows-display-agent/keymap_test.go",
+      "test_functions": 5,
+      "windows_only": false,
+      "sha256": "990a7afeb964d706215f0931a8fdb7a160c2d1ee58cc87667ef6a371a2f371bb"
+    },
+    {
+      "file": "host-agent/windows-display-agent/main_test.go",
+      "test_functions": 54,
+      "windows_only": false,
+      "sha256": "6919d35738a1e54ee735eeda55d3d07d82f99dc221aaf64d21ca5c4f8b99d074"
+    },
+    {
+      "file": "host-agent/windows-display-agent/process_attributes_windows_test.go",
+      "test_functions": 2,
+      "windows_only": true,
+      "sha256": "097d05e75403f3e0d543c5dfc140b138a87c6ccb9c6801581c06277f01da5012"
+    },
+    {
+      "file": "host-agent/windows-display-agent/s4_r2_pre_receipt_diagnostic_test.go",
+      "test_functions": 5,
+      "windows_only": false,
+      "sha256": "7e8aea63600ff8d2e74efcdf1cf1cc6ad52743fd88d10c6da18a615dd39a5e67"
+    },
+    {
+      "file": "host-agent/windows-display-agent/s4_r2_pre_receipt_diagnostic_windows_test.go",
+      "test_functions": 1,
+      "windows_only": true,
+      "sha256": "5778b56b8a8e4ac02504f19963e4213636dcb3f366a30a039e09f10ea485acc9"
+    },
+    {
+      "file": "host-agent/windows-display-agent/standalone_contract_test.go",
+      "test_functions": 3,
+      "windows_only": false,
+      "sha256": "6f3afb2c728c478c196379034503b13d93a994059e03f4ce57fa309cc2ed44d5"
+    },
+    {
+      "file": "host-agent/windows-display-agent/tcp_owner_table_test.go",
+      "test_functions": 5,
+      "windows_only": false,
+      "sha256": "32c26dbe817d09664a5f853bbeae1cf7ac198442503ebbca2b7af74ba3daed6a"
+    },
+    {
+      "file": "host-agent/windows-display-agent/testclient_envblock_test.go",
+      "test_functions": 4,
+      "windows_only": false,
+      "sha256": "3243f279192659b9539f0bdedd18bf66d1cb758cdf9194e8a773e05f8dd23873"
+    },
+    {
+      "file": "host-agent/windows-display-agent/testclient_interactive_session_test.go",
+      "test_functions": 19,
+      "windows_only": false,
+      "sha256": "eb342c667b47d4685911674258700ba7a703232682b6f7a4194599c00bc07d2c"
+    },
+    {
+      "file": "host-agent/windows-display-agent/testclient_port_table_test.go",
+      "test_functions": 2,
+      "windows_only": false,
+      "sha256": "cdb74789c70839bc9f8fc26a9dc63cacf5ad580cbf6e34c19f00d8cc21af0822"
+    },
+    {
+      "file": "host-agent/windows-display-agent/testclient_relay_test.go",
+      "test_functions": 3,
+      "windows_only": false,
+      "sha256": "9b8f3507538ed7a743a08e1155040fbacf86812c018d2fb4e1564322eadd9784"
+    },
+    {
+      "file": "host-agent/windows-display-agent/testclient_task_cleanup_windows_test.go",
+      "test_functions": 1,
+      "windows_only": true,
+      "sha256": "f10836c3b95463a2df1272048c91b93faa4b3ce6f5fd9f9b221d2b8a0c05a250"
+    },
+    {
+      "file": "host-agent/windows-display-agent/visible_list_cells_windows_test.go",
+      "test_functions": 1,
+      "windows_only": true,
+      "sha256": "99081356e31eabcacde460681d9f702e2b2cb91a852978ac0c3aeee215a71fa8"
+    }
+  ],
+  "cases_by_lane": {
+    "integration": 14,
+    "offline": 1617
+  },
+  "exact_function_body_duplicates": [
+    [
+      "tests/test_doctor.py:276:fake_run",
+      "tests/test_doctor.py:310:fake_run"
+    ],
+    [
+      "tests/test_doctor.py:340:com_probe",
+      "tests/test_doctor.py:371:com_probe"
+    ],
+    [
+      "tests/test_mcp_server.py:360:fake_run",
+      "tests/test_mcp_server.py:379:fake_run"
+    ],
+    [
+      "tests/test_native_mutation.py:97:poll",
+      "tests/test_native_mutation.py:123:poll"
+    ],
+    [
+      "tests/test_native_write.py:56:recv",
+      "tests/test_native_write.py:532:recv"
+    ],
+    [
+      "tests/test_native_write.py:424:recv",
+      "tests/test_native_write.py:480:recv"
+    ],
+    [
+      "tests/test_positive_operation_boundary_integration.py:157:handler",
+      "tests/test_positive_operation_boundary_integration.py:481:handler"
+    ]
+  ],
+  "repeated_context_helpers": {
+    "_settings": [
+      "tests/test_positive_core_operation_boundary.py:46:_settings",
+      "tests/test_positive_operation_boundary_integration.py:43:_settings",
+      "tests/test_shared_core_extension.py:32:_settings",
+      "tests/test_target_bound_evidence_cleanup.py:68:_settings"
+    ],
+    "_context": [
+      "tests/test_positive_core_operation_boundary.py:50:_context",
+      "tests/test_positive_operation_boundary_integration.py:102:_context",
+      "tests/test_target_bound_evidence_cleanup.py:77:_context"
+    ],
+    "_full_local_context": [
+      "tests/test_positive_core_operation_boundary.py:54:_full_local_context"
+    ],
+    "_resolution": [
+      "tests/test_positive_operation_boundary_integration.py:52:_resolution",
+      "tests/test_target_bound_evidence_cleanup.py:35:_resolution"
+    ],
+    "_bound_context": [
+      "tests/test_target_bound_lifecycle_admission.py:28:_bound_context"
+    ]
+  }
+}

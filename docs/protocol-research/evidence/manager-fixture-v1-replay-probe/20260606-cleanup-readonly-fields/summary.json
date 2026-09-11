@@ -1,0 +1,49 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.replay-probe-summary.v1",
+  "source_capture": "runtime/protocol-research/captures/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "successful_replay_dir": "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-field-string125-uipath",
+  "send_count": 125,
+  "transport_status": "ok",
+  "no_response_frames": [],
+  "observed_dynamic_fields": {
+    "ack_guid_after_send_3": "82301f0b-dc72-4527-8ccd-0188a6d3f5d8",
+    "main_frame_guid_after_send_6": "6ca75e50-62a3-4842-b6cd-b429f7591ef2",
+    "secondary_frame_guid_after_send_15": "cdc96779-e57e-40d1-ba0b-beecf6311c5f",
+    "managed_form_guid_after_send_15": "32d80370-d32e-4383-844f-0bd6e538b31a"
+  },
+  "adaptation": {
+    "frame4_guid": true,
+    "frame5_guid": true,
+    "frame5_random_blocks": true,
+    "binary_single_block_through": 121,
+    "binary_single_block_frames": "123-124",
+    "binary_guid_through": 125,
+    "ui_path_guids": true
+  },
+  "accepted_probe_cases": [
+    {
+      "case_id": "tm-v1-field-version",
+      "manager_frame_range": {"from": 120, "to": 122},
+      "response_after_send": 122,
+      "response_size": 236,
+      "expected_marker": "protocol-fixture.v1",
+      "normalized_hash": "0e7805e358002583cf2d4b0c82ce8de49d806917f65fcc8424d4055e309ed596",
+      "replay_status": "accepted_probe"
+    },
+    {
+      "case_id": "tm-v1-field-string",
+      "manager_frame_range": {"from": 123, "to": 125},
+      "response_after_send": 125,
+      "response_size": 255,
+      "expected_marker": "PF_EDIT_STRING_VALUE",
+      "normalized_hash": "4e1a884c0d235806670934dc2d442e93363ffe56196e6160aac9713f57228444",
+      "replay_status": "accepted_probe"
+    }
+  ],
+  "negative_controls": [
+    "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-field-version122",
+    "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-field-version122-guidonly122",
+    "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-field-version122-managedform",
+    "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-field-version122-uipath"
+  ]
+}

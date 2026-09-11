@@ -1,0 +1,53 @@
+{
+  "schema": "readonly-element-hash-resolution.v1",
+  "generated_at": "2026-06-03T10:55:00+03:00",
+  "change": "publish-readonly-element-hash-resolution",
+  "outcome": "unresolved",
+  "accepted_case_ids": [],
+  "descriptor_action": "preserve_non_accepted_status",
+  "evidence_chain": {
+    "audit": "docs/protocol-research/evidence/readonly-element-hash-audit/current-element-hash-gaps/audit_summary.md",
+    "request_hashes": "docs/protocol-research/evidence/readonly-element-request-hashes/20260602-172319-expanded-extracted/request_hashes.json",
+    "classification": "docs/protocol-research/evidence/corpus-comparison/readonly-element-hash-resolution-20260603-extracted/classification_summary.md",
+    "descriptors": "src/qa_mcp/protocol/evidence.py"
+  },
+  "rows": [
+    {
+      "case_id": "form-element-details",
+      "published_status": "incomplete_hash",
+      "descriptor_status": "incomplete_hash",
+      "precise_reasons": [
+        "accepted_reviewed_hash",
+        "missing_request_frames"
+      ],
+      "provider_owners": [
+        "/opt/vanessa-mcp-stack",
+        "project:qa-mcp"
+      ],
+      "request_hash_evidence": "docs/protocol-research/evidence/readonly-element-request-hashes/20260602-172319-expanded-extracted/request_hashes.json",
+      "classification_evidence": "docs/protocol-research/evidence/corpus-comparison/readonly-element-hash-resolution-20260603-extracted/corpus_comparison.json",
+      "next_blocker": "Current repeated comparison inputs still have zero request/response bytes and no normalized hash for the row."
+    },
+    {
+      "case_id": "typed-input-field-readonly",
+      "published_status": "incomplete_hash",
+      "descriptor_status": "incomplete_hash",
+      "precise_reasons": [
+        "accepted_reviewed_hash",
+        "ambiguous_operation_join",
+        "missing_request_frames"
+      ],
+      "provider_owners": [
+        "/opt/vanessa-mcp-stack",
+        "project:qa-mcp"
+      ],
+      "request_hash_evidence": "docs/protocol-research/evidence/readonly-element-request-hashes/20260602-172319-expanded-extracted/request_hashes.json",
+      "classification_evidence": "docs/protocol-research/evidence/corpus-comparison/readonly-element-hash-resolution-20260603-extracted/corpus_comparison.json",
+      "next_blocker": "The row shares the element-detail request shape and still needs an explicit operation-join decision plus repeated current request hashes."
+    }
+  ],
+  "safe_action_boundary": {
+    "safe_actions_unblocked": false,
+    "reason": "The two useful element rows remain non-accepted read-only mappings."
+  }
+}

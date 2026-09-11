@@ -1,0 +1,190 @@
+{
+  "schema": "protocol-normalizer-evidence.v1",
+  "generated_at": "2026-06-02T17:19:14Z",
+  "comparison_inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+      "capture_ids": [
+        "20260602-193802"
+      ],
+      "case_count": 10
+    },
+    {
+      "input_index": 1,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+      "capture_ids": [
+        "20260602-195407"
+      ],
+      "case_count": 10
+    }
+  ],
+  "accepted_replacements": [
+    "ack_guid_uuid_le",
+    "ascii_guid",
+    "nonce",
+    "sequence_uint16_le"
+  ],
+  "preserved_fields": [
+    "operation_token"
+  ],
+  "ambiguous_fields": [],
+  "normalizer_investigation_case_ids": [],
+  "cases": [
+    {
+      "case_id": "active-form-context",
+      "classification": "non_accepted",
+      "before_hashes": [
+        "a80b3b8e82bb10b7a8045a34ba1119ffc91b7b291f2384daa7bf1aee92218c55",
+        "c63209d269d87024ba6131644ac0239e170f547ae512fbf96511f586f823ec99"
+      ],
+      "after_hashes": [
+        "e43ce48cedae7b6df936a2e0db71e1afd93d32df8e0767d8750f4ff176231573"
+      ],
+      "before_hash_count": 2,
+      "after_hash_count": 1,
+      "normalization_reduced_hash_set": true,
+      "accepted_replacements": [
+        "ack_guid_uuid_le",
+        "ascii_guid",
+        "nonce",
+        "sequence_uint16_le"
+      ],
+      "preserved_fields": [
+        "operation_token"
+      ],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "active-window-context",
+      "classification": "non_accepted",
+      "before_hashes": [
+        "5193c81c798e0de0327c0dd91e235ae8736391ba0299b825ff14a219d8090082",
+        "af7098e700c1c522c4222c5524bfaa9a5a095a09b2053f4723f00f71e1d0ae53"
+      ],
+      "after_hashes": [
+        "62e03d159d511173297af9ab9a287d9ab21f788a82ab840d97c639e726ad80ad"
+      ],
+      "before_hash_count": 2,
+      "after_hash_count": 1,
+      "normalization_reduced_hash_set": true,
+      "accepted_replacements": [
+        "ack_guid_uuid_le",
+        "nonce",
+        "sequence_uint16_le"
+      ],
+      "preserved_fields": [
+        "operation_token"
+      ],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "button-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "checkbox-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "commandbar-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "form-element-details",
+      "classification": "incomplete_hash",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "label-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "page-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "table-family-readonly-gap",
+      "classification": "unsupported_gap",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    },
+    {
+      "case_id": "typed-input-field-readonly",
+      "classification": "incomplete_hash",
+      "before_hashes": [],
+      "after_hashes": [],
+      "before_hash_count": 0,
+      "after_hash_count": 0,
+      "normalization_reduced_hash_set": false,
+      "accepted_replacements": [],
+      "preserved_fields": [],
+      "ambiguous_fields": [],
+      "normalizer_investigation_candidate": false
+    }
+  ]
+}

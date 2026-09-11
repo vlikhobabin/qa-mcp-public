@@ -1,0 +1,28 @@
+{
+  "schema": "qa-mcp.demo-button-safe-action-decision.v1",
+  "run_id": "20260610-demo-button-blocked-publication",
+  "target_id": "demo10413-operation-goods-toggle-activity",
+  "source_target": "Document.OperatsiyaPoUchetuTovarov.Form.FormaDokumenta",
+  "element_path": "TovarnyeZapasyKomandnayaPanel/PereklyuchitAktivnost",
+  "element_family": "Button",
+  "safety_classification": "business_mutation",
+  "capture_status": "blocked",
+  "final_status": "routed_to_v3",
+  "accepted": false,
+  "accepted_mapping_output": "docs/protocol-research/evidence/accepted-mappings/demo-button-safe-action-20260610/",
+  "runtime_click_attempted": false,
+  "raw_capture_created": false,
+  "recovery_required": false,
+  "evidence": {
+    "target_selection": ".artifacts/openspec/select-demo-safe-button-target/20260610-demo-button-selection/target-selection/",
+    "classification": ".artifacts/openspec/classify-demo-button-safety-contract/20260610-demo-button-classification/classification/",
+    "blocked_capture": ".artifacts/openspec/capture-demo-button-safe-action-pilot/20260610-demo-button-blocked-capture/runtime-capture/",
+    "ui_summary": "docs/protocol-research/evidence/demo-button-safe-action/20260610-demo-button-blocked-publication/ui-evidence.md"
+  },
+  "v3_route": {
+    "reason": "button_value_toggle_or_register_record_activity_semantics",
+    "owner": "project:qa-mcp",
+    "next_scope": "mutation/recovery card",
+    "residual_risk": "runtime command semantics are source-classified only because TestClient was not connected"
+  }
+}

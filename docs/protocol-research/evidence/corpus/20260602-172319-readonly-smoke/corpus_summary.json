@@ -1,0 +1,19 @@
+{
+  "schema": "protocol-corpus-run.v1",
+  "generated_at": "2026-06-02T14:25:38Z",
+  "capture_id": "20260602-172319",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260602-172319",
+  "case_count": 3,
+  "case_ids": [
+    "active-window-context",
+    "active-form-context",
+    "form-element-details"
+  ],
+  "replay_status_counts": {
+    "accepted": 3
+  },
+  "case_rows_path": "docs/protocol-research/evidence/corpus/20260602-172319-readonly-smoke/corpus_cases.jsonl",
+  "case_events_path": "runtime/protocol-research/captures/20260602-172319/case_events.jsonl",
+  "runtime_manifest_path": "runtime/protocol-research/captures/20260602-172319/case_manifest.json",
+  "raw_output_policy": "raw traffic and logs stay under ignored runtime/protocol-research paths"
+}

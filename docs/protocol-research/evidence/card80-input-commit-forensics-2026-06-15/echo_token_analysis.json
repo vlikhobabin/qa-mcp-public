@@ -1,0 +1,46 @@
+{
+  "schema": "card80.input-commit-token.v1",
+  "capture": "fixture-input-capture",
+  "marker": "PF_INPUT_PROOF",
+  "set_ordinal": 282,
+  "set_chunk_no": 283,
+  "set_len": 287,
+  "known_fields": {
+    "managed_form_guid": "4451d8b2-ff0f-4e70-b96a-bde7ac7ee9d4",
+    "secondary_frame_guid": "d848f317-71b8-4f4d-a62c-2a2eaec63535",
+    "ack_guid": "6b8275f2-1967-4f9d-983c-5f1f50af4537"
+  },
+  "preceding_responses_scanned": [
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282
+  ],
+  "mystery_echo_count": 0,
+  "mystery_echoes": [],
+  "hypothesis_a_unrebound_live_token": false,
+  "all_shared_runs": [
+    {
+      "from_client_chunk_no": 281,
+      "set_offset": 85,
+      "len": 172,
+      "kind": "known:managed_form_guid",
+      "hex": "ab5365636f6e646172794672616d655b64383438663331372d373162382d346634642d613632632d3261326561656336333533355d2e4d616e61676564466f726d5b34343531643862322d666630662d346537302d623936612d6264653761633765653964345d2e47726f75705b50465f47524f55505f4d41494e5d2e47726f75705b50465f47524f55505f45444954535d2e456469744669656c645b50465f454449545f535452494e475d"
+    },
+    {
+      "from_client_chunk_no": 282,
+      "set_offset": 84,
+      "len": 173,
+      "kind": "known:managed_form_guid",
+      "hex": "9aab5365636f6e646172794672616d655b64383438663331372d373162382d346634642d613632632d3261326561656336333533355d2e4d616e61676564466f726d5b34343531643862322d666630662d346537302d623936612d6264653761633765653964345d2e47726f75705b50465f47524f55505f4d41494e5d2e47726f75705b50465f47524f55505f45444954535d2e456469744669656c645b50465f454449545f535452494e475d"
+    }
+  ]
+}

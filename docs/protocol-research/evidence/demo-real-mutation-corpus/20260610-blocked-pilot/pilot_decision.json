@@ -1,0 +1,28 @@
+{
+  "schema": "qa-mcp.demo-real-mutation-pilot-decision.v1",
+  "run_id": "20260610-blocked-pilot",
+  "target_id": "demo10413-operation-goods-toggle-activity",
+  "source_target": "Document.OperatsiyaPoUchetuTovarov.Form.FormaDokumenta",
+  "element_path": "TovarnyeZapasyKomandnayaPanel/PereklyuchitAktivnost",
+  "operation_family": "document_register_record_activity_toggle",
+  "mutates_business_data": true,
+  "runtime_preflight_status": "passed",
+  "guarded_execution_status": "blocked",
+  "blocked_reason": "live_prestate_and_reviewed_recovery_wrapper_missing",
+  "frame_isolation_status": "blocked_no_action_frames",
+  "proof_route": "blocked_validation",
+  "accepted": false,
+  "accepted_mapping_output": "docs/protocol-research/evidence/accepted-mappings/demo-real-mutation-corpus-20260610/",
+  "runtime_action_attempted": false,
+  "raw_capture_created": false,
+  "demo_data_changed": false,
+  "recovery_required": false,
+  "batch_readiness": "not_ready",
+  "evidence": {
+    "target_selection": ".artifacts/openspec/select-demo-real-mutation-targets/20260610-demo-real-mutation-selection/target-selection/",
+    "manifest_review": ".artifacts/openspec/define-demo-mutation-manifest-contract/20260610-demo-real-mutation-manifest/manifest-review/",
+    "runtime_pilot": ".artifacts/openspec/execute-demo-mutation-guarded-pilot/20260610-demo-real-mutation-pilot/runtime-pilot/",
+    "frame_isolation": ".artifacts/openspec/isolate-demo-mutation-action-frames/20260610-demo-real-mutation-frame-isolation/frame-isolation/",
+    "ui_summary": "docs/protocol-research/evidence/demo-real-mutation-corpus/20260610-blocked-pilot/ui-evidence.md"
+  }
+}

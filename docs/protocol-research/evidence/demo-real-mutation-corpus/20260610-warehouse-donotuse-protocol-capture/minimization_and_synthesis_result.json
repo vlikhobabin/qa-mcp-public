@@ -1,0 +1,25 @@
+{
+  "schema": "qa-mcp.minimization-and-synthesis.v1",
+  "minimization": {
+    "run": "probe-floor keep_every=20",
+    "total_frames": 861,
+    "frames_sent": 252,
+    "frames_skipped": 609,
+    "reduction": "71%",
+    "essential_floor": "~219 non-poll + ~33 kept polls",
+    "diverged_at": null,
+    "Большой_Склад_responses": 22
+  },
+  "from_scratch_synthesis": {
+    "run": "probe-synth keep_every=20 --synthesize-polls",
+    "frames_sent": 252,
+    "synthesized_frames": 36,
+    "synthesized_poll_frames": 33,
+    "synthesized_operations": 3,
+    "replayed": "~216 handshake/misc frames (rebound)",
+    "diverged_at": null,
+    "Большой_Склад_responses": 22,
+    "conclusion": "minimized to 252 frames (-71%) AND constructed the operations + the dominant poll form (33 polls, fresh message id + live GUIDs) from templates; only handshake/misc are rebound-replayed. Poll frames are read-only so a fresh message id is accepted."
+  },
+  "remaining": "full replay-drop needs synthesizing the handshake (frames 1-7) and the write frames (the latter showed an unresolved client sensitivity earlier, kept rebound)."
+}

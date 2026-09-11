@@ -1,0 +1,19 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "goods-doc-copyrow",
+  "api_member": "TestedFormTable.CopyRow",
+  "operation_family": "form_table_copy_row",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open a new (unsaved) Корректировка остатка document; in its ТоварныеЗапасы register-records table add a row, fill Количество=1, then commit the row (finish editing) — all bootstrap. Action: copy the current committed row, which drives TestedFormTable.CopyRow (Таблица.СкопироватьСтроку, F9) via 'в таблице ... я копирую строку'. The document is never saved, so nothing persists (the capture pipeline kills the TestClient afterward). Same family/form as the accepted AddRow/DeleteRow/ChangeRow mappings. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Документ.ОперацияПоУчетуТоваров.Создать\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" в поле с именем 'ТоварныеЗапасыКоличество' я ввожу текст \"1\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я завершаю редактирование строки"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И в таблице \"ТоварныеЗапасы\" я копирую строку"},
+    {"phase": "post_read", "read": true}
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qa-mcp.local/schemas/qa-mcp-runtime-target-profile.schema.json",
+  "title": "qa-mcp provider-local runtime target profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "binding_ref", "target", "physical_config", "evidence", "observation"],
+  "properties": {
+    "schema": {"const": "qa-mcp.runtime-target-profile.v1"},
+    "binding_ref": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9._-]{0,63}$"},
+    "target": {"$ref": "#/$defs/target"},
+    "physical_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["env_file"],
+      "properties": {"env_file": {"type": "string", "minLength": 1}}
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy", "root", "non_production_approved"],
+      "properties": {
+        "policy": {"enum": ["sanitized", "full_local"]},
+        "root": {"type": "string", "minLength": 1},
+        "non_production_approved": {"type": "boolean"}
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_id", "target_kind", "target_fingerprint",
+        "effective_principal_fingerprint", "platform_fingerprint",
+        "extension_profile_fingerprint", "process_config_fingerprint",
+        "security_receipt_id", "binding_generation"
+      ],
+      "properties": {
+        "target_id": {"type": "string", "minLength": 1},
+        "target_kind": {"type": "string", "minLength": 1},
+        "target_fingerprint": {"$ref": "#/$defs/fingerprint"},
+        "effective_principal_fingerprint": {"$ref": "#/$defs/fingerprint"},
+        "platform_fingerprint": {"$ref": "#/$defs/fingerprint"},
+        "extension_profile_fingerprint": {"$ref": "#/$defs/fingerprint"},
+        "process_config_fingerprint": {"$ref": "#/$defs/fingerprint"},
+        "security_receipt_id": {"type": "string", "minLength": 1},
+        "binding_generation": {"type": "integer", "minimum": 1}
+      }
+    }
+  },
+  "$defs": {
+    "fingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "value"],
+      "properties": {
+        "algorithm": {"type": "string", "minLength": 1},
+        "value": {"type": "string", "minLength": 1}
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "fingerprint"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["file", "file-infobase", "file_infobase", "client-server", "client-server-infobase", "client_server"]},
+        "fingerprint": {"$ref": "#/$defs/fingerprint"}
+      }
+    }
+  }
+}

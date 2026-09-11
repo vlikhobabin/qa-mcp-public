@@ -1,0 +1,247 @@
+{
+  "response": {
+    "#result": [
+      "{http://v8.1c.ru/8.3/debugger/debugDBGUICommands}DBGUIExtCmdInfoMeasure",
+      "{http://v8.1c.ru/8.3/debugger/debugDBGUICommands}DBGUIExtCmdInfoMeasure"
+    ],
+    "result": [
+      {
+        "cmdIDNum": 6,
+        "cmdID": "measureResultProcessing",
+        "targetID": {
+          "id": "c9351357-b28b-4508-b860-f8b88aa28f98",
+          "seanceId": "31c66497-6a6a-417f-8088-3f3c63cd5fb5",
+          "seanceNo": 1,
+          "infoBaseInstanceID": "10f946f4-7069-4f01-a926-0fb5f7abd3f9",
+          "infoBaseAlias": "DefAlias",
+          "isServerInfoBase": "undefined",
+          "userName": "Администратор",
+          "configVersion": "8914b866a61e2d48a9c7ebb119e4d2b000000000",
+          "targetType": "ManagedClient"
+        },
+        "measure": {
+          "targetID": {
+            "id": "c9351357-b28b-4508-b860-f8b88aa28f98",
+            "seanceId": "31c66497-6a6a-417f-8088-3f3c63cd5fb5",
+            "seanceNo": 1,
+            "infoBaseInstanceID": "10f946f4-7069-4f01-a926-0fb5f7abd3f9",
+            "infoBaseAlias": "DefAlias",
+            "isServerInfoBase": "true",
+            "userName": "Администратор",
+            "configVersion": "8914b866a61e2d48a9c7ebb119e4d2b000000000",
+            "targetType": "ManagedClient"
+          },
+          "totalDurability": 329,
+          "totalIndepServerWorkTime": "0.000005",
+          "performanceFrequency": 1000000,
+          "moduleData": [
+            {
+              "moduleID": {
+                "objectID": "eb4d6024-f5e8-48ce-87cc-51aa1d8bdc00",
+                "propertyID": "32e087ab-1491-49b6-aba7-43571b41ac2b",
+                "extId": 3,
+                "version": "d820abd99a0fe54f9ec395401c27e93000000000"
+              },
+              "lineInfo": [
+                {
+                  "lineNo": 375,
+                  "frequency": 1,
+                  "durability": 296,
+                  "pureDurability": 296,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 376,
+                  "frequency": 1,
+                  "durability": 16,
+                  "pureDurability": 16,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 382,
+                  "frequency": 1,
+                  "durability": 4,
+                  "pureDurability": 4,
+                  "serverCallSignal": 0
+                }
+              ]
+            }
+          ],
+          "sessionID": "bd4e8294-2f8f-4e65-a204-1802633960c7"
+        }
+      },
+      {
+        "cmdIDNum": 6,
+        "cmdID": "measureResultProcessing",
+        "targetID": {
+          "id": "f6adbaaf-36d0-4d81-ac5f-282934942449",
+          "seanceId": "31c66497-6a6a-417f-8088-3f3c63cd5fb5",
+          "seanceNo": 1,
+          "infoBaseInstanceID": "10f946f4-7069-4f01-a926-0fb5f7abd3f9",
+          "infoBaseAlias": "DefAlias",
+          "isServerInfoBase": "undefined",
+          "userName": "Администратор",
+          "configVersion": "8914b866a61e2d48a9c7ebb119e4d2b000000000",
+          "targetType": "ServerEmulation"
+        },
+        "measure": {
+          "targetID": {
+            "id": "f6adbaaf-36d0-4d81-ac5f-282934942449",
+            "seanceId": "31c66497-6a6a-417f-8088-3f3c63cd5fb5",
+            "seanceNo": 1,
+            "infoBaseInstanceID": "10f946f4-7069-4f01-a926-0fb5f7abd3f9",
+            "infoBaseAlias": "DefAlias",
+            "isServerInfoBase": "false",
+            "userName": "Администратор",
+            "configVersion": "8914b866a61e2d48a9c7ebb119e4d2b000000000",
+            "targetType": "ServerEmulation"
+          },
+          "totalDurability": 842,
+          "totalIndepServerWorkTime": 0,
+          "performanceFrequency": 1000000,
+          "moduleData": [
+            {
+              "moduleID": {
+                "objectID": "eb4d6024-f5e8-48ce-87cc-51aa1d8bdc00",
+                "propertyID": "32e087ab-1491-49b6-aba7-43571b41ac2b",
+                "extId": 1,
+                "version": "d820abd99a0fe54f9ec395401c27e93000000000"
+              },
+              "lineInfo": [
+                {
+                  "lineNo": 222,
+                  "frequency": 1,
+                  "durability": 45,
+                  "pureDurability": 45,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 224,
+                  "frequency": 1,
+                  "durability": 23,
+                  "pureDurability": 23,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 225,
+                  "frequency": 1,
+                  "durability": 70,
+                  "pureDurability": 70,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 227,
+                  "frequency": 1,
+                  "durability": 3,
+                  "pureDurability": 3,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 229,
+                  "frequency": 1,
+                  "durability": 19,
+                  "pureDurability": 19,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 238,
+                  "frequency": 1,
+                  "durability": 7,
+                  "pureDurability": 7,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 244,
+                  "frequency": 1,
+                  "durability": 2,
+                  "pureDurability": 2,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 247,
+                  "frequency": 1,
+                  "durability": 13,
+                  "pureDurability": 13,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 249,
+                  "frequency": 1,
+                  "durability": 4,
+                  "pureDurability": 4,
+                  "serverCallSignal": 0
+                }
+              ]
+            },
+            {
+              "moduleID": {
+                "objectID": "45403bd4-e824-44fd-b1e3-50cd17a6a658",
+                "propertyID": "a637f77f-3840-441d-a1c3-699c8c5cb7e0",
+                "version": "83dc1ca4c6c6b14fb0e6cad30ac9a3b500000000"
+              },
+              "lineInfo": [
+                {
+                  "lineNo": 4,
+                  "frequency": 1,
+                  "durability": 22,
+                  "pureDurability": 22,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 9,
+                  "frequency": 1,
+                  "durability": 6,
+                  "pureDurability": 6,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 15,
+                  "frequency": 1,
+                  "durability": 2,
+                  "pureDurability": 2,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 18,
+                  "frequency": 1,
+                  "durability": 6,
+                  "pureDurability": 6,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 19,
+                  "frequency": 1,
+                  "durability": 53,
+                  "pureDurability": 53,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 20,
+                  "frequency": 1,
+                  "durability": 538,
+                  "pureDurability": 538,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 21,
+                  "frequency": 1,
+                  "durability": 2,
+                  "pureDurability": 2,
+                  "serverCallSignal": 0
+                },
+                {
+                  "lineNo": 24,
+                  "frequency": 1,
+                  "durability": 4,
+                  "pureDurability": 4,
+                  "serverCallSignal": 0
+                }
+              ]
+            }
+          ],
+          "sessionID": "bd4e8294-2f8f-4e65-a204-1802633960c7"
+        }
+      }
+    ]
+  }
+}

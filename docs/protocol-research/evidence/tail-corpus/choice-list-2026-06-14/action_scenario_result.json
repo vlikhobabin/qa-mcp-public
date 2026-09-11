@@ -1,0 +1,16 @@
+{
+  "schema": "card74.native-action-scenario.v1",
+  "scenario": "native-choice-list",
+  "plan": [
+    {
+      "name": "choose-from-list",
+      "kind": "form_command",
+      "marker": "PF_CHOICE_B",
+      "ordinal": 290
+    }
+  ],
+  "diverged_at_send_index": null,
+  "frames_sent": 289,
+  "exchanges_with_response": 289,
+  "status": "ok"
+}

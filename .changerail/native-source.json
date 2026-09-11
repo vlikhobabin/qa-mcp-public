@@ -1,0 +1,26 @@
+{
+  "schema": "qa-mcp.native-source.v1",
+  "source_repository": "meta-mcp",
+  "source_head": "b1910ed13ef2eed16ea3e0a9e73a08a5e1b6652c",
+  "source_state": "working snapshot; not a released or fully adopted upstream runner",
+  "observed_at": "2026-09-09T06:07:02Z",
+  "files": {
+    "AGENTS.md": "ad7d52c44e2dddb66c6026f7d896936d91e7ade932ede2d92ee34cff7bc0a44c",
+    ".changerail/profile.toml": "a4d975d04c77906de9d51613bc30e474356a4aaa93f5193b941b0e98e64b7ab7",
+    "docs/development/native-openspec-delivery.md": "18ea96a1f8738fae1aa709082e91796ff4dc2853e3e12253d373208db9a94f70",
+    "scripts/changerail/openspec_context.py": "19974be518d5fdaf092d81caabffef2a271ab42a8606c7c451b55925391fabb0",
+    "scripts/changerail/openspec_board.py": "c3e91141c163396641bc93ab8b9bf2521e07c87cc23c778f2fe74b406a89a9e2",
+    "scripts/changerail/openspec_sync.py": "cf83b32ca2d12e8989128dece696e34341fcea277214c8668fff7040615bcbdc",
+    "scripts/changerail/openspec_review.py": "1be6e2b4d805427ba4f45e3d8a61b4a3cc76369a55d0a3efa55507bb5b8ddd03",
+    "tools/changerail/skills/chrl-native-deliver/SKILL.md": "de0486cfac22c5df0af234f99c9f5ce014f28ff90aaf308b8518af783dd8dd20",
+    "tools/changerail/skills/chrl-native-review/SKILL.md": "18888e903edc8bf72d540407325af031dba23e6953128e86e25a66fd72dd91e6",
+    "tools/openspec/workflow-instructions.mjs": "2b9d38eeedab890b756d3fa408850f158f0628d81531a24c29ce63dd1e9d5bed"
+  },
+  "local_adaptations": [
+    "QA closed condition and observed-proof contracts retained",
+    "QA numeric limits remain informational",
+    "Invalidated QA evidence is re-executed after archive",
+    "Historical finalization and migration engines are not imported",
+    "QA legacy test paths remain stable; native adapter tests have an explicit runner and CI step"
+  ]
+}

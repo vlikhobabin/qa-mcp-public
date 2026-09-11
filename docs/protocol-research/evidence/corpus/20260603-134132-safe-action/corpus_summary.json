@@ -1,0 +1,25 @@
+{
+  "schema": "protocol-corpus-run.v1",
+  "generated_at": "2026-06-03T10:45:15Z",
+  "capture_id": "20260603-134132",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260603-134132",
+  "case_count": 1,
+  "case_ids": [
+    "safe-activate-existing-window"
+  ],
+  "replay_status_counts": {
+    "pending": 1
+  },
+  "availability_counts": {
+    "supported": 1
+  },
+  "element_families": [],
+  "supported_case_ids": [
+    "safe-activate-existing-window"
+  ],
+  "gap_case_ids": [],
+  "case_rows_path": "docs/protocol-research/evidence/corpus/20260603-134132-safe-action/corpus_cases.jsonl",
+  "case_events_path": "runtime/protocol-research/captures/20260603-134132/case_events.jsonl",
+  "runtime_manifest_path": "runtime/protocol-research/captures/20260603-134132/case_manifest.json",
+  "raw_output_policy": "raw traffic and logs stay under ignored runtime/protocol-research paths"
+}

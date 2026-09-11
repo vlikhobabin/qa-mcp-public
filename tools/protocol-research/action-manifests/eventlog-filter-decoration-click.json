@@ -1,0 +1,17 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "eventlog-filter-decoration-click",
+  "api_member": "TestedFormDecoration.Click",
+  "operation_family": "form_decoration_click",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "BLOCKED (candidate): bootstrap is validated live (decoration-click-ref1) — step 1 opens Обработка.ЖурналРегистрации, step 2 opens the ОтборЖурналаРегистрации filter sub-form via the УстановитьОтбор command, pre_read confirms that form active — but the action step is REJECTED by the platform: 'Неподходящий тип элемента управления для вызванного действия' on .Нажать(). TestedFormDecoration.Нажатие only fires on a decoration with Гиперссылка=Истина; НадписьВажность is a plain label. The Vanessa finder (ОставитьВМассивеТолькоПоляГиперссылок) keeps any ВидДекорацииФормы.Надпись regardless of the Hyperlink flag, so the element is found but the click is not executable. The vanessa_client config has zero hyperlink decorations (full DumpConfigToFiles checked). Accepting this member needs a hyperlink-decoration fixture added to vanessa_client (a config change / scope decision). See evidence/mutation-corpus/eventlog-filter-decoration-click/findings.md. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю основную форму обработки \"ЖурналРегистрации\""},
+    {"phase": "bootstrap", "text": "И я нажимаю на кнопку с именем 'УстановитьОтбор'"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И я нажимаю на гиперссылку с именем 'НадписьВажность'"},
+    {"phase": "post_read", "read": true}
+  ]
+}

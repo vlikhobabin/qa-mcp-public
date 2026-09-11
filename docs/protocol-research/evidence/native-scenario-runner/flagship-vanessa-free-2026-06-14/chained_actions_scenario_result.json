@@ -1,0 +1,38 @@
+{
+  "scenario": "flagship-chained-actions-vanessa-free",
+  "status": "passed",
+  "steps": [
+    {
+      "name": "active-window",
+      "kind": "read_active_window",
+      "status": "ok",
+      "preview": "{\"schema\": \"python-manager-active-window-context.result.v1\", \"status\": \"ok\", \"query\": \"active-window-context\", \"case_id\": \"active-window-context\", \"evidence_status\": \"accepted\", \"descriptor\": {\"case_id\": \"active-window-context\", \"query\": \"active-window-context\", \"operation_family\": \"active_window_context\", \"safety_class\": \"read_only\", \"acceptance_status\": \"accepted\", \"evidence_path\": \"docs/protocol-research/evidence/accepted-mappings/expanded-readonly-20260602-193802-vs-20260602-195407-probe-acc",
+      "assertion": true,
+      "error": null
+    },
+    {
+      "name": "form-summary",
+      "kind": "read_form_summary",
+      "status": "ok",
+      "preview": "{\"schema\": \"python-manager-form-summary.result.v1\", \"status\": \"ok\", \"query\": \"form-summary\", \"case_id\": \"form-summary\", \"evidence_status\": \"partial\", \"descriptor\": {\"case_id\": \"form-summary\", \"query\": \"form-summary\", \"operation_family\": \"form_summary\", \"safety_class\": \"read_only\", \"acceptance_status\": \"partial\", \"evidence_path\": \"docs/protocol-research/evidence/accepted-mappings/expanded-readonly-20260602-193802-vs-20260602-195407-probe-accepted/accepted_mappings.json\", \"accepted_normalized_hash",
+      "assertion": null,
+      "error": null
+    },
+    {
+      "name": "click menu button",
+      "kind": "click_button",
+      "status": "ok",
+      "preview": "{\"query_id\": \"click menu button\", \"sent_bytes\": 254, \"recv_bytes\": 665, \"adapted\": true, \"accepted\": true}",
+      "assertion": null,
+      "error": null
+    },
+    {
+      "name": "choose menu item",
+      "kind": "form_command",
+      "status": "ok",
+      "preview": "{\"query_id\": \"choose menu item\", \"sent_bytes\": 213, \"recv_bytes\": 665, \"adapted\": true, \"accepted\": true}",
+      "assertion": null,
+      "error": null
+    }
+  ]
+}

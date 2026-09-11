@@ -1,0 +1,23 @@
+{
+  "run_id": "20260605-livepath-runtime-gap-2",
+  "scenario": "manager-fixture-v1-readonly",
+  "status": "runtime_gap",
+  "missing_asset": "Vanessa EPF",
+  "runtime_dir": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2",
+  "runtime_files": {
+    "capture_manifest": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2/capture_manifest.json",
+    "capture_summary": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2/capture_summary.json",
+    "manager_manifest": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2/manager_harness_manifest.json",
+    "manager_invocation": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2/manager_harness_invocation.json",
+    "manager_invocation_step": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2/manager_harness_invocation.feature.txt",
+    "manager_result": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2/manager_harness_result.json",
+    "case_events": "runtime/protocol-research/captures/20260605-livepath-runtime-gap-2/case_events.jsonl"
+  },
+  "pids_started": {},
+  "command_count": 11,
+  "case_events_bytes": 0,
+  "accepted_protocol_mapping": false,
+  "live_protocol_evidence": false,
+  "harness_entrypoint": "TM_RUN_FROM_CAPTURE_RUNNER_V1",
+  "harness_form": "DataProcessor.ProtocolFixtureTestManager.Form.ManagerHarness"
+}

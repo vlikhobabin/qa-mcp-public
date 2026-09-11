@@ -1,0 +1,12 @@
+{
+  "schema": "qa-mcp.accepted-mappings.v1",
+  "evidence_id": "demo-real-mutation-corpus-20260610",
+  "accepted_case_ids": [],
+  "candidate_case_ids": [],
+  "blocked_case_ids": [
+    "demo10413-operation-goods-toggle-activity"
+  ],
+  "excluded_reasons": {
+    "demo10413-operation-goods-toggle-activity": "blocked before runtime action; live pre-state and reviewed recovery wrapper are missing"
+  }
+}

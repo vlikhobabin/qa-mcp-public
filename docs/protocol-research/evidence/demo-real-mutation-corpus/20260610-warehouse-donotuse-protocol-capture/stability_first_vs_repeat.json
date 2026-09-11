@@ -1,0 +1,113 @@
+{
+  "schema": "qa-mcp.compare-probe-reference.v1",
+  "generated_at": "2026-06-11T05:17:43Z",
+  "mode": "stability",
+  "phase": "action_write",
+  "left": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\mut-warehouse-donotuse-20260610",
+  "right": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\mut-warehouse-donotuse-20260611-repeat",
+  "left_hash_by_direction": {
+    "manager_to_client": "aab00761c187e510e9a7e4abd8a57289c3770b6c989197710987a87e6071f648",
+    "client_to_manager": "4f06f3e94424c85e0eab7ea55e253966df6f4aaa90fc3c421a368c7618e32d58"
+  },
+  "right_hash_by_direction": {
+    "manager_to_client": "aab00761c187e510e9a7e4abd8a57289c3770b6c989197710987a87e6071f648",
+    "client_to_manager": "4f06f3e94424c85e0eab7ea55e253966df6f4aaa90fc3c421a368c7618e32d58"
+  },
+  "hash_match_by_direction": {
+    "client_to_manager": true,
+    "manager_to_client": true
+  },
+  "all_hashes_match": true,
+  "structural_signature_left": {
+    "manager_to_client": [
+      186,
+      352,
+      352,
+      356,
+      352,
+      352,
+      99,
+      156,
+      224,
+      202,
+      211,
+      211,
+      400,
+      400
+    ],
+    "client_to_manager": [
+      491,
+      314,
+      16,
+      326,
+      314,
+      16,
+      321,
+      355,
+      561,
+      378,
+      173,
+      16,
+      362,
+      16
+    ]
+  },
+  "structural_signature_right": {
+    "manager_to_client": [
+      186,
+      352,
+      352,
+      356,
+      352,
+      352,
+      99,
+      156,
+      224,
+      202,
+      211,
+      211,
+      400,
+      400
+    ],
+    "client_to_manager": [
+      491,
+      314,
+      16,
+      326,
+      314,
+      16,
+      321,
+      355,
+      561,
+      378,
+      173,
+      16,
+      362,
+      16
+    ]
+  },
+  "structural_match": true,
+  "residual_dynamic_bytes": 0,
+  "left_typed_result": {
+    "preFlag": "Нет",
+    "postFlag": "Да",
+    "recoveryFlag": "Нет",
+    "status": "mutation_and_recovery_confirmed"
+  },
+  "right_typed_result": {
+    "preFlag": "Нет",
+    "postFlag": "Да",
+    "recoveryFlag": "Нет",
+    "status": "mutation_and_recovery_confirmed"
+  },
+  "typed_result_match": true,
+  "left_frame_count_by_direction": {
+    "manager_to_client": 14,
+    "client_to_manager": 14
+  },
+  "right_frame_count_by_direction": {
+    "manager_to_client": 14,
+    "client_to_manager": 14
+  },
+  "verdict": "fully_stable"
+}

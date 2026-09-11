@@ -1,0 +1,37 @@
+{
+  "schema": "changerail.distribution-config.v1",
+  "version": "2.0.0-rc.3",
+  "execution_contract": "changerail.native.v1",
+  "provenance": {
+    "owner": "ChangeRail",
+    "upstream_commit": "051e99be6c696ae07e8eaa596fdb714cc00378e2",
+    "source_state": "release candidate source snapshot; payload hashes identify exact bytes"
+  },
+  "files": [
+    "distribution.py",
+    "distribution.json",
+    "DISTRIBUTION.md",
+    "bin/chrl-dist",
+    "bin/chrl",
+    "bin/chrl-run",
+    "bin/openspec",
+    "scripts/__init__.py",
+    "tools/changerail/LICENSE",
+    "tools/changerail/ORIGIN.md",
+    "tools/openspec/.gitignore",
+    "tools/openspec/bootstrap.sh",
+    "tools/openspec/check-install.mjs",
+    "tools/openspec/workflow-instructions.mjs",
+    "tools/openspec/package.json",
+    "tools/openspec/package-lock.json",
+    "tools/openspec/README.md",
+    "tools/changerail/README.md",
+    "tools/changerail/templates/profile.toml",
+    "tools/changerail/templates/card-template.md"
+  ],
+  "trees": {
+    "scripts/changerail": "**/*.py",
+    "tools/changerail/schemas": "**/*.json",
+    "tools/changerail/skills": "**/*.md"
+  }
+}

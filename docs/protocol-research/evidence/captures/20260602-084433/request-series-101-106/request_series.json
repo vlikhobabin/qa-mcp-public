@@ -1,0 +1,934 @@
+{
+  "schema": "protocol-request-series.v1",
+  "generated_at": "2026-06-02T12:18:08Z",
+  "input_kind": "capture",
+  "input_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\runtime\\protocol-research\\captures\\20260602-084433",
+  "frame_from": 101,
+  "frame_to": 106,
+  "frames": [
+    {
+      "frame_index": 101,
+      "request": {
+        "byte_count": 351,
+        "body_byte_count": 347,
+        "sha256": "56453044b5a0a76b5115efd8af59b66540ddd8caa03955ad86743b6b407a43d7",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8dbb15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23952603cee9c164de47ab5ba07142",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5563,
+        "operation_token_51_hex": "2603cee9c164de47ab5ba07142ceaf79",
+        "nonce_68_hex": "2c1b5a119fea87469d8dcb312c59fea3",
+        "managed_form_refs": [
+          {
+            "ref": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965",
+            "encoding": "utf16le"
+          }
+        ],
+        "element_refs": [
+          {
+            "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]",
+            "type": "EditField",
+            "name": "ДиаграммаПоПериодам"
+          }
+        ],
+        "ascii_strings": [],
+        "utf16le_strings": [
+          {
+            "offset": 86,
+            "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+          }
+        ],
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+        ],
+        "semantic_guess": "form_element_summary_request"
+      },
+      "response": {
+        "byte_count": 332,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "076abb2704331916aaecbae895883718ebd5c6960c3837b68c16ac8fa33e94b3",
+        "head_hex": "428f3f8ddca284838183cb23952603cee9c164de47ab5ba07142ceaf79d52c1b5a119fea87469d8dcb312c59fea3977f48006f006d0065005000610067006500",
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]",
+          "Диаграмма"
+        ],
+        "extra_ui_identifiers": [
+          "Диаграмма"
+        ],
+        "semantic_guess": "form_element_summary",
+        "operation_token_echo_positions": [
+          13
+        ]
+      }
+    },
+    {
+      "frame_index": 102,
+      "request": {
+        "byte_count": 351,
+        "body_byte_count": 347,
+        "sha256": "ff508ad679b204b4267a865667e8c417407542b060d0a62c4a1b39ecd3605074",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8dbc15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb239523c842fb38ad0a40a81b02d5c7",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5564,
+        "operation_token_51_hex": "23c842fb38ad0a40a81b02d5c7822a18",
+        "nonce_68_hex": "fbe884bbf0a2f141b831ef2e8e91021e",
+        "managed_form_refs": [
+          {
+            "ref": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965",
+            "encoding": "utf16le"
+          }
+        ],
+        "element_refs": [
+          {
+            "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]",
+            "type": "EditField",
+            "name": "ДиаграммаПоПериодам"
+          }
+        ],
+        "ascii_strings": [],
+        "utf16le_strings": [
+          {
+            "offset": 86,
+            "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+          }
+        ],
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+        ],
+        "semantic_guess": "form_element_summary_request"
+      },
+      "response": {
+        "byte_count": 313,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "ea69c3fc59e1405a83077f7d9b3a1d4e897d819719c30b24cab4928ea36e4071",
+        "head_hex": "428f408ddca284838183cb239523c842fb38ad0a40a81b02d5c7822a18d5fbe884bbf0a2f141b831ef2e8e91021e977f48006f006d0065005000610067006500",
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+        ],
+        "extra_ui_identifiers": [],
+        "semantic_guess": "form_element_summary",
+        "operation_token_echo_positions": [
+          13
+        ]
+      }
+    },
+    {
+      "frame_index": 103,
+      "request": {
+        "byte_count": 351,
+        "body_byte_count": 347,
+        "sha256": "fdea732c9c284c71f1c65f1c7b399c414eadaf4a8a2c35bf928d1fa1d989e488",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8dbd15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb2395b2c3815e482c61428e8e621adc",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5565,
+        "operation_token_51_hex": "b2c3815e482c61428e8e621adcf59922",
+        "nonce_68_hex": "35e0dd26ac5cf443997da2079bb21fa9",
+        "managed_form_refs": [
+          {
+            "ref": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965",
+            "encoding": "utf16le"
+          }
+        ],
+        "element_refs": [
+          {
+            "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]",
+            "type": "EditField",
+            "name": "ДиаграммаПоПериодам"
+          }
+        ],
+        "ascii_strings": [
+          "^H,aB"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 86,
+            "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+          }
+        ],
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+        ],
+        "semantic_guess": "form_element_summary_request"
+      },
+      "response": {
+        "byte_count": 313,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "bc3f403c4b80e4593840d4ab72cc040fed83528ea1b895a0cf1257f6b7072a52",
+        "head_hex": "428f418ddca284838183cb2395b2c3815e482c61428e8e621adcf59922d535e0dd26ac5cf443997da2079bb21fa9977f48006f006d0065005000610067006500",
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоПериодам]"
+        ],
+        "extra_ui_identifiers": [],
+        "semantic_guess": "form_element_summary",
+        "operation_token_echo_positions": [
+          13
+        ]
+      }
+    },
+    {
+      "frame_index": 104,
+      "request": {
+        "byte_count": 349,
+        "body_byte_count": 345,
+        "sha256": "f36776979e039186cfe86366b75326be7b975dbcd220c8812265d1822df5ea49",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8dbe15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23952603cee9c164de47ab5ba07142",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5566,
+        "operation_token_51_hex": "2603cee9c164de47ab5ba07142ceaf79",
+        "nonce_68_hex": "54746c061ec6da4b9d6b1acbd1483c59",
+        "managed_form_refs": [
+          {
+            "ref": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965",
+            "encoding": "utf16le"
+          }
+        ],
+        "element_refs": [
+          {
+            "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]",
+            "type": "EditField",
+            "name": "ДиаграммаПоТоварам"
+          }
+        ],
+        "ascii_strings": [],
+        "utf16le_strings": [
+          {
+            "offset": 86,
+            "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+          }
+        ],
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+        ],
+        "semantic_guess": "form_element_summary_request"
+      },
+      "response": {
+        "byte_count": 330,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "8a2e937d99f19319b08ad322b1335ef4817af2b2b9536f3acb3743eaf2e84cd2",
+        "head_hex": "428f428ddca284838183cb23952603cee9c164de47ab5ba07142ceaf79d554746c061ec6da4b9d6b1acbd1483c59977e48006f006d0065005000610067006500",
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]",
+          "Диаграмма"
+        ],
+        "extra_ui_identifiers": [
+          "Диаграмма"
+        ],
+        "semantic_guess": "form_element_summary",
+        "operation_token_echo_positions": [
+          13
+        ]
+      }
+    },
+    {
+      "frame_index": 105,
+      "request": {
+        "byte_count": 349,
+        "body_byte_count": 345,
+        "sha256": "d107b8f3c8f193e5171304d2926eda62a2e28bde4ed5c8aba9d08ac1e3790f2c",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8dbf15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb239523c842fb38ad0a40a81b02d5c7",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5567,
+        "operation_token_51_hex": "23c842fb38ad0a40a81b02d5c7822a18",
+        "nonce_68_hex": "98e95ccc76133a458f08fb33427cd35a",
+        "managed_form_refs": [
+          {
+            "ref": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965",
+            "encoding": "utf16le"
+          }
+        ],
+        "element_refs": [
+          {
+            "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]",
+            "type": "EditField",
+            "name": "ДиаграммаПоТоварам"
+          }
+        ],
+        "ascii_strings": [],
+        "utf16le_strings": [
+          {
+            "offset": 86,
+            "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+          }
+        ],
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+        ],
+        "semantic_guess": "form_element_summary_request"
+      },
+      "response": {
+        "byte_count": 311,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "2ce6eb314a9bf89b6323c9035c02b1543d0693d7183457d29ef8d3637e0ce5f7",
+        "head_hex": "428f438ddca284838183cb239523c842fb38ad0a40a81b02d5c7822a18d598e95ccc76133a458f08fb33427cd35a977e48006f006d0065005000610067006500",
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+        ],
+        "extra_ui_identifiers": [],
+        "semantic_guess": "form_element_summary",
+        "operation_token_echo_positions": [
+          13
+        ]
+      }
+    },
+    {
+      "frame_index": 106,
+      "request": {
+        "byte_count": 349,
+        "body_byte_count": 345,
+        "sha256": "3018b1c3c6d48bd0f07d2d943f34902c061b9d5e3c536ba23b379f6a7bb9c761",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8dc015818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb2395b2c3815e482c61428e8e621adc",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5568,
+        "operation_token_51_hex": "b2c3815e482c61428e8e621adcf59922",
+        "nonce_68_hex": "cb91ae513c30244f95f116d6a8693f37",
+        "managed_form_refs": [
+          {
+            "ref": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965",
+            "encoding": "utf16le"
+          }
+        ],
+        "element_refs": [
+          {
+            "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]",
+            "type": "EditField",
+            "name": "ДиаграммаПоТоварам"
+          }
+        ],
+        "ascii_strings": [
+          "^H,aB",
+          "Q<0$O"
+        ],
+        "utf16le_strings": [
+          {
+            "offset": 86,
+            "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+          }
+        ],
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+        ],
+        "semantic_guess": "form_element_summary_request"
+      },
+      "response": {
+        "byte_count": 311,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "ac4993f1079b8bce4e3ea77fd0e07898316e0b01321cad1ada7dcfa80a29e7ff",
+        "head_hex": "428f448ddca284838183cb2395b2c3815e482c61428e8e621adcf59922d5cb91ae513c30244f95f116d6a8693f37977e48006f006d0065005000610067006500",
+        "ui_identifiers": [
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965].EditField[ДиаграммаПоТоварам]"
+        ],
+        "extra_ui_identifiers": [],
+        "semantic_guess": "form_element_summary",
+        "operation_token_echo_positions": [
+          13
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "frame_count": 6,
+    "request_body_lengths": {
+      "347": 3,
+      "345": 3
+    },
+    "response_byte_counts": {
+      "332": 1,
+      "313": 2,
+      "330": 1,
+      "311": 2
+    },
+    "request_semantic_counts": {
+      "form_element_summary_request": 6
+    },
+    "response_semantic_counts": {
+      "form_element_summary": 6
+    },
+    "sequence_le_at_19_values": [
+      5563,
+      5564,
+      5565,
+      5566,
+      5567,
+      5568
+    ],
+    "unique_ack_guids_at_2": [
+      "92b71ecf-cd35-4052-abbd-48afc9134f7a"
+    ],
+    "unique_managed_form_guids": [
+      "5d68a8e5-a712-4fc2-8543-9717300ad965"
+    ],
+    "variable_range_count": 1
+  },
+  "variable_ranges": [
+    {
+      "start": 0,
+      "end": 347,
+      "length": 347,
+      "reason": "request_body_lengths_differ"
+    }
+  ],
+  "known_dynamic_ranges": [
+    {
+      "name": "ack_guid_uuid_le",
+      "start": 2,
+      "end": 18,
+      "length": 16,
+      "values_by_frame": [
+        {
+          "frame_index": 101,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 102,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 103,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 104,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 105,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 106,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        }
+      ]
+    },
+    {
+      "name": "sequence_uint16_le",
+      "start": 19,
+      "end": 21,
+      "length": 2,
+      "values_by_frame": [
+        {
+          "frame_index": 101,
+          "hex": "bb15"
+        },
+        {
+          "frame_index": 102,
+          "hex": "bc15"
+        },
+        {
+          "frame_index": 103,
+          "hex": "bd15"
+        },
+        {
+          "frame_index": 104,
+          "hex": "be15"
+        },
+        {
+          "frame_index": 105,
+          "hex": "bf15"
+        },
+        {
+          "frame_index": 106,
+          "hex": "c015"
+        }
+      ]
+    },
+    {
+      "name": "nonce",
+      "start": 68,
+      "end": 84,
+      "length": 16,
+      "values_by_frame": [
+        {
+          "frame_index": 101,
+          "hex": "2c1b5a119fea87469d8dcb312c59fea3"
+        },
+        {
+          "frame_index": 102,
+          "hex": "fbe884bbf0a2f141b831ef2e8e91021e"
+        },
+        {
+          "frame_index": 103,
+          "hex": "35e0dd26ac5cf443997da2079bb21fa9"
+        },
+        {
+          "frame_index": 104,
+          "hex": "54746c061ec6da4b9d6b1acbd1483c59"
+        },
+        {
+          "frame_index": 105,
+          "hex": "98e95ccc76133a458f08fb33427cd35a"
+        },
+        {
+          "frame_index": 106,
+          "hex": "cb91ae513c30244f95f116d6a8693f37"
+        }
+      ]
+    },
+    {
+      "name": "managed_form_guid_utf16le",
+      "start": 204,
+      "end": 276,
+      "length": 72,
+      "values_by_frame": [
+        {
+          "frame_index": 101,
+          "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+        },
+        {
+          "frame_index": 102,
+          "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+        },
+        {
+          "frame_index": 103,
+          "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+        },
+        {
+          "frame_index": 104,
+          "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+        },
+        {
+          "frame_index": 105,
+          "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+        },
+        {
+          "frame_index": 106,
+          "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+        }
+      ]
+    }
+  ],
+  "shape_groups": [
+    {
+      "body_byte_count": 345,
+      "frame_indices": [
+        104,
+        105,
+        106
+      ],
+      "frame_count": 3,
+      "variable_ranges": [
+        {
+          "start": 19,
+          "end": 20,
+          "length": 1,
+          "values_by_frame": [
+            {
+              "frame_index": 104,
+              "hex": "be"
+            },
+            {
+              "frame_index": 105,
+              "hex": "bf"
+            },
+            {
+              "frame_index": 106,
+              "hex": "c0"
+            }
+          ]
+        },
+        {
+          "start": 51,
+          "end": 67,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 104,
+              "hex": "2603cee9c164de47ab5ba07142ceaf79"
+            },
+            {
+              "frame_index": 105,
+              "hex": "23c842fb38ad0a40a81b02d5c7822a18"
+            },
+            {
+              "frame_index": 106,
+              "hex": "b2c3815e482c61428e8e621adcf59922"
+            }
+          ]
+        },
+        {
+          "start": 68,
+          "end": 84,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 104,
+              "hex": "54746c061ec6da4b9d6b1acbd1483c59"
+            },
+            {
+              "frame_index": 105,
+              "hex": "98e95ccc76133a458f08fb33427cd35a"
+            },
+            {
+              "frame_index": 106,
+              "hex": "cb91ae513c30244f95f116d6a8693f37"
+            }
+          ]
+        }
+      ],
+      "known_dynamic_ranges": [
+        {
+          "name": "ack_guid_uuid_le",
+          "start": 2,
+          "end": 18,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 104,
+              "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+            },
+            {
+              "frame_index": 105,
+              "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+            },
+            {
+              "frame_index": 106,
+              "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+            }
+          ]
+        },
+        {
+          "name": "sequence_uint16_le",
+          "start": 19,
+          "end": 21,
+          "length": 2,
+          "values_by_frame": [
+            {
+              "frame_index": 104,
+              "hex": "be15"
+            },
+            {
+              "frame_index": 105,
+              "hex": "bf15"
+            },
+            {
+              "frame_index": 106,
+              "hex": "c015"
+            }
+          ]
+        },
+        {
+          "name": "nonce",
+          "start": 68,
+          "end": 84,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 104,
+              "hex": "54746c061ec6da4b9d6b1acbd1483c59"
+            },
+            {
+              "frame_index": 105,
+              "hex": "98e95ccc76133a458f08fb33427cd35a"
+            },
+            {
+              "frame_index": 106,
+              "hex": "cb91ae513c30244f95f116d6a8693f37"
+            }
+          ]
+        },
+        {
+          "name": "managed_form_guid_utf16le",
+          "start": 204,
+          "end": 276,
+          "length": 72,
+          "values_by_frame": [
+            {
+              "frame_index": 104,
+              "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+            },
+            {
+              "frame_index": 105,
+              "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+            },
+            {
+              "frame_index": 106,
+              "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+            }
+          ]
+        }
+      ],
+      "normalized_request_shape_sha256": "1a9b8fc37a8e5fb7747cf00b71212c7ac22a2b397490a9d5786443f20e2f423e",
+      "canonical_request_shape_sha256": "e54dd8f7525b379100da3483d64ec45decd41b9a05a8f91809a760c2b9cfaa52"
+    },
+    {
+      "body_byte_count": 347,
+      "frame_indices": [
+        101,
+        102,
+        103
+      ],
+      "frame_count": 3,
+      "variable_ranges": [
+        {
+          "start": 19,
+          "end": 20,
+          "length": 1,
+          "values_by_frame": [
+            {
+              "frame_index": 101,
+              "hex": "bb"
+            },
+            {
+              "frame_index": 102,
+              "hex": "bc"
+            },
+            {
+              "frame_index": 103,
+              "hex": "bd"
+            }
+          ]
+        },
+        {
+          "start": 51,
+          "end": 67,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 101,
+              "hex": "2603cee9c164de47ab5ba07142ceaf79"
+            },
+            {
+              "frame_index": 102,
+              "hex": "23c842fb38ad0a40a81b02d5c7822a18"
+            },
+            {
+              "frame_index": 103,
+              "hex": "b2c3815e482c61428e8e621adcf59922"
+            }
+          ]
+        },
+        {
+          "start": 68,
+          "end": 84,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 101,
+              "hex": "2c1b5a119fea87469d8dcb312c59fea3"
+            },
+            {
+              "frame_index": 102,
+              "hex": "fbe884bbf0a2f141b831ef2e8e91021e"
+            },
+            {
+              "frame_index": 103,
+              "hex": "35e0dd26ac5cf443997da2079bb21fa9"
+            }
+          ]
+        }
+      ],
+      "known_dynamic_ranges": [
+        {
+          "name": "ack_guid_uuid_le",
+          "start": 2,
+          "end": 18,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 101,
+              "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+            },
+            {
+              "frame_index": 102,
+              "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+            },
+            {
+              "frame_index": 103,
+              "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+            }
+          ]
+        },
+        {
+          "name": "sequence_uint16_le",
+          "start": 19,
+          "end": 21,
+          "length": 2,
+          "values_by_frame": [
+            {
+              "frame_index": 101,
+              "hex": "bb15"
+            },
+            {
+              "frame_index": 102,
+              "hex": "bc15"
+            },
+            {
+              "frame_index": 103,
+              "hex": "bd15"
+            }
+          ]
+        },
+        {
+          "name": "nonce",
+          "start": 68,
+          "end": 84,
+          "length": 16,
+          "values_by_frame": [
+            {
+              "frame_index": 101,
+              "hex": "2c1b5a119fea87469d8dcb312c59fea3"
+            },
+            {
+              "frame_index": 102,
+              "hex": "fbe884bbf0a2f141b831ef2e8e91021e"
+            },
+            {
+              "frame_index": 103,
+              "hex": "35e0dd26ac5cf443997da2079bb21fa9"
+            }
+          ]
+        },
+        {
+          "name": "managed_form_guid_utf16le",
+          "start": 204,
+          "end": 276,
+          "length": 72,
+          "values_by_frame": [
+            {
+              "frame_index": 101,
+              "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+            },
+            {
+              "frame_index": 102,
+              "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+            },
+            {
+              "frame_index": 103,
+              "hex": "350064003600380061003800650035002d0061003700310032002d0034006600630032002d0038003500340033002d00390037003100370033003000300061006400390036003500"
+            }
+          ]
+        }
+      ],
+      "normalized_request_shape_sha256": "c45aff31df5083393e6b4a6cd3e941e0964294e5af1c33e4d407159f4342bb84",
+      "canonical_request_shape_sha256": "9bc0d3a58101f3b5e4a445833623b1b8c14fd7c7d6b7cc3ce46e43d7c71dac97"
+    }
+  ],
+  "operation_groups": [
+    {
+      "operation_token_hex": "2603cee9c164de47ab5ba07142ceaf79",
+      "frame_indices": [
+        101,
+        104
+      ],
+      "request_body_lengths": [
+        347,
+        345
+      ],
+      "response_byte_counts": [
+        332,
+        330
+      ],
+      "element_names": [
+        "ДиаграммаПоПериодам",
+        "ДиаграммаПоТоварам"
+      ],
+      "response_extra_identifiers": [
+        "Диаграмма"
+      ],
+      "operation_token_echo_positions": [
+        {
+          "frame_index": 101,
+          "positions": [
+            13
+          ]
+        },
+        {
+          "frame_index": 104,
+          "positions": [
+            13
+          ]
+        }
+      ],
+      "observed_response_class": "caption_or_value",
+      "operation_ordinal": 1,
+      "label": "editfield_detail_op_1_caption_or_value"
+    },
+    {
+      "operation_token_hex": "23c842fb38ad0a40a81b02d5c7822a18",
+      "frame_indices": [
+        102,
+        105
+      ],
+      "request_body_lengths": [
+        347,
+        345
+      ],
+      "response_byte_counts": [
+        313,
+        311
+      ],
+      "element_names": [
+        "ДиаграммаПоПериодам",
+        "ДиаграммаПоТоварам"
+      ],
+      "response_extra_identifiers": [],
+      "operation_token_echo_positions": [
+        {
+          "frame_index": 102,
+          "positions": [
+            13
+          ]
+        },
+        {
+          "frame_index": 105,
+          "positions": [
+            13
+          ]
+        }
+      ],
+      "observed_response_class": "reference_only",
+      "operation_ordinal": 2,
+      "label": "editfield_detail_op_2_reference_only"
+    },
+    {
+      "operation_token_hex": "b2c3815e482c61428e8e621adcf59922",
+      "frame_indices": [
+        103,
+        106
+      ],
+      "request_body_lengths": [
+        347,
+        345
+      ],
+      "response_byte_counts": [
+        313,
+        311
+      ],
+      "element_names": [
+        "ДиаграммаПоПериодам",
+        "ДиаграммаПоТоварам"
+      ],
+      "response_extra_identifiers": [],
+      "operation_token_echo_positions": [
+        {
+          "frame_index": 103,
+          "positions": [
+            13
+          ]
+        },
+        {
+          "frame_index": 106,
+          "positions": [
+            13
+          ]
+        }
+      ],
+      "observed_response_class": "reference_only",
+      "operation_ordinal": 3,
+      "label": "editfield_detail_op_3_reference_only"
+    }
+  ],
+  "normalized_request_shape_sha256": "",
+  "canonical_request_shape_sha256": ""
+}

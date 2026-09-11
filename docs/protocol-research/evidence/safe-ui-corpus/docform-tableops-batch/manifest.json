@@ -1,0 +1,28 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "docform-tableops-batch",
+  "api_member": "TestedFormTable.GotoNextItem",
+  "operation_family": "form_table_ops",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "act_table_nextcell",
+  "notes": "Multi-phase safe_ui_action batch on a new Корректировка остатка: add 3 ТоварныеЗапасы rows + commit + activate the table (bootstrap), then Button.Activate (ПереключитьАктивность, just focuses), Table.GotoNextItem / GotoPreviousItem (next/previous cell), Table.SetOrder (sort by Количество). Read-only; nothing persists. vanessa_client only.",
+  "phase_member_map": {
+    "act_table_nextcell": "TestedFormTable.GotoNextItem",
+    "act_table_prevcell": "TestedFormTable.GotoPreviousItem",
+    "act_table_setorder": "TestedFormTable.SetOrder"
+  },
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Документ.ОперацияПоУчетуТоваров.Создать\""},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "bootstrap", "text": "И в таблице \"ТоварныеЗапасы\" я завершаю редактирование строки"},
+    {"phase": "bootstrap", "text": "И я активизирую поле с именем 'ТоварныеЗапасы'"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "act_table_nextcell", "text": "И в таблице \"ТоварныеЗапасы\" я перехожу к следующей ячейке"},
+    {"phase": "act_table_prevcell", "text": "И в таблице \"ТоварныеЗапасы\" я перехожу к предыдущей ячейке"},
+    {"phase": "act_table_setorder", "text": "И в таблице \"ТоварныеЗапасы\" я устанавливаю сортировку по колонке \"Количество\""},
+    {"phase": "post_read", "read": true}
+  ]
+}

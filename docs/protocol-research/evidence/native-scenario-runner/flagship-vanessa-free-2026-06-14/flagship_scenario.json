@@ -1,0 +1,23 @@
+{
+ "name": "flagship-fixture-input-vanessa-free",
+ "steps": [
+  {
+   "kind": "read_active_window",
+   "name": "active-window",
+   "expect_contains": "HomePage"
+  },
+  {
+   "kind": "read_form_summary",
+   "name": "form-summary"
+  },
+  {
+   "kind": "input_text",
+   "name": "input PF_EDIT_STRING",
+   "marker": "PF_INPUT_PROOF",
+   "params": {
+    "old_value": "PF_INPUT_PROOF",
+    "new_value": "PF_INPUT_PROOF"
+   }
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "warehouse-donotuse-toggle",
+  "api_member": "TestedFormButton.Click",
+  "operation_family": "catalog_boolean_attribute_toggle",
+  "mutates_business_data": true,
+  "marker": "НеИспользовать",
+  "action_phase": "action",
+  "notes": "Reference manifest reproducing the hardcoded demo-catalog-mutation scenario via the generic demo-action-manifest scenario. Real mutation in vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю основную форму списка справочника \"Склады\""},
+    {"phase": "bootstrap", "text": "И в таблице \"Список\" я перехожу к строке\n| 'Наименование' |\n| 'Средний' |"},
+    {"phase": "bootstrap", "text": "И я нажимаю на кнопку 'Изменить'"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И я устанавливаю флаг с именем 'НеИспользовать'"},
+    {"phase": "action", "text": "И я нажимаю на кнопку 'Записать'"},
+    {"phase": "post_read", "text": "И я нажимаю на кнопку 'Перечитать'"},
+    {"phase": "post_read", "read": true},
+    {"phase": "recovery", "text": "И я снимаю флаг с именем 'НеИспользовать'"},
+    {"phase": "recovery", "text": "И я нажимаю на кнопку 'Записать'"},
+    {"phase": "recovery", "text": "И я нажимаю на кнопку 'Перечитать'"},
+    {"phase": "recovery", "read": true},
+    {"phase": "close", "text": "И я нажимаю на кнопку 'Записать и закрыть'"}
+  ]
+}

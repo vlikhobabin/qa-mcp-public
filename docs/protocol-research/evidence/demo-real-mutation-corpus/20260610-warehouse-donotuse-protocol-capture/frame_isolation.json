@@ -1,0 +1,480 @@
+{
+  "schema": "qa-mcp.demo-catalog-mutation.frame-isolation.v1",
+  "run_id": "mut-warehouse-donotuse-20260610",
+  "object": "Справочник.Склады",
+  "element": "Средний",
+  "field": "НеИспользовать",
+  "operation_family": "catalog_boolean_attribute_toggle",
+  "mutates_business_data": true,
+  "outcome": {
+    "pre": "Нет",
+    "post": "Да",
+    "recovery": "Нет",
+    "status": "mutation_and_recovery_confirmed"
+  },
+  "capture_total_frames": 1723,
+  "phase_frame_summary": [
+    {
+      "phase": "bootstrap_open_card",
+      "flag": null,
+      "started_at": "2026-06-10T18:39:02.844977Z",
+      "ended_at": "2026-06-10T18:39:07.230411Z",
+      "frame_count": 50,
+      "client_to_manager": 25,
+      "manager_to_client": 25,
+      "byte_count": 14865
+    },
+    {
+      "phase": "pre_read",
+      "flag": "Нет",
+      "started_at": "2026-06-10T18:39:07.230411Z",
+      "ended_at": "2026-06-10T18:39:09.253318Z",
+      "frame_count": 478,
+      "client_to_manager": 239,
+      "manager_to_client": 239,
+      "byte_count": 111688
+    },
+    {
+      "phase": "action_write",
+      "flag": null,
+      "started_at": "2026-06-10T18:39:09.253318Z",
+      "ended_at": "2026-06-10T18:39:10.991926Z",
+      "frame_count": 28,
+      "client_to_manager": 14,
+      "manager_to_client": 14,
+      "byte_count": 7512
+    },
+    {
+      "phase": "post_read",
+      "flag": "Да",
+      "started_at": "2026-06-10T18:39:10.991926Z",
+      "ended_at": "2026-06-10T18:39:13.167052Z",
+      "frame_count": 548,
+      "client_to_manager": 274,
+      "manager_to_client": 274,
+      "byte_count": 125893
+    },
+    {
+      "phase": "recovery",
+      "flag": "Нет",
+      "started_at": "2026-06-10T18:39:13.167052Z",
+      "ended_at": "2026-06-10T18:39:15.177234Z",
+      "frame_count": 588,
+      "client_to_manager": 294,
+      "manager_to_client": 294,
+      "byte_count": 135649
+    }
+  ],
+  "action_write_frame_count": 28,
+  "action_write_byte_count": 7512,
+  "action_write_frames": [
+    {
+      "chunk_no": 272,
+      "direction": "manager_to_client",
+      "byte_count": 186,
+      "sha256": "f09bb8a27e0683cd86c621dca235159a811cc773cc788e5d809d1d90c65c7359",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 273,
+      "direction": "client_to_manager",
+      "byte_count": 491,
+      "sha256": "872590fc7bb30296d19bf2b9bc5d6ce7c7979780c371de69986bfcf40a7ba9c5",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f3a4b5e8784838183cb23950a102b",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 273,
+      "direction": "manager_to_client",
+      "byte_count": 352,
+      "sha256": "16db59d1a25b48b3f1bdf89d4ca538b040076c0270ef0d1081368cb8be3d351f",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "镁㍐眹Ꮬ䫭箺鬾䄔愌⢍腯閅ǡဣ䲻늬뾝꺠붴蒁膃友ꎁ⏋疕潝驏膜킞푬픫垗륢拁䍔消ᴲ햁犞肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336"
+    },
+    {
+      "chunk_no": 274,
+      "direction": "client_to_manager",
+      "byte_count": 314,
+      "sha256": "865a89f0796345950d26fe86f1259ff5ce56c60bc947a7cc12331a32c25e3d90",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "428f3b4b5e8784838183cb2395754ee1",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "轂䬻蝞莄莁⏋疕潝驏膜킞푬픫垗륢拁䍔消ᴲ햁犞肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336b-4565-a240-49a203c"
+    },
+    {
+      "chunk_no": 274,
+      "direction": "manager_to_client",
+      "byte_count": 352,
+      "sha256": "30ce592294468fa39f48c36cffe3e13968c0fdea70175186e638b505a1de11ab",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "镁㍐眹Ꮬ䫭箺鬾䄔愌⦍腯閅ǡဣ䲻늬뾝꺠붴蒁膃友ꆁ⏋疕潝驏膜킞푬픫垗륢拁䍔消ᴲ햁犞肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336"
+    },
+    {
+      "chunk_no": 275,
+      "direction": "client_to_manager",
+      "byte_count": 16,
+      "sha256": "f725033602e2e63330a54e5b474e66ddb041f81c6d8978d054fff14f2c268140",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f3c4b5e878483818181a36653b2a6",
+      "ends_tail_marker": true,
+      "guids": [],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 275,
+      "direction": "manager_to_client",
+      "byte_count": 356,
+      "sha256": "981fd1b2fe48d4a5da543facb01ca393f166dbd551f89e5e7d059c17526e330b",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "镁㍐眹Ꮬ䫭箺鬾䄔愌⪍腯閅ǡဣ䲻늬뾝꺠붴蒁膃友ꎁ⏋ᮕ쿧ꐛ꫁ꕂ窄貐䘘핯ᅑ⩻댒俟⦹쏬榖ﻵ肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336"
+    },
+    {
+      "chunk_no": 276,
+      "direction": "client_to_manager",
+      "byte_count": 326,
+      "sha256": "f3c9d723743c8ed0027889373c461c729664bc3e9259e1ff632f54581f1f9f64",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "428f3d4b5e8784838183cb23951be7cf",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "轂䬽蝞莄莁⏋ᮕ쿧ꐛ꫁ꕂ窄貐䘘핯ᅑ⩻댒俟⦹쏬榖ﻵ肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336b-4565-a240-49a203c"
+    },
+    {
+      "chunk_no": 276,
+      "direction": "manager_to_client",
+      "byte_count": 352,
+      "sha256": "e7fcbbbea20e4494f803a8fadea00414836c83b4ce83efb385a6fb856a68f76d",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "镁㍐眹Ꮬ䫭箺鬾䄔愌⮍腯閅ǡဣ䲻늬뾝꺠붴蒁膃友ꎁ⏋ࡵ“̢년鄦ﴍ핿刵蟱睑俬ⶲ黧൬Ȿ肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336"
+    },
+    {
+      "chunk_no": 277,
+      "direction": "client_to_manager",
+      "byte_count": 314,
+      "sha256": "43220dbc2db1c397f847dd28d3bcc2aa475e7c582e5f51ca356a8766c59c3b32",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "428f3e4b5e8784838183cb2395f17508",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "轂䬾蝞莄莁⏋ࡵ“̢년鄦ﴍ핿刵蟱睑俬ⶲ黧൬Ȿ肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336b-4565-a240-49a203c"
+    },
+    {
+      "chunk_no": 277,
+      "direction": "manager_to_client",
+      "byte_count": 352,
+      "sha256": "ddf9c669ea4387f8b46de513760ac2353c0f36e883f47e7a9e5fbe72b186fdfa",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "镁㍐眹Ꮬ䫭箺鬾䄔愌ⲍ腯閅ǡဣ䲻늬뾝꺠붴蒁膃友ꆁ⏋ࡵ“̢년鄦ﴍ핿刵蟱睑俬ⶲ黧൬Ȿ肗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336"
+    },
+    {
+      "chunk_no": 278,
+      "direction": "client_to_manager",
+      "byte_count": 16,
+      "sha256": "8ee42bc9f0c3b3de15c0b5bf3004cbb1da969cd685db8e9a23772c903e703ac3",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f3f4b5e878483818181a36653b2a6",
+      "ends_tail_marker": true,
+      "guids": [],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 278,
+      "direction": "manager_to_client",
+      "byte_count": 99,
+      "sha256": "fa9c4980437032b1adb8b5e19b1c829e71949737f9a4a9d6382a21731a735d1c",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 279,
+      "direction": "client_to_manager",
+      "byte_count": 321,
+      "sha256": "85cadf6f944ba639062fa1bd27e2be8d73e62f856ab1a17f0be13d58fd90ea2b",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f404b5e8784838183cb2395554d85",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 279,
+      "direction": "manager_to_client",
+      "byte_count": 156,
+      "sha256": "761d4d14b9d2222278bfbeea1c1b9aebe86df351277acd7da2c40502fb3ab10e",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 280,
+      "direction": "client_to_manager",
+      "byte_count": 355,
+      "sha256": "b62e6623b06a41615b6673cd179c36bd988a10dbb947a29026b3cecbe00915a1",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f414b5e8784838183cb23950a102b",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 280,
+      "direction": "manager_to_client",
+      "byte_count": 224,
+      "sha256": "e68eecc352ad9bb03bc8b15254e56b6baed93b84cfb619c914db3db7907ff73d",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 281,
+      "direction": "client_to_manager",
+      "byte_count": 561,
+      "sha256": "8e444e35835b6dd0cf7b08ddb60c4215457e5ec6c50b66a39053bc193f37bff6",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f424b5e8784838183cb23950a102b",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 281,
+      "direction": "manager_to_client",
+      "byte_count": 202,
+      "sha256": "2af325d75cea4a8b58e39f00bdbbdcd83ccd133bd1a4be5859a046419f97ba6f",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 282,
+      "direction": "client_to_manager",
+      "byte_count": 378,
+      "sha256": "a26c446dfe9fc07eaae031ec3655299f5a10bb09e8d6809046660244aa209749",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f434b5e8784838183cb2395a83241",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe",
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 282,
+      "direction": "manager_to_client",
+      "byte_count": 211,
+      "sha256": "14972f0fe67d473f77bc9411fc0b012fd4e43f3a50134f3a3b8c16aaebc20442",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 283,
+      "direction": "client_to_manager",
+      "byte_count": 173,
+      "sha256": "29ee194f10f48fb9a3017b8ec5aebf8f46524bef4201f142e32e5ee632585d18",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f444b5e8784838183cb2395754ee1",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 283,
+      "direction": "manager_to_client",
+      "byte_count": 211,
+      "sha256": "523970962add084c858af06fd70eca8d9ba176ae6abc858561f0e66806538654",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 284,
+      "direction": "client_to_manager",
+      "byte_count": 16,
+      "sha256": "4cf63793d95caf9898b4c84a85d317038ecd698e1663bec54b103b3464d75c15",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f454b5e878483818181a36653b2a6",
+      "ends_tail_marker": true,
+      "guids": [],
+      "text_excerpt": ""
+    },
+    {
+      "chunk_no": 284,
+      "direction": "manager_to_client",
+      "byte_count": 400,
+      "sha256": "92f26dcc85e787d3c56ef0b05120542852d9de02095ef8671ac4785dad122fa4",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "镁㍐眹Ꮬ䫭箺鬾䄔愌㎍腯閅ǡဣ䲻늬뾝꺠붴蒁膃友ꎁ⏋斶蔎櫢鍈暞⾂헤躵灧꩔仦㖛ীꗥ欧颗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336"
+    },
+    {
+      "chunk_no": 285,
+      "direction": "client_to_manager",
+      "byte_count": 362,
+      "sha256": "7ffbc3935bcd03066407a7b9ddfc8bf1494ae7cf6ab1bb1e2b6d9b3c807dd883",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "428f464b5e8784838183cb2395e0b665",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "轂䭆蝞莄莁⏋斶蔎櫢鍈暞⾂헤躵灧꩔仦㖛ীꗥ欧颗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336b-4565-a240-49a203c"
+    },
+    {
+      "chunk_no": 285,
+      "direction": "manager_to_client",
+      "byte_count": 400,
+      "sha256": "28c555b9d0e6e8d4c567f855972e45ef2acba36e6a06b114d0901351f5686848",
+      "class": "utf-16-le-text",
+      "encoding": "utf-16-le",
+      "head_hex": "419550333977dc13ed4aba7b3e9b1441",
+      "ends_tail_marker": true,
+      "guids": [
+        "d107afff-b899-4eea-90ba-4c50ac244bff",
+        "718969c8-336b-4565-a240-49a203cd1dfe"
+      ],
+      "text_excerpt": "镁㍐眹Ꮬ䫭箺鬾䄔愌㒍腯閅ǡဣ䲻늬뾝꺠붴蒁膃友ꆁ⏋斶蔎櫢鍈暞⾂헤躵灧꩔仦㖛ীꗥ欧颗SecondaryFrame[d107afff-b899-4eea-90ba-4c50ac244bff].ManagedForm[718969c8-336"
+    },
+    {
+      "chunk_no": 286,
+      "direction": "client_to_manager",
+      "byte_count": 16,
+      "sha256": "f5c3d0670ae97f2ce7b9aa0bc78f613cc0f93c8fe5adc1c01f332cc8925dc5df",
+      "class": "binary",
+      "encoding": null,
+      "head_hex": "428f474b5e878483818181a36653b2a6",
+      "ends_tail_marker": true,
+      "guids": [],
+      "text_excerpt": ""
+    }
+  ],
+  "raw_payload_location": "runtime/protocol-research/captures/mut-warehouse-donotuse-20260610/ (ignored; client_to_manager.bin, manager_to_client.bin, traffic.jsonl, frames.jsonl)",
+  "proof_class": "isolated_action_frames_with_db_confirmed_mutation_and_recovery",
+  "accepted_protocol_mapping": false,
+  "accepted_mapping_reason": "action frames are isolated and the mutation+recovery are DB-confirmed, but the write opcode/field-binding has not yet been decoded to a named TestClient API call; promotion needs a same-action vanessa-mcp reference comparison."
+}

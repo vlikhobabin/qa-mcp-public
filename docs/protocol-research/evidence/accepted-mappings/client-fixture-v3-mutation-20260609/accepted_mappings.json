@@ -1,0 +1,22 @@
+{
+  "schema": "qa-mcp.accepted-mappings.v1",
+  "publication_id": "client-fixture-v3-mutation-20260609",
+  "published_at": "2026-06-09T04:43:17Z",
+  "accepted_case_ids": [],
+  "candidate_case_ids": [
+    "v3-mutate-text-string",
+    "v3-mutate-number",
+    "v3-mutate-date",
+    "v3-toggle-checkbox-true",
+    "v3-click-inert-button"
+  ],
+  "accepted_count": 0,
+  "candidate_count": 5,
+  "non_accepted_reasons": [
+    "missing_mutation_action_frame_range",
+    "missing_stable_normalized_hash",
+    "accepted_replay_probe_or_typed_contract_proof_missing"
+  ],
+  "source_manifest": "docs/protocol-research/evidence/client-fixture-v3-mutation/20260609-manifest-contract/mutation_manifest_rows.jsonl",
+  "recovery_proof": "docs/protocol-research/evidence/client-fixture-v3-mutation/20260609-recovery-proof/"
+}

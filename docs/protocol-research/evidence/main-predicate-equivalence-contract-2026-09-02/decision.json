@@ -1,0 +1,156 @@
+{
+  "schema": "qa-mcp.main-predicate-equivalence-decision.v1",
+  "decision_id": "oss-06-s4-r1-i10-investigate-main-predicate-equivalence-contract",
+  "status": "authorize_with_separate_source",
+  "baseline": {
+    "head": "2517ed6b55a6efed8f2cd84b46f8dea18090fd36",
+    "origin_main": "2517ed6b55a6efed8f2cd84b46f8dea18090fd36"
+  },
+  "lineage": [
+    {
+      "id": "oss-06-s4-r1-i4-classify-hidden-desktop-inventory-refusal-cause",
+      "status": "rejected_unpublished"
+    },
+    {
+      "id": "oss-06-s4-r1-i7-investigate-private-inventory-classifier-contract",
+      "status": "published"
+    },
+    {
+      "id": "oss-06-s4-r1-i8-authorize-private-inventory-classifier-payload",
+      "status": "published_exact_i4_only"
+    },
+    {
+      "id": "oss-06-s4-r1-i9-refuse-malformed-main-inventory-classification",
+      "status": "rejected_unpublished",
+      "canonical_review_cycle": 3,
+      "reviewed_tree": "cda26645dc8f0e3cc1bab8761125b0de1af0fb9c"
+    }
+  ],
+  "equivalence": {
+    "outcomes": [
+      "exact",
+      "absent",
+      "invalid"
+    ],
+    "first_expected_rules": [
+      "pid_nonzero",
+      "class_nonempty",
+      "class_length_at_most_256",
+      "desktop_hash_canonical",
+      "membership_non_nil"
+    ],
+    "second_expected_rules": [
+      "observer_non_nil_before_admission",
+      "pid_nonzero",
+      "class_nonempty",
+      "desktop_hash_canonical",
+      "membership_non_nil",
+      "first_admission_valid_identity_provenance",
+      "expected_hwnd_match",
+      "post_admission_returned_identity_exactly_equals_expected_before_uia"
+    ],
+    "row_rules": [
+      "hwnd_nonzero",
+      "pid_nonzero",
+      "owner_not_self",
+      "class_nonempty",
+      "class_length_at_most_256",
+      "desktop_hash_equals_expected",
+      "desktop_hash_canonical",
+      "membership_true_after_row_validity"
+    ],
+    "empty_inventory_with_valid_predicate": "absent",
+    "empty_inventory_with_invalid_predicate": "invalid",
+    "membership_replay": "ordered_booleans_only_exact_consumption_no_external_calls",
+    "success_cause_allowed_only_for": "absent",
+    "second_casefold_match_with_class_spelling_or_casing_drift": "invalid_before_uia_no_cause"
+  },
+  "connected_matrix_mutations": [
+    "disconnect_first_projection",
+    "disconnect_second_projection",
+    "remove_each_expected_or_row_guard",
+    "remove_first_class_length_guard",
+    "remove_second_post_admission_exact_identity_check",
+    "call_live_membership_during_replay",
+    "move_projection_after_uia",
+    "allow_success_cause_for_invalid",
+    "change_replay_consumption",
+    "change_first_sleep_or_outcome"
+  ],
+  "successful_one_window_invariants": {
+    "inventory_calls": 2,
+    "fence_snapshots": 4,
+    "process_open_calls": 8,
+    "process_wait_calls": 8,
+    "process_close_calls": 8,
+    "port_probes": 4,
+    "membership_calls": 12,
+    "replay_external_calls": 0,
+    "uia_calls": 2,
+    "action_count": 0
+  },
+  "envelope": {
+    "quantitatively_sufficient": true,
+    "i8_authorization_reusable": false,
+    "production_loc_baseline": "2517ed6b55a6efed8f2cd84b46f8dea18090fd36",
+    "reviewed_i9_production_loc": 247,
+    "production_loc_ceiling": 301,
+    "allow_new_authority_or_wire_protocol": false,
+    "product_test_paths": [
+      "host-agent/windows-display-agent/hidden_desktop_window_isolation_windows.go",
+      "host-agent/windows-display-agent/hidden_direct_execute_observation.go",
+      "host-agent/windows-display-agent/hidden_direct_execute_observation_test.go",
+      "host-agent/windows-display-agent/hidden_direct_execute_observation_windows_test.go",
+      "host-agent/windows-display-agent/s4_r2_pre_receipt_diagnostic_test.go"
+    ]
+  },
+  "reviewed_i9_blobs": [
+    {
+      "path": "host-agent/windows-display-agent/hidden_desktop_window_isolation_windows.go",
+      "baseline_blob": "522bfcc9f28c7c949b7a2c500ba9b478345c04dc",
+      "reviewed_blob": "178167d47e89bd8620684300868c4a54c5051919",
+      "reviewed_sha256": "396542d5a661c9c2b2a18632de5a257a4e40846e00eab3cc4bfa3f7ad73f8945"
+    },
+    {
+      "path": "host-agent/windows-display-agent/hidden_direct_execute_observation.go",
+      "baseline_blob": "ecb4b659d00a2aa78f0691b6d5b3fff0b41b23d4",
+      "reviewed_blob": "939751c52c811df0e93226df40b3ace5688327c8",
+      "reviewed_sha256": "80838c30d35481c6e65279176243044c7e69bb25e6da6da0c8caf262462adc1e"
+    },
+    {
+      "path": "host-agent/windows-display-agent/hidden_direct_execute_observation_test.go",
+      "baseline_blob": "a8bbc475df585fb1ec638b2c3afcd9db707300fe",
+      "reviewed_blob": "efa536541b2401c45d9d83c5e28bbd0efcee305e",
+      "reviewed_sha256": "635ddd448cdeabb0c28d72aa2346b6391264d0d2fa8453832994d5893b33ed0d"
+    },
+    {
+      "path": "host-agent/windows-display-agent/hidden_direct_execute_observation_windows_test.go",
+      "baseline_blob": "f81b37f40a5250212586cb7dd05f151d12549da7",
+      "reviewed_blob": "6450203e750ceee2e50961c1e7b25a70565b71d9",
+      "reviewed_sha256": "05ccc6ecd6e2b08fbefc0832362700cb63f779c87a1ac90d2014cff875845681"
+    },
+    {
+      "path": "host-agent/windows-display-agent/s4_r2_pre_receipt_diagnostic_test.go",
+      "baseline_blob": "a7c8fed0d14f07e306b75b6ef6c13a0d3fb89c55",
+      "reviewed_blob": "185c257e07b0c27122451e0846a1b697d4a879dc",
+      "reviewed_sha256": "d53de27766c3138b00222e072e7ea26a255bee2b3dc887daa316fb5450f86a53"
+    }
+  ],
+  "authorization_source": {
+    "card": "openspec/board/2.todo/oss-06-s4-r1-i10a-authorize-main-predicate-equivalence-successor.md",
+    "payload": {
+      "investigation_card": "openspec/board/4.done/oss-06-s4-r1-i10-investigate-main-predicate-equivalence-contract.md",
+      "investigation_id": "oss-06-s4-r1-i10-investigate-main-predicate-equivalence-contract",
+      "successor_card": "openspec/board/3.inprogress/oss-06-s4-r1-i11-enforce-main-predicate-equivalence-contract.md",
+      "successor_id": "oss-06-s4-r1-i11-enforce-main-predicate-equivalence-contract",
+      "production_loc_ceiling": 301,
+      "allow_new_authority_or_wire_protocol": false
+    }
+  },
+  "successor": {
+    "card": "openspec/board/2.todo/oss-06-s4-r1-i11-enforce-main-predicate-equivalence-contract.md",
+    "requires_published_authorization_source": true,
+    "fresh_independent_review": true,
+    "offline_only": true
+  }
+}

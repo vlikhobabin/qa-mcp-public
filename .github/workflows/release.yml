@@ -1,0 +1,153 @@
+# Current model-B release workflow. It gates publication on affected Python
+# tests, builds the normal source-visible package image and verifies readable
+# modules plus reviewed plaintext assets before pushing. OSS-08 owns the later
+# public release-train redesign; this workflow only removes the retired variant.
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag, e.g. v0.1.0"
+        required: true
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE: ghcr.io/vlikhobabin/qa-mcp-thin
+  DIST_REPO: vlikhobabin/qa-mcp-dist
+  PUBLIC_BASE_IMAGE: ghcr.io/astral-sh/uv:0.11.14-python3.12-trixie-slim@sha256:13b5883729ec534af5863facf5c40ac0869f2c124ad5620c9ed36fe7c03fa87d
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+        with:
+          version: "0.11.14"
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --extra dev --locked
+
+      - name: Select changes since the previous release
+        run: |
+          base=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || git rev-parse HEAD^ 2>/dev/null || git hash-object -t tree /dev/null)
+          echo "QA_TEST_BASE=$base" >> "$GITHUB_ENV"
+
+      - name: Affected offline product tests
+        run: uv run pytest -q --qa-changed --qa-lane offline --durations=10
+
+      - name: Affected subprocess, build and display integration
+        run: uv run pytest -q --qa-changed --qa-lane integration --durations=10
+
+  release:
+    needs: python-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Resolve tag
+        id: tag
+        run: echo "tag=${GITHUB_REF_NAME:-${{ github.event.inputs.tag }}}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version-file: host-agent/windows-display-agent/go.mod
+
+      - name: Build windowless host agent (windows/amd64)
+        working-directory: host-agent/windows-display-agent
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/dist"   # dist/ is gitignored — go build -o won't create the parent dir
+          go test ./...
+          GOOS=windows GOARCH=amd64 go build -ldflags "-H windowsgui" -o "$GITHUB_WORKSPACE/dist/qa-mcp-host-agent.exe" .
+
+      - name: Stage release assets
+        run: |
+          cp host-agent/install-windows-host-agent.ps1 dist/
+          cp delivery/bootstrap.ps1                    dist/
+          cp delivery/windows-agent-runbook.md         dist/
+          cp delivery/README.md                        dist/
+          sha256sum dist/qa-mcp-host-agent.exe | awk '{print $1}' > dist/qa-mcp-host-agent.exe.sha256
+          echo "agent sha256: $(cat dist/qa-mcp-host-agent.exe.sha256)"
+
+      - name: Log in to GHCR
+        if: ${{ false }} # Public destination and publication authority pending.
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build source-visible image (load locally)
+        run: |
+          printf '%s' "$PUBLIC_BASE_IMAGE" | grep -Eq '^ghcr\.io/astral-sh/uv:[^@]+@sha256:[0-9a-f]{64}$' || {
+            echo 'PUBLIC_BASE_IMAGE must be the immutable public uv/Python image' >&2
+            exit 1
+          }
+          python3 docker/verify_open_image.py --package-root src/qa_mcp \
+            --source-commit "$GITHUB_SHA" --write-inventory dist/open-package-inventory.json
+          DOCKER_BUILDKIT=1 docker build -f docker/Dockerfile.thin \
+            --build-arg PUBLIC_BASE_IMAGE="$PUBLIC_BASE_IMAGE" \
+            --build-arg SOURCE_COMMIT="$GITHUB_SHA" \
+            -t "${{ env.IMAGE }}:${{ steps.tag.outputs.tag }}" \
+            -t "${{ env.IMAGE }}:latest" .
+
+      - name: Verify source-visible package and assets
+        run: |
+          docker run --rm -v "$PWD/dist/open-package-inventory.json:/tmp/inventory.json:ro" \
+            --entrypoint python "${{ env.IMAGE }}:${{ steps.tag.outputs.tag }}" \
+            /usr/local/bin/qa-mcp-verify-open-image --inventory /tmp/inventory.json
+          docker save -o dist/qa-mcp-thin-open-check.tar "${{ env.IMAGE }}:${{ steps.tag.outputs.tag }}"
+          python3 tools/release/component_manifest.py \
+            --version "${{ steps.tag.outputs.tag }}" --git-commit "$GITHUB_SHA" \
+            --image-tag "${{ env.IMAGE }}:${{ steps.tag.outputs.tag }}" \
+            --image-asset dist/qa-mcp-thin-open-check.tar \
+            --package-inventory dist/open-package-inventory.json \
+            --asset bootstrap.ps1=dist/bootstrap.ps1 \
+            --asset qa-mcp-host-agent.exe=dist/qa-mcp-host-agent.exe \
+            --output dist/manifest.json
+          python3 tools/release/validate_component_manifest.py validate-component-manifest dist/manifest.json
+          python3 docker/verify_open_image.py --archive dist/qa-mcp-thin-open-check.tar \
+            --component-manifest dist/manifest.json
+
+      - name: Smoke direct authenticated standalone runtime
+        run: |
+          python3 tools/release/smoke_standalone_image.py \
+            "${{ env.IMAGE }}:${{ steps.tag.outputs.tag }}" \
+            --expected-source-commit "$GITHUB_SHA"
+
+      - name: Push source-visible image
+        if: ${{ false }} # Public destination and publication authority pending.
+        run: |
+          docker push "${{ env.IMAGE }}:${{ steps.tag.outputs.tag }}"
+          docker push "${{ env.IMAGE }}:latest"
+          rm -f dist/qa-mcp-thin-open-check.tar
+
+      - name: Publish release to the public dist repo
+        if: ${{ false }} # Public destination and publication authority pending.
+        env:
+          GH_TOKEN: ${{ secrets.DIST_REPO_TOKEN }}
+        run: |
+          gh release create "${{ steps.tag.outputs.tag }}" \
+            --repo "${{ env.DIST_REPO }}" \
+            --title "qa-mcp ${{ steps.tag.outputs.tag }}" \
+            --notes "Windows model-B delivery. Image: \`${{ env.IMAGE }}:${{ steps.tag.outputs.tag }}\` (and :latest). Deploy with bootstrap.ps1 — see windows-agent-runbook.md." \
+            dist/qa-mcp-host-agent.exe \
+            dist/qa-mcp-host-agent.exe.sha256 \
+            dist/install-windows-host-agent.ps1 \
+            dist/bootstrap.ps1 \
+            dist/manifest.json \
+            dist/open-package-inventory.json \
+            dist/windows-agent-runbook.md \
+            dist/README.md

@@ -1,0 +1,13 @@
+{
+  "schema": "qa-mcp.accepted-mappings.v1",
+  "generated_at": "2026-06-10T05:45:00Z",
+  "evidence_id": "demo-button-safe-action-20260610",
+  "pilot_decision": "routed_to_v3",
+  "accepted_case_ids": [],
+  "candidate_rows_excluded": [
+    "demo10413-operation-goods-toggle-activity"
+  ],
+  "excluded_reason": {
+    "demo10413-operation-goods-toggle-activity": "business_mutation; capture blocked before click; no replay/probe or typed contract proof"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2-safe-action.publication-summary.v1",
+  "published_at": "2026-06-07T19:40:00Z",
+  "capture_id": "20260607-first-focused-v2-safe-action-live-runner-2",
+  "selection_manifest": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-subset/focused_safe_action_manifest.json",
+  "frame_isolation_summary": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-live-action-frame-join/frame_isolation_summary.md",
+  "proof_summary": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-first-focused-proof-decision/proof_summary.md",
+  "accepted_mappings": "docs/protocol-research/evidence/accepted-mappings/manager-fixture-v2-first-focused-proof-20260607/accepted_mappings.json",
+  "accepted_count": 0,
+  "candidate_count": 2,
+  "rows": [
+    {
+      "case_id": "safe-switch-fixture-page-b",
+      "allowed_action_family": "switch_fixture_page",
+      "status": "candidate",
+      "normalized_hash": "191824eda15e75980801e07ab5f443a9b0065f9f28d1ee5162bbbb6c803ded4a",
+      "non_accepted_reason": "replay_or_probe_or_typed_contract_unavailable"
+    },
+    {
+      "case_id": "safe-focus-existing-edit-string",
+      "allowed_action_family": "focus_existing_element",
+      "status": "candidate",
+      "normalized_hash": "bbfa2978b211f2f6e54d84f3bc53f19aff713ee0ba66f5a7d8392ef619869b19",
+      "non_accepted_reason": "replay_or_probe_or_typed_contract_unavailable"
+    }
+  ],
+  "raw_output_policy": "raw captures, generated replay payloads, process logs and platform logs stay under ignored runtime or artifact paths",
+  "v2_safety_boundary": {
+    "excluded": [
+      "text_input",
+      "checkbox_or_value_toggle",
+      "business_command_click",
+      "object_write",
+      "save_post_delete_fill_import_export",
+      "external_side_effect"
+    ]
+  }
+}

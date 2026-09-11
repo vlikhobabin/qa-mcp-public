@@ -1,0 +1,45 @@
+{
+  "value": "WIN-SENDINPUT-OK-Кириллица-2026",
+  "pid": 17372,
+  "target_hwnd": 5770936,
+  "save": false,
+  "port": 15381,
+  "field": "Наименование",
+  "committed": false,
+  "value_in_readback": false,
+  "readback_value": null,
+  "diverged_at": null,
+  "blurred": true,
+  "saved": false,
+  "display": "(win-sendinput)",
+  "ok": true,
+  "diag": {
+    "fg_before": {
+      "hwnd": 5770936,
+      "title": "Демонстрационное приложение"
+    },
+    "fg_after": {
+      "hwnd": 5770936,
+      "title": "Демонстрационное приложение",
+      "target": 5770936,
+      "target_title": "Демонстрационное приложение",
+      "took": true
+    },
+    "focus_pre_type": {
+      "focus_hwnd": 5770936,
+      "focus_class": "V8TopLevelFrameSDI",
+      "focus_pid": 17372,
+      "is_our_client": true,
+      "fg_hwnd": 5770936,
+      "fg_title": "Демонстрационное приложение"
+    },
+    "focus_post_type": {
+      "focus_hwnd": 5770936,
+      "focus_class": "V8TopLevelFrameSDI",
+      "focus_pid": 17372,
+      "is_our_client": true,
+      "fg_hwnd": 5770936,
+      "fg_title": "Демонстрационное приложение"
+    }
+  }
+}

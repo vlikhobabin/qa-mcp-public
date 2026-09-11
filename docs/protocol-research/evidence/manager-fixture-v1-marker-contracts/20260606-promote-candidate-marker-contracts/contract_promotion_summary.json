@@ -1,0 +1,59 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.marker-contract-promotion.v1",
+  "catalog_version": "2026-06-06",
+  "catalog_path": "tools/protocol-research/manager_fixture_v1_command_catalog.json",
+  "bsl_module_path": "C:\\1C_BASES\\EDT\\vanessa_qa\\vanessa_manager\\src\\DataProcessors\\ProtocolFixtureTestManager\\Forms\\ManagerHarness\\Module.bsl",
+  "catalog_comparison": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-promote-candidate-marker-contracts/catalog_comparison.json",
+  "dry_run_capture": "runtime/protocol-research/captures/20260606-promote-candidate-marker-contracts-dryrun",
+  "focused_proof_capture": "runtime/protocol-research/captures/20260606-promote-candidate-marker-contracts-focused-proof",
+  "focused_accepted_report": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-promote-candidate-marker-contracts-focused-proof-accepted/",
+  "direct_probe_summary": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-promote-candidate-marker-contracts-focused-proof/summary.json",
+  "contract_changes_applied": [
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "previous_expected_marker": "PF_FIXTURE_VERSION",
+      "expected_marker": "QA MCP Protocol Fixture V1"
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "previous_expected_marker": "PF_FIXTURE_VERSION",
+      "expected_marker": "QA MCP Protocol Fixture V1"
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "previous_expected_marker": "TestedFormButton",
+      "expected_marker": "PF_BUTTON_INERT"
+    },
+    {
+      "case_id": "tm-v1-table-items",
+      "previous_expected_marker": "PF_ROW_001",
+      "expected_marker": "PF_TABLE_ITEMS"
+    },
+    {
+      "case_id": "tm-v1-group-main",
+      "previous_expected_marker": "PF_FORM_MAIN",
+      "expected_marker": "PF_GROUP_MAIN"
+    }
+  ],
+  "accepted_former_pending_case_ids": [
+    "tm-v1-diag-window-find-form-marker",
+    "tm-v1-form-summary",
+    "tm-v1-checkbox-true",
+    "tm-v1-button-inert",
+    "tm-v1-table-items",
+    "tm-v1-group-main"
+  ],
+  "blocked_former_pending_case_ids": [
+    "tm-v1-diag-command-interface-dump",
+    "tm-v1-diag-window-children",
+    "tm-v1-diag-window-get-form-path"
+  ],
+  "verification": {
+    "catalog_drift_status": "ok",
+    "focused_command_count": 10,
+    "focused_joined_count": 10,
+    "accepted_former_pending_count": 6,
+    "blocked_former_pending_count": 3,
+    "raw_output_policy": "raw capture and generated probe output stay under ignored runtime/protocol-research paths"
+  }
+}

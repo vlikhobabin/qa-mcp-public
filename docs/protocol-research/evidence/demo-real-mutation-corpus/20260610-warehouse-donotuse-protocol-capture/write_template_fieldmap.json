@@ -1,0 +1,494 @@
+{
+  "schema": "qa-mcp.demo-catalog-mutation-write-template-summary.v1",
+  "source_capture": "mut-warehouse-donotuse-20260610",
+  "command_frame_count": 14,
+  "dynamic_field_kinds": [
+    "per_frame_message_id",
+    "random_bytes",
+    "session_guid_ascii",
+    "session_guid_utf16le",
+    "uint16_le_sequence"
+  ],
+  "frames": [
+    {
+      "ordinal": 0,
+      "byte_count": 186,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        }
+      ]
+    },
+    {
+      "ordinal": 1,
+      "byte_count": 352,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 116,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 216,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "byte_count": 352,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 116,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 216,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "byte_count": 356,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 116,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 216,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        }
+      ]
+    },
+    {
+      "ordinal": 4,
+      "byte_count": 352,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 116,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 216,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        }
+      ]
+    },
+    {
+      "ordinal": 5,
+      "byte_count": 352,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 116,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 216,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        }
+      ]
+    },
+    {
+      "ordinal": 6,
+      "byte_count": 99,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        }
+      ]
+    },
+    {
+      "ordinal": 7,
+      "byte_count": 156,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        }
+      ]
+    },
+    {
+      "ordinal": 8,
+      "byte_count": 224,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        }
+      ]
+    },
+    {
+      "ordinal": 9,
+      "byte_count": 202,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        }
+      ]
+    },
+    {
+      "ordinal": 10,
+      "byte_count": 211,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        }
+      ]
+    },
+    {
+      "ordinal": 11,
+      "byte_count": 211,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 101,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        },
+        {
+          "name": "session_guid_ascii",
+          "offset": 151,
+          "length": 36,
+          "kind": "session_guid_ascii"
+        }
+      ]
+    },
+    {
+      "ordinal": 12,
+      "byte_count": 400,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 116,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 216,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        }
+      ]
+    },
+    {
+      "ordinal": 13,
+      "byte_count": 400,
+      "dynamic_fields": [
+        {
+          "name": "message_id",
+          "offset": 2,
+          "length": 16,
+          "kind": "per_frame_message_id"
+        },
+        {
+          "name": "sequence",
+          "offset": 19,
+          "length": 2,
+          "kind": "uint16_le_sequence"
+        },
+        {
+          "name": "nonce",
+          "offset": 68,
+          "length": 16,
+          "kind": "random_bytes"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 116,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        },
+        {
+          "name": "session_guid_utf16le",
+          "offset": 216,
+          "length": 72,
+          "kind": "session_guid_utf16le"
+        }
+      ]
+    }
+  ]
+}

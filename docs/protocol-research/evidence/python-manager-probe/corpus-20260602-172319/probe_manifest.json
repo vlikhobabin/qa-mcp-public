@@ -1,0 +1,10 @@
+{
+  "schema": "python-manager-probe.manifest.v1",
+  "started_at": "2026-06-02T14:25:11.356788Z",
+  "query": "form-element-details",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260602-084433",
+  "templates": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\docs\\protocol-research\\evidence\\templates\\20260602-frames08-106-utf16-managedform\\manager_frame_templates.json",
+  "target_host": "127.0.0.1",
+  "target_port": 15381,
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\python-manager-probe\\corpus-20260602-172319"
+}

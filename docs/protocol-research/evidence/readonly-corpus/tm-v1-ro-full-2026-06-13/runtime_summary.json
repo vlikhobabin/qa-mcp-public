@@ -1,0 +1,75 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.reviewed-summary.v1",
+  "generated_at": "2026-06-13T06:01:56Z",
+  "run_id": "tm-v1-ro-full",
+  "source_runtime_dir": "runtime\\protocol-research\\captures\\tm-v1-ro-full",
+  "reviewed_output_dir": "runtime\\protocol-research\\tm-v1-ro-full-report",
+  "fixture_version": "protocol-fixture.v1",
+  "command_catalog_version": "qa-mcp.manager-fixture-v1.manifest.v1",
+  "manager_harness": "DataProcessor.ProtocolFixtureTestManager.Form.ManagerHarness",
+  "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+  "proxy_testclient_port": 15382,
+  "run_status": "runner_timeout",
+  "status_reason": "manager fixture V1 harness invocation ended with timeout: MCP tool timed out after 120 second(s): execute_step_from_text",
+  "bootstrap_status": "connect_before",
+  "command_count": 17,
+  "event_count": 25,
+  "readonly_event_count": 15,
+  "completed_count": 4,
+  "failed_count": 3,
+  "case_status_counts": {
+    "connect_before": 1,
+    "connect_after": 1,
+    "second_boundary_wait": 8,
+    "started": 8,
+    "ok": 4,
+    "failed": 3
+  },
+  "frame_join_status_counts": {
+    "joined": 7,
+    "unresolved": 10
+  },
+  "accepted_protocol_mapping": true,
+  "accepted_case_ids": [
+    "tm-v1-diag-command-interface-dump",
+    "tm-v1-diag-window-children"
+  ],
+  "output_files": {
+    "runtime_manifest": "runtime\\protocol-research\\captures\\tm-v1-ro-full\\manager_harness_manifest.json",
+    "runtime_result": "runtime\\protocol-research\\captures\\tm-v1-ro-full\\manager_harness_result.json",
+    "runtime_case_events": "runtime\\protocol-research\\captures\\tm-v1-ro-full\\case_events.jsonl",
+    "reviewed_summary_markdown": "runtime\\protocol-research\\tm-v1-ro-full-report\\runtime_summary.md",
+    "reviewed_summary_json": "runtime\\protocol-research\\tm-v1-ro-full-report\\runtime_summary.json",
+    "reviewed_frame_join_markdown": "runtime\\protocol-research\\tm-v1-ro-full-report\\frame_join_report.md",
+    "reviewed_frame_join_json": "runtime\\protocol-research\\tm-v1-ro-full-report\\frame_join_report.json",
+    "reviewed_corpus_rows": "runtime\\protocol-research\\tm-v1-ro-full-report\\corpus_cases.jsonl"
+  },
+  "owner_routes": {
+    "runtime_apply": "project:qa-mcp",
+    "ui_proof": "/opt/vanessa-mcp-stack",
+    "bsl_diagnostics": "/opt/edt-lab",
+    "frame_join": "project:qa-mcp",
+    "replay_or_direct_probe": "project:qa-mcp"
+  },
+  "unresolved_gaps": [
+    {
+      "gap": "runner_timeout",
+      "owner_route": "project:qa-mcp",
+      "reason": "manager fixture V1 harness invocation ended with timeout: MCP tool timed out after 120 second(s): execute_step_from_text",
+      "residual_risk": "side-channel command windows remain incomplete until the manager harness emits before/after events and a final result"
+    },
+    {
+      "gap": "no_after_event",
+      "owner_route": "project:qa-mcp",
+      "reason": "1 command(s) unresolved with reason=no_after_event",
+      "residual_risk": "command remains non-accepted until live range, replay or direct probe evidence is retained"
+    },
+    {
+      "gap": "no_before_event",
+      "owner_route": "project:qa-mcp",
+      "reason": "9 command(s) unresolved with reason=no_before_event",
+      "residual_risk": "command remains non-accepted until live range, replay or direct probe evidence is retained"
+    }
+  ],
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths"
+}

@@ -1,0 +1,24 @@
+{
+ "name": "flagship-chained-actions-vanessa-free",
+ "steps": [
+  {
+   "kind": "read_active_window",
+   "name": "active-window",
+   "expect_contains": "HomePage"
+  },
+  {
+   "kind": "read_form_summary",
+   "name": "form-summary"
+  },
+  {
+   "kind": "click_button",
+   "name": "click menu button",
+   "marker": "PF_SHOW_CHOICE_MENU"
+  },
+  {
+   "kind": "form_command",
+   "name": "choose menu item",
+   "marker": "PF_MENU_2"
+  }
+ ]
+}

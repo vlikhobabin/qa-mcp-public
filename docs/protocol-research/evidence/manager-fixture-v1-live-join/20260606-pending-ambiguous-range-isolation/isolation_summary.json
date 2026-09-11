@@ -1,0 +1,52 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.range-isolation-summary.v1",
+  "generated_at": "2026-06-06T19:14:16+03:00",
+  "source_cleanup_run": "20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "source_frame_join_report": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/frame_join_report.json",
+  "source_corpus_rows": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/corpus_cases.jsonl",
+  "runtime_preflight": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-readonly-runtime-preflight/runtime_summary.json",
+  "runtime_endpoint_available": false,
+  "accepted_protocol_mapping": false,
+  "rows": [
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "manager_frame_range": {"from": 26, "to": 106, "count": 81},
+      "client_frame_range": {"from": 27, "to": 106, "count": 80},
+      "selected_chunk_count": 161,
+      "request_size": 21059,
+      "response_size": 17973,
+      "normalized_hash": "0244782c3c4f28c8b3ad0bbf5dfaf37916cb642f0d82debe8543fdd08c71f85a",
+      "normalized_frame_signature_count": 4,
+      "response_markers": ["QA MCP Protocol Fixture V1"],
+      "joined_event_result_preview": "form_path_attempted=DataProcessor.ФикстураПротоколаTestClient.Form.Форма;form_title=QA MCP Protocol Fixture V1;child_count=2",
+      "offline_isolation_status": "not_isolated",
+      "isolation_blocker": "The current event window covers 81 manager frames and the corpus row reports an envelope-only normalized hash with no whitelisted semantic payload token.",
+      "required_next_evidence": "Rerun a focused form-path capture after runtime restoration, or add narrower side-channel boundaries around the form-path call.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "manager_frame_range": {"from": 131, "to": 390, "count": 260},
+      "client_frame_range": {"from": 132, "to": 390, "count": 259},
+      "selected_chunk_count": 519,
+      "request_size": 57888,
+      "response_size": 48090,
+      "normalized_hash": "926585521047f8e7e2abe2316dacbbf690142f04867c73cb12c172139a153e86",
+      "normalized_frame_signature_count": 4,
+      "response_markers": ["PF_BUTTON_INERT"],
+      "preserved_marker_counts": {"pf_button_inert": 517},
+      "joined_event_result_preview": "family=Button;lookup_type=ТестируемаяКнопкаФормы;type=Тестируемая кнопка формы;name=PF_BUTTON_INERT;title=PF_BUTTON_INERT;view=Кнопка командной панели;visible=Да;enabled=Да;data=;child_count=0",
+      "offline_isolation_status": "not_isolated",
+      "isolation_blocker": "The current event window covers 260 manager frames and target-marker repetition alone does not identify a minimal operation shape.",
+      "action_semantics_claimed": false,
+      "required_next_evidence": "Rerun a focused button-state read-only capture after runtime restoration, or add narrower side-channel boundaries before any replay/direct-probe acceptance.",
+      "accepted_protocol_mapping": false
+    }
+  ],
+  "verification": {
+    "broad_rows_remain_non_accepted": true,
+    "target_marker_alone_is_insufficient": true,
+    "button_action_semantics_claimed": false,
+    "runtime_gap_source": "Vanessa EPF missing during 20260606-pending-readonly-runtime-preflight"
+  }
+}

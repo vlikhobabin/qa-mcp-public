@@ -1,0 +1,32 @@
+{
+  "schema": "manager_harness_manifest.v1",
+  "run_id": "20260605-source-sample",
+  "scenario": "manager-fixture-v1-readonly",
+  "output_dir": "runtime/protocol-research/manager-fixture-v1-readonly/20260605-source-sample",
+  "proxy_testclient_port": 15381,
+  "client_fixture_target": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+  "commands": [
+    {
+      "case_id": "tm-v1-active-window",
+      "command_id": "active_window",
+      "command_kind": "active_window",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+      "proxy_testclient_port": 15381,
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "QA MCP Protocol Fixture V1",
+      "element_family": "ApplicationWindow",
+      "safety_class": "read_only"
+    },
+    {
+      "case_id": "tm-v1-field-version",
+      "command_id": "element_details",
+      "command_kind": "element_details",
+      "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма.Element.PF_FIXTURE_VERSION",
+      "proxy_testclient_port": 15381,
+      "target_marker": "PF_FIXTURE_VERSION",
+      "expected_marker": "protocol-fixture.v1",
+      "element_family": "EditField",
+      "safety_class": "read_only"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "schema": "protocol-accepted-mappings.v1",
+  "generated_at": "2026-06-05T11:50:30Z",
+  "comparison_inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-bootstrap-second-boundary-guard/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-bootstrap-second-boundary-guard",
+      "capture_ids": [
+        "20260605-live-full-readonly-bootstrap-second-boundary-guard"
+      ],
+      "case_count": 11
+    },
+    {
+      "input_index": 1,
+      "cases_path": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-repeat-second-boundary-guard/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260605-live-full-readonly-repeat-second-boundary-guard",
+      "capture_ids": [
+        "20260605-live-full-readonly-repeat-second-boundary-guard"
+      ],
+      "case_count": 11
+    }
+  ],
+  "accepted_case_ids": [
+    "tm-v1-active-form",
+    "tm-v1-checkbox-true"
+  ],
+  "case_count": 2,
+  "cases": [
+    {
+      "case_id": "tm-v1-active-form",
+      "classification": "stable",
+      "safety_classes": [
+        "read_only"
+      ],
+      "normalized_hash": "484507fd5b4399e3cee38f0da8201ca4efc6e3b5721851199effac2f1d39e973",
+      "capture_ids": [
+        "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+        "20260605-live-full-readonly-repeat-second-boundary-guard"
+      ],
+      "request_sizes": [
+        16638,
+        16992
+      ],
+      "response_sizes": [
+        11280,
+        11520
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        [
+          "PF_FORM_MAIN"
+        ]
+      ],
+      "action_frame_ranges": [
+        null
+      ],
+      "background_frame_range_sets": [
+        []
+      ],
+      "action_result_marker_sets": [
+        []
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-tm-v1-active-form-marker-replay/manager_fixture_marker_probe_result.json"
+      ],
+      "observations": [
+        {
+          "capture_id": "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+          "evidence_path": null,
+          "frame_range": {
+            "manager_to_client": {
+              "from": 7,
+              "to": 147
+            },
+            "client_to_manager": {
+              "from": 8,
+              "to": 148
+            }
+          },
+          "action_frame_range": null,
+          "background_frame_ranges": [],
+          "action_result_markers": [],
+          "probe_evidence": {
+            "kind": "direct_python_manager_marker_replay",
+            "status": "accepted",
+            "query": "manager-fixture-marker",
+            "case_id": "tm-v1-active-form",
+            "evidence_path": "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-tm-v1-active-form-marker-replay/manager_fixture_marker_probe_result.json",
+            "source_capture_id": "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+            "frame_mode": null,
+            "response_markers": [
+              "PF_FORM_MAIN",
+              "pf_form_main"
+            ],
+            "response_marker_count": 2,
+            "notes": "Read-only marker replay uses captured manager-fixture request shape and dynamic ACK/sequence/nonce replacement."
+          }
+        },
+        {
+          "capture_id": "20260605-live-full-readonly-repeat-second-boundary-guard",
+          "evidence_path": null,
+          "frame_range": {
+            "manager_to_client": {
+              "from": 7,
+              "to": 150
+            },
+            "client_to_manager": {
+              "from": 8,
+              "to": 151
+            }
+          },
+          "action_frame_range": null,
+          "background_frame_ranges": [],
+          "action_result_markers": [],
+          "probe_evidence": {
+            "kind": "direct_python_manager_marker_replay",
+            "status": "accepted",
+            "query": "manager-fixture-marker",
+            "case_id": "tm-v1-active-form",
+            "evidence_path": "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-tm-v1-active-form-marker-replay/manager_fixture_marker_probe_result.json",
+            "source_capture_id": "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+            "frame_mode": null,
+            "response_markers": [
+              "PF_FORM_MAIN",
+              "pf_form_main"
+            ],
+            "response_marker_count": 2,
+            "notes": "Read-only marker replay uses captured manager-fixture request shape and dynamic ACK/sequence/nonce replacement."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "tm-v1-checkbox-true",
+      "classification": "stable",
+      "safety_classes": [
+        "read_only"
+      ],
+      "normalized_hash": "7a6b4ee6ce323d54fc81add277f7e2071513e9ddff9f5a5af6d666bd0fdc9581",
+      "capture_ids": [
+        "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+        "20260605-live-full-readonly-repeat-second-boundary-guard"
+      ],
+      "request_sizes": [
+        17202,
+        17690
+      ],
+      "response_sizes": [
+        11844,
+        12180
+      ],
+      "operation_token_sets": [
+        []
+      ],
+      "response_marker_sets": [
+        [
+          "CheckBox",
+          "PF_CHECKBOX_TRUE"
+        ]
+      ],
+      "action_frame_ranges": [
+        null
+      ],
+      "background_frame_range_sets": [
+        []
+      ],
+      "action_result_marker_sets": [
+        []
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-next-readonly-marker-probes/tm-v1-checkbox-true/manager_fixture_marker_probe_result.json"
+      ],
+      "observations": [
+        {
+          "capture_id": "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+          "evidence_path": null,
+          "frame_range": {
+            "manager_to_client": {
+              "from": 556,
+              "to": 696
+            },
+            "client_to_manager": {
+              "from": 557,
+              "to": 697
+            }
+          },
+          "action_frame_range": null,
+          "background_frame_ranges": [],
+          "action_result_markers": [],
+          "probe_evidence": {
+            "kind": "direct_python_manager_marker_replay",
+            "status": "accepted",
+            "query": "manager-fixture-marker",
+            "case_id": "tm-v1-checkbox-true",
+            "evidence_path": "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-next-readonly-marker-probes/tm-v1-checkbox-true/manager_fixture_marker_probe_result.json",
+            "source_capture_id": "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+            "frame_mode": null,
+            "response_markers": [
+              "PF_CHECKBOX_TRUE",
+              "CheckBox",
+              "pf_checkbox_true"
+            ],
+            "response_marker_count": 3,
+            "notes": "Read-only marker replay uses captured manager-fixture request shape and dynamic ACK/sequence/nonce replacement."
+          }
+        },
+        {
+          "capture_id": "20260605-live-full-readonly-repeat-second-boundary-guard",
+          "evidence_path": null,
+          "frame_range": {
+            "manager_to_client": {
+              "from": 583,
+              "to": 727
+            },
+            "client_to_manager": {
+              "from": 584,
+              "to": 728
+            }
+          },
+          "action_frame_range": null,
+          "background_frame_ranges": [],
+          "action_result_markers": [],
+          "probe_evidence": {
+            "kind": "direct_python_manager_marker_replay",
+            "status": "accepted",
+            "query": "manager-fixture-marker",
+            "case_id": "tm-v1-checkbox-true",
+            "evidence_path": "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-next-readonly-marker-probes/tm-v1-checkbox-true/manager_fixture_marker_probe_result.json",
+            "source_capture_id": "20260605-live-full-readonly-bootstrap-second-boundary-guard",
+            "frame_mode": null,
+            "response_markers": [
+              "PF_CHECKBOX_TRUE",
+              "CheckBox",
+              "pf_checkbox_true"
+            ],
+            "response_marker_count": 3,
+            "notes": "Read-only marker replay uses captured manager-fixture request shape and dynamic ACK/sequence/nonce replacement."
+          }
+        }
+      ]
+    }
+  ]
+}

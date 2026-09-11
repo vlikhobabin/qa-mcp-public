@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+chrl_distribution_root=$(dirname "$(dirname "$(readlink -f "$0")")")
+exec python3 "$chrl_distribution_root/distribution.py" "$@"

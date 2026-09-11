@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+chrl_source_root="$(dirname "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")")"
+if [[ "${1:-}" == --project ]]; then
+  export CHRL_PROJECT_ROOT="$(cd "$2" && pwd -P)"
+  shift 2
+fi
+if [[ -z "${CHRL_PROJECT_ROOT:-}" ]]; then
+  chrl_invocation_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
+  if [[ "$chrl_invocation_root" != "$chrl_source_root" ]]; then
+    export CHRL_PROJECT_ROOT="$chrl_invocation_root"
+  else
+    export CHRL_PROJECT_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || printf '%s' "$chrl_source_root")"
+  fi
+fi
+cd "$CHRL_PROJECT_ROOT"
+chrl_python="$CHRL_PROJECT_ROOT/.venv/bin/python"
+if [[ ! -x "$chrl_python" ]]; then
+  chrl_python="$chrl_source_root/.venv/bin/python"
+fi
+if [[ ! -x "$chrl_python" ]]; then
+  chrl_python="$(command -v python3)"
+fi
+export PYTHONPATH="$chrl_source_root${PYTHONPATH:+:$PYTHONPATH}"
+exec "$chrl_python" -m scripts.changerail.local_delivery "$@"

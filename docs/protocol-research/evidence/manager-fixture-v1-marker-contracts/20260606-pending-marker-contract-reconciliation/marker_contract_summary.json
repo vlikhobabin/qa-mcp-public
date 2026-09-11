@@ -1,0 +1,91 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.marker-contract-reconciliation.v1",
+  "generated_at": "2026-06-06T19:14:16+03:00",
+  "source_cleanup_run": "20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "classification": "docs/protocol-research/evidence/manager-fixture-v1-pending-readonly/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/classification.json",
+  "current_replay_review": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-pending-readonly-review/summary.json",
+  "missing_proof_runtime_gap": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-pending-missing-proof-runtime-gap/summary.json",
+  "ambiguous_range_isolation": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-ambiguous-range-isolation/isolation_summary.json",
+  "catalog_comparison": "docs/protocol-research/evidence/manager-fixture-v1-marker-contracts/20260606-pending-marker-contract-reconciliation/catalog_comparison.json",
+  "catalog_changes_applied": [],
+  "accepted_protocol_mapping_count": 0,
+  "decisions": [
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "previous_expected_marker": "PF_FIXTURE_VERSION",
+      "candidate_marker": "QA MCP Protocol Fixture V1",
+      "joined_observed_markers": ["QA MCP Protocol Fixture V1"],
+      "current_replay_status": "not_run",
+      "decision": "candidate_only",
+      "accepted_protocol_mapping": false,
+      "reason": "The candidate title/form marker is visible in joined evidence, but no current replay or direct-probe proof exists because the focused endpoint is runtime-gapped.",
+      "next_route": "Restore runtime endpoint and prove whether this diagnostic endpoint intentionally returns the form title or should retarget version semantics."
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "previous_expected_marker": "PF_FIXTURE_VERSION",
+      "candidate_marker": "QA MCP Protocol Fixture V1",
+      "joined_observed_markers": ["QA MCP Protocol Fixture V1"],
+      "current_replay_status": "not_run",
+      "decision": "candidate_only",
+      "accepted_protocol_mapping": false,
+      "reason": "Older form-summary direct-probe evidence is rejected/supporting only, and no current endpoint was available for a current-run marker proof.",
+      "next_route": "Restore runtime endpoint and rerun form-summary direct proof before changing the expected marker."
+    },
+    {
+      "case_id": "tm-v1-checkbox-true",
+      "previous_expected_marker": "CheckBox",
+      "candidate_marker": null,
+      "joined_observed_markers": ["CheckBox", "PF_CHECKBOX_TRUE"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observed_marker": "PF_CHECKBOX_TRUE",
+      "decision": "mismatch_retained",
+      "accepted_protocol_mapping": false,
+      "reason": "Current-run replay observed only the target marker while the cleanup capture also contains the type marker. Older accepted checkbox probe remains supporting only until reconciled with the current run.",
+      "next_route": "Run a current-run direct probe or response parser that validates both checkbox identity and the normalized hash for frames 126..130."
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "previous_expected_marker": "TestedFormButton",
+      "candidate_marker": "PF_BUTTON_INERT",
+      "joined_observed_markers": ["PF_BUTTON_INERT"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observed_marker": "pf_button_inert",
+      "decision": "candidate_only_blocked_by_broad_range",
+      "accepted_protocol_mapping": false,
+      "reason": "The target marker appears in replay and joined evidence, but the row still spans 260 manager frames and range isolation failed.",
+      "action_semantics_claimed": false,
+      "next_route": "Restore runtime endpoint and rerun a focused read-only button-state probe with narrower side-channel boundaries."
+    },
+    {
+      "case_id": "tm-v1-table-items",
+      "previous_expected_marker": "PF_ROW_001",
+      "candidate_marker": "PF_TABLE_ITEMS",
+      "joined_observed_markers": ["PF_TABLE_ITEMS"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observed_marker": "PF_TABLE_ITEMS",
+      "decision": "candidate_only",
+      "accepted_protocol_mapping": false,
+      "reason": "Current-run replay reaches the table identity marker, but the semantic choice between table-summary identity and row-marker endpoint remains unproven.",
+      "next_route": "Prove the table-summary endpoint contract or add a separate row endpoint before changing the expected marker."
+    },
+    {
+      "case_id": "tm-v1-group-main",
+      "previous_expected_marker": "PF_FORM_MAIN",
+      "candidate_marker": "PF_GROUP_MAIN",
+      "joined_observed_markers": ["PF_FORM_MAIN", "PF_GROUP_MAIN"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observed_marker": "PF_GROUP_MAIN",
+      "decision": "candidate_only",
+      "accepted_protocol_mapping": false,
+      "reason": "Current-run replay reaches the group target marker, but the original form marker remains present in joined evidence and target-marker-only group semantics are not independently proven.",
+      "next_route": "Run a current-run direct probe or parser that validates group identity semantics for frames 408..413."
+    }
+  ],
+  "verification": {
+    "catalog_drift_status": "ok",
+    "catalog_expected_marker_changes": 0,
+    "old_and_candidate_markers_retained": true,
+    "no_acceptance_by_manifest_change_only": true
+  }
+}

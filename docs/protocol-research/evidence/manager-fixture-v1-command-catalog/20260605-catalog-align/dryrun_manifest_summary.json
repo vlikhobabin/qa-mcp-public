@@ -1,0 +1,17 @@
+{
+  "run_id": "20260605-catalog-align-dryrun",
+  "scenario": "manager-fixture-v1-readonly",
+  "runtime_dir": "runtime/protocol-research/captures/20260605-catalog-align-dryrun",
+  "manifest_path": "runtime/protocol-research/captures/20260605-catalog-align-dryrun/manager_harness_manifest.json",
+  "command_count": 11,
+  "smoke_subset": [
+    "tm-v1-active-window",
+    "tm-v1-active-form",
+    "tm-v1-field-version"
+  ],
+  "catalog_version": "2026-06-05",
+  "target_fixture_path": "DataProcessor.ФикстураПротоколаTestClient.Form.Форма",
+  "status": "dry-run-ok",
+  "accepted_protocol_mapping": false,
+  "raw_outputs_under_runtime": true
+}

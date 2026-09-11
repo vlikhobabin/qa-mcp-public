@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qa-mcp"
+version = "0.1.0"
+description = "Native 1C TestClient QA automation for AI agents (MCP): drive/verify 1C managed forms, run BDD scenarios, assert UI->DB."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+  "fastmcp==3.4.2",
+  "mcp>=1.28,<2",
+]
+
+[project.scripts]
+qa-native-mcp = "qa_mcp.mcp_server:main"
+qa-mcp-doctor = "qa_mcp.doctor:main"
+
+[project.optional-dependencies]
+dev = [
+  "jsonschema>=4.23,<5",
+  "pytest>=8",
+  "pytest-cov>=5",
+]
+
+[dependency-groups]
+build = ["setuptools>=68"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Ship the non-.py runtime assets so the wheel/Docker image is self-contained: the PER-VERSION bundled genuine
+# captures + manager-frame templates + accepted-mapping evidence (`_bundled/<8.3|8.5>/…`), plus the in-tree
+# synthesized-bootstrap frames and the calendar-button image asset. The `*` matches the version-family key.
+[tool.setuptools.package-data]
+qa_mcp = [
+  "_bundled/*/accepted_mappings.json",
+  "_bundled/*/templates/*.json",
+  "_bundled/*/captures/*/traffic.jsonl",
+  "protocol/*.json",
+  "protocol/assets/*.png",
+  "schemas/*.json",
+]
+
+[tool.pytest.ini_options]
+addopts = [
+  "--strict-config",
+  "--strict-markers",
+]
+markers = [
+  "offline: hermetic tests that do not require live 1C runtime",
+  "live: tests that require a running 1C TestClient, infobase, or live service",
+  "integration: tests that cross process, service, or host boundaries",
+  "slow: tests that are intentionally longer than unit checks",
+  "smoke: fast delivery smoke checks suitable for OPSX release gates",
+  "capture: tests that depend on optional local protocol capture files",
+]
+pythonpath = ["src", "."]
+testpaths = ["tests"]

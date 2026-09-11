@@ -1,0 +1,21 @@
+{
+  "schema": "qa-mcp.local-changerail-lock.v1",
+  "source": {
+    "repository": "meta-mcp",
+    "commit": "69ad52f57607e3e1cc60f234b230edcd5fd49c9f",
+    "snapshot": "tools/changerail/upstream-snapshot.json"
+  },
+  "workflow": "board-only",
+  "runtime_authority": [
+    "scripts/changerail",
+    "tools/changerail",
+    ".changerail"
+  ],
+  "models": {
+    "ff": "gpt-6-astra/high",
+    "review": "gpt-6-astra/high",
+    "implementation": "gpt-5.6-terra/high"
+  },
+  "legacy_lifecycle": ".changerail/legacy-lifecycle.json",
+  "pilot": "requires-separate-prior-approval"
+}

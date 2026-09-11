@@ -1,0 +1,329 @@
+{
+  "archive_sha256": "3b8cabecbfe4572c851cee5ecbd55538a6951ec4fdb8c501eda8922771b9e664",
+  "execution_contract": "changerail.native.v1",
+  "files": {
+    "DISTRIBUTION.md": {
+      "mode": 420,
+      "sha256": "5bdb4d8d1d7293c38ea95f00aa95d7ce1b971466073d03634066565df0acc461",
+      "size": 13271
+    },
+    "bin/chrl": {
+      "mode": 493,
+      "sha256": "89789c54e8ba9f0d665f3b89ed3921f0f1c9bb0dab6375f9347f57c7f395e6bf",
+      "size": 947
+    },
+    "bin/chrl-dist": {
+      "mode": 493,
+      "sha256": "d1f79a23b5efe6de5332610ea3fbfe3b921d4d19fc417e48ba3bf45931c39b4b",
+      "size": 147
+    },
+    "bin/chrl-run": {
+      "mode": 493,
+      "sha256": "d5439b7564ffe60e99d6468b52d97026565814bd425ffe0933ef422698256cb1",
+      "size": 323
+    },
+    "bin/openspec": {
+      "mode": 493,
+      "sha256": "50bf89a1563713ac19ec2a01ed4c555811db92828c9ceba158dc6f27e0457128",
+      "size": 916
+    },
+    "distribution.json": {
+      "mode": 420,
+      "sha256": "52fb03a623d027f59d5b7d48ff754bd22487faed69ec9649f9672b169125d9f9",
+      "size": 1131
+    },
+    "distribution.py": {
+      "mode": 420,
+      "sha256": "4a12e3d5ade00c157553abb2d5230f7901a89d852849868ca7d31233dbd840cd",
+      "size": 32556
+    },
+    "scripts/__init__.py": {
+      "mode": 420,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "scripts/changerail/__init__.py": {
+      "mode": 420,
+      "sha256": "a2c12e89db2ea8091951ca9a9223a0777af108474e157a5e5c6fbf0b76af809a",
+      "size": 47
+    },
+    "scripts/changerail/adapters/__init__.py": {
+      "mode": 420,
+      "sha256": "ca58ae0ce3c344f1cc0ab90197e4d8ace5b188731f863c8005432c701d4b95a9",
+      "size": 67
+    },
+    "scripts/changerail/adapters/codex.py": {
+      "mode": 420,
+      "sha256": "e7fbc0164b32263c1dca33082196b9eaa7b2dada5bd6a82cc16b3be230fee4f7",
+      "size": 1433
+    },
+    "scripts/changerail/adapters/pytest.py": {
+      "mode": 420,
+      "sha256": "7137bb9eeb27a7e42ce92474c204ec4e9bbac4d9e5af52393b09c77805f2fa86",
+      "size": 6086
+    },
+    "scripts/changerail/adapters/results.py": {
+      "mode": 420,
+      "sha256": "13b96c5939e610ac5b4e6e11c94d4d6ee3cb22adf09949c3dc3c5ecaefd1f27f",
+      "size": 8568
+    },
+    "scripts/changerail/contracts.py": {
+      "mode": 420,
+      "sha256": "04059531b66c7d8f7a1b67568a25b5d3c2a7b986ba2d77961c3aea5935adb301",
+      "size": 199
+    },
+    "scripts/changerail/evidence_dependencies.py": {
+      "mode": 420,
+      "sha256": "0576d710bcbc4fa3a2d86cc82cd36f0737fe6b1ca459d480ad5a07fa9d3e4e6d",
+      "size": 14974
+    },
+    "scripts/changerail/installed_compatibility.py": {
+      "mode": 420,
+      "sha256": "07e973ce4b62b15a073b75f4535909ab944ee4740d8e78a36ad2be3351c1c0da",
+      "size": 5817
+    },
+    "scripts/changerail/installed_restoration.py": {
+      "mode": 420,
+      "sha256": "646036467f53d727ea8df56f3c9ed14f54be1154e77563c792ed9f04e1c90357",
+      "size": 10565
+    },
+    "scripts/changerail/local_delivery.py": {
+      "mode": 420,
+      "sha256": "0f0752636607fcd9e9465bfe5f8f1798781f253ac88576d31cdbc5fb92234cf3",
+      "size": 321978
+    },
+    "scripts/changerail/native_workflow.py": {
+      "mode": 420,
+      "sha256": "5231e570832f676a062cfe4408801db3d4a13ef251bfa738cd5c4593e240f647",
+      "size": 21022
+    },
+    "scripts/changerail/openspec_adapter.py": {
+      "mode": 420,
+      "sha256": "651509619bdcd3d8fa1d96efeb340c3195825325b9573cd11a2cb3327543254e",
+      "size": 12650
+    },
+    "scripts/changerail/openspec_board.py": {
+      "mode": 420,
+      "sha256": "d24ee4b155b78b402b37875fa4460049512c963a113a25a86e4310dda21af342",
+      "size": 8483
+    },
+    "scripts/changerail/openspec_context.py": {
+      "mode": 420,
+      "sha256": "d847ca3748911177253dc89f8c7e2aa13e4231aa14a05e4fb2fd1fdeb1d2e8a1",
+      "size": 14711
+    },
+    "scripts/changerail/plan_restoration.py": {
+      "mode": 420,
+      "sha256": "9d682870251383d2859a97cc22bccdba3fc91165312fee49b8d3d1f8913f2aec",
+      "size": 46807
+    },
+    "scripts/changerail/runtime_repair.py": {
+      "mode": 420,
+      "sha256": "bdf6672f5f6cde6fa477b88411a2b1d87aeeb17ff82b438e5cddbc2747f94c60",
+      "size": 15554
+    },
+    "scripts/changerail/source_binding.py": {
+      "mode": 420,
+      "sha256": "2ab29af1df57b6cc10ad5a5dfc012ea4779adff9c847825cf88742603cbfe2d8",
+      "size": 7506
+    },
+    "scripts/changerail/source_install.py": {
+      "mode": 420,
+      "sha256": "973ed7d60ba41d6e998bbd8e2beee4ece585c922f0cd690026f00b4032524e97",
+      "size": 12926
+    },
+    "scripts/changerail/targeted_checks.py": {
+      "mode": 420,
+      "sha256": "8d20f2549253d70bd188e141e72215661bda97c0a5709c59a2d7371ae53b746a",
+      "size": 3474
+    },
+    "tools/changerail/LICENSE": {
+      "mode": 420,
+      "sha256": "14d414b3c2ae2f638197c540d80fb9b34790f2e4072cae6d1fc1d6160269c668",
+      "size": 1080
+    },
+    "tools/changerail/ORIGIN.md": {
+      "mode": 420,
+      "sha256": "673b1262c189b4c6b94c8b1f643fdce0814a7f697f6cc59ca9e468c80610d222",
+      "size": 1276
+    },
+    "tools/changerail/README.md": {
+      "mode": 420,
+      "sha256": "c4ed2ef3602611a5470fa8d355c690b16a33ae24dbdfa9b951404a326c79afc2",
+      "size": 10863
+    },
+    "tools/changerail/schemas/card-evidence.schema.json": {
+      "mode": 420,
+      "sha256": "bb7da61d1ec1f757282d8f1f0891e75838a2a965d6ce658e0c8096dcc15cf040",
+      "size": 2006
+    },
+    "tools/changerail/schemas/card-proof.schema.json": {
+      "mode": 420,
+      "sha256": "d1db4b040963c903434789c7c29111c628378df18eb03a0fd1e78a968a225708",
+      "size": 10672
+    },
+    "tools/changerail/schemas/check-result.schema.json": {
+      "mode": 420,
+      "sha256": "f48ef31334c50484a45b255c03fc9e05036b47db8ef26c1560cb4ee20eba73cf",
+      "size": 5081
+    },
+    "tools/changerail/schemas/review-verdict-v2.schema.json": {
+      "mode": 420,
+      "sha256": "ba3539e596643cf8b106955d6d6e311cd5feebba21d098c06e75bd72939abb77",
+      "size": 3043
+    },
+    "tools/changerail/schemas/review-verdict.schema.json": {
+      "mode": 420,
+      "sha256": "62f591be0aac22e84557562ae68ed6ccdbd2801643bc926ed7b8396d33a58516",
+      "size": 2669
+    },
+    "tools/changerail/skills/chrl-native-deliver/SKILL.md": {
+      "mode": 420,
+      "sha256": "81a8e756010f95cc561f96b6e1e102eeaeda3ea8b91158af745098c04a811541",
+      "size": 4370
+    },
+    "tools/changerail/skills/chrl-native-review/SKILL.md": {
+      "mode": 420,
+      "sha256": "bd3487ffe37d01711ad46cec074a71a422084a333f3a853bb44b955f14963113",
+      "size": 1409
+    },
+    "tools/changerail/skills/chrl-review/SKILL.md": {
+      "mode": 420,
+      "sha256": "55fcc161cdaf24fac36ae46e82007e55fe897b7c536b68eed846a50d28da8865",
+      "size": 5655
+    },
+    "tools/changerail/templates/card-template.md": {
+      "mode": 420,
+      "sha256": "d0e69c48076179a780f0665086df9b19d9522681dd4a2dc43c4b4a0324316087",
+      "size": 2279
+    },
+    "tools/changerail/templates/profile.toml": {
+      "mode": 420,
+      "sha256": "effacea33d05c676fe75f48d113c0b0bf4ba5218d500816bbc924312c94381c6",
+      "size": 1099
+    },
+    "tools/openspec/.gitignore": {
+      "mode": 420,
+      "sha256": "47ccb3e99069908159cc925cba07f4b81c2f38e68d9fc6b808806e1a0f5e1086",
+      "size": 24
+    },
+    "tools/openspec/README.md": {
+      "mode": 420,
+      "sha256": "c5431f814452631e76a690a05642890e08779c4f97ff61e77eef517fae561ad0",
+      "size": 7718
+    },
+    "tools/openspec/bootstrap.sh": {
+      "mode": 493,
+      "sha256": "73d5b40231a4d460bae99f5e329cca5a31d5a01e12a6a106a8a1a918e5c25329",
+      "size": 924
+    },
+    "tools/openspec/check-install.mjs": {
+      "mode": 420,
+      "sha256": "479f85f31a79a595478a9e29fe2d76fd0d1b357788a19da1cdb9d1aa53c374d6",
+      "size": 1796
+    },
+    "tools/openspec/package-lock.json": {
+      "mode": 420,
+      "sha256": "d7f6a6accb3aa11492dd3acc3da969f6032bb29855103bf3407b801983212c2f",
+      "size": 36047
+    },
+    "tools/openspec/package.json": {
+      "mode": 420,
+      "sha256": "2c937cc3cb02b183bd27dcbe83b0dd540e2458193a1180823420300c97b08d84",
+      "size": 271
+    },
+    "tools/openspec/workflow-instructions.mjs": {
+      "mode": 420,
+      "sha256": "2f35abbf179ec90e144cbd0e292d15fea797c1e4b18be53b472c7c960f99690f",
+      "size": 1750
+    }
+  },
+  "payload_sha256": "29575a00079fe906c1a81efc5cf3a4a97cb24eae3a3677d3dce61aeffb870b0a",
+  "provenance": {
+    "owner": "ChangeRail",
+    "source_state": "release candidate source snapshot; payload hashes identify exact bytes",
+    "upstream_commit": "051e99be6c696ae07e8eaa596fdb714cc00378e2"
+  },
+  "retained_read_only_runs": {
+    ".runtime/changerail/ff-runs/20260905T161228146364Z-oss-fix-01-freeze-physical-target-configuration/run.json": {
+      "execution_contract": null,
+      "mode": 420,
+      "sha256": "c287113de4a7772383bcca6abc4952079d78368fb0839536564a61b67f8205ff",
+      "size": 896
+    },
+    ".runtime/changerail/ff-runs/offline-fix03b-design-eNVZfB/run.json": {
+      "execution_contract": null,
+      "mode": 420,
+      "sha256": "260e0cae3d0113eec2e2f465b1657f9c3d8d2fd2d520bd5c645b29712184a751",
+      "size": 367
+    },
+    ".runtime/changerail/runs/20260905T170917Z-oss-fix-01-freeze-physical-target-configuration/run.json": {
+      "execution_contract": null,
+      "mode": 420,
+      "sha256": "199f3bb39415579f9c612009c1e6830ffb290ba2d3853a533f3d0c32feca0a5d",
+      "size": 729
+    },
+    ".runtime/changerail/runs/20260909T082328Z-oss-fix-02-reject-unproven-project-attach/run.json": {
+      "execution_contract": null,
+      "mode": 420,
+      "sha256": "bd583ef403c6840d52c178f698e8cbc4d07b6ec232619990d6b53b148c6f3e78",
+      "size": 1151
+    },
+    ".runtime/changerail/runs/20260909T084512Z-oss-fix-02-reject-unproven-project-attach/run.json": {
+      "execution_contract": null,
+      "mode": 420,
+      "sha256": "05e9af87720ab0cf210fd672cec3d26e4cdf4889e087ce5ef5c3274711f03896",
+      "size": 2820
+    },
+    ".runtime/changerail/runs/20260909T084724Z-oss-fix-02-reject-unproven-project-attach/run.json": {
+      "execution_contract": null,
+      "mode": 420,
+      "sha256": "5d09f7f27e0b7dd50edda3a784fe93b18b0e590bad086120b93fc1df39acac5d",
+      "size": 2945
+    },
+    ".runtime/changerail/runs/20260909T085415Z-oss-fix-02-reject-unproven-project-attach/run.json": {
+      "execution_contract": null,
+      "mode": 420,
+      "sha256": "623cf3d4ca54f30646aed7d86a271e09ada00b5d7d8562936ea4c5a2d44e5039",
+      "size": 2970
+    },
+    ".runtime/changerail/runs/20260910T065103Z-oss-fix-04a-isolate-display-and-host-agent-settings/run.json": {
+      "execution_contract": "changerail.native.v1",
+      "mode": 420,
+      "sha256": "78c4599db8fa476fa08036a6244bb1a05c76d2ce1d6634a26fe823afe0f94820",
+      "size": 4365
+    },
+    ".runtime/changerail/runs/20260910T071820Z-oss-fix-04a-isolate-display-and-host-agent-settings/run.json": {
+      "execution_contract": "changerail.native.v1",
+      "mode": 420,
+      "sha256": "30e7d4be002299d9494939ef96c4d5bd53ee2894992675b72211502ec1ff967d",
+      "size": 6022
+    },
+    ".runtime/changerail/runs/20260910T073430Z-oss-fix-04a-isolate-display-and-host-agent-settings/run.json": {
+      "execution_contract": "changerail.native.v1",
+      "mode": 420,
+      "sha256": "b5c7e1fb32b27523acff401dc5f137f3dbf7c036f251bade6a675bfd142d758e",
+      "size": 6950
+    },
+    ".runtime/changerail/runs/20260910T074010Z-oss-fix-04a-isolate-display-and-host-agent-settings/run.json": {
+      "execution_contract": "changerail.native.v1",
+      "mode": 420,
+      "sha256": "f1e22f0e1c9732d5562b33bfbae9d4e73401f03f899a1d79ec0fe2a34b9a1039",
+      "size": 6974
+    },
+    ".runtime/changerail/runs/20260910T074356Z-oss-fix-04a-isolate-display-and-host-agent-settings/run.json": {
+      "execution_contract": "changerail.native.v1",
+      "mode": 420,
+      "sha256": "70b0d63b8683c65acf0493cb1ec0e63f12d1d710b4f31df81f5fab15907642d6",
+      "size": 6988
+    },
+    ".runtime/changerail/runs/20260910T102834Z-oss-fix-04a-isolate-display-and-host-agent-settings/run.json": {
+      "execution_contract": "changerail.native.v1",
+      "mode": 420,
+      "sha256": "2686e53a287f686fc335fb61607443b1c2d341ee950dfa13304bf19bde379d86",
+      "size": 7236
+    }
+  },
+  "schema": "changerail.installation.v1",
+  "version": "2.0.0-rc.3"
+}

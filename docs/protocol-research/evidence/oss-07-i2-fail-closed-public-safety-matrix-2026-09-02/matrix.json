@@ -1,0 +1,47 @@
+{
+  "schema": "qa-mcp.oss-07-i2.public-safety-matrix.v1",
+  "license_spdx": "Apache-2.0",
+  "semantic_labels": {
+    "P": "predicate",
+    "S": "safeguard"
+  },
+  "eligible_email": {
+    "utf8_hex": "656c696769626c65406578616d706c652e696e76616c6964",
+    "byte_length": 24,
+    "sha256": "4aa460464f7b5a72e497da3759deaa0aa0e962be8d587663d65f056c4292da15"
+  },
+  "red_result": [
+    46,
+    14,
+    5,
+    "D14"
+  ],
+  "non_email_rule_ids": [
+    "P46",
+    "S14",
+    "D12",
+    "G18"
+  ],
+  "rows": [
+    {
+      "id": "P46",
+      "semantic_label": "P",
+      "expected_result": 46
+    },
+    {
+      "id": "S14",
+      "semantic_label": "S",
+      "expected_result": 14
+    },
+    {
+      "id": "D12",
+      "semantic_label": "P",
+      "expected_result": 5
+    },
+    {
+      "id": "G18",
+      "semantic_label": "S",
+      "expected_result": "D14"
+    }
+  ]
+}

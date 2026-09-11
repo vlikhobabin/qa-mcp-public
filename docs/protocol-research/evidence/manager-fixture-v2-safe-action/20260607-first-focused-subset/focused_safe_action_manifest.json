@@ -1,0 +1,148 @@
+{
+  "schema": "qa-mcp.manager-fixture-v2.safe-action-catalog.v1",
+  "catalog_version": "2026-06-07.1-focused.1",
+  "scenario": "manager-fixture-v2-safe-action",
+  "fixture_version": "protocol-fixture.v2-safe-action-candidate",
+  "source_catalog_path": "tools/protocol-research/manager_fixture_v2_safe_action_catalog.json",
+  "reviewed_target_map_path": "docs/protocol-research/evidence/fixture-target-maps/20260607-client-fixture-v2-safe-action-target-map/target_map_summary.md",
+  "raw_output_policy": "raw TCP streams, full event logs, platform logs and generated replay output stay under ignored runtime/protocol-research paths",
+  "selection": {
+    "run_id": "20260607-first-focused-subset",
+    "selected_order": [
+      "safe-switch-fixture-page-b",
+      "safe-focus-existing-edit-string"
+    ],
+    "selection_scope": "first focused V2 safe-action proof input only; not accepted protocol mapping evidence",
+    "max_executable_rows": 2,
+    "selected_by": "opsx-do",
+    "selected_at": "2026-06-07"
+  },
+  "safe_action_targets": [
+    {
+      "target_id": "tm-v2-pages-main",
+      "target_marker": "PF_PAGES_MAIN",
+      "target_kind": "fixture_page_group",
+      "target_status": "reviewed",
+      "allowed_action_families": [
+        "switch_fixture_page"
+      ],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json"
+    },
+    {
+      "target_id": "tm-v2-edit-string",
+      "target_marker": "PF_EDIT_STRING",
+      "target_kind": "visible_form_element",
+      "target_status": "reviewed",
+      "allowed_action_families": [
+        "focus_existing_element"
+      ],
+      "source_evidence_path": "docs/protocol-research/evidence/fixture-target-maps/20260604-client-fixture-v1-target-map/target_map.json"
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "safe-switch-fixture-page-b",
+      "case_id": "safe-switch-fixture-page-b",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-pages-main",
+      "target_marker": "PF_PAGES_MAIN",
+      "pre_state": {
+        "selected_page": "PF_PAGE_A",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "switch_fixture_page",
+        "api_intent": "select existing fixture page B"
+      },
+      "post_state": {
+        "selected_page": "PF_PAGE_B",
+        "selected_page_marker": "PF_SELECTED_PAGE"
+      },
+      "recovery_expectation": {
+        "route": "select_page_a",
+        "expected_marker": "PF_PAGE_A"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "switch_fixture_page",
+      "expected_action_result_markers": [
+        "PF_PAGES_MAIN",
+        "PF_PAGE_B",
+        "PF_SELECTED_PAGE"
+      ],
+      "safety_class": "safe_ui_action",
+      "provider_owner": "project:qa-mcp",
+      "status_reason": "page switching changes only transient fixture UI state",
+      "residual_risk": "candidate only until recovery proof shows page A is restored"
+    },
+    {
+      "action_id": "safe-focus-existing-edit-string",
+      "case_id": "safe-focus-existing-edit-string",
+      "scenario": "manager-fixture-v2-safe-action",
+      "target_id": "tm-v2-edit-string",
+      "target_marker": "PF_EDIT_STRING",
+      "pre_state": {
+        "focus_marker": "PF_FORM_MAIN",
+        "last_action": "PF_STATE_INITIAL"
+      },
+      "action": {
+        "family": "focus_existing_element",
+        "api_intent": "set focus to existing edit field without changing value"
+      },
+      "post_state": {
+        "focus_marker": "PF_EDIT_STRING",
+        "value_marker": "PF_EDIT_STRING_VALUE"
+      },
+      "recovery_expectation": {
+        "route": "focus_form_shell",
+        "expected_marker": "PF_FORM_MAIN"
+      },
+      "mutates_business_data": false,
+      "allowed_action_family": "focus_existing_element",
+      "expected_action_result_markers": [
+        "PF_EDIT_STRING",
+        "PF_EDIT_STRING_VALUE"
+      ],
+      "safety_class": "safe_ui_action",
+      "provider_owner": "project:qa-mcp",
+      "status_reason": "focus change targets an existing fixture field and does not edit data",
+      "residual_risk": "candidate only until live focus proof confirms the same target identity"
+    }
+  ],
+  "deferred_or_excluded_actions": [
+    {
+      "action_id": "safe-activate-existing-window",
+      "decision": "deferred",
+      "owner": "project:qa-mcp",
+      "reason": "not needed for the first focused action proof unless the capture bootstrap requires an explicit activation row",
+      "residual_risk": "window activation may still be useful as setup traffic, but it would not prove the preferred fixture action families"
+    },
+    {
+      "action_id": "safe-select-local-row-002",
+      "decision": "deferred",
+      "owner": "project:qa-mcp",
+      "reason": "row selection is safe-cataloged but broader than the first page/focus proof",
+      "residual_risk": "selection state needs reset proof before being mixed into the first action-frame isolation"
+    },
+    {
+      "action_id": "safe-expand-commandbar-main",
+      "decision": "deferred",
+      "owner": "project:qa-mcp",
+      "reason": "menu expansion is harder to distinguish from command invocation and is not needed for the first proof",
+      "residual_risk": "popup identity drift could accidentally approach command-like behavior"
+    },
+    {
+      "action_id": "blocked-expand-popup-child",
+      "decision": "excluded",
+      "owner": "project:qa-mcp",
+      "reason": "catalog marks the popup child target blocked because identity is not reviewed enough for V2 execution",
+      "residual_risk": "a child popup target could invoke a command if marker identity drifts"
+    },
+    {
+      "action_id": "rejected-click-inert-button",
+      "decision": "excluded",
+      "owner": "project:qa-mcp",
+      "reason": "button clicks and business command clicks are outside V2 safe-action scope",
+      "residual_risk": "button behavior must move to a later mutation/recovery card"
+    }
+  ]
+}

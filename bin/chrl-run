@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+chrl_invocation_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
+if [[ "${1:-}" == --project ]]; then
+  chrl_selected_project="$2"
+  shift 2
+  exec "$chrl_invocation_root/bin/chrl" --project "$chrl_selected_project" run "$@"
+fi
+exec "$chrl_invocation_root/bin/chrl" run "$@"

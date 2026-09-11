@@ -1,0 +1,88 @@
+{
+  "schema": "qa-mcp.i14-investigation-decision.v1",
+  "card": "oss-06-s4-r1-i14-investigate-i13-s4-early-exit-and-task-topology-drift",
+  "status": "not_verifiable",
+  "source": {
+    "published_i11_commit": "964e29fa7ee8ba87df12d0db903ca7a331113c2f",
+    "bound_blobs": [
+      "178167d47e89bd8620684300868c4a54c5051919",
+      "90f0b6be371e011a363958b2c2b8a18ef029f8e8",
+      "91a35c2700318fb19286fc4093d577e1edad6f48",
+      "f0021e00b18b071e06f8c4b45889dc0b95bb79b1",
+      "7eed6f0b47e8ab28038b9589a86133db124a03a4"
+    ],
+    "bound_diff_from_i11": false,
+    "product_test_paths_dirty": false,
+    "candidate_sha256": "9e32429f6faba65abae187722e199b54f165e9c6d92c63d84ff89693afb8ccf7",
+    "run1_sha256": "ffd50b306cee13404e3be08d7c4f19e8529e78d86eb9ccf19f0aeb76b3ef5573",
+    "run2_sha256": "a9c35c020419b53dcb1e97c354dbce8c40919b902f9186f280296f87d5134b5a"
+  },
+  "preflight": {
+    "operator_authority_exact": true,
+    "host_principal_session_exact": true,
+    "platform_version": "8.3.27.2214",
+    "platform_sha256": "ca26ada2c7baaf97516c59ba10a2a4d30d7c509da062a8d09ad2b5a9528f8bac",
+    "target_present": true,
+    "interactive_session_process_present": true,
+    "exact_fixtures_present": true,
+    "one_c_process_count": 0,
+    "exact_i14_task_count": 0,
+    "exact_i14_stage_count": 0,
+    "exact_i14_process_count": 0,
+    "configuration_content_sha256": "90fb293ed45921a8daff17d75e5196049ca350485b979f01bd7af9092fb9ae0a"
+  },
+  "s4_investigation": {
+    "i13_status_preserved": "failed_before_observation_receipt",
+    "i13_exit_code": 1,
+    "i13_output_sha256": "e3dd3f479dfdea7747da95c75da681ad7a0ac2cb68e2effbd0fe7fe6d6764f12",
+    "i13_observation_receipt_present": false,
+    "published_static_boundary": "before_positive_observation_receipt",
+    "i14_session_one_canary_receipt_present": false,
+    "i14_session_one_canary_timeout_seconds": 180,
+    "i14_candidate_result_admitted": false,
+    "i14_candidate_invocation_count": null,
+    "classification": "contour",
+    "outcome": "not_verifiable",
+    "reason": "the exact interactive task route did not admit even a constant Session-1 canary, so no candidate result can be accepted and no retry or substitute contour is authorized"
+  },
+  "task_topology": {
+    "historical_before_sha256": "25ed8ce8d6bb55d5886abb967e36114de568142f827d8f0243016a8f1d2e7f86",
+    "historical_after_sha256": "113c7390688e8c2f6a3e1a81a9df36198dfae1c225c6df5f325414abe948117a",
+    "current_before_sha256": "25ed8ce8d6bb55d5886abb967e36114de568142f827d8f0243016a8f1d2e7f86",
+    "current_during_sha256": "25ed8ce8d6bb55d5886abb967e36114de568142f827d8f0243016a8f1d2e7f86",
+    "current_after_sha256": "25ed8ce8d6bb55d5886abb967e36114de568142f827d8f0243016a8f1d2e7f86",
+    "current_task_count": 291,
+    "harness_exclusion_invariant": true,
+    "foreign_task_target_count": 0,
+    "scheduler_operational_log_enabled": false,
+    "classification": "not_verifiable",
+    "simple_owned_task_inclusion_ruled_out": true,
+    "harness_start_vs_external_drift_distinguished": false,
+    "reason": "the excluded exact-owned task did not change the protected set, but the original started route and scheduler attribution were unavailable, so historical harness/start behavior and external drift remain observationally indistinguishable",
+    "ownership_violation": false
+  },
+  "cleanup": {
+    "configuration_content_acl_creation_write_attributes_exact": true,
+    "configuration_last_access_restored_as_final_operation": true,
+    "configuration_initial_last_access_continuity_verifiable": false,
+    "exact_task_count_after": 0,
+    "exact_process_count_after": 0,
+    "one_c_process_count_after": 0,
+    "job_desktop_transport_zero_state_verifiable": false,
+    "stage_first_removed_count": 1,
+    "stage_second_removed_count": 0,
+    "stage_present_after": false,
+    "foreign_target_count": 0
+  },
+  "privacy": {
+    "raw_ui_retained": false,
+    "raw_output_retained": false,
+    "raw_task_names_retained": false,
+    "screenshots_retained": false,
+    "credentials_retained": false,
+    "connection_strings_retained": false
+  },
+  "i13_certified": false,
+  "product_or_test_source_changed": false,
+  "next_card": "oss-06-s4-r1-i15-retry-i13-s4-isolation-after-session1-admission-restoration"
+}

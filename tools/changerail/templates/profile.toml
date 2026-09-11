@@ -1,0 +1,39 @@
+schema = "changerail.local-delivery.v1"
+max_wall_minutes = 45
+max_review_cycles = 2
+require_clean_start = true
+require_push = true
+
+[admission]
+max_expected_wall_minutes = 30
+max_acceptance_criteria = 4
+max_production_owners = 1
+max_runtime_contours = 1
+max_estimated_product_files = 5
+max_estimated_production_loc = 300
+
+[models.implementation]
+model = "gpt-5.6-terra"
+reasoning_effort = "high"
+
+[models.review]
+model = "gpt-6-astra"
+reasoning_effort = "high"
+
+[adapters.codex]
+launcher = "bin/codex"
+
+[budgets]
+# Numerical observations never replenish the two-review execution allowance.
+enforce_limits = false
+first_edit_discovery_commands = 8
+first_edit_hard_stop_commands = 12
+review_commands = 12
+review_verdict_only_commands = 20
+review_hard_stop_commands = 24
+tool_output_token_limit = 4000
+
+[verification]
+# Replace with the actual project's configured checks before first delivery.
+pre_review_commands = ["git diff --check", "./bin/openspec validate --specs --strict --no-interactive"]
+final_commands = ["python3 -m pytest -v", "./bin/openspec validate --specs --strict --no-interactive"]

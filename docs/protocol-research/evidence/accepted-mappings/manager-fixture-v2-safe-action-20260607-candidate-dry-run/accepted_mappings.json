@@ -1,0 +1,18 @@
+{
+  "schema": "protocol-accepted-mappings.v1",
+  "generated_at": "2026-06-07T17:33:36Z",
+  "comparison_inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/manager-fixture-v2-safe-action/20260607-candidate-dry-run",
+      "capture_ids": [
+        "recovery-sequence"
+      ],
+      "case_count": 7
+    }
+  ],
+  "accepted_case_ids": [],
+  "case_count": 0,
+  "cases": []
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "card74.native-action-scenario.v1",
+  "scenario": "native-click-open-card",
+  "plan": [
+    {
+      "name": "open-list",
+      "kind": "form_command",
+      "marker": "e1cib/list/",
+      "ordinal": 8
+    },
+    {
+      "name": "select",
+      "kind": "select_row",
+      "marker": "Средний",
+      "ordinal": 15
+    },
+    {
+      "name": "click-izmenit",
+      "kind": "click_button",
+      "marker": "Изменить",
+      "ordinal": 19
+    }
+  ],
+  "diverged_at_send_index": null,
+  "frames_sent": 26,
+  "exchanges_with_response": 26,
+  "status": "ok"
+}

@@ -1,0 +1,893 @@
+{
+  "schema": "protocol-request-series.v1",
+  "generated_at": "2026-06-02T11:52:46Z",
+  "input_kind": "capture",
+  "input_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\runtime\\protocol-research\\captures\\20260602-084433",
+  "frame_from": 18,
+  "frame_to": 30,
+  "frames": [
+    {
+      "frame_index": 18,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "08bbb081a7b045a23644cb09e6d80f86dec34762bb1e404b7d658d705f12db13",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6815818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5480,
+        "nonce_68_hex": "fc2dbb2a476012478e428c3df6d0e021",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "e2a594f60d59fb8034be87d8f08c548128a550ac078433570f4af889e9135481",
+        "head_hex": "428fec8cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d5fc2dbb2a476012478e428c3df6d0e0219a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 19,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "2ea92d1114256d221add960ca8868ee3e99dac98d5da884382cb289b1661c06b",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6915818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5481,
+        "nonce_68_hex": "5de1de4618424b44ac8f04ceeaf02b59",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "3c865c6bbfc154e71cb544271511f7d6c94d9348fa3ee5f722d1553b68560857",
+        "head_hex": "428fed8cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d55de1de4618424b44ac8f04ceeaf02b599a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 20,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "8ce5b7a998c37114534af310759d1f382f9e4ef9a0b48399381f7fb0d3fcbab2",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6a15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5482,
+        "nonce_68_hex": "1711abb8e02e4046b49cd62b8a2f3a25",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "81173589ab8aa187e561d7000855c557bd41f0f3f60876cc88bf3912f0d9bd41",
+        "head_hex": "428fee8cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d51711abb8e02e4046b49cd62b8a2f3a259a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 21,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "e0c43956bdfe04b1ecab7fdae15e6a736334a09a9b0a9af43afd3601a7ca3f1d",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6b15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5483,
+        "nonce_68_hex": "64e1405b2a4648489bec69ff8d322882",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "@[*FHH",
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "5f5b1611be211c7dce3ecf5c2e1ce911c5468efc2beb8934536ab9bc22e747de",
+        "head_hex": "428fef8cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d564e1405b2a4648489bec69ff8d3228829a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 22,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "c27b567dbe74aed379109d7869a95a1972033d26be83f90bbbfa69f3b38f9f35",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6c15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5484,
+        "nonce_68_hex": "de3bff9d4d98f04f8c6058a51e14db27",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "a27f73844b47a489419ba06e1283c029a3f65868815fbd7f24523d4a4e2c8dab",
+        "head_hex": "428ff08cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d5de3bff9d4d98f04f8c6058a51e14db279a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 23,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "9e412d3b13bcde0bf1c13e67d50acff22c170add6e0c49cf5794d9b837a1cc01",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6d15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5485,
+        "nonce_68_hex": "6748a3db1b6e754db8bbe91d10bcaacb",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "d8324a570a54af97473eb71d020cde906c1ce41f6809d1df998bb1bbe83c70fd",
+        "head_hex": "428ff18cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d56748a3db1b6e754db8bbe91d10bcaacb9a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 24,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "9c58128c54d2fcc36a0ed27818bc0aa04673ce3c77a190f29d36519c8e57c2d3",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6e15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5486,
+        "nonce_68_hex": "27fbffa69ee0284596df17becc38be8b",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "d35f05d0a9d13e16fdfa8564b48a09f573ccbffd814fc717bf683838ae76ed90",
+        "head_hex": "428ff28cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d527fbffa69ee0284596df17becc38be8b9a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 25,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "3083c563c7f4e5f1ff5695703656e60fa78c5a3fa3e2507293f67c90169a7610",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d6f15818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5487,
+        "nonce_68_hex": "3a9bbd2e5094384db03ed45a16aab3f8",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "ee534bc76214213daf7eca109f8c485a85f4c861d1e9022f91d7c2314098ab8c",
+        "head_hex": "428ff38cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d53a9bbd2e5094384db03ed45a16aab3f89a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 26,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "c5e481c761252fd03ad457260b39cf41e120d16b8723b8796064cc0954f545b2",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d7015818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5488,
+        "nonce_68_hex": "e89dc5ca1dd97f4aa2ea6cddfaf6b13a",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "4ce67053bd40649d3d4f45c0f151521fec97cafb755b78fa9ef21b33e31a2dda",
+        "head_hex": "428ff48cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e89dc5ca1dd97f4aa2ea6cddfaf6b13a9a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 27,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "24b4593318112d5f1d36945af46998d8215fd3774e89eb8097429bc7adc6744f",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d7115818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5489,
+        "nonce_68_hex": "75dfe678e9674144948424ddc7ce0b9a",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "3375171a9b14d900130e5972a726779622c0631880f0c11bbbee78c0e9f730ab",
+        "head_hex": "428ff58cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d575dfe678e9674144948424ddc7ce0b9a9a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 28,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "186f0ef612147389170e1104fe1e764cbcb577b6ab3b7726405532e376fc84ba",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d7215818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5490,
+        "nonce_68_hex": "abe6b7af0d271f4caf2f21e3cd50d0ff",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "115536ba44583dd928b21c9f7ca0da2007e163db849375ffda0f6808cf02d9ea",
+        "head_hex": "428ff68cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d5abe6b7af0d271f4caf2f21e3cd50d0ff9a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 29,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "07c6d39bda6e7f1bf9373c5d64fe77c64bee17bf413f5ac3765a4a52e79e590a",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d7315818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5491,
+        "nonce_68_hex": "0aaab3bd1718f74eaae710eef3b4dcc9",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "168080dc5cd978293a513d8455e1a02a7ce998413f2a5d4b568634acab3f80d4",
+        "head_hex": "428ff78cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d50aaab3bd1718f74eaae710eef3b4dcc99a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    },
+    {
+      "frame_index": 30,
+      "request": {
+        "byte_count": 200,
+        "body_byte_count": 196,
+        "sha256": "d2fe22103fa34029e65664e463b7001f937ceee1ccf6f744b1fca596eb4375f8",
+        "head_hex": "4195cf1eb79235cd5240abbd48afc9134f7a8d7415818595e101231011f3bb4cacb29dbfa0aeb4bd81848381cb5381a3cb23950a102bc90b462c40b5aeb6e232",
+        "uuid_le_at_2": "92b71ecf-cd35-4052-abbd-48afc9134f7a",
+        "sequence_le_at_19": 5492,
+        "nonce_68_hex": "c1139311d6b1364aa715e5da87fbb543",
+        "managed_form_refs": [
+          {
+            "ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]",
+            "guid": "5d68a8e5-a712-4fc2-8543-9717300ad965"
+          }
+        ],
+        "ascii_strings": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "utf16le_strings": [],
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref_request"
+      },
+      "response": {
+        "byte_count": 162,
+        "expected_byte_count": null,
+        "same_size_as_expected": false,
+        "sha256": "e3f9e8f41dbb07c1d3b6afa2919a112029d840f8b1290f4b48e947a33ca2f54d",
+        "head_hex": "428ff88cdca284838183cb23950a102bc90b462c40b5aeb6e2329a7234d5c1139311d6b1364aa715e5da87fbb5439a60486f6d65506167655b36636137356535",
+        "ui_identifiers": [
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5d68a8e5-a712-4fc2-8543-9717300ad965]"
+        ],
+        "semantic_guess": "managed_form_ref"
+      }
+    }
+  ],
+  "summary": {
+    "frame_count": 13,
+    "request_body_lengths": {
+      "196": 13
+    },
+    "response_byte_counts": {
+      "162": 13
+    },
+    "request_semantic_counts": {
+      "managed_form_ref_request": 13
+    },
+    "response_semantic_counts": {
+      "managed_form_ref": 13
+    },
+    "sequence_le_at_19_values": [
+      5480,
+      5481,
+      5482,
+      5483,
+      5484,
+      5485,
+      5486,
+      5487,
+      5488,
+      5489,
+      5490,
+      5491,
+      5492
+    ],
+    "unique_ack_guids_at_2": [
+      "92b71ecf-cd35-4052-abbd-48afc9134f7a"
+    ],
+    "unique_managed_form_guids": [
+      "5d68a8e5-a712-4fc2-8543-9717300ad965"
+    ],
+    "variable_range_count": 2
+  },
+  "variable_ranges": [
+    {
+      "start": 19,
+      "end": 20,
+      "length": 1,
+      "values_by_frame": [
+        {
+          "frame_index": 18,
+          "hex": "68"
+        },
+        {
+          "frame_index": 19,
+          "hex": "69"
+        },
+        {
+          "frame_index": 20,
+          "hex": "6a"
+        },
+        {
+          "frame_index": 21,
+          "hex": "6b"
+        },
+        {
+          "frame_index": 22,
+          "hex": "6c"
+        },
+        {
+          "frame_index": 23,
+          "hex": "6d"
+        },
+        {
+          "frame_index": 24,
+          "hex": "6e"
+        },
+        {
+          "frame_index": 25,
+          "hex": "6f"
+        },
+        {
+          "frame_index": 26,
+          "hex": "70"
+        },
+        {
+          "frame_index": 27,
+          "hex": "71"
+        },
+        {
+          "frame_index": 28,
+          "hex": "72"
+        },
+        {
+          "frame_index": 29,
+          "hex": "73"
+        },
+        {
+          "frame_index": 30,
+          "hex": "74"
+        }
+      ]
+    },
+    {
+      "start": 68,
+      "end": 84,
+      "length": 16,
+      "values_by_frame": [
+        {
+          "frame_index": 18,
+          "hex": "fc2dbb2a476012478e428c3df6d0e021"
+        },
+        {
+          "frame_index": 19,
+          "hex": "5de1de4618424b44ac8f04ceeaf02b59"
+        },
+        {
+          "frame_index": 20,
+          "hex": "1711abb8e02e4046b49cd62b8a2f3a25"
+        },
+        {
+          "frame_index": 21,
+          "hex": "64e1405b2a4648489bec69ff8d322882"
+        },
+        {
+          "frame_index": 22,
+          "hex": "de3bff9d4d98f04f8c6058a51e14db27"
+        },
+        {
+          "frame_index": 23,
+          "hex": "6748a3db1b6e754db8bbe91d10bcaacb"
+        },
+        {
+          "frame_index": 24,
+          "hex": "27fbffa69ee0284596df17becc38be8b"
+        },
+        {
+          "frame_index": 25,
+          "hex": "3a9bbd2e5094384db03ed45a16aab3f8"
+        },
+        {
+          "frame_index": 26,
+          "hex": "e89dc5ca1dd97f4aa2ea6cddfaf6b13a"
+        },
+        {
+          "frame_index": 27,
+          "hex": "75dfe678e9674144948424ddc7ce0b9a"
+        },
+        {
+          "frame_index": 28,
+          "hex": "abe6b7af0d271f4caf2f21e3cd50d0ff"
+        },
+        {
+          "frame_index": 29,
+          "hex": "0aaab3bd1718f74eaae710eef3b4dcc9"
+        },
+        {
+          "frame_index": 30,
+          "hex": "c1139311d6b1364aa715e5da87fbb543"
+        }
+      ]
+    }
+  ],
+  "known_dynamic_ranges": [
+    {
+      "name": "ack_guid_uuid_le",
+      "start": 2,
+      "end": 18,
+      "length": 16,
+      "values_by_frame": [
+        {
+          "frame_index": 18,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 19,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 20,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 21,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 22,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 23,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 24,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 25,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 26,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 27,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 28,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 29,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        },
+        {
+          "frame_index": 30,
+          "hex": "cf1eb79235cd5240abbd48afc9134f7a"
+        }
+      ]
+    },
+    {
+      "name": "sequence_uint16_le",
+      "start": 19,
+      "end": 21,
+      "length": 2,
+      "values_by_frame": [
+        {
+          "frame_index": 18,
+          "hex": "6815"
+        },
+        {
+          "frame_index": 19,
+          "hex": "6915"
+        },
+        {
+          "frame_index": 20,
+          "hex": "6a15"
+        },
+        {
+          "frame_index": 21,
+          "hex": "6b15"
+        },
+        {
+          "frame_index": 22,
+          "hex": "6c15"
+        },
+        {
+          "frame_index": 23,
+          "hex": "6d15"
+        },
+        {
+          "frame_index": 24,
+          "hex": "6e15"
+        },
+        {
+          "frame_index": 25,
+          "hex": "6f15"
+        },
+        {
+          "frame_index": 26,
+          "hex": "7015"
+        },
+        {
+          "frame_index": 27,
+          "hex": "7115"
+        },
+        {
+          "frame_index": 28,
+          "hex": "7215"
+        },
+        {
+          "frame_index": 29,
+          "hex": "7315"
+        },
+        {
+          "frame_index": 30,
+          "hex": "7415"
+        }
+      ]
+    },
+    {
+      "name": "nonce",
+      "start": 68,
+      "end": 84,
+      "length": 16,
+      "values_by_frame": [
+        {
+          "frame_index": 18,
+          "hex": "fc2dbb2a476012478e428c3df6d0e021"
+        },
+        {
+          "frame_index": 19,
+          "hex": "5de1de4618424b44ac8f04ceeaf02b59"
+        },
+        {
+          "frame_index": 20,
+          "hex": "1711abb8e02e4046b49cd62b8a2f3a25"
+        },
+        {
+          "frame_index": 21,
+          "hex": "64e1405b2a4648489bec69ff8d322882"
+        },
+        {
+          "frame_index": 22,
+          "hex": "de3bff9d4d98f04f8c6058a51e14db27"
+        },
+        {
+          "frame_index": 23,
+          "hex": "6748a3db1b6e754db8bbe91d10bcaacb"
+        },
+        {
+          "frame_index": 24,
+          "hex": "27fbffa69ee0284596df17becc38be8b"
+        },
+        {
+          "frame_index": 25,
+          "hex": "3a9bbd2e5094384db03ed45a16aab3f8"
+        },
+        {
+          "frame_index": 26,
+          "hex": "e89dc5ca1dd97f4aa2ea6cddfaf6b13a"
+        },
+        {
+          "frame_index": 27,
+          "hex": "75dfe678e9674144948424ddc7ce0b9a"
+        },
+        {
+          "frame_index": 28,
+          "hex": "abe6b7af0d271f4caf2f21e3cd50d0ff"
+        },
+        {
+          "frame_index": 29,
+          "hex": "0aaab3bd1718f74eaae710eef3b4dcc9"
+        },
+        {
+          "frame_index": 30,
+          "hex": "c1139311d6b1364aa715e5da87fbb543"
+        }
+      ]
+    },
+    {
+      "name": "managed_form_guid_ascii",
+      "start": 145,
+      "end": 181,
+      "length": 36,
+      "values_by_frame": [
+        {
+          "frame_index": 18,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 19,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 20,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 21,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 22,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 23,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 24,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 25,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 26,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 27,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 28,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 29,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        },
+        {
+          "frame_index": 30,
+          "hex": "35643638613865352d613731322d346663322d383534332d393731373330306164393635"
+        }
+      ]
+    }
+  ],
+  "normalized_request_shape_sha256": "327c6b155e4ca0c00559ab1aa3dbce20e9eb2d51dbdd68f609183a8d3da84536",
+  "canonical_request_shape_sha256": "cc023bcdf5b7f3204b977cf104783966eec7a580226a01972b6e52d1d6e5352e"
+}

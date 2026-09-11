@@ -1,0 +1,18 @@
+{
+  "schema": "protocol-accepted-mappings.v1",
+  "generated_at": "2026-06-03T06:01:33Z",
+  "comparison_inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260603-085618-fixture-readonly",
+      "capture_ids": [
+        "20260603-085618"
+      ],
+      "case_count": 6
+    }
+  ],
+  "accepted_case_ids": [],
+  "case_count": 0,
+  "cases": []
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "execute-command-navlink",
+  "api_member": "TestedClientApplicationWindow.ExecuteCommand",
+  "operation_family": "client_application_window_execute_command",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open the goods document list (bootstrap), then navigate to the Склады list via the main window's ExecuteCommand. Drives TestedClientApplicationWindow.ExecuteCommand (ГлавноеОкноТестируемого.ВыполнитьКоманду) via 'я перехожу по навигационной ссылке' — confirmed in upstream VanessaAutomation step definitions (ЯПерехожуПоНавигационнойСсылке). This is distinct from the bootstrap 'я открываю навигационную ссылку'. Only opens read-only lists, so nothing persists. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/list/Документ.ОперацияПоУчетуТоваров\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И я перехожу по навигационной ссылке \"e1cib/list/Справочник.Склады\""},
+    {"phase": "post_read", "read": true}
+  ]
+}

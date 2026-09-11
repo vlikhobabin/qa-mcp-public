@@ -1,0 +1,118 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.replay-probe-summary.v1",
+  "source_capture": "runtime/protocol-research/captures/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "successful_replay_dir": null,
+  "send_count": 0,
+  "transport_status": "runtime_gap",
+  "no_response_frames": [],
+  "observed_dynamic_fields": {},
+  "adaptation": {},
+  "accepted_probe_cases": [],
+  "blocked_probe_cases": [
+    {
+      "case_id": "tm-v1-diag-command-interface-dump",
+      "manager_frame_range": {"from": 18, "to": 20},
+      "client_frame_range": {"from": 19, "to": 21},
+      "normalized_hash": "45b82b8a5f5febcc6ca5086bd872984206d54d3ffd7e3c6fa3e7546e4ee6311b",
+      "expected_marker": "ci_children_count=",
+      "observed_markers": [],
+      "probe_status": "blocked_runtime_gap",
+      "accepted_protocol_mapping": false,
+      "blocker": "No clean TestClient endpoint was available after preflight; a count-marker contract could not be directly probed.",
+      "next_route": "Restore the Vanessa EPF/runtime endpoint, then run a focused command-interface direct probe or replay for frames 18..20."
+    },
+    {
+      "case_id": "tm-v1-diag-window-children",
+      "manager_frame_range": {"from": 21, "to": 22},
+      "client_frame_range": {"from": 22, "to": 23},
+      "normalized_hash": "a606b8eda4f9e3a65f15110b36bb28b04a965c6b8d3bcae9a9b0319d7e6a973f",
+      "expected_marker": "window_children_count=",
+      "observed_markers": [],
+      "probe_status": "blocked_runtime_gap",
+      "accepted_protocol_mapping": false,
+      "blocker": "No clean TestClient endpoint was available after preflight; a window-children count contract could not be directly probed.",
+      "next_route": "Restore the Vanessa EPF/runtime endpoint, then run a focused window-children direct probe or replay for frames 21..22."
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "manager_frame_range": {"from": 23, "to": 25},
+      "client_frame_range": {"from": 24, "to": 26},
+      "normalized_hash": "5d87ccd9f0c08ea313b9378dff7fe65abcfb3f3e5355bd15d3fb8e9294ca51f2",
+      "expected_marker": "PF_FIXTURE_VERSION",
+      "observed_markers": ["QA MCP Protocol Fixture V1"],
+      "probe_status": "blocked_runtime_gap",
+      "accepted_protocol_mapping": false,
+      "blocker": "Joined evidence observes the title/form marker, but no current endpoint was available to prove whether this endpoint should return title semantics or version semantics.",
+      "next_route": "After runtime restoration, run a focused current-run probe for frames 23..25 and pass the marker contract decision to reconciliation."
+    },
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "manager_frame_range": {"from": 26, "to": 106},
+      "client_frame_range": {"from": 27, "to": 106},
+      "normalized_hash": "0244782c3c4f28c8b3ad0bbf5dfaf37916cb642f0d82debe8543fdd08c71f85a",
+      "expected_marker": "PF_FIXTURE_VERSION",
+      "observed_markers": ["QA MCP Protocol Fixture V1"],
+      "probe_status": "blocked_ambiguous_range_and_runtime_gap",
+      "accepted_protocol_mapping": false,
+      "blocker": "The row spans 81 manager frames and no clean endpoint was available to isolate or replay the form-path operation.",
+      "next_route": "Run the broad-window isolation change first, then retry focused proof after runtime restoration."
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "manager_frame_range": {"from": 117, "to": 119},
+      "client_frame_range": {"from": 118, "to": 120},
+      "normalized_hash": "33f8fb78e26a3aa64d0b111942140a3b19eba163e3e2ab875cfa81a5ccc1ad3f",
+      "expected_marker": "PF_FIXTURE_VERSION",
+      "observed_markers": ["QA MCP Protocol Fixture V1"],
+      "probe_status": "blocked_runtime_gap",
+      "accepted_protocol_mapping": false,
+      "blocker": "Older form-summary probe evidence is rejected/supporting only, and no current endpoint was available for a current-run proof.",
+      "next_route": "After runtime restoration, run a current-run form-summary probe and reconcile whether title/form marker semantics are intended."
+    }
+  ],
+  "not_attempted_cases": [
+    {
+      "case_id": "tm-v1-diag-command-interface-dump",
+      "reason": "runtime_gap: missing Vanessa EPF blocked clean TestClient endpoint startup before focused proof"
+    },
+    {
+      "case_id": "tm-v1-diag-window-children",
+      "reason": "runtime_gap: missing Vanessa EPF blocked clean TestClient endpoint startup before focused proof"
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "reason": "runtime_gap: missing Vanessa EPF blocked endpoint/expected-marker proof"
+    },
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "reason": "runtime_gap plus ambiguous 81-frame manager window"
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "reason": "runtime_gap; older rejected probe remains supporting only"
+    }
+  ],
+  "runtime_availability_check": {
+    "checked_at": "2026-06-06T19:14:16+03:00",
+    "windows_native": true,
+    "preflight_run_id": "20260606-pending-readonly-runtime-preflight",
+    "preflight_status": "runtime_gap",
+    "missing_asset": "Vanessa EPF",
+    "checked_ports": [15381, 15382, 19874],
+    "one_c_processes_started": false,
+    "testclient_endpoint_available": false,
+    "provider_gap": {
+      "provider_id": "project-runtime",
+      "owner_path": "project:qa-mcp",
+      "missing_capability": "running TestClient endpoint for focused pending-row replay/direct probes",
+      "missing_evidence_type": "scenario_log",
+      "impact": "five missing-proof rows remain non-accepted in this change",
+      "current_workaround": "retain current-run frame/hash blockers and no-acceptance summary"
+    }
+  },
+  "supporting_evidence": [
+    "docs/protocol-research/evidence/manager-fixture-v1-pending-readonly/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/classification.json",
+    "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-pending-readonly-runtime-preflight/runtime_summary.json",
+    "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-pending-readonly-review/summary.json"
+  ]
+}

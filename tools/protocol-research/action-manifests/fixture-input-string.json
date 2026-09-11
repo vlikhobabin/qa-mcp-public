@@ -1,0 +1,28 @@
+{
+ "schema": "qa-mcp.action-capture-manifest.v1",
+ "action_id": "fixture-input-string",
+ "api_member": "TestedFormField.input_text",
+ "operation_family": "form_field_input_text",
+ "mutates_business_data": false,
+ "marker": "",
+ "action_phase": "action",
+ "notes": "Open the protocol fixture form and input text into the PF_EDIT_STRING InputField (local fixture marker only; reset via PF_RESET_STATE). Drives the field text-input command frame for the native input_text live proof. vanessa_client only.",
+ "steps": [
+  {
+   "phase": "bootstrap",
+   "text": "И я открываю основную форму обработки \"ФикстураПротоколаTestClient\""
+  },
+  {
+   "phase": "pre_read",
+   "read": true
+  },
+  {
+   "phase": "action",
+   "text": "И в поле с именем 'PF_EDIT_STRING' я ввожу текст \"PF_INPUT_PROOF\""
+  },
+  {
+   "phase": "post_read",
+   "read": true
+  }
+ ]
+}

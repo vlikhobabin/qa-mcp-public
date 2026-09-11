@@ -1,0 +1,24 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "extform-window-batch",
+  "api_member": "TestedFormDecoration.Activate",
+  "operation_family": "form_window_safe_ui",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "act_decoration_activate",
+  "notes": "Multi-phase safe_ui_action batch on the Расш1_Обработка1 extension form: bootstrap opens the form and clicks Декорация1 (its OnClick only calls Сообщить, leaving a user message in the panel). Phases: Decoration.Activate (activate Декорация1), window Activate (activate window 'Расш1_Обработка1'), CloseUserMessagesPanel (clear the user-messages panel). Read-only; nothing persists. vanessa_client only.",
+  "phase_member_map": {
+    "act_decoration_activate": "TestedFormDecoration.Activate",
+    "act_window_activate": "TestedClientApplicationWindow.Activate",
+    "act_close_messages": "TestedClientApplicationWindow.CloseUserMessagesPanel"
+  },
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю основную форму обработки \"Расш1_Обработка1\""},
+    {"phase": "bootstrap", "text": "И я нажимаю на гиперссылку с именем 'Декорация1'"},
+    {"phase": "pre_read", "read": true},
+    {"phase": "act_decoration_activate", "text": "И я активизирую поле с именем 'Декорация1'"},
+    {"phase": "act_window_activate", "text": "И я активизирую окно \"Расш1_Обработка1\""},
+    {"phase": "act_close_messages", "text": "И я очищаю окно сообщений пользователю"},
+    {"phase": "post_read", "read": true}
+  ]
+}

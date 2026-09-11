@@ -1,0 +1,91 @@
+{
+  "schema": "protocol-case-probe-evidence.v1",
+  "kind": "direct_python_manager_marker_replay",
+  "status": "ok",
+  "probe_status": "accepted",
+  "case_id": "tm-v1-active-form",
+  "query": "manager-fixture-marker",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\captures\\20260605-live-full-readonly-bootstrap-second-boundary-guard",
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\runtime\\protocol-research\\manager-fixture-marker-probe\\20260605-tm-v1-active-form-marker-replay",
+  "ack_guid": "e22e91eb-a877-44ca-8f69-0305a63b7334",
+  "frame4_sequence": 15701,
+  "sent_byte_count": 2162,
+  "received_byte_count": 1318,
+  "target_marker": "PF_FORM_MAIN",
+  "expected_marker": "PF_FORM_MAIN",
+  "response_markers": [
+    "PF_FORM_MAIN",
+    "pf_form_main"
+  ],
+  "response_marker_count": 2,
+  "marker_observed": true,
+  "frames": [
+    {
+      "send_index": 6,
+      "response_byte_count": 212,
+      "response_sha256": "f2af3e75f1ae7e1bbb3cb4b6b7142f89360cc47a78358d012a36056d08d8aa53",
+      "response_head_hex": "428f350654f284838183cb2395554d850d068aee499e292f8d0e7a9f0ed5287844c7b9ac89613bc5c2a565936b7881818181e04b2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "287844c7b9ac89613bc5c2a565936b78",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 121,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   ",
+        "Начальная страница"
+      ],
+      "semantic_guess": "home_page_navigation_point",
+      "label": "warmup-active-window",
+      "response_markers": [
+        "homepage[<guid>]",
+        "homepage",
+        "e1cib/navigationpoint/startpage"
+      ]
+    },
+    {
+      "send_index": 7,
+      "response_byte_count": 80,
+      "response_sha256": "eab65b1aec5d3c65eede9173dca29cd2f089ed3e70aa9245e890b78e7832cda6",
+      "response_head_hex": "428f360654f284838183cb23950a102bc90b462c40b5aeb6e2329a7234d5a4780686a37f54c45aa374db58c1a2408181818b0fe182818481829a0c70665f666f",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "a4780686a37f54c45aa374db58c1a240",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "pf_form_main"
+      ],
+      "utf16le_strings": [],
+      "ui_identifiers": [],
+      "semantic_guess": "",
+      "label": "tm-v1-active-form",
+      "response_markers": [
+        "PF_FORM_MAIN",
+        "pf_form_main"
+      ]
+    }
+  ],
+  "finished_at": "2026-06-05T11:23:39.393104Z",
+  "notes": "Read-only marker replay uses captured manager-fixture request shape and dynamic ACK/sequence/nonce replacement."
+}

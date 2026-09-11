@@ -1,0 +1,696 @@
+{
+  "schema": "python-manager-form-element-details.result.v1",
+  "status": "ok",
+  "capture_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\runtime\\protocol-research\\captures\\20260602-084433",
+  "templates": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\runtime\\protocol-research\\templates\\20260602-frames08-106-utf16-managedform\\manager_frame_templates.json",
+  "output_dir": "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\vanessa-mcp\\runtime\\protocol-research\\python-manager-probe\\short-element-details-20260602-151206",
+  "ack_guid": "2186904d-c451-4d16-acc3-1a59b7a749a0",
+  "frame4_sequence": 5466,
+  "sent_byte_count": 5449,
+  "received_byte_count": 6986,
+  "frames": [
+    {
+      "send_index": 8,
+      "response_byte_count": 212,
+      "response_sha256": "88b16c8948743309732847af477e04313ca1bb4bcb774455e5c5a2336a9ba006",
+      "response_head_hex": "428f6502ac3184838183cb2395554d850d068aee499e292f8d0e7a9f0ed5a1d6a7c313a2b403ac445caccfaca3dc81818181e04b2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "a1d6a7c313a2b403ac445caccfaca3dc",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 121,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   ",
+        "Начальная страница"
+      ],
+      "semantic_guess": "home_page_navigation_point"
+    },
+    {
+      "send_index": 9,
+      "response_byte_count": 359,
+      "response_sha256": "8fc45c94d0ad5f58098149ccd33f9105b1c3b16c3fe9d9805d998a3f2088cc32",
+      "response_head_hex": "428f6602ac3184838183cb23950a102bc90b462c40b5aeb6e2329a7234d5f0b2f3df2801cd9922720a17751017fb81818181e3cb2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "f0b2f3df2801cd9922720a17751017fb",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "MainFrame",
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 122,
+          "text": "Демонстрационное приложение"
+        },
+        {
+          "offset": 262,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "MainFrame",
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage ",
+        "Демонстрационное приложение",
+        "Начальная страница"
+      ],
+      "semantic_guess": "main_frame_with_home_page"
+    },
+    {
+      "send_index": 10,
+      "response_byte_count": 212,
+      "response_sha256": "d2519ec5affb4c156fdd41e3f78bc69763c5a204c90d1aa6d2be9a35094c4881",
+      "response_head_hex": "428f6702ac3184838183cb2395554d850d068aee499e292f8d0e7a9f0ed5b66c3d41b9a82c3795806ba14e226a7381818181e04b2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "b66c3d41b9a82c3795806ba14e226a73",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 121,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   ",
+        "Начальная страница"
+      ],
+      "semantic_guess": "home_page_navigation_point"
+    },
+    {
+      "send_index": 11,
+      "response_byte_count": 212,
+      "response_sha256": "0e0546dfbf745d055982ff5b08d9de6f7eaadb82816edb49c27870ff0c61f6bb",
+      "response_head_hex": "428f6802ac3184838183cb2395554d850d068aee499e292f8d0e7a9f0ed515a202b93ecedac5e76cfb6156021f4581818181e04b2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "15a202b93ecedac5e76cfb6156021f45",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 121,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   ",
+        "Начальная страница"
+      ],
+      "semantic_guess": "home_page_navigation_point"
+    },
+    {
+      "send_index": 12,
+      "response_byte_count": 339,
+      "response_sha256": "41d386fcac28a596bda1a1193be267ad1645347dbf3e3653a9fd27685f3b1252",
+      "response_head_hex": "428f6902ac3184838183cb23950a102bc90b462c40b5aeb6e2329a7234d51f6044bf9da03ba5fdb73cd31ddb47409a2e486f6d65506167655b36636137356535",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "1f6044bf9da03ba5fdb73cd31ddb4740",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf]",
+        "ManagedForm"
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 218,
+          "text": "Продажи"
+        },
+        {
+          "offset": 248,
+          "text": "Отчет.ДашбордПродажи.Форма.ФормаОтчета"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf]",
+        "Продажи",
+        "Отчет.ДашбордПродажи.Форма.ФормаОтчета"
+      ],
+      "semantic_guess": "active_form_descriptor"
+    },
+    {
+      "send_index": 13,
+      "response_byte_count": 212,
+      "response_sha256": "34b84fc32546ce8b8fe651910f6d6a29417957321c2fcc7ae21eeb8431ee6d77",
+      "response_head_hex": "428f6a02ac3184838183cb2395554d850d068aee499e292f8d0e7a9f0ed5a7e9f5f5669f7eaf004f43beda7891ae81818181e04b2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "a7e9f5f5669f7eaf004f43beda7891ae",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 121,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   ",
+        "Начальная страница"
+      ],
+      "semantic_guess": "home_page_navigation_point"
+    },
+    {
+      "send_index": 14,
+      "response_byte_count": 359,
+      "response_sha256": "b8c02ddc0fa1d24d156bf87714d826b1468b06f0a71e3492d1560ba94b3f82d0",
+      "response_head_hex": "428f6b02ac3184838183cb23950a102bc90b462c40b5aeb6e2329a7234d510f2bb35a3f97b6542e0ffd99a54937181818181e3cb2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "10f2bb35a3f97b6542e0ffd99a549371",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "MainFrame",
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 122,
+          "text": "Демонстрационное приложение"
+        },
+        {
+          "offset": 262,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "MainFrame",
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage ",
+        "Демонстрационное приложение",
+        "Начальная страница"
+      ],
+      "semantic_guess": "main_frame_with_home_page"
+    },
+    {
+      "send_index": 15,
+      "response_byte_count": 212,
+      "response_sha256": "6b4ecefb4177adcd2cc4e0fe4ced811191af6b70bf9394886a079eb9c3678496",
+      "response_head_hex": "428f6c02ac3184838183cb2395554d850d068aee499e292f8d0e7a9f0ed5d44098e80fd9ef227ce4158b997ca97e81818181e04b2395f10d6f047b8f764e9698",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "d44098e80fd9ef227ce4158b997ca97e",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   "
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 121,
+          "text": "Начальная страница"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "HomePage",
+        "e1cib/navigationpoint/startpage   ",
+        "Начальная страница"
+      ],
+      "semantic_guess": "home_page_navigation_point"
+    },
+    {
+      "send_index": 16,
+      "response_byte_count": 339,
+      "response_sha256": "693e79ae97c1881c038c5d80a533bad217fd3802df2671e7822777e47e97aa11",
+      "response_head_hex": "428f6d02ac3184838183cb23950a102bc90b462c40b5aeb6e2329a7234d5273f7fc34a3d6f0b834a1ad3b87767939a2e486f6d65506167655b36636137356535",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "273f7fc34a3d6f0b834a1ad3b8776793",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf]",
+        "ManagedForm"
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 218,
+          "text": "Продажи"
+        },
+        {
+          "offset": 248,
+          "text": "Отчет.ДашбордПродажи.Форма.ФормаОтчета"
+        }
+      ],
+      "ui_identifiers": [
+        ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf]",
+        "Продажи",
+        "Отчет.ДашбордПродажи.Форма.ФормаОтчета"
+      ],
+      "semantic_guess": "active_form_descriptor"
+    },
+    {
+      "send_index": 17,
+      "response_byte_count": 876,
+      "response_sha256": "dc3b657340057ba90df6f79d757c27644a60dc6061dd312a22996328763956aa",
+      "response_head_hex": "428f6e02ac3184838183cb23950a102bc90b462c40b5aeb6e2329a7234d5e101a30605c79187cf0f10b5863b486b9a60486f6d65506167655b36636137356535",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "e101a30605c79187cf0f10b5863b486b",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf]"
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 169,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+        },
+        {
+          "offset": 426,
+          "text": "ДиаграммаПоПериодам"
+        },
+        {
+          "offset": 529,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+        },
+        {
+          "offset": 784,
+          "text": "ДиаграммаПоТоварам"
+        }
+      ],
+      "ui_identifiers": [
+        "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf]",
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]",
+        "ДиаграммаПоПериодам",
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]",
+        "ДиаграммаПоТоварам"
+      ],
+      "semantic_guess": "form_element_summary"
+    },
+    {
+      "send_index": 101,
+      "response_byte_count": 332,
+      "response_sha256": "ad1a0d59ec8eceab5eea2f7ba926587c397a85b8209b8eb16a77f5904ca003d2",
+      "response_head_hex": "428fc202ac3184838183cb23952603cee9c164de47ab5ba07142ceaf79d5772e6a79e3c90bbbdf99f4d9a5d8e114977f48006f006d0065005000610067006500",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "772e6a79e3c90bbbdf99f4d9a5d8e114",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [],
+      "utf16le_strings": [
+        {
+          "offset": 48,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+        },
+        {
+          "offset": 307,
+          "text": "Диаграмма"
+        }
+      ],
+      "ui_identifiers": [
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]",
+        "Диаграмма"
+      ],
+      "semantic_guess": "form_element_summary"
+    },
+    {
+      "send_index": 102,
+      "response_byte_count": 313,
+      "response_sha256": "decd1cad0e0c3bc780ce09e6f9751f2ac4a43a234b328b1f9252fe5ba225b247",
+      "response_head_hex": "428fc302ac3184838183cb239523c842fb38ad0a40a81b02d5c7822a18d5138c9ce8a3fc0affb66e90bb35bce534977f48006f006d0065005000610067006500",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "138c9ce8a3fc0affb66e90bb35bce534",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [],
+      "utf16le_strings": [
+        {
+          "offset": 48,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+        }
+      ],
+      "ui_identifiers": [
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+      ],
+      "semantic_guess": "form_element_summary"
+    },
+    {
+      "send_index": 103,
+      "response_byte_count": 313,
+      "response_sha256": "d1092e01aead17ced8f8e4ed541da3bce41efd859964541aa82d546e6f8b9f5a",
+      "response_head_hex": "428fc402ac3184838183cb2395b2c3815e482c61428e8e621adcf59922d509fcf1fc655454d9c84b3f510172cd09977f48006f006d0065005000610067006500",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "09fcf1fc655454d9c84b3f510172cd09",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "^H,aB"
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 48,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+        }
+      ],
+      "ui_identifiers": [
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+      ],
+      "semantic_guess": "form_element_summary"
+    },
+    {
+      "send_index": 104,
+      "response_byte_count": 330,
+      "response_sha256": "c365160d4dea637a5ae78784ad703e11efd619360e61a7590455a97e4b3a56b2",
+      "response_head_hex": "428fc502ac3184838183cb23952603cee9c164de47ab5ba07142ceaf79d5633cac995978fb694f081f0976da0537977e48006f006d0065005000610067006500",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "633cac995978fb694f081f0976da0537",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [],
+      "utf16le_strings": [
+        {
+          "offset": 48,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+        },
+        {
+          "offset": 305,
+          "text": "Диаграмма"
+        }
+      ],
+      "ui_identifiers": [
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]",
+        "Диаграмма"
+      ],
+      "semantic_guess": "form_element_summary"
+    },
+    {
+      "send_index": 105,
+      "response_byte_count": 311,
+      "response_sha256": "9394f7f8abfe901bb3970b38e313d9969ea8671decdda416be1b8ba5abf30cc7",
+      "response_head_hex": "428fc602ac3184838183cb239523c842fb38ad0a40a81b02d5c7822a18d5236d03eebf5b2283ae1b5f0c523631ff977e48006f006d0065005000610067006500",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "236d03eebf5b2283ae1b5f0c523631ff",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [],
+      "utf16le_strings": [
+        {
+          "offset": 48,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+        }
+      ],
+      "ui_identifiers": [
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+      ],
+      "semantic_guess": "form_element_summary"
+    },
+    {
+      "send_index": 106,
+      "response_byte_count": 311,
+      "response_sha256": "34831821c3589448541a82a6738923d69282d46dfc80271e2e26d5f5b4f6dddd",
+      "response_head_hex": "428fc702ac3184838183cb2395b2c3815e482c61428e8e621adcf59922d5f9c5e47da31b3134321e44614d352973977e48006f006d0065005000610067006500",
+      "nonce_echoes": [
+        {
+          "manager_offset": 68,
+          "block_hex": "f9c5e47da31b3134321e44614d352973",
+          "response_positions": [
+            30
+          ]
+        }
+      ],
+      "ascii_strings": [
+        "^H,aB",
+        "DaM5)s"
+      ],
+      "utf16le_strings": [
+        {
+          "offset": 48,
+          "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+        }
+      ],
+      "ui_identifiers": [
+        "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+      ],
+      "semantic_guess": "form_element_summary"
+    }
+  ],
+  "finished_at": "2026-06-02T12:12:20.721600Z",
+  "active_form_name": "Отчет.ДашбордПродажи.Форма.ФормаОтчета",
+  "active_form_caption": "Продажи",
+  "managed_form_ref": "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf]",
+  "elements": [
+    {
+      "type": "EditField",
+      "name": "ДиаграммаПоПериодам",
+      "caption": "ДиаграммаПоПериодам",
+      "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]",
+      "offset": 169
+    },
+    {
+      "type": "EditField",
+      "name": "ДиаграммаПоТоварам",
+      "caption": "ДиаграммаПоТоварам",
+      "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]",
+      "offset": 529
+    }
+  ],
+  "element_count": 2,
+  "element_details": [
+    {
+      "type": "EditField",
+      "name": "ДиаграммаПоПериодам",
+      "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]",
+      "captions": [
+        "Диаграмма"
+      ],
+      "frames": [
+        {
+          "send_index": 101,
+          "response_byte_count": 332,
+          "semantic_guess": "form_element_summary",
+          "caption": "Диаграмма",
+          "utf16le_strings": [
+            {
+              "offset": 48,
+              "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+            },
+            {
+              "offset": 307,
+              "text": "Диаграмма"
+            }
+          ],
+          "ui_identifiers": [
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]",
+            "Диаграмма"
+          ]
+        },
+        {
+          "send_index": 102,
+          "response_byte_count": 313,
+          "semantic_guess": "form_element_summary",
+          "caption": null,
+          "utf16le_strings": [
+            {
+              "offset": 48,
+              "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+            }
+          ],
+          "ui_identifiers": [
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+          ]
+        },
+        {
+          "send_index": 103,
+          "response_byte_count": 313,
+          "semantic_guess": "form_element_summary",
+          "caption": null,
+          "utf16le_strings": [
+            {
+              "offset": 48,
+              "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+            }
+          ],
+          "ui_identifiers": [
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоПериодам]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "EditField",
+      "name": "ДиаграммаПоТоварам",
+      "path": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]",
+      "captions": [
+        "Диаграмма"
+      ],
+      "frames": [
+        {
+          "send_index": 104,
+          "response_byte_count": 330,
+          "semantic_guess": "form_element_summary",
+          "caption": "Диаграмма",
+          "utf16le_strings": [
+            {
+              "offset": 48,
+              "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+            },
+            {
+              "offset": 305,
+              "text": "Диаграмма"
+            }
+          ],
+          "ui_identifiers": [
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]",
+            "Диаграмма"
+          ]
+        },
+        {
+          "send_index": 105,
+          "response_byte_count": 311,
+          "semantic_guess": "form_element_summary",
+          "caption": null,
+          "utf16le_strings": [
+            {
+              "offset": 48,
+              "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+            }
+          ],
+          "ui_identifiers": [
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+          ]
+        },
+        {
+          "send_index": 106,
+          "response_byte_count": 311,
+          "semantic_guess": "form_element_summary",
+          "caption": null,
+          "utf16le_strings": [
+            {
+              "offset": 48,
+              "text": "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+            }
+          ],
+          "ui_identifiers": [
+            "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[d81a2a14-b311-44ab-9e2b-543a30da7faf].EditField[ДиаграммаПоТоварам]"
+          ]
+        }
+      ]
+    }
+  ],
+  "element_detail_count": 2,
+  "frame_mode": "short"
+}

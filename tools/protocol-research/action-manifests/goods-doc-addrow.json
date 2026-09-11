@@ -1,0 +1,16 @@
+{
+  "schema": "qa-mcp.action-capture-manifest.v1",
+  "action_id": "goods-doc-addrow",
+  "api_member": "TestedFormTable.AddRow",
+  "operation_family": "form_table_add_row",
+  "mutates_business_data": false,
+  "marker": "",
+  "action_phase": "action",
+  "notes": "Open a new (unsaved) Корректировка остатка document and add a row to its ТоварныеЗапасы tabular section. The document is never saved, so nothing persists (the capture pipeline kills the TestClient afterward). Drives TestedFormTable.AddRow via 'в таблице ... я добавляю строку'. vanessa_client only.",
+  "steps": [
+    {"phase": "bootstrap", "text": "И я открываю навигационную ссылку \"e1cib/command/Документ.ОперацияПоУчетуТоваров.Создать\""},
+    {"phase": "pre_read", "read": true},
+    {"phase": "action", "text": "И в таблице \"ТоварныеЗапасы\" я добавляю строку"},
+    {"phase": "post_read", "read": true}
+  ]
+}

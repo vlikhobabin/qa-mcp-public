@@ -1,0 +1,12 @@
+﻿{
+    "jsonrpc":  "2.0",
+    "id":  304,
+    "result":  {
+                   "content":  [
+                                   {
+                                       "type":  "text",
+                                       "text":  "# Анализ текущей формы\n\n## Gherkin-состояние формы\n```gherkin\n\tТогда элемент формы с именем \u0027Hyperlink\u0027 стал равен \"Hyperlink\"\n\tИ элемент формы с именем \u0027HyperlinkRightSpacer\u0027 стал равен \"HyperlinkRightSpacer\"\n\tИ элемент формы с именем \u0027Icon\u0027 стал равен \"Icon\"\n\tИ элемент формы с именем \u0027IconLeftSpacer\u0027 стал равен \"IconLeftSpacer\"\n\tИ элемент формы с именем \u0027IconRightSpacer\u0027 стал равен \"IconRightSpacer\"\n\tИ элемент формы с именем \u0027Message\u0027 стал равен \"Пометить выделенные элементы на удаление?\"\n\tИ элемент формы с именем \u0027Title\u0027 стал равен \"Title\"\n\n```\n"
+                                   }
+                               ]
+               }
+}

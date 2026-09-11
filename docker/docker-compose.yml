@@ -1,0 +1,22 @@
+# qa-mcp delivery — one-command run. Set the two paths in a `.env` next to this file (or your shell env):
+#   PLATFORM_DIR  = your 1C-for-Linux install root (the dir that contains x86_64/<version>/1cv8)
+#   INFOBASE_DIR  = your file infobase (.1CD) directory
+#   PLATFORM_ROOT = the versioned platform subdir inside the container, e.g. /opt/1cv8/x86_64/8.3.27.2130
+# Then:  docker compose up
+services:
+  qa-mcp:
+    image: qa-mcp:latest          # or `build: ..` to build from source
+    # Model A runs on a Linux host with the host's licensed 1C platform mounted in.
+    # Host networking lets the MCP bind 127.0.0.1 without an in-container wildcard listener.
+    network_mode: host
+    environment:
+      QA_MCP_HTTP_HOST: "${QA_MCP_HTTP_HOST:-127.0.0.1}"
+      QA_MCP_BEARER_TOKEN: "${QA_MCP_BEARER_TOKEN:-}"
+      PLATFORM_ROOT: "${PLATFORM_ROOT:?set PLATFORM_ROOT to the versioned platform dir, e.g. /opt/1cv8/x86_64/8.3.27.2130}"
+      INFOBASE_PATH: /infobase
+      TEST_CLIENT_USER: "${TEST_CLIENT_USER:-Администратор}"
+      TEST_CLIENT_PASSWORD: "${TEST_CLIENT_PASSWORD:-}"
+    volumes:
+      - "${PLATFORM_DIR:?set PLATFORM_DIR to your 1C-for-Linux install root}:/opt/1cv8:ro"
+      - "${INFOBASE_DIR:?set INFOBASE_DIR to your file infobase directory}:/infobase"
+      - "./.work:/work"           # lifecycle logs + screenshots (optional, handy for debugging)

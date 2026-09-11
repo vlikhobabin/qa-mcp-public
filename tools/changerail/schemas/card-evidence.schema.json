@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "changerail.card-evidence.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "conditions", "risks"],
+  "properties": {
+    "schema": {"const": "changerail.card-evidence.v1"},
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["condition", "seam", "precondition", "action", "expected", "method", "stage"],
+        "properties": {
+          "condition": {"type": "string", "pattern": "^C[1-9][0-9]*$"},
+          "seam": {"type": "string", "pattern": ".*\\S.*"},
+          "precondition": {"type": "string", "pattern": ".*\\S.*"},
+          "action": {"type": "string", "pattern": ".*\\S.*"},
+          "expected": {"type": "string", "pattern": ".*\\S.*"},
+          "method": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["kind", "target"],
+            "properties": {
+              "kind": {"enum": ["test", "inspection", "runtime"]},
+              "target": {"type": "string", "pattern": ".*\\S.*"}
+            }
+          },
+          "stage": {"enum": ["implementation", "review", "final"]}
+        }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kinds", "applies", "decision", "conditions"],
+        "properties": {
+          "kinds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"enum": ["input_safety", "mutation", "restart", "concurrency", "publication", "external_effects"]}
+          },
+          "applies": {"type": "boolean"},
+          "decision": {"type": "string", "pattern": ".*\\S.*"},
+          "conditions": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^C[1-9][0-9]*$"}}
+        }
+      }
+    }
+  }
+}

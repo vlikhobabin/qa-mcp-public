@@ -1,0 +1,19 @@
+{
+  "schema": "card80.samesession-commit-probe.v1",
+  "capture": "fixture-input-capture",
+  "set_ordinal": 282,
+  "read_frames": [
+    467,
+    468,
+    469,
+    470
+  ],
+  "stop_after": 472,
+  "frames_sent": 473,
+  "diverged_at": null,
+  "set_response_has_marker": false,
+  "read_response_has_marker": false,
+  "read_response_has_default": false,
+  "committed": false,
+  "verdict": "NOT committed even in faithful same-session replay -> manager-side runtime state gates the commit (Fork 3 required)"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "qa-mcp.native-semantic-navigation-retarget.v1",
+  "run": "probe-retarget-20260611-150950",
+  "retarget": {
+    "old": "Средний",
+    "new": "Большой",
+    "manager_frames_substituted": 1,
+    "substituted_ordinal": 15
+  },
+  "flow": {
+    "manager_frames": 861,
+    "exchanges_with_response": 861,
+    "diverged_at": null
+  },
+  "verification": {
+    "card_title_Большой_Склад_in_responses": 22,
+    "card_title_Средний_Склад_in_responses": 0,
+    "conclusion": "manager semantically re-targeted navigation: opened the Большой warehouse card instead of the captured Средний, by a single length-preserving UTF-16LE row-value substitution in the row-select command frame (ordinal 15)."
+  },
+  "raw_outputs": "runtime/protocol-research/captures/probe-retarget-20260611-150950/ (ignored)"
+}

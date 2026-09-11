@@ -1,0 +1,38 @@
+{
+  "schema": "qa-mcp.fixture-source-scan.v1",
+  "run_id": "20260603-opsx-do-readonly-fixture-source",
+  "scanned_at": "2026-06-03T08:41:25+03:00",
+  "source_boundary": "C:\\1C_BASES\\EDT\\demo10413\\demo10413",
+  "scan_command_summary": "PowerShell read-only scan of Form.form files under the external EDT source tree for form element family markers.",
+  "raw_output_policy": "No form source payload or provider output is committed; this file keeps only counts and candidate paths.",
+  "counts": {
+    "forms": 74,
+    "button": 48,
+    "table": 39,
+    "command_bar": 74,
+    "page": 11,
+    "label": 74,
+    "checkbox": 19,
+    "all_families": 3
+  },
+  "candidate_forms_with_all_families": [
+    {
+      "path": "C:\\1C_BASES\\EDT\\demo10413\\demo10413\\src\\DataProcessors\\УдалениеПомеченныхОбъектов\\Forms\\ОсновнаяФорма\\Form.form",
+      "families": ["Button", "Table", "CommandBar", "Page", "Label", "CheckBox"]
+    },
+    {
+      "path": "C:\\1C_BASES\\EDT\\demo10413\\demo10413\\src\\DataProcessors\\ЭлектроннаяПочта\\Forms\\Форма\\Form.form",
+      "families": ["Button", "Table", "CommandBar", "Page", "Label", "CheckBox"]
+    },
+    {
+      "path": "C:\\1C_BASES\\EDT\\demo10413\\demo10413\\src\\Documents\\ОперацияПоУчетуТоваров\\Forms\\ФормаДокумента\\Form.form",
+      "families": ["Button", "Table", "CommandBar", "Page", "Label", "CheckBox"]
+    }
+  ],
+  "status": "source_candidate_found",
+  "unresolved": [
+    "No EDT validation command was run in this change.",
+    "No Vanessa/runtime form-open proof was retained in this change.",
+    "The next change must confirm whether one candidate form is reachable in the live TestClient fixture without actions or writes."
+  ]
+}

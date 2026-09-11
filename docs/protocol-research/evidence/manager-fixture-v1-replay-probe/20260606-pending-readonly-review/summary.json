@@ -1,0 +1,103 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.replay-probe-summary.v1",
+  "source_capture": "runtime/protocol-research/captures/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "successful_replay_dir": "runtime/protocol-research/replay-probe/20260606-manager-fixture-cleanup-summary419-uipath-v1",
+  "send_count": 419,
+  "transport_status": "ok",
+  "no_response_frames": [],
+  "observed_dynamic_fields": {
+    "ack_guid_after_send_3": "65769232-e953-4b39-9eaf-8ba6df5faf1f",
+    "main_frame_guid_after_send_6": "6ca75e50-62a3-4842-b6cd-b429f7591ef2",
+    "secondary_frame_guid_after_send_15": "2757ad56-6318-4d52-993f-6db40b2ba9db",
+    "managed_form_guid_after_send_15": "95d7e9d7-5ff3-476b-afc8-ffb2c084be35"
+  },
+  "adaptation": {
+    "frame4_guid": true,
+    "frame5_guid": true,
+    "frame5_random_blocks": true,
+    "binary_single_block_through": 121,
+    "binary_single_block_frames": "123-129,131-174,176-187,189-210,212-231,233-294,296-300,302-307,309-359,361-367,369-371,373-381,383,386,388-394,396-399,402-405,408-411,414-417",
+    "binary_guid_through": 419,
+    "ui_path_guids": true
+  },
+  "accepted_probe_cases": [],
+  "non_accepted_observations": [
+    {
+      "case_id": "tm-v1-checkbox-true",
+      "manager_frame_range": {"from": 126, "to": 130},
+      "response_after_send": 130,
+      "normalized_hash": "1ea7dc4c026fb1a000214163de81b6edf32751c0442ddf12de7d00e485e2987d",
+      "observed_marker": "PF_CHECKBOX_TRUE",
+      "missing_expected_marker": "CheckBox",
+      "probe_status": "transport_ok_marker_mismatch",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "manager_frame_range": {"from": 131, "to": 390},
+      "response_after_send": 390,
+      "normalized_hash": "926585521047f8e7e2abe2316dacbbf690142f04867c73cb12c172139a153e86",
+      "observed_marker": "pf_button_inert",
+      "missing_expected_marker": "TestedFormButton",
+      "probe_status": "transport_ok_marker_mismatch",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-table-items",
+      "manager_frame_range": {"from": 396, "to": 401},
+      "response_after_send": 401,
+      "normalized_hash": "9c09bc0e84e5e14f6215ccb858e5d4cb07a0bd99bf0228b55256259c719e89a6",
+      "observed_marker": "PF_TABLE_ITEMS",
+      "missing_expected_marker": "PF_ROW_001",
+      "probe_status": "transport_ok_marker_mismatch",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-group-main",
+      "manager_frame_range": {"from": 408, "to": 413},
+      "response_after_send": 413,
+      "normalized_hash": "88ffe72ff1b8392c56b8cf999151ef66b1db837e8edfee734a0d197d402e04b8",
+      "observed_marker": "PF_GROUP_MAIN",
+      "missing_expected_marker": "PF_FORM_MAIN",
+      "probe_status": "transport_ok_marker_mismatch",
+      "accepted_protocol_mapping": false
+    }
+  ],
+  "not_attempted_cases": [
+    {
+      "case_id": "tm-v1-diag-command-interface-dump",
+      "reason": "no current live TestClient endpoint was available for a focused direct probe; summary419 did not retain endpoint marker proof for this row"
+    },
+    {
+      "case_id": "tm-v1-diag-window-children",
+      "reason": "no current live TestClient endpoint was available for a focused direct probe; summary419 did not retain endpoint marker proof for this row"
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "reason": "no current live TestClient endpoint was available for a focused direct probe; current joined response needs endpoint/expected-marker review"
+    },
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "reason": "no current live TestClient endpoint was available and the joined command window is broad enough to require isolation before replay acceptance"
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "reason": "no current live TestClient endpoint was available; older form-summary direct probe remains rejected/supporting only"
+    }
+  ],
+  "runtime_availability_check": {
+    "checked_at": "2026-06-06T17:28:00+03:00",
+    "windows_native": true,
+    "one_c_processes_found": false,
+    "checked_ports": [15381, 15382, 48001],
+    "testclient_endpoint_available": false,
+    "provider_gap": {
+      "provider_id": "project-runtime",
+      "owner_path": "project:qa-mcp",
+      "missing_capability": "running TestClient endpoint for focused pending-row replay/direct probes",
+      "missing_evidence_type": "scenario_log",
+      "impact": "no additional pending row can be accepted in this change beyond the retained summary419 observations",
+      "current_workaround": "retain current-run negative replay observations and keep not-attempted rows pending"
+    }
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "schema": "protocol-accepted-mappings.v1",
+  "generated_at": "2026-06-02T19:35:48Z",
+  "comparison_inputs": [
+    {
+      "input_index": 0,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+      "capture_ids": [
+        "20260602-193802"
+      ],
+      "case_count": 10
+    },
+    {
+      "input_index": 1,
+      "cases_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly/corpus_cases.jsonl",
+      "evidence_dir": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+      "capture_ids": [
+        "20260602-195407"
+      ],
+      "case_count": 10
+    }
+  ],
+  "accepted_case_ids": [
+    "active-form-context",
+    "active-window-context"
+  ],
+  "case_count": 2,
+  "cases": [
+    {
+      "case_id": "active-form-context",
+      "normalized_hash": "e43ce48cedae7b6df936a2e0db71e1afd93d32df8e0767d8750f4ff176231573",
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "request_sizes": [
+        801
+      ],
+      "response_sizes": [
+        2337
+      ],
+      "operation_token_sets": [
+        [
+          "0a102bc90b462c40b5aeb6e2329a7234",
+          "554d850d068aee499e292f8d0e7a9f0e"
+        ]
+      ],
+      "response_marker_sets": [
+        [
+          ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb]",
+          "Продажи",
+          "Отчет.ДашбордПродажи.Форма.ФормаОтчета",
+          "HomePage",
+          "e1cib/navigationpoint/startpage",
+          "Начальная страница",
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "MainFrame",
+          "Демонстрационное приложение",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb].EditField[ДиаграммаПоПериодам]",
+          "ДиаграммаПоПериодам",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[5be10e9c-571a-42f9-beaa-460380e221bb].EditField[ДиаграммаПоТоварам]",
+          "ДиаграммаПоТоварам"
+        ],
+        [
+          ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538]",
+          "Продажи",
+          "Отчет.ДашбордПродажи.Форма.ФормаОтчета",
+          "HomePage",
+          "e1cib/navigationpoint/startpage",
+          "Начальная страница",
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "MainFrame",
+          "Демонстрационное приложение",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538].EditField[ДиаграммаПоПериодам]",
+          "ДиаграммаПоПериодам",
+          "HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[a05bfad2-2211-4e46-a144-f6b8c4190538].EditField[ДиаграммаПоТоварам]",
+          "ДиаграммаПоТоварам"
+        ]
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json"
+      ],
+      "observations": [
+        {
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "frame_range": {
+            "manager_to_client": {
+              "from": 12,
+              "to": 17
+            },
+            "client_to_manager": {
+              "from": 13,
+              "to": 18
+            }
+          },
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-form-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          }
+        },
+        {
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "frame_range": {
+            "manager_to_client": {
+              "from": 12,
+              "to": 17
+            },
+            "client_to_manager": {
+              "from": 13,
+              "to": 18
+            }
+          },
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-form-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "active-window-context",
+      "normalized_hash": "62e03d159d511173297af9ab9a287d9ab21f788a82ab840d97c639e726ad80ad",
+      "capture_ids": [
+        "20260602-193802",
+        "20260602-195407"
+      ],
+      "request_sizes": [
+        400
+      ],
+      "response_sizes": [
+        995
+      ],
+      "operation_token_sets": [
+        [
+          "0a102bc90b462c40b5aeb6e2329a7234",
+          "554d850d068aee499e292f8d0e7a9f0e"
+        ]
+      ],
+      "response_marker_sets": [
+        [
+          ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "HomePage",
+          "e1cib/navigationpoint/startpage",
+          "Начальная страница",
+          "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+          "MainFrame",
+          "Демонстрационное приложение"
+        ]
+      ],
+      "probe_evidence_paths": [
+        "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json"
+      ],
+      "observations": [
+        {
+          "capture_id": "20260602-193802",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-193802-expanded-readonly",
+          "frame_range": {
+            "manager_to_client": {
+              "from": 8,
+              "to": 11
+            },
+            "client_to_manager": {
+              "from": 9,
+              "to": 12
+            }
+          },
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-window-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          }
+        },
+        {
+          "capture_id": "20260602-195407",
+          "evidence_path": "docs/protocol-research/evidence/corpus/20260602-195407-expanded-readonly",
+          "frame_range": {
+            "manager_to_client": {
+              "from": 8,
+              "to": 11
+            },
+            "client_to_manager": {
+              "from": 9,
+              "to": 12
+            }
+          },
+          "probe_evidence": {
+            "kind": "direct_python_manager",
+            "status": "accepted",
+            "query": "form-element-details",
+            "case_id": "active-window-context",
+            "evidence_path": "docs/protocol-research/evidence/python-manager-probe/expanded-20260602-193802/python_manager_probe_result.json",
+            "source_capture_id": "20260602-084433",
+            "frame_mode": "short",
+            "response_markers": [
+              "home_page_navigation_point",
+              ".HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "HomePage",
+              "e1cib/navigationpoint/startpage",
+              "Начальная страница",
+              "main_frame_with_home_page",
+              "/MainFrame[6ca75e50-62a3-4842-b6cd-b429f7591ef2]",
+              "MainFrame",
+              "Демонстрационное приложение",
+              "active_form_descriptor",
+              "`HomePage[6ca75e50-62a3-4842-b6cd-b429f7591ef2].ManagedForm[857f5423-a4f6-46b7-94b8-53274a199790]",
+              "Продажи"
+            ],
+            "response_marker_count": 12
+          }
+        }
+      ]
+    }
+  ]
+}

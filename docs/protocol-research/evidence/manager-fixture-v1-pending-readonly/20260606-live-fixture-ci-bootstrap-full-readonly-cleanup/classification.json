@@ -1,0 +1,283 @@
+{
+  "schema": "qa-mcp.manager-fixture-v1.pending-readonly-classification.v1",
+  "generated_at": "2026-06-06T17:18:00+03:00",
+  "run_id": "20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "source_runtime_dir": "runtime/protocol-research/captures/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup",
+  "source_evidence": {
+    "live_join_report": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/frame_join_report.json",
+    "corpus_rows": "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/corpus_cases.jsonl",
+    "runtime_manifest": "runtime/protocol-research/captures/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/manager_harness_manifest.json",
+    "summary419_replay": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-cleanup-summary419-uipath/summary.json",
+    "field_replay": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-cleanup-readonly-fields/summary.json",
+    "commandbar_replay": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-cleanup-commandbar-main/summary.json"
+  },
+  "acceptance_gate": {
+    "required_match_fields": [
+      "case_id",
+      "manager_frame_range",
+      "normalized_hash"
+    ],
+    "joined_frame_evidence_is_sufficient": false,
+    "older_probe_evidence_policy": "supporting_only_until_reconciled_with_current_cleanup_run"
+  },
+  "counts": {
+    "joined_rows": 17,
+    "accepted_rows_before_classification": 8,
+    "classified_pending_rows": 9,
+    "promoted_by_classification": 0
+  },
+  "rows": [
+    {
+      "case_id": "tm-v1-diag-command-interface-dump",
+      "command_id": "diagnostic_command_interface_dump",
+      "element_family": "DiagnosticCommandInterface",
+      "manager_frame_range": {"from": 18, "to": 20},
+      "client_frame_range": {"from": 19, "to": 21},
+      "request_size": 410,
+      "response_size": 631,
+      "normalized_hash": "45b82b8a5f5febcc6ca5086bd872984206d54d3ffd7e3c6fa3e7546e4ee6311b",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "ci_children_count=",
+      "joined_response_markers": [],
+      "current_replay_status": "not_run",
+      "primary_classification": "missing_replay_or_direct_probe_evidence",
+      "secondary_classifications": [
+        "expected_marker_absent_from_joined_response_markers",
+        "endpoint_contract_needs_review"
+      ],
+      "candidate_manifest_change": null,
+      "required_next_evidence": "Run a direct diagnostic command-interface probe or replay summary tied to frames 18..20 and decide whether the endpoint should expose a count marker.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-diag-window-children",
+      "command_id": "diagnostic_window_children",
+      "element_family": "DiagnosticWindowChildren",
+      "manager_frame_range": {"from": 21, "to": 22},
+      "client_frame_range": {"from": 22, "to": 23},
+      "request_size": 255,
+      "response_size": 662,
+      "normalized_hash": "a606b8eda4f9e3a65f15110b36bb28b04a965c6b8d3bcae9a9b0319d7e6a973f",
+      "target_marker": "PF_FORM_MAIN",
+      "expected_marker": "window_children_count=",
+      "joined_response_markers": [],
+      "current_replay_status": "not_run",
+      "primary_classification": "missing_replay_or_direct_probe_evidence",
+      "secondary_classifications": [
+        "expected_marker_absent_from_joined_response_markers",
+        "endpoint_contract_needs_review"
+      ],
+      "candidate_manifest_change": null,
+      "required_next_evidence": "Run a direct window-children probe or replay summary tied to frames 21..22 and retain the observed child marker/count contract.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-diag-window-find-form-marker",
+      "command_id": "diagnostic_window_find_form_marker",
+      "element_family": "DiagnosticWindowFindForm",
+      "manager_frame_range": {"from": 23, "to": 25},
+      "client_frame_range": {"from": 24, "to": 26},
+      "request_size": 489,
+      "response_size": 1244,
+      "normalized_hash": "5d87ccd9f0c08ea313b9378dff7fe65abcfb3f3e5355bd15d3fb8e9294ca51f2",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "PF_FIXTURE_VERSION",
+      "joined_response_markers": ["QA MCP Protocol Fixture V1"],
+      "current_replay_status": "not_run",
+      "primary_classification": "wrong_expected_marker_or_wrong_endpoint_candidate",
+      "secondary_classifications": [
+        "missing_replay_or_direct_probe_evidence",
+        "expected_marker_absent_from_joined_response_markers"
+      ],
+      "candidate_manifest_change": {
+        "field": "expected_marker",
+        "candidate_value": "QA MCP Protocol Fixture V1",
+        "decision_status": "candidate_only"
+      },
+      "required_next_evidence": "Run a current-run probe for frames 23..25 and decide whether this operation is a title/form marker probe or should target PF_FIXTURE_VERSION through a different endpoint.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-diag-window-get-form-path",
+      "command_id": "diagnostic_window_get_form_path",
+      "element_family": "DiagnosticWindowGetForm",
+      "manager_frame_range": {"from": 26, "to": 106},
+      "client_frame_range": {"from": 27, "to": 106},
+      "request_size": 21059,
+      "response_size": 17973,
+      "normalized_hash": "0244782c3c4f28c8b3ad0bbf5dfaf37916cb642f0d82debe8543fdd08c71f85a",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "PF_FIXTURE_VERSION",
+      "joined_response_markers": ["QA MCP Protocol Fixture V1"],
+      "current_replay_status": "not_run",
+      "primary_classification": "ambiguous_frame_range",
+      "secondary_classifications": [
+        "wrong_expected_marker_or_wrong_endpoint_candidate",
+        "missing_replay_or_direct_probe_evidence"
+      ],
+      "candidate_manifest_change": null,
+      "required_next_evidence": "Isolate the form-path endpoint from the 81-frame window or rerun a focused direct probe before deciding expected marker semantics.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-form-summary",
+      "command_id": "form_summary",
+      "element_family": "TestedForm",
+      "manager_frame_range": {"from": 117, "to": 119},
+      "client_frame_range": {"from": 118, "to": 120},
+      "request_size": 469,
+      "response_size": 1275,
+      "normalized_hash": "33f8fb78e26a3aa64d0b111942140a3b19eba163e3e2ab875cfa81a5ccc1ad3f",
+      "target_marker": "QA MCP Protocol Fixture V1",
+      "expected_marker": "PF_FIXTURE_VERSION",
+      "joined_response_markers": ["QA MCP Protocol Fixture V1"],
+      "current_replay_status": "not_run",
+      "prior_probe_evidence": [
+        {
+          "path": "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-next-readonly-marker-probes/tm-v1-form-summary/manager_fixture_marker_probe_result.json",
+          "status": "rejected",
+          "policy": "supporting_only"
+        }
+      ],
+      "primary_classification": "wrong_expected_marker_or_wrong_endpoint_candidate",
+      "secondary_classifications": [
+        "missing_current_run_replay_or_direct_probe_evidence",
+        "prior_probe_rejected_expected_marker"
+      ],
+      "candidate_manifest_change": {
+        "field": "expected_marker",
+        "candidate_value": "QA MCP Protocol Fixture V1",
+        "decision_status": "candidate_only"
+      },
+      "required_next_evidence": "Run a current-run form-summary probe and decide whether form summary should assert the title/form marker instead of PF_FIXTURE_VERSION.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-checkbox-true",
+      "command_id": "element_state",
+      "element_family": "CheckBox",
+      "manager_frame_range": {"from": 126, "to": 130},
+      "client_frame_range": {"from": 127, "to": 131},
+      "request_size": 1183,
+      "response_size": 1505,
+      "normalized_hash": "1ea7dc4c026fb1a000214163de81b6edf32751c0442ddf12de7d00e485e2987d",
+      "target_marker": "PF_CHECKBOX_TRUE",
+      "expected_marker": "CheckBox",
+      "joined_response_markers": ["CheckBox", "PF_CHECKBOX_TRUE"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observation": {
+        "path": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-cleanup-summary419-uipath/summary.json",
+        "observed_marker": "PF_CHECKBOX_TRUE",
+        "missing_expected_marker": "CheckBox"
+      },
+      "prior_probe_evidence": [
+        {
+          "path": "docs/protocol-research/evidence/manager-fixture-marker-probe/20260605-next-readonly-marker-probes/tm-v1-checkbox-true/manager_fixture_marker_probe_result.json",
+          "status": "accepted",
+          "policy": "supporting_only_until_reconciled"
+        }
+      ],
+      "primary_classification": "replay_marker_mismatch",
+      "secondary_classifications": [
+        "older_probe_must_be_reconciled_with_current_run",
+        "candidate_direct_probe_acceptance"
+      ],
+      "candidate_manifest_change": null,
+      "required_next_evidence": "Produce a current-run direct probe or replay summary that validates both the semantic checkbox marker and normalized hash for frames 126..130, or retain the marker mismatch.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-button-inert",
+      "command_id": "element_state",
+      "element_family": "Button",
+      "manager_frame_range": {"from": 131, "to": 390},
+      "client_frame_range": {"from": 132, "to": 390},
+      "request_size": 57888,
+      "response_size": 48090,
+      "normalized_hash": "926585521047f8e7e2abe2316dacbbf690142f04867c73cb12c172139a153e86",
+      "target_marker": "PF_BUTTON_INERT",
+      "expected_marker": "TestedFormButton",
+      "joined_response_markers": ["PF_BUTTON_INERT"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observation": {
+        "path": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-cleanup-summary419-uipath/summary.json",
+        "observed_marker": "pf_button_inert",
+        "missing_expected_marker": "TestedFormButton"
+      },
+      "primary_classification": "ambiguous_frame_range",
+      "secondary_classifications": [
+        "replay_marker_mismatch",
+        "wrong_expected_marker_or_wrong_endpoint_candidate"
+      ],
+      "candidate_manifest_change": {
+        "field": "expected_marker",
+        "candidate_value": "PF_BUTTON_INERT",
+        "decision_status": "candidate_only"
+      },
+      "required_next_evidence": "Isolate the 260-frame element-state window or add a focused button direct probe before accepting a target-marker-only contract.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-table-items",
+      "command_id": "table_summary",
+      "element_family": "Table",
+      "manager_frame_range": {"from": 396, "to": 401},
+      "client_frame_range": {"from": 397, "to": 402},
+      "request_size": 1331,
+      "response_size": 4421,
+      "normalized_hash": "9c09bc0e84e5e14f6215ccb858e5d4cb07a0bd99bf0228b55256259c719e89a6",
+      "target_marker": "PF_TABLE_ITEMS",
+      "expected_marker": "PF_ROW_001",
+      "joined_response_markers": ["PF_TABLE_ITEMS"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observation": {
+        "path": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-cleanup-summary419-uipath/summary.json",
+        "observed_marker": "PF_TABLE_ITEMS",
+        "missing_expected_marker": "PF_ROW_001"
+      },
+      "primary_classification": "wrong_expected_marker_or_wrong_endpoint_candidate",
+      "secondary_classifications": [
+        "replay_marker_mismatch",
+        "row_marker_not_returned_by_current_table_summary_endpoint"
+      ],
+      "candidate_manifest_change": {
+        "field": "expected_marker",
+        "candidate_value": "PF_TABLE_ITEMS",
+        "decision_status": "candidate_only"
+      },
+      "required_next_evidence": "Decide whether table_summary accepts table identity only or needs a different endpoint for row markers; prove the chosen contract with current-run replay/direct probe.",
+      "accepted_protocol_mapping": false
+    },
+    {
+      "case_id": "tm-v1-group-main",
+      "command_id": "group_summary",
+      "element_family": "FormGroup",
+      "manager_frame_range": {"from": 408, "to": 413},
+      "client_frame_range": {"from": 409, "to": 414},
+      "request_size": 1242,
+      "response_size": 3772,
+      "normalized_hash": "88ffe72ff1b8392c56b8cf999151ef66b1db837e8edfee734a0d197d402e04b8",
+      "target_marker": "PF_GROUP_MAIN",
+      "expected_marker": "PF_FORM_MAIN",
+      "joined_response_markers": ["PF_FORM_MAIN", "PF_GROUP_MAIN"],
+      "current_replay_status": "transport_ok_marker_mismatch",
+      "current_replay_observation": {
+        "path": "docs/protocol-research/evidence/manager-fixture-v1-replay-probe/20260606-cleanup-summary419-uipath/summary.json",
+        "observed_marker": "PF_GROUP_MAIN",
+        "missing_expected_marker": "PF_FORM_MAIN"
+      },
+      "primary_classification": "replay_marker_mismatch",
+      "secondary_classifications": [
+        "wrong_expected_marker_or_wrong_endpoint_candidate",
+        "candidate_target_marker_only_contract"
+      ],
+      "candidate_manifest_change": {
+        "field": "expected_marker",
+        "candidate_value": "PF_GROUP_MAIN",
+        "decision_status": "candidate_only"
+      },
+      "required_next_evidence": "Produce a current-run replay/direct probe that validates group identity semantics, or keep the row pending with the PF_FORM_MAIN mismatch.",
+      "accepted_protocol_mapping": false
+    }
+  ]
+}

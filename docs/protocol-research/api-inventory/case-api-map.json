@@ -1,0 +1,106 @@
+{
+  "schema": "qa-mcp.api-coverage-case-map.v1",
+  "updated_at": "2026-06-10",
+  "inventory": "docs/protocol-research/api-inventory/automated-testing-8.3.27.1786.json",
+  "policy": {
+    "mapping_confidence_values": ["reviewed", "seed"],
+    "note": "A mapping with confidence 'seed' is a semantic correspondence between accepted corpus case ids and an inventory member. Seed mappings must be reviewed against the manager harness BSL source or direct probe call shape before the member may count as reviewed-accepted coverage. Coverage percentages over seed mappings are planning signals, not protocol claims."
+  },
+  "mappings": [
+    {
+      "api": "TestedApplication.GetActiveWindow",
+      "case_ids": ["active-window-context", "tm-v1-active-window"],
+      "proof_status": "accepted",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/accepted-mappings/expanded-readonly-20260602-193802-vs-20260602-195407-probe-accepted/",
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/"
+      ],
+      "notes": "Active-window read-only context is accepted by replay plus direct Python-manager probe; the GetActiveWindow correspondence still needs harness-source review."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GetObject",
+      "case_ids": ["active-form-context", "tm-v1-active-form"],
+      "proof_status": "accepted",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/accepted-mappings/expanded-readonly-20260602-193802-vs-20260602-195407-probe-accepted/",
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/"
+      ],
+      "notes": "Active-form retrieval route is accepted at the wire level; whether the manager route is GetObject or another chain from the active window remains a seed assumption."
+    },
+    {
+      "api": "TestedClientApplicationWindow.FindObject",
+      "case_ids": ["tm-v1-diag-window-find-field-marker", "tm-v1-diag-window-find-form-marker"],
+      "proof_status": "accepted",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/",
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-promote-candidate-marker-contracts-focused-proof-accepted/"
+      ],
+      "notes": "Window-scoped marker find rows are accepted by probe and marker-contract focused proof."
+    },
+    {
+      "api": "TestedForm.FindObject",
+      "case_ids": ["tm-v1-diag-form-find-field-marker"],
+      "proof_status": "accepted",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/"
+      ],
+      "notes": "Form-scoped marker find row is accepted by probe."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GetChildObjects",
+      "case_ids": ["tm-v1-diag-window-children"],
+      "proof_status": "accepted_side_channel",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-side-channel-count-contracts-focused-proof/"
+      ],
+      "notes": "Accepted as a typed manager side-channel count contract, not as a direct wire marker observation."
+    },
+    {
+      "api": "TestedClientApplicationWindow.GetCommandInterface",
+      "case_ids": ["tm-v1-diag-command-interface-dump"],
+      "proof_status": "accepted_side_channel",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-side-channel-count-contracts-focused-proof/"
+      ],
+      "notes": "Accepted as a typed manager side-channel count contract, not as a direct wire marker observation."
+    },
+    {
+      "api": "TestedForm.GetChildObjects",
+      "case_ids": ["tm-v1-form-summary", "tm-v1-table-items", "tm-v1-group-main", "tm-v1-pages-main"],
+      "proof_status": "accepted",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-promote-candidate-marker-contracts-focused-proof-accepted/",
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/"
+      ],
+      "notes": "Structure-summary rows are accepted by marker-contract focused proof; the exact child-enumeration call chain needs harness-source review."
+    },
+    {
+      "api": "TestedForm.GetCommandBar",
+      "case_ids": ["tm-v1-commandbar-main"],
+      "proof_status": "accepted",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/"
+      ],
+      "notes": "Command-bar summary row is accepted by replay/probe in the cleanup baseline."
+    },
+    {
+      "api": "TestedFormField.GetDataPresentation",
+      "case_ids": ["tm-v1-field-version", "tm-v1-field-string", "tm-v1-checkbox-true"],
+      "proof_status": "accepted",
+      "mapping_confidence": "seed",
+      "evidence": [
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-live-fixture-ci-bootstrap-full-readonly-cleanup/",
+        "docs/protocol-research/evidence/manager-fixture-v1-live-join/20260606-promote-candidate-marker-contracts-focused-proof-accepted/"
+      ],
+      "notes": "Field value reads are accepted by probe and marker proof; the GetDataPresentation correspondence for text and checkbox reads needs harness-source review."
+    }
+  ]
+}

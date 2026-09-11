@@ -1,0 +1,36 @@
+﻿{
+    "schema":  "qa-mcp.manager-fixture-v1.catalog-comparison.v1",
+    "status":  "ok",
+    "catalog_path":  "C:\\Users\\historical-user\\YandexDisk\\Work\\dev-mcp-1c\\qa-mcp\\tools\\protocol-research\\manager_fixture_v1_command_catalog.json",
+    "bsl_module_path":  "C:\\1C_BASES\\EDT\\vanessa_qa\\vanessa_manager\\src\\DataProcessors\\ProtocolFixtureTestManager\\Forms\\ManagerHarness\\Module.bsl",
+    "catalog_command_count":  17,
+    "ignored_non_readonly_catalog_command_count":  1,
+    "ignored_non_readonly_catalog_case_ids":  [
+                                                  "tm-v1-diag-command-interface-section-dump"
+                                              ],
+    "bsl_command_count":  17,
+    "smoke_subset":  [
+                         "tm-v1-active-window",
+                         "tm-v1-active-form",
+                         "tm-v1-field-version"
+                     ],
+    "rejected_command_kinds":  [
+                                   "text_input",
+                                   "click",
+                                   "page_switch",
+                                   "row_select",
+                                   "business_command",
+                                   "object_write"
+                               ],
+    "compared_fields":  [
+                            "case_id",
+                            "command_id",
+                            "command_kind",
+                            "target_marker",
+                            "expected_marker",
+                            "element_family"
+                        ],
+    "mismatches":  [
+
+                   ]
+}
